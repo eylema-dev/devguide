@@ -1,15 +1,19 @@
 """Negative tests for immutable multi-repository document validation."""
 import copy
 import hashlib
+import json
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from check_repository import CheckFailure, PRODUCT_DOCS
 from check_workspace import (MEMBERS, cross_link_errors, validate_migration,
-                             validate_product_pairs, validate_set, validate_heads)
+                             validate_product_pairs, validate_set, validate_heads,
+                             validate_snapshot, validate_historical_migration, historical_bytes)
 
 
 def repository_set():
@@ -72,7 +76,7 @@ class WorkspaceTests(unittest.TestCase):
     def test_missing_workspace_roots_fail_before_git(self):
         with self.assertRaises(CheckFailure): validate_heads({}, repository_set()['members'])
 
-    def test_migration_catches_duplicate_old_files_and_destination_drift(self):
+    def test_current_migration_accepts_reviewed_edits_and_rejects_duplicates_missing_and_escapes(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             core = root / 'core'
@@ -92,7 +96,85 @@ class WorkspaceTests(unittest.TestCase):
             with self.assertRaises(CheckFailure): validate_migration(roots, inventory)
             (core / 'old-0.md').unlink()
             (dest / '0.md').write_text('unreviewed change')
+            # Current reviewed bytes are checked by the translation manifest, not historical hashes.
+            self.assertEqual(validate_migration(roots, inventory), 26)
+            (dest / '0.md').unlink()
             with self.assertRaises(CheckFailure): validate_migration(roots, inventory)
+            (dest / '0.md').write_text('reviewed')
+            for field in ('destination_path', 'previous_main_path'):
+                bad = copy.deepcopy(inventory)
+                bad['documents'][0][field] = '../outside.md'
+                with self.subTest(field=field), self.assertRaises(CheckFailure):
+                    validate_migration(roots, bad)
+
+    def test_historical_inventory_and_source_destination_previous_bytes_remain_immutable(self):
+        with tempfile.TemporaryDirectory() as temp:
+            guide = Path(temp)
+            (guide / 'records').mkdir()
+            snapshot = {'format_version':1,
+                        'inventory':{'repository':'eylema-dev/devguide','revision':'a'*40,
+                                     'path':'records/document-migration.json'},
+                        'destinations':{name:{'repository':'eylema-dev/'+name,'revision':'a'*40}
+                                        for name in ('devguide','eylema-docs-en','eylema-docs-tr')},
+                        'sources':{'repository':'eylema-dev/eylema','revisions':['b'*40,'c'*40]}}
+            documents, blobs = [], {}
+            h = lambda data: hashlib.sha256(data).hexdigest()
+            for i in range(26):
+                row={'source_repository':'eylema-dev/eylema','source_revision':'b'*40,
+                     'source_path':f'source/{i}.md','source_sha256':h(b'source'),
+                     'destination_repository':'eylema-dev/devguide','destination_path':f'docs/{i}.md',
+                     'destination_sha256':h(b'destination')}
+                blobs[('eylema-dev/eylema','b'*40,row['source_path'])]=b'source'
+                blobs[('eylema-dev/devguide','a'*40,row['destination_path'])]=b'destination'
+                if i<21:
+                    row.update(previous_main_path=f'old/{i}.md',previous_main_revision='c'*40,previous_main_sha256=h(b'old'))
+                    blobs[('eylema-dev/eylema','c'*40,row['previous_main_path'])]=b'old'
+                documents.append(row)
+            original=json.dumps({'documents':documents}).encode()
+            inventory=guide/'records/document-migration.json'
+            inventory.write_bytes(original)
+            snapshot['inventory']['sha256']=h(original)
+            blobs[('eylema-dev/devguide','a'*40,'records/document-migration.json')]=original
+            with patch('check_workspace.historical_bytes',side_effect=lambda roots,repo,rev,path:blobs[(repo,rev,path)]):
+                self.assertEqual(validate_historical_migration(guide,{},snapshot),26)
+                inventory.write_bytes(original+b' ')
+                with self.assertRaises(CheckFailure): validate_historical_migration(guide,{},snapshot)
+                inventory.write_bytes(original)
+                for key in [('eylema-dev/eylema','b'*40,'source/0.md'),
+                            ('eylema-dev/devguide','a'*40,'docs/0.md'),
+                            ('eylema-dev/eylema','c'*40,'old/0.md')]:
+                    before=blobs[key];blobs[key]=b'corrupted'
+                    with self.subTest(key=key), self.assertRaises(CheckFailure):
+                        validate_historical_migration(guide,{},snapshot)
+                    blobs[key]=before
+                bad=copy.deepcopy(snapshot);bad['inventory']['sha256']='d'*64
+                with self.assertRaises(CheckFailure): validate_historical_migration(guide,{},bad)
+            for mode in ('mutable','foreign','missing','anchor'):
+                bad=copy.deepcopy(snapshot)
+                if mode=='mutable': bad['sources']['revisions'][0]='main'
+                if mode=='foreign': bad['sources']['repository']='other/repo'
+                if mode=='missing': del bad['destinations']['eylema-docs-en']
+                if mode=='anchor': bad['inventory']['revision']='d'*40
+                with self.subTest(mode=mode), self.assertRaises(CheckFailure): validate_snapshot(bad)
+
+    def test_historical_blobs_ignore_worktree_edits_and_reject_symlinks_wrong_heads_and_paths(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            def git(*args):
+                return subprocess.check_output(['git','-c','user.name=Fixture','-c','user.email=fixture@example.invalid',*args],cwd=root).decode().strip()
+            git('init','--quiet')
+            (root/'record.md').write_text('accepted bytes')
+            (root/'link.md').symlink_to('record.md')
+            git('add','record.md','link.md');git('commit','--quiet','-m','historical fixture')
+            head=git('rev-parse','HEAD');roots={('eylema-dev/devguide',head):root}
+            (root/'record.md').write_text('current edit')
+            self.assertEqual(historical_bytes(roots,'eylema-dev/devguide',head,'record.md'),b'accepted bytes')
+            for path in ('link.md','missing.md','../record.md','/record.md'):
+                with self.subTest(path=path),self.assertRaises(CheckFailure):
+                    historical_bytes(roots,'eylema-dev/devguide',head,path)
+            with self.assertRaises(CheckFailure): historical_bytes(roots,'eylema-dev/devguide','a'*40,'record.md')
+            git('add','record.md');git('commit','--quiet','-m','new revision')
+            with self.assertRaises(CheckFailure): historical_bytes(roots,'eylema-dev/devguide',head,'record.md')
 
 
 if __name__ == '__main__':

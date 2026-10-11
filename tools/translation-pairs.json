@@ -23,8 +23,8 @@
     {
       "en": "docs/en/quality-gates.md",
       "tr": "docs/tr/quality-gates.md",
-      "en_sha256": "3614f88cc8323b1e6a83d123fe87025d3ae3607f7e8d7e8a7f94b8ed29d6f853",
-      "tr_sha256": "562ac0a31164e672475d9fc78f3d64d5ee10cb875c572fcd6cddb49c552116c8"
+      "en_sha256": "13f0980753b5ffc9cd6d07a4c6572e5561f5efff7621fa7f637e038dc9978e84",
+      "tr_sha256": "43e3e3b8db1528ff7e9fcc7ef35afa8be719070f8939425236941c27bf61f353"
     },
     {
       "en": "docs/en/repository-map.md",
@@ -41,8 +41,8 @@
     {
       "en": "docs/en/repository-setup.md",
       "tr": "docs/tr/repository-setup.md",
-      "en_sha256": "33235d24fcff9a7fc4820f52e4279b1bfd1235b608c7b25e6c2a1ef073f351bf",
-      "tr_sha256": "2a4cc8f744758aa928365d6ea4044b48f8abd0b18f9c8c22e9b52443306749ee"
+      "en_sha256": "36572653bb503cdc923b0fc0ac9c714b6fe85db96d4176ec050a1e13f5a04981",
+      "tr_sha256": "df948e240fa84272effb44eaf1bebc4f405dfd04caeea522d19e5373f60d9890"
     },
     {
       "en": "docs/en/tooling.md",

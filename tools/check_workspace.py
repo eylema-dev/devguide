@@ -1,9 +1,10 @@
 """Verify a pinned Eylema repository set as data; never execute fetched member code."""
 import argparse
 import hashlib
+import json
 import re
 import subprocess
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 
 from check_repository import (ROOT, ROLES, PRODUCT_DOCS, CheckFailure, load_json,
@@ -99,6 +100,7 @@ def validate_product_pairs(roots, manifest):
 
 
 def validate_migration(roots, inventory):
+    """Check today's layout; historical byte identity is checked separately."""
     documents = inventory.get('documents', [])
     require(len(documents) == 26, 'Migration inventory is incomplete')
     seen = set()
@@ -110,10 +112,11 @@ def validate_migration(roots, inventory):
         require(key not in seen, 'Duplicate migration destination')
         seen.add(key)
         root = roots[repo].resolve()
+        require(safe_path(row['destination_path']), 'Invalid migration destination path')
         path = (root / row['destination_path']).resolve()
         require(path.is_relative_to(root) and path.is_file(), 'Missing or escaping migration destination')
-        require(digest(path) == row['destination_sha256'], f'Migration destination changed: {key}')
         if old := row.get('previous_main_path'):
+            require(safe_path(old), 'Invalid migration removal path')
             require(old not in removed, 'Duplicate migration removal')
             removed.add(old)
             require(not (roots['eylema'] / old).exists(), f'Duplicate original document remains in core: {old}')
@@ -121,9 +124,87 @@ def validate_migration(roots, inventory):
     return len(documents)
 
 
-def check(guide, roots, manifest):
+def safe_path(value):
+    return (isinstance(value, str) and bool(value) and '\\' not in value
+            and not PurePosixPath(value).is_absolute()
+            and all(part not in {'..', '.'} for part in value.split('/')))
+
+
+def validate_snapshot(snapshot):
+    require(snapshot.get('format_version') == 1, 'Unknown migration snapshot version')
+    inventory = snapshot.get('inventory', {})
+    require(inventory.get('repository') == 'eylema-dev/devguide'
+            and inventory.get('path') == 'records/document-migration.json', 'Unexpected inventory source')
+    require(bool(re.fullmatch('[0-9a-f]{64}', inventory.get('sha256', ''))), 'Invalid inventory hash')
+    destinations = snapshot.get('destinations', {})
+    require(set(destinations) == {'eylema-docs-en', 'eylema-docs-tr', 'devguide'}, 'Historical destination coverage')
+    for name, member in destinations.items():
+        require(member.get('repository') == 'eylema-dev/' + name, 'Unexpected historical repository')
+    sources = snapshot.get('sources', {})
+    require(sources.get('repository') == 'eylema-dev/eylema', 'Unexpected historical source repository')
+    revisions = sources.get('revisions', [])
+    require(len(revisions) == 2 and len(set(revisions)) == 2, 'Historical source coverage')
+    revisions = revisions + [inventory.get('revision', '')] + [m.get('revision', '') for m in destinations.values()]
+    require(all(re.fullmatch('[0-9a-f]{40}', r) for r in revisions), 'Historical references must be immutable SHAs')
+    require(inventory['revision'] == destinations['devguide']['revision'], 'Inventory/destination anchor mismatch')
+    return snapshot
+
+
+def history_roots(snapshot, cache):
+    """Fetch fixed public identities and validated commits as data, never code."""
+    validate_snapshot(snapshot)
+    roots = {}
+    for name, member in snapshot['destinations'].items():
+        roots[(member['repository'], member['revision'])] = fetch_members({name: member}, cache)[name]
+    for revision in snapshot['sources']['revisions']:
+        member = {'repository': snapshot['sources']['repository'], 'revision': revision}
+        roots[(member['repository'], revision)] = fetch_members({'eylema': member}, cache)['eylema']
+    return roots
+
+
+def historical_bytes(roots, repository, revision, path):
+    require(safe_path(path), 'Invalid historical artifact path')
+    require((repository, revision) in roots, 'Unpinned historical artifact')
+    root = roots[(repository, revision)]
+    require(git(root, 'rev-parse', 'HEAD') == revision, 'Wrong historical checkout revision')
+    # Read Git blobs rather than potentially edited working files or symlinks.
+    mode = git(root, 'ls-tree', revision, '--', path).split()
+    require(mode and mode[0] in {'100644', '100755'}, 'Historical artifact is missing or not a regular file')
+    return subprocess.run(['git', '-c', 'core.hooksPath=/dev/null', 'show', revision + ':' + path],
+                          cwd=root, check=True, capture_output=True, timeout=60).stdout
+
+
+def validate_historical_migration(guide, roots, snapshot):
+    validate_snapshot(snapshot)
+    anchor = snapshot['inventory']
+    original = historical_bytes(roots, anchor['repository'], anchor['revision'], anchor['path'])
+    require(hashlib.sha256(original).hexdigest() == anchor['sha256'], 'Historical inventory hash mismatch')
+    require((guide / anchor['path']).read_bytes() == original, 'Historical migration inventory was changed')
+    inventory = json.loads(original)
+    documents = inventory.get('documents', [])
+    require(len(documents) == 26, 'Historical inventory coverage')
+    for row in documents:
+        for prefix, repository, revision, path, expected in [
+            ('source', row['source_repository'], row['source_revision'], row['source_path'], row['source_sha256']),
+            ('destination', row['destination_repository'],
+             snapshot['destinations'][row['destination_repository'].removeprefix('eylema-dev/')]['revision'],
+             row['destination_path'], row['destination_sha256']),
+        ]:
+            actual = historical_bytes(roots, repository, revision, path)
+            require(hashlib.sha256(actual).hexdigest() == expected, f'Historical {prefix} hash mismatch: {path}')
+        if row.get('previous_main_path'):
+            actual = historical_bytes(roots, row['source_repository'], row['previous_main_revision'], row['previous_main_path'])
+            require(hashlib.sha256(actual).hexdigest() == row['previous_main_sha256'], 'Historical previous-main hash mismatch')
+    return len(documents)
+
+
+def check(guide, roots, manifest, history=None):
     validate_heads(roots, validate_set(manifest))
     roots = dict(roots, devguide=guide)
+    snapshot = load_json(guide / 'records/migration-snapshot.json')
+    if history is None:
+        history = history_roots(snapshot, guide / '.cache/migration-history')
+    historical = validate_historical_migration(guide, history, snapshot)
     operations = validate_product_pairs(roots, manifest)
     count = validate_migration(roots, load_json(guide / 'records/document-migration.json'))
     links = 0
@@ -140,7 +221,7 @@ def check(guide, roots, manifest):
                 errors = cross_link_errors(roots, text)
                 require(not errors, f'Broken cross-repository target in {name}/{path}: {errors}')
                 links += 1
-    print(f'PASS: {len(roots)} repositories, {len(PRODUCT_DOCS)} product translation pairs, {operations} API operations, {count} migration destinations, {links} Markdown documents checked for cross-repository targets')
+    print(f'PASS: {len(roots)} repositories, {len(PRODUCT_DOCS)} product translation pairs, {operations} API operations, {count} current migration destinations, {historical} immutable historical records, {links} Markdown documents checked for cross-repository targets')
     print('Scope: pinned document snapshots only; no fetched member code, runtime, GPU, model or training was executed.')
 
 
