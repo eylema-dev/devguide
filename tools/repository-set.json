@@ -3,15 +3,15 @@
   "members": {
     "eylema": {
       "repository": "eylema-dev/eylema",
-      "revision": "f20343064b63448a394efc68cc121823c7886355"
+      "revision": "02e0083b7cdac7abfdbb28a22541e6c5bc4d466d"
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",
-      "revision": "13d8978289a90298185fa4eeef63b8394276a579"
+      "revision": "c4554afc3418a1167b5291d6d72c1d9495f4e425"
     },
     "eylema-docs-tr": {
       "repository": "eylema-dev/eylema-docs-tr",
-      "revision": "64d011aa2601b1592e09a08894efcd0fd1487bb4"
+      "revision": "8b353b0332270cda27bdec996b69a3f7172e6c2f"
     },
     ".github": {
       "repository": "eylema-dev/.github",
@@ -56,8 +56,8 @@
       "tr_sha256": "572c35a11b1dd3adca0c1e477be219ddd1216cec84a3e555dfaed3996b8d45d0"
     },
     "roadmap": {
-      "en_sha256": "1c4cc45778995c597dce4bdc253e30088e83db3db3758cacc43c85686c1a912c",
-      "tr_sha256": "fa966a7292825a247daaf639fa2ebdbc5cd159d3b61fcb554fe795faacd90b08"
+      "en_sha256": "90e3a51f2ac4aba592d758981a6018a0b8590457beb545671b4adaeabe930254",
+      "tr_sha256": "29f91660d264a1ce88d7d7c2208e761ee8aa80cdf7313c5f5d2015c5fa4678bb"
     }
   }
 }

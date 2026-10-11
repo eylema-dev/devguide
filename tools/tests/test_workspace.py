@@ -85,7 +85,7 @@ class WorkspaceTests(unittest.TestCase):
                 path.write_text('migrated')
                 row = {'destination_repository': 'eylema-dev/devguide', 'destination_path': path.name,
                        'destination_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
-                if i < 15: row['previous_main_path'] = f'old-{i}.md'
+                if i < 21: row['previous_main_path'] = f'old-{i}.md'
                 inventory['documents'].append(row)
             self.assertEqual(validate_migration(roots, inventory), 26)
             (core / 'old-0.md').write_text('duplicate')

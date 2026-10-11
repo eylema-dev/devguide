@@ -117,7 +117,7 @@ def validate_migration(roots, inventory):
             require(old not in removed, 'Duplicate migration removal')
             removed.add(old)
             require(not (roots['eylema'] / old).exists(), f'Duplicate original document remains in core: {old}')
-    require(len(removed) == 15, 'Core removal inventory is incomplete')
+    require(len(removed) == 21, 'Core removal inventory is incomplete')
     return len(documents)
 
 

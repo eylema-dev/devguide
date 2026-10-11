@@ -37,7 +37,8 @@
       "product_translation_pairs": 6,
       "api_operations": 20,
       "migration_destinations": 26,
-      "markdown_documents": 110
+      "markdown_documents": 110,
+      "core_removals": 21
     },
     "independent_review": {
       "status": "not_run",
@@ -62,5 +63,6 @@
     "git diff --cached --check",
     ".venv/bin/python tools/check_workspace.py --fetch"
   ],
-  "repair_note": "A staged whitespace check caught trailing blank lines in a generated test file; corrected without weakening the gate. Final local gates passed."
+  "repair_note": "A staged whitespace check caught trailing blank lines in a generated test file; corrected without weakening the gate. Final local gates passed.",
+  "integration_base": "8e529b4747aef2648c241354858d28aaf416ecaa; concurrent core PR #2 foundation preserved and checks rerun"
 }
