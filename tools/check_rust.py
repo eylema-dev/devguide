@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 import platform
+import re
 import subprocess
 import tomllib
 from pathlib import Path
@@ -10,11 +11,31 @@ from pathlib import Path
 TOOLCHAIN = '1.99.0'
 TARGET = 'wasm32-unknown-unknown'
 ROLES = {'eylema-dev/eylema': 'core', 'eylema-dev/eylema-examples': 'examples', 'eylema-dev/eylema-evals': 'evals'}
+REPOSITORIES = {'eylema', 'devguide', '.github', 'eylema-docs-en', 'eylema-docs-tr',
+                'eylema-examples', 'eylema-evals', 'eylema-models', 'eylema-training'}
 
 
 def require(condition, message):
     if not condition:
         raise ValueError(message)
+
+
+def validate_identity(root, config):
+    identity = config.get('repository')
+    require(identity in {'eylema-dev/' + n for n in REPOSITORIES}, 'Unknown repository identity')
+    actual = os.environ.get('GITHUB_REPOSITORY')
+    require(actual is None or actual == identity, 'Declared repository differs from trusted CI identity')
+    origin = subprocess.run(['git', '-c', 'core.hooksPath=/dev/null', 'remote', 'get-url', 'origin'],
+                            cwd=root, check=True, capture_output=True, text=True, timeout=60).stdout.strip()
+    require(origin in {f'https://github.com/{identity}', f'https://github.com/{identity}.git',
+                       f'git@github.com:{identity}.git'}, 'Declared repository differs from local origin')
+    # Local origin is consistency evidence, not proof of ownership or authorization.
+
+
+def validate_environment():
+    allowed = {'CARGO_HOME', 'CARGO_TERM_COLOR', 'RUSTUP_HOME', 'RUST_BACKTRACE'}
+    require(not any(k.startswith(('CARGO_', 'RUST')) and k not in allowed for k in os.environ),
+            'Cargo/compiler/toolchain environment overrides require a reviewed profile')
 
 
 def validate_toolchain(root):
@@ -24,13 +45,23 @@ def validate_toolchain(root):
             'Rust profile requires the exact reviewed toolchain/components/target')
 
 
-def validate_metadata(root, value):
+def validate_wasm_packages(config):
+    packages = config.get('wasm_packages')
+    require(isinstance(packages, list) and all(isinstance(p, str) and re.fullmatch('[a-z][a-z0-9_-]*', p) for p in packages)
+            and len(packages) == len(set(packages)), 'Declare exact unique portable Wasm packages')
+    require(config.get('role') != 'core' or packages, 'Core requires portable Wasm acceptance packages')
+    return packages
+
+
+def validate_metadata(root, value, wasm_packages=()):
     root = root.resolve()
     require(Path(value['workspace_root']).resolve() == root, 'Foreign Cargo workspace')
     packages = value.get('packages', [])
     members = value.get('workspace_members', [])
     require(packages and len(members) == len(set(members))
-            and {p['id'] for p in packages} == set(members), 'External Cargo packages are forbidden in rust-v1')
+            and len(packages) == len(members) and {p['id'] for p in packages} == set(members), 'External Cargo packages are forbidden in rust-v1')
+    libraries = {p['name'] for p in packages if any(set(t.get('kind', [])) & {'lib', 'rlib', 'cdylib', 'staticlib'} for t in p.get('targets', []))}
+    require(set(wasm_packages) <= libraries, 'Wasm packages must name actual owned workspace libraries')
     for package in packages:
         manifest = Path(package['manifest_path']).resolve()
         require(package.get('source') is None and manifest.is_relative_to(root) and manifest.is_file(),
@@ -50,6 +81,7 @@ def run(root, args, capture=False):
 
 def check(root, provision=False):
     config = json.loads((root / 'repository.json').read_text())
+    validate_identity(root, config)
     require(config.get('tooling_version') == '0.3.0', 'Unreviewed tooling version')
     if config.get('stage') == 'documentation':
         require(config.get('gate_profile') == 'documentation-v1' and config.get('runtime_implemented') is False,
@@ -61,9 +93,9 @@ def check(root, provision=False):
             and config.get('runtime_implemented') is True
             and ROLES.get(config.get('repository')) == config.get('role'), 'Unapproved Rust implementation profile')
     validate_toolchain(root)
+    wasm_packages = validate_wasm_packages(config)
     require(platform.system() == 'Darwin' and platform.machine() == 'arm64', 'Native acceptance requires ARM64 macOS')
-    require(not any(k in os.environ for k in ('RUSTC', 'RUSTC_WRAPPER', 'RUSTC_WORKSPACE_WRAPPER', 'RUSTFLAGS', 'CARGO_ENCODED_RUSTFLAGS', 'RUSTUP_TOOLCHAIN', 'CARGO_BUILD_TARGET')),
-            'Compiler/environment overrides require a reviewed profile')
+    validate_environment()
     config_dirs = [p / '.cargo' for p in [root, *root.parents]]
     config_dirs.append(Path(os.environ.get('CARGO_HOME', Path.home() / '.cargo')))
     require(not any((p / n).exists() for p in config_dirs for n in ('config', 'config.toml')),
@@ -75,16 +107,21 @@ def check(root, provision=False):
     require(version.startswith('rustc ' + TOOLCHAIN + ' '), 'Unexpected compiler version')
     print(version.strip())
     metadata = json.loads(run(root, prefix + ['cargo', 'metadata', '--locked', '--offline', '--all-features', '--format-version', '1'], capture=True))
-    validate_metadata(root, metadata)
+    validate_metadata(root, metadata, wasm_packages)
     for command in [
         ['fmt', '--all', '--', '--check'],
         ['clippy', '--workspace', '--all-targets', '--all-features', '--locked', '--offline', '--', '-D', 'warnings'],
         ['test', '--workspace', '--all-features', '--locked', '--offline'],
         ['build', '--workspace', '--all-features', '--locked', '--offline'],
-        ['build', '--workspace', '--all-features', '--locked', '--offline', '--target', TARGET],
     ]:
         run(root, prefix + ['cargo', *command])
-    print('PASS: native ARM64 fmt/clippy/tests/build, Wasm compilation and workspace dependency inventory')
+    if wasm_packages:
+        selection = [arg for package in wasm_packages for arg in ('--package', package)]
+        run(root, prefix + ['cargo', 'build', *selection, '--all-features', '--locked', '--offline', '--target', TARGET])
+        print('PASS: selected portable library Wasm compilation:', ', '.join(wasm_packages))
+    else:
+        print('NOT_APPLICABLE: reviewed native-only consumer has no Wasm library')
+    print('PASS: native ARM64 fmt/clippy/tests/build and workspace dependency inventory')
     print('Wasm execution, GPU, model and training: NOT RUN. Workspace membership does not prove copied-code provenance.')
 
 

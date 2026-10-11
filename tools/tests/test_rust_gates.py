@@ -19,10 +19,17 @@ def config(stage='implementation', repository='eylema'):
     roles = {'eylema': 'core', 'eylema-examples': 'examples', 'eylema-evals': 'evals', 'eylema-models': 'models'}
     return {'format_version': 1, 'repository': 'eylema-dev/' + repository, 'role': roles[repository],
             'stage': stage, 'runtime_implemented': stage == 'implementation', 'tooling_version': '0.3.0',
-            'gate_profile': 'rust-v1' if stage == 'implementation' else 'documentation-v1'}
+            'gate_profile': 'rust-v1' if stage == 'implementation' else 'documentation-v1',
+            **({'wasm_packages': ['owned']} if stage == 'implementation' else {})}
+
+
+def initialize_git(root):
+    subprocess.run(['git', 'init', '--quiet', str(root)], check=True)
+    subprocess.run(['git', '-C', str(root), 'remote', 'add', 'origin', 'https://github.com/eylema-dev/eylema.git'], check=True)
 
 
 def fixture(root):
+    if not (root / '.git').exists(): initialize_git(root)
     (root / 'repository.json').write_text(json.dumps(config()))
     (root / 'rust-toolchain.toml').write_text('[toolchain]\nchannel = "1.99.0"\nprofile = "minimal"\ncomponents = ["rustfmt", "clippy"]\ntargets = ["wasm32-unknown-unknown"]\n')
     (root / 'Cargo.toml').write_text('[workspace]\n')
@@ -30,7 +37,7 @@ def fixture(root):
     (root / 'src').mkdir(); (root / 'src/lib.rs').write_text('')
     (root / 'tools').mkdir(); (root / 'tools/check_rust.py').write_text('fixture only')
     return {'workspace_root': str(root), 'workspace_members': ['owned'],
-            'packages': [{'id': 'owned', 'source': None, 'manifest_path': str(root / 'Cargo.toml'),
+            'packages': [{'id': 'owned', 'name': 'owned', 'source': None, 'manifest_path': str(root / 'Cargo.toml'),
                           'dependencies': [], 'targets': [{'kind': ['lib']}]}]}
 
 
@@ -41,6 +48,32 @@ class RustProfileTests(unittest.TestCase):
         for value in (config(repository='eylema-models'), dict(config(), gate_profile='trust-me'),
                       dict(config('documentation'), runtime_implemented=True)):
             with self.assertRaises(CheckFailure): validate_repository_config(value)
+
+    def test_declared_identity_must_match_ci_and_local_origin(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); initialize_git(root)
+            with patch.dict('check_rust.os.environ', {}, clear=True):
+                rust.validate_identity(root, config())
+                with self.assertRaises(ValueError): rust.validate_identity(root, config(repository='eylema-examples'))
+            with patch.dict('check_rust.os.environ', {'GITHUB_REPOSITORY': 'eylema-dev/eylema-training'}, clear=True):
+                with self.assertRaises(ValueError): rust.validate_identity(root, config())
+            with patch.dict('check_rust.os.environ', {'GITHUB_REPOSITORY': 'eylema-dev/eylema'}, clear=True):
+                rust.validate_identity(root, config())
+
+    def test_all_cargo_compiler_and_runner_overrides_fail_before_execution(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); fixture(root)
+            overrides = ('CARGO_BUILD_RUSTC', 'CARGO_BUILD_RUSTC_WRAPPER', 'CARGO_BUILD_RUSTC_WORKSPACE_WRAPPER',
+                         'CARGO_TARGET_AARCH64_APPLE_DARWIN_RUNNER', 'CARGO_TARGET_AARCH64_APPLE_DARWIN_RUSTFLAGS',
+                         'RUSTC', 'RUSTC_WRAPPER', 'RUSTDOC', 'RUSTFLAGS', 'RUSTC_BOOTSTRAP',
+                         'CARGO_ENCODED_RUSTFLAGS', 'RUSTUP_DIST_SERVER', 'RUSTUP_TOOLCHAIN')
+            with patch('check_rust.platform.system', return_value='Darwin'), patch('check_rust.platform.machine', return_value='arm64'):
+                for key in overrides:
+                    with self.subTest(key=key), patch.dict('check_rust.os.environ', {key: 'fixture-override'}, clear=True), patch('check_rust.run') as run:
+                        with self.assertRaises(ValueError): rust.check(root, provision=True)
+                        run.assert_not_called()
+            with patch.dict('check_rust.os.environ', {'RUST_BACKTRACE': '1', 'CARGO_TERM_COLOR': 'always'}, clear=True):
+                rust.validate_environment()
 
     def test_documentation_sources_and_incomplete_or_wrong_toolchain_fail(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -62,6 +95,18 @@ class RustProfileTests(unittest.TestCase):
                               ('eylema', required + ['ai-team-protocol/../escape.schema.json']),
                               ('eylema-models', required), ('devguide', required)]:
             with self.assertRaises(CheckFailure): validate_schema_ownership(repo, schemas)
+
+    def test_wasm_selection_is_explicit_and_bound_to_owned_libraries(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); metadata = fixture(root)
+            self.assertEqual(rust.validate_wasm_packages(config()), ['owned'])
+            rust.validate_metadata(root, metadata, ['owned'])
+            for selection in (None, [], ['owned', 'owned'], ['../escape'], [1]):
+                with self.assertRaises(ValueError): rust.validate_wasm_packages(dict(config(), wasm_packages=selection))
+            with self.assertRaises(ValueError): rust.validate_metadata(root, metadata, ['absent'])
+            metadata['packages'][0]['targets'] = [{'kind': ['bin']}]
+            with self.assertRaises(ValueError): rust.validate_metadata(root, metadata, ['owned'])
+            self.assertEqual(rust.validate_wasm_packages(dict(config(repository='eylema-evals'), wasm_packages=[])), [])
 
     def test_runtime_job_cannot_be_missing_skipped_or_privileged(self):
         original = load_yaml(ROOT / '.github/workflows/ci.yml')
@@ -99,6 +144,7 @@ class RustProfileTests(unittest.TestCase):
                 calls = [c.args[1] for c in run.call_args_list]
                 self.assertEqual([a[4] for a in calls[1:]], ['metadata', 'fmt', 'clippy', 'test', 'build', 'build'])
                 self.assertEqual(calls[-1][-2:], ['--target', rust.TARGET])
+                self.assertIn('--package', calls[-1]); self.assertNotIn('--workspace', calls[-1])
                 for index in range(len(calls)):
                     count = 0
                     def failure(root, args, capture=False):
@@ -114,11 +160,11 @@ class RustProfileTests(unittest.TestCase):
 
     def test_docs_skip_and_wrong_host_never_provision(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp); (root / 'repository.json').write_text(json.dumps(config('documentation')))
-            with patch('check_rust.run') as run:
+            root = Path(temp); initialize_git(root); (root / 'repository.json').write_text(json.dumps(config('documentation')))
+            with patch.dict('check_rust.os.environ', {}, clear=True), patch('check_rust.run') as run:
                 with contextlib.redirect_stdout(io.StringIO()): rust.check(root, provision=True)
                 run.assert_not_called()
             fixture(root)
-            with patch('check_rust.platform.system', return_value='Linux'), patch('check_rust.run') as run:
+            with patch.dict('check_rust.os.environ', {}, clear=True), patch('check_rust.platform.system', return_value='Linux'), patch('check_rust.run') as run:
                 with self.assertRaises(ValueError): rust.check(root, provision=True)
                 run.assert_not_called()
