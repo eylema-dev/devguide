@@ -31,8 +31,18 @@ class GoalTrackingTests(unittest.TestCase):
             if mode=='eyl':g['related_eyl']=[]
             if mode=='dependencies':g['dependencies']=[]
             if mode=='conditional':goals[-1]['conditional_dependencies']={}
-            if mode=='multiple-active':g['status']='implementing';g['labels']=[x for x in g['labels'] if not x.startswith('status:')]+['status:implementing']
-            if mode=='ready':g['status']='ready';g['labels']=[x for x in g['labels'] if not x.startswith('status:')]+['status:ready']
+            if mode=='multiple-active':
+                # Construct two active records even after the live snapshot advances.
+                for active in (goals[5], goals[6]):
+                    active['status']='implementing';active['accepted_delivery']=None
+                    active['labels']=[x for x in active['labels'] if not x.startswith('status:')]+['status:implementing']
+            if mode=='ready':
+                # G08 cannot become ready while its direct G07 dependency is in review.
+                dependency=next(x for x in goals if x['id']=='G07')
+                dependency['status']='review';dependency['accepted_delivery']=None
+                dependency['labels']=[x for x in dependency['labels'] if not x.startswith('status:')]+['status:review']
+                g['status']='ready';g['accepted_delivery']=None
+                g['labels']=[x for x in g['labels'] if not x.startswith('status:')]+['status:ready']
             if mode=='state':g['status']='done'
             if mode=='labels':g['labels'].append('status:accepted')
             if mode=='premature':g['accepted_delivery']=copy.deepcopy(goals[0]['accepted_delivery'])

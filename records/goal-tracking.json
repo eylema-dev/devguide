@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "task": "G05",
-  "observed_at": "2026-10-11T18:21:12.844371+00:00",
+  "observed_at": "2026-10-11T18:30:43.588163+00:00",
   "source_cards": "records/goal-index.json",
   "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
   "states": [
@@ -552,7 +552,7 @@
         "number": 9,
         "url": "https://github.com/eylema-dev/eylema/issues/9"
       },
-      "status": "review",
+      "status": "accepted",
       "milestone": {
         "id": "M1",
         "number": 2,
@@ -566,7 +566,7 @@
         "type:implementation",
         "planning:EYL-003",
         "platform:macos",
-        "status:review"
+        "status:accepted"
       ],
       "dependencies": [
         "G02",
@@ -577,10 +577,45 @@
       "related_eyl": [
         "EYL-003"
       ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Implementation/native gates passed; separate final-head review and current PR CI pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/39",
+          "head": "309beb40b4c13645bc630c82dc2a39752d2b0d99",
+          "main": "748d233d7653ca50bee8036a9131a8057b5be729",
+          "tree": "8db0d1d4feac7dd1a566f67067706e11cf781a91",
+          "main_ci": {
+            "id": 38164005434,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38164005434",
+            "head": "748d233d7653ca50bee8036a9131a8057b5be729",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "309beb40b4c13645bc630c82dc2a39752d2b0d99",
+            "reviewer": "g07_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/13",
+          "head": "978933f479435e444857670d0756ea0f810b7dc7",
+          "main": "effe36587d45a341f8c38292f4bfb3bf09dee540",
+          "tree": "d8bb6bbd5c86adc8d732a4ffedb36d1421abcc65",
+          "main_ci": {
+            "id": 38164012164,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38164012164",
+            "head": "effe36587d45a341f8c38292f4bfb3bf09dee540",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "978933f479435e444857670d0756ea0f810b7dc7",
+            "reviewer": "g07_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G08",
@@ -589,7 +624,7 @@
         "number": 10,
         "url": "https://github.com/eylema-dev/eylema/issues/10"
       },
-      "status": "backlog",
+      "status": "implementing",
       "milestone": {
         "id": "M1",
         "number": 2,
@@ -598,13 +633,12 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M1",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-004",
-        "platform:macos"
+        "platform:macos",
+        "status:implementing"
       ],
       "dependencies": [
         "G07"
@@ -614,9 +648,7 @@
         "EYL-004"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "waiting_reasons": []
     },
     {
       "id": "G09",
