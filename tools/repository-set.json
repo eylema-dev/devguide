@@ -3,35 +3,35 @@
   "members": {
     "eylema": {
       "repository": "eylema-dev/eylema",
-      "revision": "02e0083b7cdac7abfdbb28a22541e6c5bc4d466d"
+      "revision": "6f44ed55dee1c42b015eea37bc91b3270a3c89d3"
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",
-      "revision": "c4554afc3418a1167b5291d6d72c1d9495f4e425"
+      "revision": "cfa29a9bff26283948405ffb389e9480dd54fc30"
     },
     "eylema-docs-tr": {
       "repository": "eylema-dev/eylema-docs-tr",
-      "revision": "8b353b0332270cda27bdec996b69a3f7172e6c2f"
+      "revision": "222fd8fbc96b2546371b0d5603baf9cd8c9a2040"
     },
     ".github": {
       "repository": "eylema-dev/.github",
-      "revision": "56fc6bfcc1ad7f2c070957fcb6618b7de7d82b94"
+      "revision": "ee6e5276214054b9ab5978ddd88824940c67bee9"
     },
     "eylema-examples": {
       "repository": "eylema-dev/eylema-examples",
-      "revision": "d648d4ac6db983f31a4eafc6754f5e427acda9d9"
+      "revision": "9bb43a4789bb3d6e6e0afd1a3473dec87e4a8ba0"
     },
     "eylema-evals": {
       "repository": "eylema-dev/eylema-evals",
-      "revision": "7021d5a6d76565e2fa1ecf805a0001eb399db928"
+      "revision": "97917818419f39b86b705a7f0331aa0f02e19633"
     },
     "eylema-models": {
       "repository": "eylema-dev/eylema-models",
-      "revision": "719d03356106c0c0539c06474d1eb23321a82deb"
+      "revision": "c3ddb3acf36d5f81133ec6fb9168cbb61582ad2c"
     },
     "eylema-training": {
       "repository": "eylema-dev/eylema-training",
-      "revision": "b668d37a1a4738d322cd7486aeba51a9c7dec073"
+      "revision": "84b7dd9bf0799ed2577a9b1fd47d0d08ccdd3478"
     }
   },
   "product_translations": {

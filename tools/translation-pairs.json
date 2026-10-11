@@ -23,8 +23,8 @@
     {
       "en": "docs/en/quality-gates.md",
       "tr": "docs/tr/quality-gates.md",
-      "en_sha256": "c71d1920c50cbcfd3dc0a0043db809c661d19c1fb0429b9606d2076440de96c2",
-      "tr_sha256": "e39ef01ebee884266fbb271fd552df37332f2201deac0b4d32fc2019d921052e"
+      "en_sha256": "e73ee9c8ce54bcbb6fb72744b09c97bf379d4605e83b6625e8e1e7986b71fd72",
+      "tr_sha256": "f7909af9a349227111d0207305176612b88c0464331c4ab017b8cc58ddf5b74c"
     },
     {
       "en": "docs/en/repository-map.md",
@@ -47,8 +47,8 @@
     {
       "en": "docs/en/tooling.md",
       "tr": "docs/tr/tooling.md",
-      "en_sha256": "9a2aba99784aa27914374e1be959b20e735335d665f18368c1f8e5360a843dda",
-      "tr_sha256": "7004096e6ffaf0b8789b7da138b286a14a698d7ce416b7f3488a6c4c7846b2c1"
+      "en_sha256": "0d47f53969a9afa44b7ea710db9e843fab5d82af4a27eeda9c2728ca2f826791",
+      "tr_sha256": "0fccdd092dedcc972c80b6823fb201f35260b0accfb7978c03c1f93f95044541"
     },
     {
       "en": "docs/en/goal-program.md",

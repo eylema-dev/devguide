@@ -8,7 +8,7 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 
 from check_repository import (ROOT, ROLES, PRODUCT_DOCS, CheckFailure, load_json,
-                              require, repository_files, validate_api, verify_vendor)
+                              require, repository_files, validate_api, verify_vendor, validate_repository_config)
 
 MEMBERS = set(ROLES) - {'devguide'}
 
@@ -60,6 +60,7 @@ def validate_heads(roots, members):
     for name, root in roots.items():
         require(git(root, 'rev-parse', 'HEAD') == members[name]['revision'], f'Wrong pinned revision: {name}')
         require(not git(root, 'status', '--porcelain', '--untracked-files=all'), f'Dirty repository cannot represent a pinned snapshot: {name}')
+        require(validate_repository_config(load_json(root / 'repository.json')) == name, 'Pinned repository profile mismatch')
         print(f'PIN {name}: {members[name]["revision"]}')
 
 

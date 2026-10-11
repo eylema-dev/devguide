@@ -1,6 +1,6 @@
 # Repository quality gates
 
-Revision **0.2.0**. [Türkçe](../tr/quality-gates.md).
+Revision **0.3.0**. [Türkçe](../tr/quality-gates.md).
 
 ## Current executable gate
 
@@ -13,7 +13,7 @@ The `repository-checks` job in [CI](../../.github/workflows/ci.yml) runs on pull
 | EN/TR contracts | Missing/stale translation fingerprints, API operation or inline identifier mismatch, roadmap ID mismatch | Semantic translation accuracy |
 | GitHub configuration | Missing intake fields, malformed forms, missing PR sections, unpinned/unexpected actions, privileged workflow settings | GitHub server-side template rendering or branch-rule enforcement |
 | Real PR body | Missing, duplicated or placeholder-only required sections | Truth of evidence, reviewer independence or authority |
-| Source-stage guard | Rust/Cargo sources added while only documentation checks exist | Rust compilation or execution; EYL-003 must replace this guard with actual gates |
+| Source-stage guard | Rust/Cargo sources in documentation profile, missing implementation workspace/toolchain, unapproved role/profile | Static profile validation alone does not run Rust |
 | Whitespace and checker tests | Git whitespace errors, regression tests failing | Application behavior |
 
 The PR-body check is conditional on a PR event. On a push, there is no PR body to validate. CI prints actual PR head SHA and checked-out revision: a PR run may check GitHub's synthetic merge commit. A green run for an older head is not current evidence. Editing a PR body triggers a fresh check.
@@ -24,9 +24,13 @@ Requirements, production dependency policy, independent review, license, API/ove
 
 Checker/policy changes must be inspected against the accepted base policy; a PR running modified validators cannot independently approve their weakening. Separate review must identify the exact reviewed revision. Until that review exists, report it as pending.
 
-## Future executable gates
+## Reviewed source profiles
 
-EYL-003 adds the pinned Rust toolchain, root workspace/lockfile, formatter, clippy, behavioral tests, dependency inventory and Linux/Wasm compilation before accepting Rust sources. Native Linux execution must be reported separately from compilation. Browser/device GPU, performance, persistence, policy/world-model, language-model and training acceptance are added at their roadmap milestones on controlled hardware. Public PR code never gains access to private data or trusted deployment runners by changing a workflow.
+Every repository declares its role, stage and gate_profile in repository.json. Declared identity must match the trusted GITHUB_REPOSITORY in CI and the canonical local Git origin. Documented fork workflows may use a same-name GitHub fork as origin with a canonical upstream remote. Fork-local checks work; required PR CI still runs in the canonical base repository, while unsupported fork-push identities fail rather than skipping implementation checks. Local origin proves consistency, not ownership or authorization; changing a JSON role cannot route around the actual repository-scoped workflow. Cargo/Rust environment overrides, including target runners and compiler aliases, are rejected before provisioning/compilation. Only CARGO_HOME, CARGO_TERM_COLOR, RUSTUP_HOME and RUST_BACKTRACE are allowed; Cargo config files at those locations still fail. All current repositories remain at documentation / documentation-v1 with runtime_implemented false. Rust sources, Cargo manifests/lockfiles and toolchain files remain forbidden in that profile. Core, examples and evals may enter implementation / rust-v1 only in a separately reviewed change that supplies actual source, root workspace/lockfile and the exact rust-toolchain.toml. That transition flag describes repository implementation, not completed product acceptance. Guide, community, language documents, model metadata and training recipes cannot claim this Rust profile.
+
+The shared rust-checks job is scoped to core/examples/evals on hosted ARM64 macos-26 with a 20-minute limit. It runs tools/check_rust.py --provision: documentation explicitly skips without installing Rust; implementation provisions Rust 1.99.0 with rustfmt, clippy and wasm32-unknown-unknown, then runs Cargo metadata offline/locked, fmt, clippy with warnings denied, native tests/build and Wasm build for the explicitly reviewed wasm_packages library list in repository.json. Core must name at least one portable library; native-only examples/evals may declare an empty list and report Wasm not_applicable. Native server/filesystem packages are not compiled as Wasm. Selected names must resolve to owned workspace libraries. All features are covered. A failed command fails the gate; unsupported hosts, compiler overrides, Cargo configuration overrides, build scripts and external/non-workspace packages are rejected. This initial profile forbids development Cargo packages too; adding them needs a reviewed inventory/profile change. No third-party Rust provisioning action is added. Hosted macOS is not local M4 hardware acceptance; Wasm compilation does not prove browser execution.
+
+Schema ownership is role-specific: core keeps the two existing required schemas and may add locally resolved, validated schemas under ai-team-protocol. Other roles cannot own machine schemas; metadata/recipes belong in their owning repositories. The profile is an executable development tool, not runtime implementation. G04/G07 provide real toolchain/runtime evidence; current validator fixtures do not prove compilation, GPU, model, training or performance. Later milestones add controlled-hardware acceptance; public PRs never receive private data or deployment credentials.
 
 ## Updating the checkers
 
@@ -36,7 +40,7 @@ References: [GitHub workflow syntax](https://docs.github.com/en/actions/referenc
 
 ## Repository split checks
 
-Each checkout validates its own files, exact repository role, maintained-document coverage and reviewed fingerprints. Core alone owns and validates the two machine schemas. Local single-language checks cannot compare both product languages. Devguide additionally runs `tools/check_workspace.py --fetch` over immutable repository pins: all six product-document pairs and their reviewed hashes, API identifiers/operations, roadmap IDs, cross-repository links, migration destinations/removals and shared-tool copies. Missing peers, stale pins/hashes and broken targets fail; no fetched member script is executed. The source guard applies to every documentation-stage repository and must be replaced with real implementation gates before runtime source is added.
+Each checkout validates its own files, exact repository role, maintained-document coverage and reviewed fingerprints. Core alone owns and validates machine schemas, including the two required existing contracts. Local single-language checks cannot compare both product languages. Devguide additionally runs `tools/check_workspace.py --fetch` over immutable repository pins: all six product-document pairs and their reviewed hashes, API identifiers/operations, roadmap IDs, cross-repository links, migration destinations/removals and shared-tool copies. Missing peers, stale pins/hashes and broken targets fail; no fetched member script is executed. The source guard applies to every documentation-stage repository and must be replaced with real implementation gates before runtime source is added.
 
 Historical migration and current validation have separate inputs. [migration-snapshot.json](../../records/migration-snapshot.json) pins the accepted inventory and original destination commits; the checker reads Git blobs to verify all source, destination, previous-main and replaced-main hashes and rejects changes to the inventory itself. It does not compare today's maintained documents against historical destination hashes. Current translation fingerprints, API/roadmap parity, target existence, removal of core duplicates, navigation and shared-tool hashes still apply. A current edit needs reviewed current fingerprints and corresponding member pins; updating those never replaces historical evidence. Negative tests cover corrupt history, missing/escaping destinations, broken links, stale current fingerprints and restored originals.
 

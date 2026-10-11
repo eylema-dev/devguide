@@ -1,6 +1,6 @@
 # Tooling and dependency inventory
 
-Revision **0.1.0**. [Türkçe](../tr/tooling.md).
+Revision **0.3.0**. [Türkçe](../tr/tooling.md).
 
 The production target is owned Rust components with no third-party Cargo packages by default. This repository currently has no production code. CI tools do not become application dependencies. Linux, the browser, drivers, GPU interfaces and model artifacts are explicit platform inputs, not magically removed by using Rust.
 
@@ -10,9 +10,9 @@ The production target is owned Rust components with no third-party Cargo package
 | Transitive CI-only packages | attrs 26.1.0, jsonschema-specifications 2025.9.1, referencing 0.37.0, rpds-py 2026.9.1 | Locked with hashes alongside direct packages; none ships in the application |
 | GitHub checkout | actions/checkout v7.0.1, `3d3c42e5aac5ba805825da76410c181273ba90b1` | Official GitHub action; credentials not persisted |
 | Python provisioning | actions/setup-python v7.0.0, `5fda3b95a4ea91299a34e894583c3862153e4b97` | Official GitHub action; Python minor fixed to 3.14, patch version printed in CI |
-| Hosted environment | GitHub `ubuntu-24.04`, Git | Hosted image revisions may change; record runner/runtime versions when reproducing results |
+| Hosted environment | GitHub `ubuntu-24.04`, Git | The implementation job uses hosted ARM64 macos-26, separately from local M4 acceptance. Hosted image revisions may change; record runner/runtime versions when reproducing results |
 | Existing brand-asset rebuild only | Node.js and sharp | The [brand guide](https://github.com/eylema-dev/eylema/blob/main/assets/eylema-logo/README.md) records sharp 0.35.5 for the original export. Optional artwork tooling inherited from main; not installed by CI or used by the application. A reproducible rebuild lock is not supplied by this contribution change |
-| Planned production toolchain | Rust/Cargo, Wasm target tools | Exact version, target inventory and Rust checks selected in EYL-003; no Rust test is claimed today |
+| Reviewed implementation gate | Rust/Cargo 1.99.0, rustfmt, clippy, wasm32-unknown-unknown; first-party tools/check_rust.py | Installed only for implementation profile through hosted preinstalled rustup. No Rust execution is claimed while repositories remain documentation stage |
 | Planned training environment | Unsloth and its Python/accelerator dependencies | Separate pinned training image/recipe at M6; not installed or used by repository CI |
 
 Reproduce installation with `python -m pip install --require-hashes -r tools/requirements-ci.txt` in an isolated Python 3.14 environment. Updating a tool requires reviewing its release/provenance, resolving the complete dependency set, recording artifact SHA-256 values from PyPI, running tests with the new lock, and updating this inventory. GitHub action updates require an official release tag resolved to its full commit SHA. No automatic dependency updater is installed.
@@ -21,4 +21,6 @@ The first-party policy does not justify writing unreviewed cryptography, replaci
 
 ## Shared first-party validation tools
 
-Tooling revision 0.2.0 lives in devguide. Repository-local copies of the validators, generic regression tests, lockfile, workflow, issue forms and PR template are listed with SHA-256 fingerprints in tools/vendor.json. Devguide integration compares every listed copy against this source; intentional repository-specific schema tests remain in core. Updating the source requires linked updates to consumers and their repository-set pins. These are first-party development tools, not runtime components. The Git CLI downloads pinned public snapshots as data with bounded subprocess timeouts; no additional package or service is required.
+Tooling revision 0.3.0 lives in devguide. Repository-local copies of the validators, generic regression tests, lockfile, workflow, issue forms and PR template are listed with SHA-256 fingerprints in tools/vendor.json. Devguide integration compares every listed copy against this source; intentional repository-specific schema tests remain in core. Updating the source requires linked updates to consumers and their repository-set pins. These are first-party development tools, not runtime components. The Git CLI downloads pinned public snapshots as data with bounded subprocess timeouts; no additional package or service is required.
+
+The rust-v1 profile currently permits only workspace-local packages and no build scripts, including in development targets. Cargo metadata is checked before compiling. Rust distribution/toolchain, macOS SDK and browser remain platform inputs; runtime provenance still requires review. Rustup is a development provisioning tool, not an application dependency. Training remains separately inventoried and uninstalled.
