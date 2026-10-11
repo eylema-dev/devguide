@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "purpose": "Reviewed local bytes; split product translations are paired and pinned in devguide/tools/repository-set.json. Hashes do not prove semantic equivalence.",
+  "pairs": [
+    {
+      "en": "README.md",
+      "tr": "README.tr.md",
+      "en_sha256": "621865e42a8ce241a07b63e9840b018cbc16a425e7d06bcdc2a9ffe695acebd8",
+      "tr_sha256": "b41787808b44f4348cae72be51569ade2f19a771f50073f9871ff6e64271e185"
+    },
+    {
+      "en": "CONTRIBUTING.md",
+      "tr": "CONTRIBUTING.tr.md",
+      "en_sha256": "7af96a9fc7dd534b15b9117462aa7f6712cc84421196b8e5b727ccf3e2ace944",
+      "tr_sha256": "0b68aa88a1d9d53b082a2283ed3f78511f437b8efb9ae184e216ea91b7e24d2f"
+    },
+    {
+      "en": "docs/en/name-availability.md",
+      "tr": "docs/tr/name-availability.md",
+      "en_sha256": "2ef68f4ce57281d231addfab7f4b0c41e10adfdac1dfd9074b9fe7344212cc23",
+      "tr_sha256": "c05af741be2ba9fd4366dd69c3d78e7d6deceaf405df1cbd2bd4f6382f92a0f8"
+    },
+    {
+      "en": "docs/en/quality-gates.md",
+      "tr": "docs/tr/quality-gates.md",
+      "en_sha256": "3614f88cc8323b1e6a83d123fe87025d3ae3607f7e8d7e8a7f94b8ed29d6f853",
+      "tr_sha256": "562ac0a31164e672475d9fc78f3d64d5ee10cb875c572fcd6cddb49c552116c8"
+    },
+    {
+      "en": "docs/en/repository-map.md",
+      "tr": "docs/tr/repository-map.md",
+      "en_sha256": "4fd9645fa41388bb16518ee5e12ef1ab24e6925d82ed857833507495df4325f5",
+      "tr_sha256": "986aaf51ee720ea6ff350253b08d9ba1e1483e5d1424ed58bd976d0fed679585"
+    },
+    {
+      "en": "docs/en/repository-migration.md",
+      "tr": "docs/tr/repository-migration.md",
+      "en_sha256": "f35ee94caa76163370ae7752788e3fc04de4917265684a078fe94fa48f5122db",
+      "tr_sha256": "8a2767ab8105283e448c590558df07c853f0c7d6c9613eab2737c0a8be1d5a7c"
+    },
+    {
+      "en": "docs/en/repository-setup.md",
+      "tr": "docs/tr/repository-setup.md",
+      "en_sha256": "33235d24fcff9a7fc4820f52e4279b1bfd1235b608c7b25e6c2a1ef073f351bf",
+      "tr_sha256": "2a4cc8f744758aa928365d6ea4044b48f8abd0b18f9c8c22e9b52443306749ee"
+    },
+    {
+      "en": "docs/en/tooling.md",
+      "tr": "docs/tr/tooling.md",
+      "en_sha256": "9a2aba99784aa27914374e1be959b20e735335d665f18368c1f8e5360a843dda",
+      "tr_sha256": "7004096e6ffaf0b8789b7da138b286a14a698d7ce416b7f3488a6c4c7846b2c1"
+    }
+  ],
+  "documents": []
+}

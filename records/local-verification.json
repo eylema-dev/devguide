@@ -1,0 +1,66 @@
+{
+  "task": "repository-split-r2",
+  "environment": {
+    "os": "macOS 27.0.1 (26A434)",
+    "architecture": "arm64",
+    "python": "3.14.8",
+    "git": "2.56.0"
+  },
+  "revision": "member revisions in tools/repository-set.json; devguide PR head, exact SHAs recorded by CI",
+  "results": {
+    "locked_environment_setup": {
+      "status": "passed",
+      "repositories": 9
+    },
+    "unit_regressions": {
+      "status": "passed",
+      "core_tests": 20,
+      "devguide_tests": 22,
+      "other_repository_tests_each": 17
+    },
+    "repository_check": {
+      "status": "passed",
+      "repositories": 9
+    },
+    "pr_template_structure": {
+      "status": "passed",
+      "repositories": 9,
+      "limit": "Blank template only; real PR bodies are checked separately."
+    },
+    "whitespace": {
+      "status": "passed",
+      "staged_and_unstaged": true
+    },
+    "repository_set_local_and_remote_fetch": {
+      "status": "passed",
+      "repositories": 9,
+      "product_translation_pairs": 6,
+      "api_operations": 20,
+      "migration_destinations": 26,
+      "markdown_documents": 110
+    },
+    "independent_review": {
+      "status": "not_run",
+      "reason": "No separate reviewer was used; maintainer review remains pending."
+    },
+    "post_merge_navigation": {
+      "status": "not_run",
+      "reason": "No merge authorized or performed; pinned-commit navigation was verified."
+    },
+    "runtime_gpu_models_training": {
+      "status": "not_applicable",
+      "reason": "Only documentation and repository tooling changed; no runtime or hardware support is claimed."
+    }
+  },
+  "commands": [
+    "python3 -m venv .venv",
+    ".venv/bin/python -m pip install --require-hashes -r tools/requirements-ci.txt",
+    ".venv/bin/python -m unittest discover -s tools/tests -v",
+    ".venv/bin/python tools/check_repository.py",
+    ".venv/bin/python tools/check_pr.py --body-file .github/PULL_REQUEST_TEMPLATE.md --allow-template",
+    "git diff --check",
+    "git diff --cached --check",
+    ".venv/bin/python tools/check_workspace.py --fetch"
+  ],
+  "repair_note": "A staged whitespace check caught trailing blank lines in a generated test file; corrected without weakening the gate. Final local gates passed."
+}
