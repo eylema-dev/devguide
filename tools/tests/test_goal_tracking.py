@@ -92,7 +92,11 @@ class GoalTrackingTests(unittest.TestCase):
         with patch('check_goal_tracking.subprocess.run',return_value=subprocess.CompletedProcess([],1,'','HTTP 404')):self.assertIsNone(protection('eylema-dev/devguide'))
 
     def test_remote_issue_mismatch_fails_before_delivery_network(self):
-        goal=self.records[1]['goals'][8]
+        # Model an unaccepted issue explicitly; live G08 completion must not
+        # turn this pre-delivery metadata fixture into a merged-proof audit.
+        goal=copy.deepcopy(self.records[1]['goals'][8])
+        goal['status']='review';goal['accepted_delivery']=None
+        goal['labels']=[x for x in goal['labels'] if not x.startswith('status:')]+['status:review']
         issue={'html_url':goal['issue']['url'],'body':'<!-- eylema-goal:'+goal['id']+':v1 -->','state':'open','labels':[{'name':x} for x in goal['labels']],'milestone':goal['milestone']}
         with patch('check_goal_tracking.api',return_value=issue):self.assertEqual(audit_goal(goal),goal['id'])
         for mode in ('pr','body','state','labels','milestone'):
