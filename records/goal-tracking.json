@@ -1,0 +1,1980 @@
+{
+  "format_version": 1,
+  "task": "G05",
+  "observed_at": "2026-10-11T18:04:01.773978+00:00",
+  "source_cards": "records/goal-index.json",
+  "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
+  "states": [
+    "backlog",
+    "ready",
+    "implementing",
+    "verification",
+    "review",
+    "ready_for_maintainer",
+    "accepted"
+  ],
+  "goals": [
+    {
+      "id": "G00",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 2,
+        "url": "https://github.com/eylema-dev/devguide/issues/2"
+      },
+      "status": "accepted",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/devguide/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:accepted",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation"
+      ],
+      "dependencies": [],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/3",
+          "head": "457d890650740b63a20e61a1e869c0c430401270",
+          "main": "b5c8ccb2855c333e5f751fa1736b5db8d87db5fd",
+          "tree": "3357cac63d226d750d36c312addea3050f72a3a6",
+          "main_ci": {
+            "id": 38155477086,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38155477086",
+            "head": "b5c8ccb2855c333e5f751fa1736b5db8d87db5fd",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "457d890650740b63a20e61a1e869c0c430401270",
+            "reviewer": "g00_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G01",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/devguide/issues/4"
+      },
+      "status": "accepted",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/devguide/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:accepted",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation"
+      ],
+      "dependencies": [
+        "G00"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/5",
+          "head": "747a2ea6b85b7c85c92b247d3ca4531277109a6b",
+          "main": "1d49a184af88ab9c8d2db00c333dda3c193339e6",
+          "tree": "79161b83e8c670390040444e00e69798d1c85712",
+          "main_ci": {
+            "id": 38156264629,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38156264629",
+            "head": "1d49a184af88ab9c8d2db00c333dda3c193339e6",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "747a2ea6b85b7c85c92b247d3ca4531277109a6b",
+            "reviewer": "g01_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G02",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 6,
+        "url": "https://github.com/eylema-dev/devguide/issues/6"
+      },
+      "status": "accepted",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/devguide/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:accepted",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation"
+      ],
+      "dependencies": [
+        "G01"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/5",
+          "head": "6f44ed55dee1c42b015eea37bc91b3270a3c89d3",
+          "main": "9e3b5caa96d75f0a522d909d80de275f776404a2",
+          "tree": "cf6a1136a00fcbae858ba89c1b9dc45da0ad91c1",
+          "main_ci": {
+            "id": 38157850839,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38157850839",
+            "head": "9e3b5caa96d75f0a522d909d80de275f776404a2",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "6f44ed55dee1c42b015eea37bc91b3270a3c89d3",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-docs-en",
+          "pr": "https://github.com/eylema-dev/eylema-docs-en/pull/2",
+          "head": "cfa29a9bff26283948405ffb389e9480dd54fc30",
+          "main": "1d4f8d686a1612e4c21d87786661a1a5ae9e2845",
+          "tree": "4a0a1df3bda619fc84f46ff14cad313aeff98b8c",
+          "main_ci": {
+            "id": 38157883397,
+            "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38157883397",
+            "head": "1d4f8d686a1612e4c21d87786661a1a5ae9e2845",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "cfa29a9bff26283948405ffb389e9480dd54fc30",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-docs-tr",
+          "pr": "https://github.com/eylema-dev/eylema-docs-tr/pull/2",
+          "head": "222fd8fbc96b2546371b0d5603baf9cd8c9a2040",
+          "main": "4eea5816c8f216987296b9105586a47c236e3367",
+          "tree": "7e6c9183a8a55721c9371f9971e2ebd8693bf716",
+          "main_ci": {
+            "id": 38157863689,
+            "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38157863689",
+            "head": "4eea5816c8f216987296b9105586a47c236e3367",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "222fd8fbc96b2546371b0d5603baf9cd8c9a2040",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/.github",
+          "pr": "https://github.com/eylema-dev/.github/pull/2",
+          "head": "ee6e5276214054b9ab5978ddd88824940c67bee9",
+          "main": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+          "tree": "947dcc5fbde34ad8c6181ab0e6b14aedfe62b83b",
+          "main_ci": {
+            "id": 38157875658,
+            "url": "https://github.com/eylema-dev/.github/actions/runs/38157875658",
+            "head": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "ee6e5276214054b9ab5978ddd88824940c67bee9",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-examples",
+          "pr": "https://github.com/eylema-dev/eylema-examples/pull/2",
+          "head": "9bb43a4789bb3d6e6e0afd1a3473dec87e4a8ba0",
+          "main": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+          "tree": "988aa360f047ccd3a25d65a593442fe3cdf554a3",
+          "main_ci": {
+            "id": 38157873915,
+            "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38157873915",
+            "head": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "9bb43a4789bb3d6e6e0afd1a3473dec87e4a8ba0",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-evals",
+          "pr": "https://github.com/eylema-dev/eylema-evals/pull/2",
+          "head": "97917818419f39b86b705a7f0331aa0f02e19633",
+          "main": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+          "tree": "af603e64936fd61387ffe323141e5742f3760f56",
+          "main_ci": {
+            "id": 38157883517,
+            "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38157883517",
+            "head": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "97917818419f39b86b705a7f0331aa0f02e19633",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/2",
+          "head": "c3ddb3acf36d5f81133ec6fb9168cbb61582ad2c",
+          "main": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+          "tree": "f2ad1c016849ce171d7243947a60214f7d408bda",
+          "main_ci": {
+            "id": 38157882043,
+            "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38157882043",
+            "head": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "c3ddb3acf36d5f81133ec6fb9168cbb61582ad2c",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-training",
+          "pr": "https://github.com/eylema-dev/eylema-training/pull/2",
+          "head": "84b7dd9bf0799ed2577a9b1fd47d0d08ccdd3478",
+          "main": "869306b3432e996ca7823e62b98c54880d8ee96e",
+          "tree": "92b9403fa16864edcd5c51ee5df254465d217f35",
+          "main_ci": {
+            "id": 38157915719,
+            "url": "https://github.com/eylema-dev/eylema-training/actions/runs/38157915719",
+            "head": "869306b3432e996ca7823e62b98c54880d8ee96e",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "84b7dd9bf0799ed2577a9b1fd47d0d08ccdd3478",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/7",
+          "head": "1af134d7ce12cc584a25524d85f9c0a1beb9556f",
+          "main": "8501e496f5c1f93764a253869ea0d7fb673c349f",
+          "tree": "7e24a37c170c3547c2067ade42678fce385353a9",
+          "main_ci": {
+            "id": 38158029778,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38158029778",
+            "head": "8501e496f5c1f93764a253869ea0d7fb673c349f",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "1af134d7ce12cc584a25524d85f9c0a1beb9556f",
+            "reviewer": "g02_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G03",
+      "repository": "eylema-dev/eylema-docs-en",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-docs-en/issues/3"
+      },
+      "status": "accepted",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/eylema-docs-en/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:accepted",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation",
+        "planning:EYL-002",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G02"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-002"
+      ],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/6",
+          "head": "25c2209a20417b7398e2e7ddbc3485b75df59b75",
+          "main": "a07f3f6ccf3b564635da70f00bd73aadbb7d6a7f",
+          "tree": "1f4c66a0c5add7ab543aba4789731d9aaf5cc13d",
+          "main_ci": {
+            "id": 38159565181,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38159565181",
+            "head": "a07f3f6ccf3b564635da70f00bd73aadbb7d6a7f",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "25c2209a20417b7398e2e7ddbc3485b75df59b75",
+            "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-docs-en",
+          "pr": "https://github.com/eylema-dev/eylema-docs-en/pull/4",
+          "head": "bb729ff4ec8df3a0b6dfdb1211dfcc763a896a30",
+          "main": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+          "tree": "aecb76b68000f3a04dab03490a7a51c06304f9bd",
+          "main_ci": {
+            "id": 38159546068,
+            "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38159546068",
+            "head": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "bb729ff4ec8df3a0b6dfdb1211dfcc763a896a30",
+            "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-docs-tr",
+          "pr": "https://github.com/eylema-dev/eylema-docs-tr/pull/3",
+          "head": "95aa9efd876980838acbf4c7a7ee2f0e70758e99",
+          "main": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+          "tree": "2a6890dc5c91746d1f1e69ed7c6a2f684b1dc95c",
+          "main_ci": {
+            "id": 38159547271,
+            "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38159547271",
+            "head": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "95aa9efd876980838acbf4c7a7ee2f0e70758e99",
+            "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/8",
+          "head": "4b0279b1dda15ec2dfb37d6df42017d8eb175c2c",
+          "main": "7760167ab4b6fe20ebeab37e0da62a4f7c51bc42",
+          "tree": "2609b3637dbd2ba0f4c7be683f4ff9f624d2fa68",
+          "main_ci": {
+            "id": 38159555419,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38159555419",
+            "head": "7760167ab4b6fe20ebeab37e0da62a4f7c51bc42",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "4b0279b1dda15ec2dfb37d6df42017d8eb175c2c",
+            "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G04",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 7,
+        "url": "https://github.com/eylema-dev/eylema/issues/7"
+      },
+      "status": "accepted",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/eylema/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:accepted",
+        "priority:unranked",
+        "milestone:M0",
+        "type:tooling",
+        "planning:EYL-002",
+        "planning:EYL-003",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G03"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-002",
+        "EYL-003"
+      ],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/8",
+          "head": "7871d810f50033d82651dc2b54f9ef7a127a5036",
+          "main": "ba4f3e2bd73688c3e39372c7ad24daf7336e9768",
+          "tree": "469c0132c5da32d26c39659981e8b6d1904e2a7c",
+          "main_ci": {
+            "id": 38161326019,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38161326019",
+            "head": "ba4f3e2bd73688c3e39372c7ad24daf7336e9768",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "7871d810f50033d82651dc2b54f9ef7a127a5036",
+            "reviewer": "g04_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/9",
+          "head": "867c26c8129613e8c32c0a61560d28590569d3bf",
+          "main": "ac2d950026cac79128df48492aae62f3f93be37e",
+          "tree": "959bfa40d48f78107651950f34a34ebea76f4287",
+          "main_ci": {
+            "id": 38161333379,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38161333379",
+            "head": "ac2d950026cac79128df48492aae62f3f93be37e",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "867c26c8129613e8c32c0a61560d28590569d3bf",
+            "reviewer": "g04_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G05",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 10,
+        "url": "https://github.com/eylema-dev/devguide/issues/10"
+      },
+      "status": "review",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/devguide/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation",
+        "status:review"
+      ],
+      "dependencies": [
+        "G02",
+        "G03"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Separate exact-head review and current CI pending; protection administration requires separate real maintainer authorization"
+      ]
+    },
+    {
+      "id": "G06",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 11,
+        "url": "https://github.com/eylema-dev/devguide/issues/11"
+      },
+      "status": "ready",
+      "milestone": {
+        "id": "M0",
+        "number": 1,
+        "title": "M0 \u2014 Contribution foundation",
+        "url": "https://github.com/eylema-dev/devguide/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:ready",
+        "priority:unranked",
+        "milestone:M0",
+        "type:documentation",
+        "blocked:license",
+        "planning:EYL-001"
+      ],
+      "dependencies": [
+        "G00"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-001"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Real maintainer license/contribution decision pending"
+      ]
+    },
+    {
+      "id": "G07",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 9,
+        "url": "https://github.com/eylema-dev/eylema/issues/9"
+      },
+      "status": "ready",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:ready",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "planning:EYL-003",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-003"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": []
+    },
+    {
+      "id": "G08",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 10,
+        "url": "https://github.com/eylema-dev/eylema/issues/10"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-004",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G07"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G09",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 11,
+        "url": "https://github.com/eylema-dev/eylema/issues/11"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G08"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G10",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 12,
+        "url": "https://github.com/eylema-dev/eylema/issues/12"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-004",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G08",
+        "G09"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G11",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 13,
+        "url": "https://github.com/eylema-dev/eylema/issues/13"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-004",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G10"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G12",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 14,
+        "url": "https://github.com/eylema-dev/eylema/issues/14"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-005",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G10"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-005"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G13",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 15,
+        "url": "https://github.com/eylema-dev/eylema/issues/15"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-005",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G11",
+        "G12"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-005"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G14",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 16,
+        "url": "https://github.com/eylema-dev/eylema/issues/16"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-006",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G15",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 17,
+        "url": "https://github.com/eylema-dev/eylema/issues/17"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-006",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G14"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G16",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 18,
+        "url": "https://github.com/eylema-dev/eylema/issues/18"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-006",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G14",
+        "G15"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G17",
+      "repository": "eylema-dev/eylema-examples",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-examples/issues/3"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M2",
+        "number": 1,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema-examples/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-006",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G16"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G18",
+      "repository": "eylema-dev/eylema-evals",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-evals/issues/3"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M3",
+        "number": 1,
+        "title": "M3 \u2014 M4 Metal and browser WebGPU acceptance",
+        "url": "https://github.com/eylema-dev/eylema-evals/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M3",
+        "type:evaluation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G17"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G19",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 19,
+        "url": "https://github.com/eylema-dev/eylema/issues/19"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M3",
+        "number": 4,
+        "title": "M3 \u2014 M4 Metal and browser WebGPU acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/4"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M3",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-007",
+        "platform:macos",
+        "platform:metal"
+      ],
+      "dependencies": [
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-007"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G20",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 20,
+        "url": "https://github.com/eylema-dev/eylema/issues/20"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M3",
+        "number": 4,
+        "title": "M3 \u2014 M4 Metal and browser WebGPU acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/4"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M3",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-007",
+        "platform:macos",
+        "platform:webgpu"
+      ],
+      "dependencies": [
+        "G17",
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-007"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G21",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 21,
+        "url": "https://github.com/eylema-dev/eylema/issues/21"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M3",
+        "number": 4,
+        "title": "M3 \u2014 M4 Metal and browser WebGPU acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/4"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M3",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos",
+        "platform:metal",
+        "platform:webgpu"
+      ],
+      "dependencies": [
+        "G19",
+        "G20"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G22",
+      "repository": "eylema-dev/eylema-evals",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-evals/issues/4"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M3",
+        "number": 1,
+        "title": "M3 \u2014 M4 Metal and browser WebGPU acceptance",
+        "url": "https://github.com/eylema-dev/eylema-evals/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M3",
+        "type:evaluation",
+        "blocked:dependency",
+        "platform:macos",
+        "platform:metal",
+        "platform:webgpu"
+      ],
+      "dependencies": [
+        "G21"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G23",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 22,
+        "url": "https://github.com/eylema-dev/eylema/issues/22"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M4",
+        "number": 5,
+        "title": "M4 \u2014 Bounded placement policy and world model",
+        "url": "https://github.com/eylema-dev/eylema/milestone/5"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M4",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G18",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G24",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 23,
+        "url": "https://github.com/eylema-dev/eylema/issues/23"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M4",
+        "number": 5,
+        "title": "M4 \u2014 Bounded placement policy and world model",
+        "url": "https://github.com/eylema-dev/eylema/milestone/5"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M4",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos",
+        "platform:metal"
+      ],
+      "dependencies": [
+        "G19",
+        "G23"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G25",
+      "repository": "eylema-dev/eylema-examples",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-examples/issues/4"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M4",
+        "number": 2,
+        "title": "M4 \u2014 Bounded placement policy and world model",
+        "url": "https://github.com/eylema-dev/eylema-examples/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M4",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G20",
+        "G23"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G26",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 24,
+        "url": "https://github.com/eylema-dev/eylema/issues/24"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M4",
+        "number": 5,
+        "title": "M4 \u2014 Bounded placement policy and world model",
+        "url": "https://github.com/eylema-dev/eylema/milestone/5"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M4",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G24",
+        "G25"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G27",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/3"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 1,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema-models/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "planning:EYL-008",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G03",
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-008"
+      ],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G28",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 25,
+        "url": "https://github.com/eylema-dev/eylema/issues/25"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 6,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema/milestone/6"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G09",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G29",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 26,
+        "url": "https://github.com/eylema-dev/eylema/issues/26"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 6,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema/milestone/6"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G30",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 27,
+        "url": "https://github.com/eylema-dev/eylema/issues/27"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 6,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema/milestone/6"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G31",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 28,
+        "url": "https://github.com/eylema-dev/eylema/issues/28"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 6,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema/milestone/6"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos",
+        "platform:metal"
+      ],
+      "dependencies": [
+        "G24",
+        "G30"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G32",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 29,
+        "url": "https://github.com/eylema-dev/eylema/issues/29"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M5",
+        "number": 6,
+        "title": "M5 \u2014 Pinned Qwen3 CPU and Metal inference",
+        "url": "https://github.com/eylema-dev/eylema/milestone/6"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M5",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos",
+        "platform:metal",
+        "platform:webgpu"
+      ],
+      "dependencies": [
+        "G22",
+        "G26",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G33",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 30,
+        "url": "https://github.com/eylema-dev/eylema/issues/30"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M6",
+        "number": 7,
+        "title": "M6 \u2014 Same-device assignment and permitted local learning",
+        "url": "https://github.com/eylema-dev/eylema/milestone/7"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M6",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G32"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G34",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/3"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M6",
+        "number": 1,
+        "title": "M6 \u2014 Same-device assignment and permitted local learning",
+        "url": "https://github.com/eylema-dev/eylema-training/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M6",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G33"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G35",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/4"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M6",
+        "number": 1,
+        "title": "M6 \u2014 Same-device assignment and permitted local learning",
+        "url": "https://github.com/eylema-dev/eylema-training/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M6",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G27",
+        "G34"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G36",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 5,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/5"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M6",
+        "number": 1,
+        "title": "M6 \u2014 Same-device assignment and permitted local learning",
+        "url": "https://github.com/eylema-dev/eylema-training/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M6",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G31",
+        "G35"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G37",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/4"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M6",
+        "number": 2,
+        "title": "M6 \u2014 Same-device assignment and permitted local learning",
+        "url": "https://github.com/eylema-dev/eylema-models/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M6",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G36"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G38",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 31,
+        "url": "https://github.com/eylema-dev/eylema/issues/31"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G05",
+        "G17"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G39",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 32,
+        "url": "https://github.com/eylema-dev/eylema/issues/32"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G38"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G40",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 33,
+        "url": "https://github.com/eylema-dev/eylema/issues/33"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G41",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 34,
+        "url": "https://github.com/eylema-dev/eylema/issues/34"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G42",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 35,
+        "url": "https://github.com/eylema-dev/eylema/issues/35"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G38",
+        "G39",
+        "G40",
+        "G41"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G43",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 36,
+        "url": "https://github.com/eylema-dev/eylema/issues/36"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G42"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G44",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 37,
+        "url": "https://github.com/eylema-dev/eylema/issues/37"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "M7",
+        "number": 8,
+        "title": "M7 \u2014 Real Codex/Claude delivery and full macOS acceptance",
+        "url": "https://github.com/eylema-dev/eylema/milestone/8"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:M7",
+        "type:implementation",
+        "blocked:dependency",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42",
+        "G43"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "G45",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 38,
+        "url": "https://github.com/eylema-dev/eylema/issues/38"
+      },
+      "status": "backlog",
+      "milestone": {
+        "id": "release",
+        "number": 9,
+        "title": "release \u2014 Experimental distribution rights and packaging",
+        "url": "https://github.com/eylema-dev/eylema/milestone/9"
+      },
+      "labels": [
+        "goal",
+        "status:backlog",
+        "priority:unranked",
+        "milestone:release",
+        "type:implementation",
+        "blocked:dependency"
+      ],
+      "dependencies": [
+        "G06",
+        "G44"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": [
+        "Accepted dependency deliveries pending"
+      ]
+    },
+    {
+      "id": "W01",
+      "repository": "eylema-dev/eylemadotdev",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylemadotdev/issues/4"
+      },
+      "status": "ready",
+      "milestone": {
+        "id": "website",
+        "number": 1,
+        "title": "website \u2014 Truthful bilingual website",
+        "url": "https://github.com/eylema-dev/eylemadotdev/milestone/1"
+      },
+      "labels": [
+        "goal",
+        "status:ready",
+        "priority:unranked",
+        "milestone:website",
+        "type:documentation",
+        "platform:macos"
+      ],
+      "dependencies": [
+        "G03"
+      ],
+      "conditional_dependencies": {
+        "working_product_claims": [
+          "G44"
+        ]
+      },
+      "related_eyl": [],
+      "accepted_delivery": null,
+      "waiting_reasons": []
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "format_version": 1,
+  "goal": "G05",
+  "status": "prepared; separately authorized administration write required",
+  "observed_at": "2026-10-11T17:54:50.674562+00:00",
+  "repositories": {
+    "eylema-dev/eylema": {
+      "source_main": "ba4f3e2bd73688c3e39372c7ad24daf7336e9768",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "ba4f3e2bd73688c3e39372c7ad24daf7336e9768",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema/actions/runs/38161326019/job/114534673557"
+        },
+        {
+          "name": "rust-checks",
+          "head": "ba4f3e2bd73688c3e39372c7ad24daf7336e9768",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema/actions/runs/38161326019/job/114534673372"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            },
+            {
+              "context": "rust-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/devguide": {
+      "source_main": "ac2d950026cac79128df48492aae62f3f93be37e",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "ac2d950026cac79128df48492aae62f3f93be37e",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/devguide/actions/runs/38161333379/job/114534694497"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-docs-en": {
+      "source_main": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38159546068/job/114529399424"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-docs-tr": {
+      "source_main": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38159547271/job/114529403312"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/.github": {
+      "source_main": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/.github/actions/runs/38157875658/job/114524481481"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-examples": {
+      "source_main": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38157873915/job/114524477230"
+        },
+        {
+          "name": "rust-checks",
+          "head": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38157873915/job/114524476872"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            },
+            {
+              "context": "rust-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-evals": {
+      "source_main": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+      "required_check_sources": [
+        {
+          "name": "rust-checks",
+          "head": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38157883517/job/114524507343"
+        },
+        {
+          "name": "repository-checks",
+          "head": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38157883517/job/114524507072"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            },
+            {
+              "context": "rust-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-models": {
+      "source_main": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38157882043/job/114524500561"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylema-training": {
+      "source_main": "869306b3432e996ca7823e62b98c54880d8ee96e",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "869306b3432e996ca7823e62b98c54880d8ee96e",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-training/actions/runs/38157915719/job/114524601352"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    },
+    "eylema-dev/eylemadotdev": {
+      "source_main": "878d785242fe75065e255c0fa44630aa4886ff8f",
+      "required_check_sources": [
+        {
+          "name": "repository-checks",
+          "head": "878d785242fe75065e255c0fa44630aa4886ff8f",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylemadotdev/actions/runs/38150198175/job/114501877953"
+        }
+      ],
+      "request": {
+        "required_status_checks": {
+          "strict": true,
+          "contexts": [],
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "enforce_admins": true,
+        "required_pull_request_reviews": {
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false
+        },
+        "restrictions": null,
+        "required_conversation_resolution": true,
+        "allow_force_pushes": false,
+        "allow_deletions": false,
+        "required_linear_history": false,
+        "lock_branch": false,
+        "allow_fork_syncing": false
+      }
+    }
+  },
+  "excluded": [
+    "deployment/release",
+    "license selection",
+    "collaborators/token scopes",
+    "new spending",
+    "requiring one unavailable second human approval",
+    "website deploy check"
+  ]
+}
