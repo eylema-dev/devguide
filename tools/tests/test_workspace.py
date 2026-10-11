@@ -129,22 +129,36 @@ class WorkspaceTests(unittest.TestCase):
                 if i<21:
                     row.update(previous_main_path=f'old/{i}.md',previous_main_revision='c'*40,previous_main_sha256=h(b'old'))
                     blobs[('eylema-dev/eylema','c'*40,row['previous_main_path'])]=b'old'
+                if i>=23:
+                    row.update(replaced_main_path=f'contributor/{i}.md',replaced_main_revision='c'*40,replaced_main_sha256=h(b'replaced'))
+                    blobs[('eylema-dev/eylema','c'*40,row['replaced_main_path'])]=b'replaced'
                 documents.append(row)
             original=json.dumps({'documents':documents}).encode()
             inventory=guide/'records/document-migration.json'
             inventory.write_bytes(original)
             snapshot['inventory']['sha256']=h(original)
             blobs[('eylema-dev/devguide','a'*40,'records/document-migration.json')]=original
-            with patch('check_workspace.historical_bytes',side_effect=lambda roots,repo,rev,path:blobs[(repo,rev,path)]):
+            def read_blob(roots,repo,rev,path):
+                key=(repo,rev,path)
+                if key not in blobs:
+                    raise CheckFailure('Missing historical fixture artifact')
+                return blobs[key]
+            with patch('check_workspace.historical_bytes',side_effect=read_blob):
                 self.assertEqual(validate_historical_migration(guide,{},snapshot),26)
                 inventory.write_bytes(original+b' ')
                 with self.assertRaises(CheckFailure): validate_historical_migration(guide,{},snapshot)
                 inventory.write_bytes(original)
                 for key in [('eylema-dev/eylema','b'*40,'source/0.md'),
                             ('eylema-dev/devguide','a'*40,'docs/0.md'),
-                            ('eylema-dev/eylema','c'*40,'old/0.md')]:
+                            ('eylema-dev/eylema','c'*40,'old/0.md'),
+                            ('eylema-dev/eylema','c'*40,'contributor/23.md'),
+                            ('eylema-dev/eylema','c'*40,'contributor/24.md'),
+                            ('eylema-dev/eylema','c'*40,'contributor/25.md')]:
                     before=blobs[key];blobs[key]=b'corrupted'
                     with self.subTest(key=key), self.assertRaises(CheckFailure):
+                        validate_historical_migration(guide,{},snapshot)
+                    del blobs[key]
+                    with self.subTest(missing=key), self.assertRaises(CheckFailure):
                         validate_historical_migration(guide,{},snapshot)
                     blobs[key]=before
                 bad=copy.deepcopy(snapshot);bad['inventory']['sha256']='d'*64

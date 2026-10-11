@@ -192,9 +192,10 @@ def validate_historical_migration(guide, roots, snapshot):
         ]:
             actual = historical_bytes(roots, repository, revision, path)
             require(hashlib.sha256(actual).hexdigest() == expected, f'Historical {prefix} hash mismatch: {path}')
-        if row.get('previous_main_path'):
-            actual = historical_bytes(roots, row['source_repository'], row['previous_main_revision'], row['previous_main_path'])
-            require(hashlib.sha256(actual).hexdigest() == row['previous_main_sha256'], 'Historical previous-main hash mismatch')
+        for prefix in ('previous_main', 'replaced_main'):
+            if row.get(prefix + '_path'):
+                actual = historical_bytes(roots, row['source_repository'], row[prefix + '_revision'], row[prefix + '_path'])
+                require(hashlib.sha256(actual).hexdigest() == row[prefix + '_sha256'], f'Historical {prefix} hash mismatch')
     return len(documents)
 
 
