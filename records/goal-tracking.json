@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "task": "G05",
-  "observed_at": "2026-10-11T18:04:01.773978+00:00",
+  "observed_at": "2026-10-11T18:21:12.844371+00:00",
   "source_cards": "records/goal-index.json",
   "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
   "states": [
@@ -552,7 +552,7 @@
         "number": 9,
         "url": "https://github.com/eylema-dev/eylema/issues/9"
       },
-      "status": "ready",
+      "status": "review",
       "milestone": {
         "id": "M1",
         "number": 2,
@@ -561,12 +561,12 @@
       },
       "labels": [
         "goal",
-        "status:ready",
         "priority:unranked",
         "milestone:M1",
         "type:implementation",
         "planning:EYL-003",
-        "platform:macos"
+        "platform:macos",
+        "status:review"
       ],
       "dependencies": [
         "G02",
@@ -578,7 +578,9 @@
         "EYL-003"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": []
+      "waiting_reasons": [
+        "Implementation/native gates passed; separate final-head review and current PR CI pending"
+      ]
     },
     {
       "id": "G08",
