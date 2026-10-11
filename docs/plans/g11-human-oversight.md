@@ -1,6 +1,6 @@
 # G11 — Human oversight
 
-Revision3; eylema-dev/eylema#13 / EYL-004. Accepted G10 core main 9dbcb1ca4b48c8ca3ae01df43ebfa19209ec1841 and guide main 9ec707de516f2393b4930f64a051f790da26a177 passed separate exact-head review, current PR CI, matching reviewed trees and mainCI38170174463/38170181946.
+Revision4; eylema-dev/eylema#13 / EYL-004. Accepted G10 core main 9dbcb1ca4b48c8ca3ae01df43ebfa19209ec1841 and guide main 9ec707de516f2393b4930f64a051f790da26a177 passed separate exact-head review, current PR CI, matching reviewed trees and mainCI38170174463/38170181946.
 
 Actual user requests all accepted Goals and standing scoped merges after separate review/currentCI. G05 retained settings/prepared proposal. No license/deploy/admin/access/spending authority.
 
@@ -14,6 +14,8 @@ Core scope: crates/eylema-runtime/, tools/work-plans/g11.json, docs/en/human-ove
 
 Current Codex architect/implementer/verifier; fresh separate gpt-6.1-sol/high reviewer planned, hidden identity unverifiable. Budget120active minutes/3targeted repairs/zero spending. Stop unresolved required failure, missing authority/hardware or budget exhaustion. Revert scoped runtime/docs/pins/tracking through reviewed PR; preserve accepted G10, settings, license boundary, frozen records and original dirty work.
 
-Revision3 checks immutable trusted-host task oversight independently of request fields. Policy-revision advance cannot remove obligations; this is not a general policy-candidate activation API.
+Revision4 checks immutable trusted-host task oversight independently of request fields. Policy-revision advance cannot remove obligations; this is not a general policy-candidate activation API.
 
-Local passed evidence: exact six AGENTS commands (core43Python/guide45Python), unchanged Rust inventory/fmt/clippy/60native tests/build/selected contracts-platform Wasm, actual native cancel/revoke/late scenarios with SystemTime/CommonCrypto/Security and explicit simulated-person host attestation. Fifteen new oversight tests; one module-visibility compile failure repaired before passing gates without weakening checks. Core author c54836cdf4057e9a1b5d79f297974ac7953b802e; final separate review/current CI/merge/mainCI/tree proof remain pending.
+Local passed evidence: exact six AGENTS commands (core43Python/guide45Python), unchanged Rust inventory/fmt/clippy/62native tests/build/selected contracts-platform Wasm, actual native cancel/revoke/late scenarios with SystemTime/CommonCrypto/Security and explicit simulated-person host attestation. Seventeen new oversight tests; one module-visibility compile failure repaired before passing gates without weakening checks. Repaired core author edbec25f1b44ada352a06a90a02f21f448873b06; final separate review/current CI/merge/mainCI/tree proof remain pending.
+
+Revision4: separate reviewer reproduced a blocking multi-resource task/action/controller mismatch at original author c54836cdf4057e9a1b5d79f297974ac7953b802e. Repair2 requires full task scope for accepted/declared intervention and observation; new multi-resource regressions prevent unsupported admission. Original review is failed, renewed exact-head review/current CI required; no old-head pass is reused.
