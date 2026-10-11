@@ -317,5 +317,12 @@
       "rulesets": []
     }
   },
-  "projects": "not_run; optional; no access scope change requested"
+  "projects": "not_run; optional; no access scope change requested",
+  "maintainer_decision": {
+    "status": "retain_current_settings",
+    "authority": "Actual maintainer response in the active chat",
+    "instruction": "Mevcut ayarlar\u0131 koru; \u00f6neriyi haz\u0131rl\u0131k olarak b\u0131rak",
+    "administration_writes": "not_run; explicitly declined",
+    "scope": "Prepared protection proposal retained; scoped Git/metadata delivery and standing merges remain authorized."
+  }
 }

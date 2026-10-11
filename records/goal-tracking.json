@@ -507,7 +507,7 @@
       "related_eyl": [],
       "accepted_delivery": null,
       "waiting_reasons": [
-        "Separate exact-head review and current CI pending; protection administration requires separate real maintainer authorization"
+        "Final exact-head review/CI and accepted delivery pending; maintainer chose to retain settings and leave proposal prepared"
       ]
     },
     {
