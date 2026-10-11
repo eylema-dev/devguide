@@ -1,6 +1,6 @@
 # Depo kalite kontrolleri
 
-Sürüm **0.2.0**. [İngilizce](../en/quality-gates.md).
+Sürüm **0.3.0**. [İngilizce](../en/quality-gates.md).
 
 ## Bugün çalışan kapı
 
@@ -13,7 +13,7 @@ Sürüm **0.2.0**. [İngilizce](../en/quality-gates.md).
 | EN/TR sözleşmeleri | Eksik/eski çeviri özeti, API işlem/kod kimliği farkı, yol haritası kimliği farkı | Anlamsal çeviri doğruluğu |
 | GitHub yapılandırması | Eksik girdi alanı, bozuk form, eksik PR bölümü, sabitlenmemiş/beklenmeyen action, ayrıcalıklı iş akışı ayarı | GitHub'ın şablonu sunucuda doğru çizmesi veya dal kuralını uygulaması |
 | Gerçek PR açıklaması | Eksik, yinelenmiş veya yalnız yer tutucu içeren zorunlu bölüm | Kanıtın doğruluğu, inceleyici bağımsızlığı veya yetki |
-| Kaynak aşaması sınırı | Yalnız belge kontrolleri varken Rust/Cargo kaynağı ekleme | Rust derleme/yürütme; EYL-003 bu sınırı gerçek kapılarla değiştirmelidir |
+| Kaynak aşaması koruması | Belge profilindeki Rust/Cargo kaynakları, eksik uygulama workspace/toolchain, onaysız rol/profil | Statik profil doğrulaması tek başına Rust çalıştırmaz |
 | Boşluk ve doğrulayıcı testleri | Git boşluk hatası, başarısız regresyon testi | Uygulama davranışı |
 
 PR açıklama kontrolü PR olayına bağlıdır; push olayında doğrulanacak PR gövdesi yoktur. CI gerçek PR head SHA'sını ve checkout revizyonunu yazar; PR çalışması GitHub'ın sentetik birleşim commit'ini kontrol edebilir. Eski commit'teki yeşil sonuç güncel kanıt değildir. PR açıklaması düzenlenince kontrol yeniden tetiklenir.
@@ -24,9 +24,13 @@ Gereksinimler, üretim bağımlılık politikası, bağımsız inceleme, lisans,
 
 Doğrulayıcı/politika değişiklikleri kabul edilmiş başlangıç politikasıyla karşılaştırılmalıdır; değiştirilmiş doğrulayıcıyı çalıştıran PR kendi gevşetmesini onaylayamaz. Ayrı inceleme kesin revizyonu belirtmelidir. Böyle bir inceleme yoksa beklemede raporlanır.
 
-## Sonraki çalıştırılabilir kapılar
+## İncelenmiş kaynak profilleri
 
-EYL-003, Rust kaynağı kabulünden önce sabit toolchain, kök workspace/lockfile, format, clippy, davranış testleri, bağımlılık envanteri ve Linux/Wasm derlemesini ekler. Native Linux yürütmesi derlemeden ayrı raporlanır. Tarayıcı/GPU, performans, kalıcılık, politika/dünya modeli, dil modeli ve eğitim kabulleri kendi yol haritası aşamalarında kontrollü donanımla eklenir. Public PR kodu workflow değiştirerek özel veri veya güvenilen dağıtım runner'ına erişemez.
+Her depo repository.json içinde rolünü, stage ve gate_profile değerlerini bildirir. Mevcut bütün depolar documentation / documentation-v1 aşamasında ve runtime_implemented false değerinde kalır. Bu profilde Rust kaynakları, Cargo manifest/lockfile ve toolchain dosyaları yasaktır. Çekirdek, örnekler ve değerlendirmeler ancak gerçek kaynak, kök workspace/lockfile ve tam rust-toolchain.toml içeren ayrı incelenmiş değişiklikte implementation / rust-v1 profiline geçebilir. Bu geçiş bayrağı depodaki uygulamayı belirtir; ürünün tamamının kabulü değildir. Rehber, topluluk, dil belgeleri, model metadata ve eğitim tarifleri bu Rust profilini kullanamaz.
+
+Ortak rust-checks işi yalnızca çekirdek/örnekler/değerlendirmelerde, 20 dakika sınırıyla hosted ARM64 macos-26 üzerinde çalışır. tools/check_rust.py --provision çağrısı belge aşamasını Rust kurmadan açıkça atlar; uygulama aşamasında Rust 1.99.0, rustfmt, clippy ve wasm32-unknown-unknown kurar. Ardından offline/locked Cargo metadata, fmt, uyarıları hata sayan clippy, native test/build ve Wasm build çalıştırılır; bütün feature değerleri kapsanır. Başarısız komut kapıyı başarısız yapar. Desteklenmeyen host, derleyici veya Cargo yapılandırması geçersiz kılmaları, build script ve workspace dışı paketler reddedilir. İlk profil geliştirme Cargo paketlerini de yasaklar; bunları eklemek incelenmiş envanter/profil değişikliği gerektirir. Üçüncü taraf Rust kurulum action'ı eklenmez. Hosted macOS yerel M4 donanım kabulü değildir; Wasm derlemesi tarayıcı çalışmasını kanıtlamaz.
+
+Şema sahipliği role bağlıdır: çekirdek mevcut iki zorunlu şemayı korur ve ai-team-protocol altında yerel çözümlenen, doğrulanan şemalar ekleyebilir. Diğer roller makine şeması sahibi olamaz; metadata/tarifler kendi depolarına aittir. Profil çalıştırılabilir geliştirme aracıdır; runtime uygulaması değildir. G04/G07 gerçek toolchain/runtime kanıtını sağlar. Mevcut doğrulayıcı fixture'ları derleme, GPU, model, eğitim veya performans kanıtı değildir. Sonraki kilometre taşları kontrollü donanım kabulünü ekler; public PR'lara özel veri veya deploy kimlik bilgileri verilmez.
 
 ## Kontrolleri güncelleme
 
@@ -36,7 +40,7 @@ Kaynaklar: [GitHub workflow sözdizimi](https://docs.github.com/en/actions/refer
 
 ## Depo bölünmesi kontrolleri
 
-Her çalışma dizini kendi dosyalarını, kesin depo rolünü, sürdürülen belge kapsamını ve incelenmiş parmak izlerini doğrular. İki makine şemasını yalnızca çekirdek yönetir ve doğrular. Tek dilli yerel kontroller iki ürün dilini karşılaştıramaz. Devguide ayrıca değişmez depo revizyonlarında `tools/check_workspace.py --fetch` çalıştırır: altı ürün belgesi çifti ve incelenmiş özetleri, API tanımlayıcıları/işlemleri, yol haritası kimlikleri, depolar arası bağlantılar, taşıma hedefleri/kaldırmaları ve ortak araç kopyaları denetlenir. Eksik eşler, eski revizyon/özetler ve kırık hedefler reddedilir; indirilen üye betiği yürütülmez. Kaynak koruması belge aşamasındaki tüm depolara uygulanır; çalışma zamanı kaynağı eklenmeden gerçek uygulama kapılarıyla değiştirilmelidir.
+Her çalışma dizini kendi dosyalarını, kesin depo rolünü, sürdürülen belge kapsamını ve incelenmiş parmak izlerini doğrular. Mevcut iki zorunlu sözleşme dahil makine şemalarını yalnızca çekirdek yönetir ve doğrular. Tek dilli yerel kontroller iki ürün dilini karşılaştıramaz. Devguide ayrıca değişmez depo revizyonlarında `tools/check_workspace.py --fetch` çalıştırır: altı ürün belgesi çifti ve incelenmiş özetleri, API tanımlayıcıları/işlemleri, yol haritası kimlikleri, depolar arası bağlantılar, taşıma hedefleri/kaldırmaları ve ortak araç kopyaları denetlenir. Eksik eşler, eski revizyon/özetler ve kırık hedefler reddedilir; indirilen üye betiği yürütülmez. Kaynak koruması belge aşamasındaki tüm depolara uygulanır; çalışma zamanı kaynağı eklenmeden gerçek uygulama kapılarıyla değiştirilmelidir.
 
 Tarihsel taşıma ve güncel doğrulama ayrı girdiler kullanır. [migration-snapshot.json](../../records/migration-snapshot.json), kabul edilmiş envanteri ve ilk hedef commit’lerini sabitler; doğrulayıcı Git blob’larından kaynak, hedef, önceki-main ve değiştirilen-main hash’lerini doğrular ve envanterin değiştirilmesini reddeder. Bugün sürdürülen belgeleri tarihsel hedef hash’leriyle karşılaştırmaz. Güncel çeviri parmak izleri, API/yol haritası uyumu, hedef varlığı, çekirdek kopyalarının kaldırılması, gezinme ve ortak araç hash’leri uygulanmaya devam eder. Güncel değişiklik, incelenmiş güncel parmak izleri ve ilgili üye pinlerini gerektirir; bunları güncellemek tarihsel kanıtı değiştirmez. Olumsuz testler bozuk geçmişi, eksik/depo dışına çıkan hedefleri, kopuk bağlantıları, eski güncel parmak izlerini ve geri getirilen asılları kapsar.
 
