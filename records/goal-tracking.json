@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "task": "G05",
-  "observed_at": "2026-10-11T20:35:34.785561+00:00",
+  "observed_at": "2026-10-11T21:11:31.132442+00:00",
   "source_cards": "records/goal-index.json",
   "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
   "states": [
@@ -937,6 +937,76 @@
         "number": 14,
         "url": "https://github.com/eylema-dev/eylema/issues/14"
       },
+      "status": "accepted",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "planning:EYL-005",
+        "platform:macos",
+        "status:accepted"
+      ],
+      "dependencies": [
+        "G10"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-005"
+      ],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/45",
+          "head": "b67aac6c80983d95b4280d13246e5d40776fc945",
+          "main": "0d6093564fe2373aa2b68e1d3f745fb09bdf268a",
+          "tree": "6dba1ef4ec80984d995cb93cdb64e38846798b8f",
+          "main_ci": {
+            "id": 38173433713,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38173433713",
+            "head": "0d6093564fe2373aa2b68e1d3f745fb09bdf268a",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "b67aac6c80983d95b4280d13246e5d40776fc945",
+            "reviewer": "g12_review separate exact-head context;78native tests/core43guide45Python/actual9typedrecords/9repo140Markdown/live47Goal; no human GitHub approval"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/18",
+          "head": "9e189bac31807d21f3633228b10abe3a88d4a7d9",
+          "main": "e0380b6248ccaeae477fa9aa47420dc7cd486704",
+          "tree": "e7493877f5ddf76711d3e4ec4a5fcab5ee712a63",
+          "main_ci": {
+            "id": 38173439779,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38173439779",
+            "head": "e0380b6248ccaeae477fa9aa47420dc7cd486704",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "9e189bac31807d21f3633228b10abe3a88d4a7d9",
+            "reviewer": "g12_review separate exact-head context;78native tests/core43guide45Python/actual9typedrecords/9repo140Markdown/live47Goal; no human GitHub approval"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G13",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 15,
+        "url": "https://github.com/eylema-dev/eylema/issues/15"
+      },
       "status": "review",
       "milestone": {
         "id": "M2",
@@ -954,42 +1024,6 @@
         "status:review"
       ],
       "dependencies": [
-        "G10"
-      ],
-      "conditional_dependencies": {},
-      "related_eyl": [
-        "EYL-005"
-      ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Fresh separate exact-head review and current CI before standing-authorized merge"
-      ]
-    },
-    {
-      "id": "G13",
-      "repository": "eylema-dev/eylema",
-      "issue": {
-        "number": 15,
-        "url": "https://github.com/eylema-dev/eylema/issues/15"
-      },
-      "status": "backlog",
-      "milestone": {
-        "id": "M2",
-        "number": 3,
-        "title": "M2 \u2014 Saved-task local web console",
-        "url": "https://github.com/eylema-dev/eylema/milestone/3"
-      },
-      "labels": [
-        "goal",
-        "status:backlog",
-        "priority:unranked",
-        "milestone:M2",
-        "type:implementation",
-        "blocked:dependency",
-        "planning:EYL-005",
-        "platform:macos"
-      ],
-      "dependencies": [
         "G11",
         "G12"
       ],
@@ -999,7 +1033,7 @@
       ],
       "accepted_delivery": null,
       "waiting_reasons": [
-        "Accepted dependency deliveries pending"
+        "Fresh separate final-head review and current CI before standing-authorized merge"
       ]
     },
     {
