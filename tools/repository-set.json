@@ -3,15 +3,15 @@
   "members": {
     "eylema": {
       "repository": "eylema-dev/eylema",
-      "revision": "6f44ed55dee1c42b015eea37bc91b3270a3c89d3"
+      "revision": "25c2209a20417b7398e2e7ddbc3485b75df59b75"
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",
-      "revision": "cfa29a9bff26283948405ffb389e9480dd54fc30"
+      "revision": "bb729ff4ec8df3a0b6dfdb1211dfcc763a896a30"
     },
     "eylema-docs-tr": {
       "repository": "eylema-dev/eylema-docs-tr",
-      "revision": "222fd8fbc96b2546371b0d5603baf9cd8c9a2040"
+      "revision": "95aa9efd876980838acbf4c7a7ee2f0e70758e99"
     },
     ".github": {
       "repository": "eylema-dev/.github",
@@ -36,28 +36,28 @@
   },
   "product_translations": {
     "api-reference": {
-      "en_sha256": "7614b6dfdb14ffa13b0a308469b4adfb9608d6a9ed8dae8cc1c88d33b2607e0c",
-      "tr_sha256": "545208f91009cf4f8da26835d5aa7dc3d5a4dd990d775d92b9a94c9622a188b0"
+      "en_sha256": "a9508b7255a03da53d486ce039015de1b8ef826a3c1d6ece0393ab340f29d74a",
+      "tr_sha256": "c5d3d3ccb02a340e0e2e7114af4d384a0cf3b976be500fd40fd9d0aedd7717f3"
     },
     "architecture": {
-      "en_sha256": "5216be56972d5224bbe91f85a6a4523f191eadd9f2184cfd508df66182bebbed",
-      "tr_sha256": "d5df2c43393e7287f71c35df9eb7b949257decb519f4a5cffb33e7b60ef16c1d"
+      "en_sha256": "9b3dab65f48fbe47530f9b242cf190a042c26ad669419775dddf22b6a03ed19a",
+      "tr_sha256": "11e097eb20edf4092347daecbaed8af85a17d87e2468d6612ee6945c9aea5b9f"
     },
     "development-and-operations": {
-      "en_sha256": "f5bc7a62bf4a1dde8f3a590f9771cb9f8b19742124b8209c95df78d16641f2c0",
-      "tr_sha256": "6d582abcdbe391ce731911b8a54e394d6b0d96fc67224d3990f4267c55a8e385"
+      "en_sha256": "70ce5c67a0dd9d7ad20367d4730ca1c214822fff72cdd0e352983766e58ac91e",
+      "tr_sha256": "a5d2dc1ed662c3c26cc07522ec6643a013990c72ee2e93fcde85f5c5ffee6d49"
     },
     "learning-and-training": {
-      "en_sha256": "b6932cc605544721cb0767f4cd4e72898168b01d33527707d198fee0b624665b",
-      "tr_sha256": "b453942a68f215d8aa418cf610cce96b15ca910af098163b30ec09cd94bce495"
+      "en_sha256": "dd297ee1f66a84e90de516884068a90bbed771443387392314947de86e1c1c82",
+      "tr_sha256": "4600203bd7ce9034f8d8c20c9a028090165f61fea13caa259f91f4242b8e0666"
     },
     "project-structure": {
-      "en_sha256": "e282a6f4d108d5e0901898eec6e474a9117012164414dd4accc4b9512c4a1137",
-      "tr_sha256": "572c35a11b1dd3adca0c1e477be219ddd1216cec84a3e555dfaed3996b8d45d0"
+      "en_sha256": "b4652f3343f7dd6e578024814ea2fe3758aca9946b23899194b65238b37275ed",
+      "tr_sha256": "c7425617a7f784e0165db00b327b95349044f84b2b087f7209a6b89fe8faf6f4"
     },
     "roadmap": {
-      "en_sha256": "90e3a51f2ac4aba592d758981a6018a0b8590457beb545671b4adaeabe930254",
-      "tr_sha256": "29f91660d264a1ce88d7d7c2208e761ee8aa80cdf7313c5f5d2015c5fa4678bb"
+      "en_sha256": "957609dc8f4a3dca19fcc4bfa5aa9c2d85f4587fe328f5c1a9f9d4c93e0a4858",
+      "tr_sha256": "f6b7cc669b4d0110599e9de625d4693b757f21ec4e6d6bf7640952ae3869f324"
     }
   }
 }
