@@ -1,0 +1,5006 @@
+{
+  "format_version": 1,
+  "program": "Eylema v0.1 macOS M4 Pro",
+  "revision": 1,
+  "source_plan_sha256": "76f6a3ab8f4c8980c744b6e39e3f13ca817f8c2971bf078a7752952b2c5e7c18",
+  "baseline": "records/g00-baseline.json",
+  "status": "proposed Goal cards; acceptance and authority are separate",
+  "execution_rule": "One implementing Goal at a time. Populate current base, accepted dependency SHAs, issue, exact linked paths and actual roles before execution. G00 does not start downstream Goals.",
+  "recommended_order": [
+    [
+      "G00",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05"
+    ],
+    [
+      "G06"
+    ],
+    [
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
+      "G17"
+    ],
+    [
+      "G38",
+      "G39",
+      "G40",
+      "G41",
+      "G42",
+      "G43"
+    ],
+    [
+      "G18",
+      "G27"
+    ],
+    [
+      "G19",
+      "G20",
+      "G21",
+      "G22",
+      "G23",
+      "G24",
+      "G25",
+      "G26"
+    ],
+    [
+      "G28",
+      "G29",
+      "G30",
+      "G31",
+      "G32"
+    ],
+    [
+      "G33",
+      "G34",
+      "G35",
+      "G36",
+      "G37"
+    ],
+    [
+      "G44",
+      "G45"
+    ],
+    [
+      "W01"
+    ]
+  ],
+  "goals": [
+    {
+      "id": "G00",
+      "task_revision": 1,
+      "title": "Baseline record",
+      "milestone": "M0",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/devguide",
+      "linked_repositories": [],
+      "issue": "https://github.com/eylema-dev/devguide/issues/2",
+      "issue_status": "created",
+      "status": "implementing",
+      "dependencies": [],
+      "conditional_dependencies": {},
+      "objective": "Ten commit/policy snapshots, all Goal dependencies/cards, and matching before/after local work digests",
+      "base_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {},
+      "allowed_paths": [
+        "docs/plans/",
+        "docs/en/goal-program.md",
+        "docs/tr/goal-program.md",
+        "records/g00-baseline.json",
+        "records/goal-index.json",
+        "tools/tests/test_goals.py",
+        "tools/translation-pairs.json",
+        "README.md",
+        "README.tr.md"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G00-A1",
+          "requirement": "Ten commit/policy snapshots, all Goal dependencies/cards, and matching before/after local work digests",
+          "check": "AGENTS local commands, workspace fetch, Goal-record tests, GitHub snapshot and local preservation audit",
+          "result": "not_run; results attached to delivery PR"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "Current Codex session (GPT-6 family per session instructions); exact model/effort not independently exposed, planned setting not silently claimed as actual"
+      },
+      "roles": {
+        "architect": "Codex (GPT-6 family) in the current task",
+        "implementer": "Same Codex task; no separate implementer claimed",
+        "verifier": "Same Codex task using Git 2.56.0, gh CLI 2.102.0 and Python 3.14.8",
+        "independent_reviewer": "Pending separate context at final delivered head"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G01",
+      "task_revision": 1,
+      "title": "Separate migration validation",
+      "milestone": "M0",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/devguide",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G00"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Reviewed current document edits pass; corrupted historical evidence, broken links and restored duplicates fail",
+      "base_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G00": null
+      },
+      "allowed_paths": [
+        "tools/check_workspace.py",
+        "tools/tests/test_workspace.py",
+        "records/document-migration.json",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G01-A1",
+          "requirement": "Reviewed current document edits pass; corrupted historical evidence, broken links and restored duplicates fail",
+          "check": "Migration positive/negative fixtures, full repository and pinned-workspace checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G02",
+      "task_revision": 1,
+      "title": "Implementation-stage gates",
+      "milestone": "M0",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/devguide",
+      "linked_repositories": [
+        "eylema-dev/eylema",
+        "eylema-dev/eylema-docs-en",
+        "eylema-dev/eylema-docs-tr",
+        "eylema-dev/.github",
+        "eylema-dev/eylema-examples",
+        "eylema-dev/eylema-evals",
+        "eylema-dev/eylema-models",
+        "eylema-dev/eylema-training"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G01"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Ungated Rust is rejected; a reviewed implementation profile with actual Rust gates is accepted; shared hashes agree",
+      "base_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G01": null
+      },
+      "allowed_paths": [
+        "tools/",
+        ".github/workflows/ci.yml",
+        "repository.json",
+        "docs/en/",
+        "docs/tr/"
+      ],
+      "linked_scope": {
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-docs-en": "docs/",
+        "eylema-docs-tr": "docs/",
+        ".github": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-models": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G02-A1",
+          "requirement": "Ungated Rust is rejected; a reviewed implementation profile with actual Rust gates is accepted; shared hashes agree",
+          "check": "Profile rejection/acceptance fixtures, every affected member CI and workspace inventory checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G03",
+      "task_revision": 1,
+      "title": "macOS contracts",
+      "milestone": "M0",
+      "related_eyl": [
+        "EYL-002"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-docs-en",
+      "linked_repositories": [
+        "eylema-dev/eylema-docs-tr",
+        "eylema-dev/eylema"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G02"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Architecture/API/schema/roadmap agree on M4/Metal/local training and one device; Linux and second-device acceptance remain future scope",
+      "base_sha": "e51f2abc01bf05a479ff2d693e890f6c96ddc2bb",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G02": null
+      },
+      "allowed_paths": [
+        "docs/"
+      ],
+      "linked_scope": {
+        "eylema-docs-tr": "docs/",
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G03-A1",
+          "requirement": "Architecture/API/schema/roadmap agree on M4/Metal/local training and one device; Linux and second-device acceptance remain future scope",
+          "check": "EN/TR contract comparison, core schema regressions, pinned workspace checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G04",
+      "task_revision": 1,
+      "title": "Development environment",
+      "milestone": "M0",
+      "related_eyl": [
+        "EYL-002",
+        "EYL-003"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G03"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Rust 1.99.0 ARM64 build and actual execution plus SDK/Metal/browser inventory are reproducible",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G03": null
+      },
+      "allowed_paths": [
+        "rust-toolchain.toml",
+        "tools/doctor/",
+        "docs/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G04-A1",
+          "requirement": "Rust 1.99.0 ARM64 build and actual execution plus SDK/Metal/browser inventory are reproducible",
+          "check": "Native compile/run and real Metal tool invocation, with versioned environment evidence",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G05",
+      "task_revision": 1,
+      "title": "GitHub work management",
+      "milestone": "M0",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/devguide",
+      "linked_repositories": [
+        "eylema-dev/.github"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G02",
+        "G03"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Goal issues/milestones/labels and PR gates are linked; actually authorized protections are read back from GitHub",
+      "base_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G02": null,
+        "G03": null
+      },
+      "allowed_paths": [
+        "records/goal-index.json",
+        "docs/en/",
+        "docs/tr/",
+        ".github/"
+      ],
+      "linked_scope": {
+        ".github": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G05-A1",
+          "requirement": "Goal issues/milestones/labels and PR gates are linked; actually authorized protections are read back from GitHub",
+          "check": "Issue/CI metadata audit and read-only API verification after separately authorized settings changes",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G06",
+      "task_revision": 1,
+      "title": "Distribution and rights",
+      "milestone": "M0",
+      "related_eyl": [
+        "EYL-001"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/devguide",
+      "linked_repositories": [
+        "eylema-dev/eylema-models",
+        "eylema-dev/eylema-training"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G00"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Real maintainer license/contribution decisions and third-party provenance are recorded",
+      "base_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G00": null
+      },
+      "allowed_paths": [
+        "docs/en/",
+        "docs/tr/",
+        "records/"
+      ],
+      "linked_scope": {
+        "eylema-models": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G06-A1",
+          "requirement": "Real maintainer license/contribution decisions and third-party provenance are recorded",
+          "check": "Maintainer decision review, rights/provenance inventory and model/training record checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G07",
+      "task_revision": 1,
+      "title": "Rust workspace and CI",
+      "milestone": "M1",
+      "related_eyl": [
+        "EYL-003"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Minimal workspace has actual formatter/clippy/native checks and no external production Cargo packages",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G02": null,
+        "G03": null,
+        "G04": null
+      },
+      "allowed_paths": [
+        "Cargo.toml",
+        "Cargo.lock",
+        "rust-toolchain.toml",
+        "crates/",
+        ".github/workflows/ci.yml",
+        "tools/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G07-A1",
+          "requirement": "Minimal workspace has actual formatter/clippy/native checks and no external production Cargo packages",
+          "check": "cargo fmt --check; cargo clippy; native cargo test/build; dependency inventory and hosted CI",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G08",
+      "task_revision": 1,
+      "title": "Typed contracts",
+      "milestone": "M1",
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G07"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Task/action/execution/event/authority/budget/error types share version semantics and reject invalid examples",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G07": null
+      },
+      "allowed_paths": [
+        "crates/contracts/",
+        "ai-team-protocol/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G08-A1",
+          "requirement": "Task/action/execution/event/authority/budget/error types share version semantics and reject invalid examples",
+          "check": "Contract valid/invalid and version compatibility tests across consumers",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G09",
+      "task_revision": 1,
+      "title": "Encoding and identity binding",
+      "milestone": "M1",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G08"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Malformed/oversized data fails; canonical payloads share hashes; native/Wasm contracts match",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G08": null
+      },
+      "allowed_paths": [
+        "crates/contracts/",
+        "crates/platform/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G09-A1",
+          "requirement": "Malformed/oversized data fails; canonical payloads share hashes; native/Wasm contracts match",
+          "check": "Canonical reference vectors, malformed input and size-bound tests; native/Wasm comparison",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G10",
+      "task_revision": 1,
+      "title": "Deterministic executor",
+      "milestone": "M1",
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G08",
+        "G09"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Success/failure/denial/duplicate/deadline/budget behaviors are bounded",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G08": null,
+        "G09": null
+      },
+      "allowed_paths": [
+        "crates/runtime/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G10-A1",
+          "requirement": "Success/failure/denial/duplicate/deadline/budget behaviors are bounded",
+          "check": "Executor behavioral tests for every acceptance case",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G11",
+      "task_revision": 1,
+      "title": "Human oversight",
+      "milestone": "M1",
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G10"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Expired/mismatched/stale approvals cannot act; revocation and effective stop differ from receipt; late stop preserves completed results",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G10": null
+      },
+      "allowed_paths": [
+        "crates/runtime/",
+        "crates/contracts/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G11-A1",
+          "requirement": "Expired/mismatched/stale approvals cannot act; revocation and effective stop differ from receipt; late stop preserves completed results",
+          "check": "Authority/approval/revocation/cancellation behavioral tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G12",
+      "task_revision": 1,
+      "title": "Local journal",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-005"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G10"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Truncated/corrupted/disk-failure/incompatible records produce explicit outcomes",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G10": null
+      },
+      "allowed_paths": [
+        "crates/journal/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G12-A1",
+          "requirement": "Truncated/corrupted/disk-failure/incompatible records produce explicit outcomes",
+          "check": "Fault-injection journal write/read and version tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G13",
+      "task_revision": 1,
+      "title": "Recovery and reopening",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-005"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G11",
+        "G12"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Replay preserves identities/results, avoids repeated confirmed effects and records unknown outcomes",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G11": null,
+        "G12": null
+      },
+      "allowed_paths": [
+        "crates/journal/",
+        "crates/runtime/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G13-A1",
+          "requirement": "Replay preserves identities/results, avoids repeated confirmed effects and records unknown outcomes",
+          "check": "Crash/restart/idempotency/incomplete-execution recovery tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G14",
+      "task_revision": 1,
+      "title": "Local HTTP service",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Loopback session, Origin/Host, authorization, size and timeout boundaries reject invalid requests",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G09": null,
+        "G10": null,
+        "G11": null,
+        "G12": null,
+        "G13": null
+      },
+      "allowed_paths": [
+        "crates/web/",
+        "crates/host/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G14-A1",
+          "requirement": "Loopback session, Origin/Host, authorization, size and timeout boundaries reject invalid requests",
+          "check": "HTTP cross-origin/denied/malformed/oversize/timeout tests against a running native service",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G15",
+      "task_revision": 1,
+      "title": "CLI",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G14"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Start/inspect/run/stop/doctor share web execution IDs and machine errors",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G14": null
+      },
+      "allowed_paths": [
+        "crates/cli/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G15-A1",
+          "requirement": "Start/inspect/run/stop/doctor share web execution IDs and machine errors",
+          "check": "CLI/service end-to-end identity, error and cancellation checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G16",
+      "task_revision": 1,
+      "title": "Web task console",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G14",
+        "G15"
+      ],
+      "conditional_dependencies": {},
+      "objective": "EN/TR progress/stop/error screens retain correct state after reload or disconnection on this Mac",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G14": null,
+        "G15": null
+      },
+      "allowed_paths": [
+        "crates/web/",
+        "web/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G16-A1",
+          "requirement": "EN/TR progress/stop/error screens retain correct state after reload or disconnection on this Mac",
+          "check": "Actual browser create/run/inspect/stop/reload/reconnect journey and accessibility checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G17",
+      "task_revision": 1,
+      "title": "External consumer example",
+      "milestone": "M2",
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-examples",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G16"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Pinned core consumer passes F1\u2013F7 create/run/inspect/stop/restart/reopen cases",
+      "base_sha": "4c26f576ccc3dfc2bbdcfa43af320e750e201371",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G16": null
+      },
+      "allowed_paths": [
+        "task-console/",
+        "README.md",
+        "README.tr.md"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G17-A1",
+          "requirement": "Pinned core consumer passes F1\u2013F7 create/run/inspect/stop/restart/reopen cases",
+          "check": "Run all F1\u2013F7 examples against the pinned core on the target Mac",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G18",
+      "task_revision": 1,
+      "title": "Measurement infrastructure",
+      "milestone": "M3",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-evals",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G17"
+      ],
+      "conditional_dependencies": {},
+      "objective": "M4 cold/warm workloads bind versions/environment and preserve failures/unmeasured values",
+      "base_sha": "732c8d8b6523a0307907209152aea5efae3ea79f",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G17": null
+      },
+      "allowed_paths": [
+        "profiles/",
+        "workloads/",
+        "tools/",
+        "results/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G18-A1",
+          "requirement": "M4 cold/warm workloads bind versions/environment and preserve failures/unmeasured values",
+          "check": "Repeat measurement runs and result-format/unknown-value tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G19",
+      "task_revision": 1,
+      "title": "Metal worker",
+      "milestone": "M3",
+      "related_eyl": [
+        "EYL-007"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Real M4 computation/readback, bounded buffer lifetime and worker failure paths execute",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G18": null
+      },
+      "allowed_paths": [
+        "crates/platform/",
+        "crates/compute/",
+        "shaders/metal/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G19-A1",
+          "requirement": "Real M4 computation/readback, bounded buffer lifetime and worker failure paths execute",
+          "check": "Real Metal reference/readback, invalid-size, worker-loss and resource-lifetime tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G20",
+      "task_revision": 1,
+      "title": "WebGPU view",
+      "milestone": "M3",
+      "related_eyl": [
+        "EYL-007"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-examples"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G17",
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Real Chrome/WebGPU scene selection/movement and unsupported/device-loss paths work",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G17": null,
+        "G18": null
+      },
+      "allowed_paths": [
+        "crates/view/",
+        "web/",
+        "shaders/wgsl/"
+      ],
+      "linked_scope": {
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G20-A1",
+          "requirement": "Real Chrome/WebGPU scene selection/movement and unsupported/device-loss paths work",
+          "check": "Browser GPU execution and scene interaction with device-loss/unsupported fixtures",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G21",
+      "task_revision": 1,
+      "title": "Resource manager",
+      "milestone": "M3",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G19",
+        "G20"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Admission/queues/allocation are bounded under Metal/view/model load; stop latency is measured",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G19": null,
+        "G20": null
+      },
+      "allowed_paths": [
+        "crates/compute/",
+        "crates/runtime/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G21-A1",
+          "requirement": "Admission/queues/allocation are bounded under Metal/view/model load; stop latency is measured",
+          "check": "Combined stress, queue/memory bounds and measured effective cancellation tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G22",
+      "task_revision": 1,
+      "title": "Combined GPU acceptance",
+      "milestone": "M3",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-evals",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G21"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Native compute and 3D frame-time/latency/memory distributions are measured; closing view leaves native task alive",
+      "base_sha": "732c8d8b6523a0307907209152aea5efae3ea79f",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G21": null
+      },
+      "allowed_paths": [
+        "workloads/",
+        "tools/",
+        "results/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G22-A1",
+          "requirement": "Native compute and 3D frame-time/latency/memory distributions are measured; closing view leaves native task alive",
+          "check": "Repeated combined-load runs, raw distributions and tab-close/native-liveness checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G23",
+      "task_revision": 1,
+      "title": "CPU tensor reference",
+      "milestone": "M4",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G18",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Selected operators match independent vectors and reject invalid shape/overflow/NaN cases",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G18": null,
+        "G27": null
+      },
+      "allowed_paths": [
+        "crates/tensor/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G23-A1",
+          "requirement": "Selected operators match independent vectors and reject invalid shape/overflow/NaN cases",
+          "check": "Independent numerical reference and shape/dtype/nonfinite failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G24",
+      "task_revision": 1,
+      "title": "Metal tensor operations",
+      "milestone": "M4",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G19",
+        "G23"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Actual M4 kernels agree with CPU within predeclared tolerances",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G19": null,
+        "G23": null
+      },
+      "allowed_paths": [
+        "crates/tensor/",
+        "shaders/metal/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G24-A1",
+          "requirement": "Actual M4 kernels agree with CPU within predeclared tolerances",
+          "check": "Real CPU/Metal operator parity and failure tests before changing tolerance",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G25",
+      "task_revision": 1,
+      "title": "Placement task",
+      "milestone": "M4",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-examples",
+      "linked_repositories": [
+        "eylema-dev/eylema-evals"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G20",
+        "G23"
+      ],
+      "conditional_dependencies": {},
+      "objective": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+      "base_sha": "4c26f576ccc3dfc2bbdcfa43af320e750e201371",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G20": null,
+        "G23": null
+      },
+      "allowed_paths": [
+        "placement/"
+      ],
+      "linked_scope": {
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G25-A1",
+          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G26",
+      "task_revision": 1,
+      "title": "Small learned models",
+      "milestone": "M4",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-training",
+        "eylema-dev/eylema-evals"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G24",
+        "G25"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Held-out policy/dynamics closed-loop success, multistep errors and constraints are compared with baseline",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G24": null,
+        "G25": null
+      },
+      "allowed_paths": [
+        "crates/models/",
+        "crates/runtime/"
+      ],
+      "linked_scope": {
+        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G26-A1",
+          "requirement": "Held-out policy/dynamics closed-loop success, multistep errors and constraints are compared with baseline",
+          "check": "Pinned training/eval runs; publish unsuccessful candidates; acceptance needs actual improvement/quality floors",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 2
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G27",
+      "task_revision": 1,
+      "title": "Model contract",
+      "milestone": "M5",
+      "related_eyl": [
+        "EYL-008"
+      ],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-models",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G03",
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Qwen3-0.6B source/artifact/tokenizer/operator hashes, rights and narrow configuration are pinned",
+      "base_sha": "818f8456158ef1a7e40fa05b022d0e09c3e7d1be",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G03": null,
+        "G18": null
+      },
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G27-A1",
+          "requirement": "Qwen3-0.6B source/artifact/tokenizer/operator hashes, rights and narrow configuration are pinned",
+          "check": "Artifact identity/rights/operator audit; selection alone is not runtime support",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G28",
+      "task_revision": 1,
+      "title": "Weight loader",
+      "milestone": "M5",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G09",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Selected safetensors/conversion subset rejects bad offsets/dtype/shape/missing/changed tensors",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G09": null,
+        "G27": null
+      },
+      "allowed_paths": [
+        "crates/models/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G28-A1",
+          "requirement": "Selected safetensors/conversion subset rejects bad offsets/dtype/shape/missing/changed tensors",
+          "check": "Malformed and changed-artifact fixtures plus reference load comparison",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G29",
+      "task_revision": 1,
+      "title": "Tokenizer and template",
+      "milestone": "M5",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "objective": "EN/TR/Unicode examples match reference token IDs including special tokens/template",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G27": null
+      },
+      "allowed_paths": [
+        "crates/models/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G29-A1",
+          "requirement": "EN/TR/Unicode examples match reference token IDs including special tokens/template",
+          "check": "Pinned independent tokenizer vectors and special-token/template regression tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G30",
+      "task_revision": 1,
+      "title": "CPU model execution",
+      "milestone": "M5",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Transformer/attention/KV/logits agree with reference; context and stop bounds work",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G23": null,
+        "G28": null,
+        "G29": null
+      },
+      "allowed_paths": [
+        "crates/models/",
+        "crates/tensor/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G30-A1",
+          "requirement": "Transformer/attention/KV/logits agree with reference; context and stop bounds work",
+          "check": "Layer/logit vectors and actual bounded CPU generation/cancellation tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G31",
+      "task_revision": 1,
+      "title": "Metal model execution",
+      "milestone": "M5",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G24",
+        "G30"
+      ],
+      "conditional_dependencies": {},
+      "objective": "The same pinned model really runs/streams/stops on M4 with numerical and resource bounds",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G24": null,
+        "G30": null
+      },
+      "allowed_paths": [
+        "crates/models/",
+        "shaders/metal/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G31-A1",
+          "requirement": "The same pinned model really runs/streams/stops on M4 with numerical and resource bounds",
+          "check": "Actual CPU/Metal numerical/generation comparison, streaming/stop/memory checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G32",
+      "task_revision": 1,
+      "title": "Language-driven tasks",
+      "milestone": "M5",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-examples",
+        "eylema-dev/eylema-evals"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G22",
+        "G26",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "objective": "EN/TR goals become typed authorized proposals under combined LLM/policy/3D load; no hidden cloud fallback",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G22": null,
+        "G26": null,
+        "G31": null
+      },
+      "allowed_paths": [
+        "crates/models/",
+        "crates/runtime/",
+        "web/"
+      ],
+      "linked_scope": {
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G32-A1",
+          "requirement": "EN/TR goals become typed authorized proposals under combined LLM/policy/3D load; no hidden cloud fallback",
+          "check": "Actual combined user journeys, invalid/denied-proposal tests and locality audit",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G33",
+      "task_revision": 1,
+      "title": "Episodes and corrections",
+      "milestone": "M6",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G32"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Training admission rejects content without consent; observations and teacher suggestions remain distinct",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G32": null
+      },
+      "allowed_paths": [
+        "crates/learning/",
+        "crates/contracts/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G33-A1",
+          "requirement": "Training admission rejects content without consent; observations and teacher suggestions remain distinct",
+          "check": "Consent/provenance/correction admission and redaction tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G34",
+      "task_revision": 1,
+      "title": "Dataset revision",
+      "milestone": "M6",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-training",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G33"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Episode derivatives never leak between train/holdout and every sample has permitted lineage",
+      "base_sha": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G33": null
+      },
+      "allowed_paths": [
+        "data/",
+        "tools/",
+        "recipes/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G34-A1",
+          "requirement": "Episode derivatives never leak between train/holdout and every sample has permitted lineage",
+          "check": "Deterministic dedup/split/provenance/rights negative tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G35",
+      "task_revision": 1,
+      "title": "Local Unsloth recipe",
+      "milestone": "M6",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-training",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G27",
+        "G34"
+      ],
+      "conditional_dependencies": {},
+      "objective": "A bounded pinned LoRA run completes on this M4 with checkpoint and resource evidence",
+      "base_sha": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G27": null,
+        "G34": null
+      },
+      "allowed_paths": [
+        "recipes/",
+        "environments/",
+        "tools/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G35-A1",
+          "requirement": "A bounded pinned LoRA run completes on this M4 with checkpoint and resource evidence",
+          "check": "One small smoke run followed by actual local training; installed tools alone do not pass",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 2
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G36",
+      "task_revision": 1,
+      "title": "Export and reacceptance",
+      "milestone": "M6",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-training",
+      "linked_repositories": [
+        "eylema-dev/eylema",
+        "eylema-dev/eylema-evals"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G31",
+        "G35"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Exported candidate matches tokenizer/numerical/task contracts in owned Rust and held-out comparisons",
+      "base_sha": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G31": null,
+        "G35": null
+      },
+      "allowed_paths": [
+        "recipes/",
+        "tools/",
+        "results/"
+      ],
+      "linked_scope": {
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G36-A1",
+          "requirement": "Exported candidate matches tokenizer/numerical/task contracts in owned Rust and held-out comparisons",
+          "check": "Actual export and Rust candidate/current evaluation on independent tasks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G37",
+      "task_revision": 1,
+      "title": "Model set and rollback",
+      "milestone": "M6",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema-models",
+      "linked_repositories": [
+        "eylema-dev/eylema"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G36"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Approval/canary/active/rollback and measured same-device workload assignment pin in-flight versions",
+      "base_sha": "818f8456158ef1a7e40fa05b022d0e09c3e7d1be",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G36": null
+      },
+      "allowed_paths": [
+        "releases/",
+        "assignments/"
+      ],
+      "linked_scope": {
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G37-A1",
+          "requirement": "Approval/canary/active/rollback and measured same-device workload assignment pin in-flight versions",
+          "check": "Actual failed-canary rollback and workload-change/version-binding tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G38",
+      "task_revision": 1,
+      "title": "Development coordinator",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G05",
+        "G17"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Need-to-review states enforce budget/cancel/input/repair bounds; issue text is not authority",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G05": null,
+        "G17": null
+      },
+      "allowed_paths": [
+        "crates/development/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G38-A1",
+          "requirement": "Need-to-review states enforce budget/cancel/input/repair bounds; issue text is not authority",
+          "check": "Coordinator state/failure/budget/authority-injection tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G39",
+      "task_revision": 1,
+      "title": "Controlled workspace",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G38"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Scoped worktree/process/artifacts preserve dirty work and keep credentials out of implementer output",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G38": null
+      },
+      "allowed_paths": [
+        "crates/development/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G39-A1",
+          "requirement": "Scoped worktree/process/artifacts preserve dirty work and keep credentials out of implementer output",
+          "check": "Path escape, dirty checkout, process-ownership and secret-isolation tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G40",
+      "task_revision": 1,
+      "title": "Codex adapter",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Real configured Codex call/structured output/timeout/quota/model-unavailable behaviors are evidenced",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G39": null
+      },
+      "allowed_paths": [
+        "crates/development/adapters/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G40-A1",
+          "requirement": "Real configured Codex call/structured output/timeout/quota/model-unavailable behaviors are evidenced",
+          "check": "Live provider contract smoke plus timeout/quota/unavailable failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G41",
+      "task_revision": 1,
+      "title": "Second adapter",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Claude passes the same contract with actual access and recorded provider revision",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G39": null
+      },
+      "allowed_paths": [
+        "crates/development/adapters/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G41-A1",
+          "requirement": "Claude passes the same contract with actual access and recorded provider revision",
+          "check": "Live second-provider contract smoke and matching failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G42",
+      "task_revision": 1,
+      "title": "GitHub delivery",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G38",
+        "G39",
+        "G40",
+        "G41"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Task/revision retries find the same branch/draft PR after unknown responses; task code lacks write token",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G38": null,
+        "G39": null,
+        "G40": null,
+        "G41": null
+      },
+      "allowed_paths": [
+        "crates/development/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G42-A1",
+          "requirement": "Task/revision retries find the same branch/draft PR after unknown responses; task code lacks write token",
+          "check": "Unknown-result reconciliation, idempotency and credential-isolation tests plus real draft PR",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G43",
+      "task_revision": 1,
+      "title": "Real development acceptance",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-evals"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G42"
+      ],
+      "conditional_dependencies": {},
+      "objective": "Both providers complete bounded real need/code/tests/separate-review/PR chains with time/repair/intervention records",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G42": null
+      },
+      "allowed_paths": [
+        "crates/development/",
+        "docs/"
+      ],
+      "linked_scope": {
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G43-A1",
+          "requirement": "Both providers complete bounded real need/code/tests/separate-review/PR chains with time/repair/intervention records",
+          "check": "Two live same-contract tasks and exact-head independent review/CI evidence",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G44",
+      "task_revision": 1,
+      "title": "Complete macOS acceptance",
+      "milestone": "M7",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-examples",
+        "eylema-dev/eylema-evals",
+        "eylema-dev/eylema-docs-en",
+        "eylema-dev/eylema-docs-tr"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42",
+        "G43"
+      ],
+      "conditional_dependencies": {},
+      "objective": "All twelve full macOS acceptance steps pass on one clean profile at the same candidate revision",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G07": null,
+        "G08": null,
+        "G09": null,
+        "G10": null,
+        "G11": null,
+        "G12": null,
+        "G13": null,
+        "G14": null,
+        "G15": null,
+        "G16": null,
+        "G17": null,
+        "G18": null,
+        "G19": null,
+        "G20": null,
+        "G21": null,
+        "G22": null,
+        "G23": null,
+        "G24": null,
+        "G25": null,
+        "G26": null,
+        "G27": null,
+        "G28": null,
+        "G29": null,
+        "G30": null,
+        "G31": null,
+        "G32": null,
+        "G33": null,
+        "G34": null,
+        "G35": null,
+        "G36": null,
+        "G37": null,
+        "G38": null,
+        "G39": null,
+        "G40": null,
+        "G41": null,
+        "G42": null,
+        "G43": null
+      },
+      "allowed_paths": [
+        "docs/",
+        "release/"
+      ],
+      "linked_scope": {
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-docs-en": "docs/",
+        "eylema-docs-tr": "docs/"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G44-A1",
+          "requirement": "All twelve full macOS acceptance steps pass on one clean profile at the same candidate revision",
+          "check": "Clean-profile task/recovery/GPU/LLM/consent/training/export/promotion/rollback/two-provider PR replay",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "G45",
+      "task_revision": 1,
+      "title": "Experimental distribution package",
+      "milestone": "release",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylema",
+      "linked_repositories": [
+        "eylema-dev/eylema-docs-en",
+        "eylema-dev/eylema-docs-tr",
+        "eylema-dev/devguide"
+      ],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G06",
+        "G44"
+      ],
+      "conditional_dependencies": {},
+      "objective": "ARM64 binary/web assets/install/rollback have hashes, rights, dependencies and clean reinstall evidence",
+      "base_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G06": null,
+        "G44": null
+      },
+      "allowed_paths": [
+        "release/",
+        "docs/"
+      ],
+      "linked_scope": {
+        "eylema-docs-en": "docs/",
+        "eylema-docs-tr": "docs/",
+        "devguide": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "G45-A1",
+          "requirement": "ARM64 binary/web assets/install/rollback have hashes, rights, dependencies and clean reinstall evidence",
+          "check": "Reproducible package/hash inventory and clean install/rollback; publishing requires separate authority",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    },
+    {
+      "id": "W01",
+      "task_revision": 1,
+      "title": "Website accuracy",
+      "milestone": "website",
+      "related_eyl": [],
+      "related_eyl_note": "Existing planning IDs only; empty means this Goal expands the program beyond EYL-001\u2013008",
+      "repository": "eylema-dev/eylemadotdev",
+      "linked_repositories": [],
+      "issue": null,
+      "issue_status": "not_created; materialize in G05 or accepted task intake",
+      "status": "backlog",
+      "dependencies": [
+        "G03"
+      ],
+      "conditional_dependencies": {
+        "working_product_claims": [
+          "G44"
+        ]
+      },
+      "objective": "EN/TR claims and quickstart match accepted product; DNS/TLS checked separately; publication binds Git/Actions/live SHA",
+      "base_sha": "878d785242fe75065e255c0fa44630aa4886ff8f",
+      "base_binding": "Historical starting SHA only; read current main/policy and accepted dependency delivery SHAs before execution",
+      "dependency_acceptance": {
+        "G03": null
+      },
+      "allowed_paths": [
+        "README.md",
+        "src/",
+        "public/",
+        "records/"
+      ],
+      "linked_scope": {},
+      "exclusions": [
+        "Other Goal implementation",
+        "Unrelated local work",
+        "Merge/deploy/release/permissions/spending without actual maintainer authority",
+        "Weights, private training records and credentials in Git"
+      ],
+      "contract_bindings": [
+        "devguide/AGENTS.md",
+        "devguide/CONTRIBUTING.md",
+        "devguide/docs/en/quality-gates.md",
+        "eylema-docs-en/docs/architecture.md",
+        "eylema-docs-en/docs/api-reference.md",
+        "eylema-docs-en/docs/development-and-operations.md",
+        "eylema-docs-en/docs/roadmap.md"
+      ],
+      "contract_versions": {
+        "contribution": "0.2.0",
+        "tooling": "0.2.0",
+        "architecture": "0.3.1",
+        "api": "0.1.0",
+        "development_protocol": "0.1.0",
+        "need_spec": "0.1.0",
+        "model_set_release": "0.1.0",
+        "learning_protocol": "0.1.0"
+      },
+      "acceptance": [
+        {
+          "id": "W01-A1",
+          "requirement": "EN/TR claims and quickstart match accepted product; DNS/TLS checked separately; publication binds Git/Actions/live SHA",
+          "check": "Website build/browser/language checks and independent DNS/TLS/release-SHA checks if publishing is authorized",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": "record at execution; do not silently change setting"
+      },
+      "roles": {
+        "architect": "record actual executor",
+        "implementer": "record actual executor",
+        "verifier": "record actual executor",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      },
+      "stop_conditions": [
+        "Unresolved required failure after repair budget",
+        "Missing authority or required provider/hardware",
+        "Active-time budget exhausted",
+        "Changed product intent requires a new task revision"
+      ],
+      "delivery": {
+        "pr": null,
+        "checks": "AGENTS commands plus the mapped Goal checks; record command/environment/revision/status/reason",
+        "review": "Separate report at final head; maintainer decision remains required",
+        "rollback": "Revert scoped changes through a reviewed PR; external effects need their own recovery plan"
+      },
+      "handoff": {
+        "accepted_commits": {},
+        "artifacts": [],
+        "remaining_blockers": [
+          "Not accepted; resolve dependencies and task scope before execution"
+        ]
+      },
+      "risk": "Baseline/policy drift and unavailable evidence; proposed paths/contracts must be reviewed against current main before activation"
+    }
+  ],
+  "observation": "Initial task-revision-1 cards at G00 capture. Execution results and current G00 head/review live in the delivery PR; this snapshot does not claim current acceptance."
+}
