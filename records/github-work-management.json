@@ -1,0 +1,328 @@
+{
+  "format_version": 1,
+  "goal": "G05",
+  "observed_at": "2026-10-11T18:30:26.463867+00:00",
+  "observation": "Historical API observation, not continuous enforcement. Classic protection and applied rules are separate surfaces; no administration write performed.",
+  "repositories": {
+    "eylema-dev/eylema": {
+      "main": "748d233d7653ca50bee8036a9131a8057b5be729",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "748d233d7653ca50bee8036a9131a8057b5be729",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema/actions/runs/38164005434/job/114542656161"
+        },
+        {
+          "name": "repository-checks",
+          "head": "748d233d7653ca50bee8036a9131a8057b5be729",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema/actions/runs/38164005434/job/114542656051"
+        }
+      ],
+      "classic_protection": {
+        "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection",
+        "required_status_checks": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_status_checks",
+          "strict": true,
+          "contexts": [
+            "repository-checks"
+          ],
+          "contexts_url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_status_checks/contexts",
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "required_pull_request_reviews": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_pull_request_reviews",
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "require_last_push_approval": false,
+          "required_approving_review_count": 0
+        },
+        "required_signatures": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_signatures",
+          "enabled": false
+        },
+        "enforce_admins": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/enforce_admins",
+          "enabled": true
+        },
+        "required_linear_history": {
+          "enabled": false
+        },
+        "allow_force_pushes": {
+          "enabled": false
+        },
+        "allow_deletions": {
+          "enabled": false
+        },
+        "block_creations": {
+          "enabled": false
+        },
+        "required_conversation_resolution": {
+          "enabled": true
+        },
+        "lock_branch": {
+          "enabled": false
+        },
+        "allow_fork_syncing": {
+          "enabled": false
+        }
+      },
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/devguide": {
+      "main": "effe36587d45a341f8c38292f4bfb3bf09dee540",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "effe36587d45a341f8c38292f4bfb3bf09dee540",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/devguide/actions/runs/38164012164/job/114542676925"
+        },
+        {
+          "name": "repository-checks",
+          "head": "effe36587d45a341f8c38292f4bfb3bf09dee540",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/devguide/actions/runs/38164012164/job/114542675866"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-docs-en": {
+      "main": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38159546068/job/114529400431"
+        },
+        {
+          "name": "repository-checks",
+          "head": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38159546068/job/114529399424"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-docs-tr": {
+      "main": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38159547271/job/114529404101"
+        },
+        {
+          "name": "repository-checks",
+          "head": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38159547271/job/114529403312"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/.github": {
+      "main": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/.github/actions/runs/38157875658/job/114524482499"
+        },
+        {
+          "name": "repository-checks",
+          "head": "c92219ad48268824d7692f3c6b8680e85dd4ec14",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/.github/actions/runs/38157875658/job/114524481481"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-examples": {
+      "main": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+      "checks": [
+        {
+          "name": "repository-checks",
+          "head": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38157873915/job/114524477230"
+        },
+        {
+          "name": "rust-checks",
+          "head": "6f013b265e7b457198c8fb821e457bc856d9bb0a",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38157873915/job/114524476872"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-evals": {
+      "main": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38157883517/job/114524507343"
+        },
+        {
+          "name": "repository-checks",
+          "head": "9b06fe6c4de281770df59b57a44a4c73c69e7cd4",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38157883517/job/114524507072"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-models": {
+      "main": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38157882043/job/114524501507"
+        },
+        {
+          "name": "repository-checks",
+          "head": "e40e709badbfb1508ee2d8435b7a6d9d17244376",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38157882043/job/114524500561"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylema-training": {
+      "main": "869306b3432e996ca7823e62b98c54880d8ee96e",
+      "checks": [
+        {
+          "name": "rust-checks",
+          "head": "869306b3432e996ca7823e62b98c54880d8ee96e",
+          "status": "completed",
+          "conclusion": "skipped",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-training/actions/runs/38157915719/job/114524602451"
+        },
+        {
+          "name": "repository-checks",
+          "head": "869306b3432e996ca7823e62b98c54880d8ee96e",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylema-training/actions/runs/38157915719/job/114524601352"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    },
+    "eylema-dev/eylemadotdev": {
+      "main": "878d785242fe75065e255c0fa44630aa4886ff8f",
+      "checks": [
+        {
+          "name": "deploy",
+          "head": "878d785242fe75065e255c0fa44630aa4886ff8f",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylemadotdev/actions/runs/38150198155/job/114501878400"
+        },
+        {
+          "name": "repository-checks",
+          "head": "878d785242fe75065e255c0fa44630aa4886ff8f",
+          "status": "completed",
+          "conclusion": "success",
+          "app_id": 15368,
+          "app_slug": "github-actions",
+          "url": "https://github.com/eylema-dev/eylemadotdev/actions/runs/38150198175/job/114501877953"
+        }
+      ],
+      "classic_protection": null,
+      "applied_rules": [],
+      "rulesets": []
+    }
+  },
+  "projects": "not_run; optional; no access scope change requested",
+  "maintainer_decision": {
+    "status": "retain_current_settings",
+    "authority": "Actual maintainer response in the active chat",
+    "instruction": "Mevcut ayarlar\u0131 koru; \u00f6neriyi haz\u0131rl\u0131k olarak b\u0131rak",
+    "administration_writes": "not_run; explicitly declined",
+    "scope": "Prepared protection proposal retained; scoped Git/metadata delivery and standing merges remain authorized."
+  }
+}

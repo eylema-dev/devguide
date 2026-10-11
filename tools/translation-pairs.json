@@ -5,8 +5,8 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "0c76c213c3a10e1bd12542cfab1f24e23305f15e62b471c48eea20fedcfd158d",
-      "tr_sha256": "ba5f0b495c643c65f30c8225db9166bbe7b99d51ffd081add873cd6d77661816"
+      "en_sha256": "5388a5134327ef31f906d6bf58954a39cc4da32cae44f8292109d9a6b96b10a6",
+      "tr_sha256": "0cf94cc5c79e9376005ed929f8ce733cede64e07172d08451168586d16ebe677"
     },
     {
       "en": "CONTRIBUTING.md",
@@ -23,8 +23,8 @@
     {
       "en": "docs/en/quality-gates.md",
       "tr": "docs/tr/quality-gates.md",
-      "en_sha256": "e73ee9c8ce54bcbb6fb72744b09c97bf379d4605e83b6625e8e1e7986b71fd72",
-      "tr_sha256": "f7909af9a349227111d0207305176612b88c0464331c4ab017b8cc58ddf5b74c"
+      "en_sha256": "bb12abc9c1fa4bc4a72a6ed0dc7452c511cc71bef475d78cfb5661a1f34a7c08",
+      "tr_sha256": "a5f7b977d3e641cfc7f29681cf0734f8ac754553e734d11fccafe78e9b7ca67b"
     },
     {
       "en": "docs/en/repository-map.md",
@@ -47,14 +47,20 @@
     {
       "en": "docs/en/tooling.md",
       "tr": "docs/tr/tooling.md",
-      "en_sha256": "3202551276c512fc8aece390c88dfb36c8093b24049b47c67b02b86bb23c2ac3",
-      "tr_sha256": "6e4096c7a7a52b07c1ccd938e138c17a000bdbf6c40497bdf12f9b699523388b"
+      "en_sha256": "ea866364d728f4284c4bacb2428f58c33106a22099c48422a8d6c1af4df2bc2d",
+      "tr_sha256": "07f6b7e05cb8bb29ccd6aee2ed1fe7a634be86ae69a30b6358f8bf8fea4d791a"
     },
     {
       "en": "docs/en/goal-program.md",
       "tr": "docs/tr/goal-program.md",
-      "en_sha256": "6bba3ef2a0ba3a9bca9a055aa3a696950f44e4ade34f29070fd024450b2087b5",
-      "tr_sha256": "346ab825a480594f0ff81f258c60bb2189d7a47cf07fb6aa93ac0ac9eafab7a4"
+      "en_sha256": "bb93c73c57ba038294e5b6808b891ab74e6d01b89926c5e6b50940e2cf6d5e71",
+      "tr_sha256": "07562f38c21cdcdc8f6a70d9b2470e2045e4f2926c8d8b8bd4ac0dc4e9d91e5f"
+    },
+    {
+      "en": "docs/en/github-work-management.md",
+      "tr": "docs/tr/github-work-management.md",
+      "en_sha256": "2f22235c59c69fca85274623ef23acb41ad3142be296c179d207097278f982b8",
+      "tr_sha256": "13206931c4256b2c59f677029c1db3c677c39c0717c061311b9ccd935503cb9a"
     }
   ],
   "documents": []
