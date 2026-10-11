@@ -1,0 +1,461 @@
+{
+  "format_version": 1,
+  "task": "G00",
+  "task_revision": 1,
+  "captured_at": "2026-10-11T16:08:58.743894+00:00",
+  "observation": "historical baseline; re-query current main and policy before every execution",
+  "source_plan": {
+    "title": "Eylema v0.1 \u2014 M4 Pro Codex Goal plan",
+    "date": "2026-10-11",
+    "sha256": "76f6a3ab8f4c8980c744b6e39e3f13ca817f8c2971bf078a7752952b2c5e7c18",
+    "request": "Explicit maintainer request to implement G00 from the accepted action plan"
+  },
+  "repositories": {
+    "eylema": {
+      "repository": "eylema-dev/eylema",
+      "url": "https://github.com/eylema-dev/eylema",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "tree_sha": "219c0180f64a037adcb007b59bbbd517fbead9d9",
+      "role": "core",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+          "url": "https://github.com/eylema-dev/eylema/actions/runs/38149540225/job/114499914606"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "passed",
+      "classic_protection": {
+        "required_status_checks": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_status_checks",
+          "strict": true,
+          "contexts": [
+            "repository-checks"
+          ],
+          "contexts_url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_status_checks/contexts",
+          "checks": [
+            {
+              "context": "repository-checks",
+              "app_id": 15368
+            }
+          ]
+        },
+        "required_pull_request_reviews": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/required_pull_request_reviews",
+          "dismiss_stale_reviews": true,
+          "require_code_owner_reviews": false,
+          "require_last_push_approval": false,
+          "required_approving_review_count": 0
+        },
+        "enforce_admins": {
+          "url": "https://api.github.com/repos/eylema-dev/eylema/branches/main/protection/enforce_admins",
+          "enabled": true
+        },
+        "required_conversation_resolution": {
+          "enabled": true
+        },
+        "allow_force_pushes": {
+          "enabled": false
+        },
+        "allow_deletions": {
+          "enabled": false
+        }
+      },
+      "responsibility": "Core Rust, CLI, local service, contracts, platform/model engine and coordinator"
+    },
+    "eylema-docs-en": {
+      "repository": "eylema-dev/eylema-docs-en",
+      "url": "https://github.com/eylema-dev/eylema-docs-en",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "e51f2abc01bf05a479ff2d693e890f6c96ddc2bb",
+      "tree_sha": "558eb79e4b0d221470dc4ad9c1148baf4e801f5b",
+      "role": "docs-en",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "e51f2abc01bf05a479ff2d693e890f6c96ddc2bb",
+          "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38149434313/job/114499610306"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Canonical English architecture, API, user documentation and roadmap"
+    },
+    "eylema-docs-tr": {
+      "repository": "eylema-dev/eylema-docs-tr",
+      "url": "https://github.com/eylema-dev/eylema-docs-tr",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "7aad023323d904d7f74f7ed7bd3222a046066a03",
+      "tree_sha": "926ced4e6de873470af06ad54bbcf70fdc3e1282",
+      "role": "docs-tr",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "7aad023323d904d7f74f7ed7bd3222a046066a03",
+          "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38149438982/job/114499625657"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Reviewed Turkish companions and historical drafts"
+    },
+    "devguide": {
+      "repository": "eylema-dev/devguide",
+      "url": "https://github.com/eylema-dev/devguide",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "tree_sha": "ba159886f9b3a72d754784545eacd8d4bff68443",
+      "role": "guide",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+          "url": "https://github.com/eylema-dev/devguide/actions/runs/38149498675/job/114499797353"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Shared contributor policy, tooling, Goal records and integration verification"
+    },
+    ".github": {
+      "repository": "eylema-dev/.github",
+      "url": "https://github.com/eylema-dev/.github",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "d76840809ee2edc2acaab7bd9859001504fb3d27",
+      "tree_sha": "5a9059362e9aa09e35257824df56c37dbd3bd11f",
+      "role": "community",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "d76840809ee2edc2acaab7bd9859001504fb3d27",
+          "url": "https://github.com/eylema-dev/.github/actions/runs/38149429802/job/114499594047"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Organization profile and shared community templates"
+    },
+    "eylema-examples": {
+      "repository": "eylema-dev/eylema-examples",
+      "url": "https://github.com/eylema-dev/eylema-examples",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "4c26f576ccc3dfc2bbdcfa43af320e750e201371",
+      "tree_sha": "269829456044a764be324bd316a6036826d9bb1e",
+      "role": "reserved",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "4c26f576ccc3dfc2bbdcfa43af320e750e201371",
+          "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38149444501/job/114499643023"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Consumers pinned to the accepted core API"
+    },
+    "eylema-evals": {
+      "repository": "eylema-dev/eylema-evals",
+      "url": "https://github.com/eylema-dev/eylema-evals",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "732c8d8b6523a0307907209152aea5efae3ea79f",
+      "tree_sha": "1fd33f5e69a3606195a73722d1a0f99a5700978b",
+      "role": "reserved",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "732c8d8b6523a0307907209152aea5efae3ea79f",
+          "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38149451687/job/114499661763"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Reproducible workloads, measurements and publishable results"
+    },
+    "eylema-models": {
+      "repository": "eylema-dev/eylema-models",
+      "url": "https://github.com/eylema-dev/eylema-models",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "818f8456158ef1a7e40fa05b022d0e09c3e7d1be",
+      "tree_sha": "9e0a5edc647d922e78011093956623e24e4c82c9",
+      "role": "reserved",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "818f8456158ef1a7e40fa05b022d0e09c3e7d1be",
+          "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38149460367/job/114499685271"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Model metadata, compatibility and model-set manifests; no weights"
+    },
+    "eylema-training": {
+      "repository": "eylema-dev/eylema-training",
+      "url": "https://github.com/eylema-dev/eylema-training",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+      "tree_sha": "947d3c16a31a8a957b9e52e91e2a3726b6ca8dd7",
+      "role": "reserved",
+      "stage": "documentation",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+          "url": "https://github.com/eylema-dev/eylema-training/actions/runs/38149465926/job/114499701639"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Pinned training environments/recipes, permitted curation and export"
+    },
+    "eylemadotdev": {
+      "repository": "eylema-dev/eylemadotdev",
+      "url": "https://github.com/eylema-dev/eylemadotdev",
+      "visibility": "public",
+      "default_branch": "main",
+      "main_sha": "878d785242fe75065e255c0fa44630aa4886ff8f",
+      "tree_sha": "275b1e9638e361c96352fb593be1315250c91b0e",
+      "role": "website",
+      "stage": "website",
+      "platform_runtime_implemented": false,
+      "checks": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "878d785242fe75065e255c0fa44630aa4886ff8f",
+          "url": "https://github.com/eylema-dev/eylemadotdev/actions/runs/38150198155/job/114501878400"
+        },
+        {
+          "name": "repository-checks",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "878d785242fe75065e255c0fa44630aa4886ff8f",
+          "url": "https://github.com/eylema-dev/eylemadotdev/actions/runs/38150198175/job/114501877953"
+        }
+      ],
+      "rules": [],
+      "rulesets": [],
+      "classic_protection_observation": "not_applicable: no classic protection returned (HTTP 404); rules/rulesets queried separately",
+      "classic_protection": null,
+      "responsibility": "Promotional website and verified product/release links"
+    }
+  },
+  "shared_contracts": {
+    "AGENTS.md": {
+      "sha256": "2bde505f8d08748d2e2e38202aecc9bd79d808db767a6e512520f58ef844e715",
+      "url": "https://github.com/eylema-dev/devguide/blob/e1c767eafa0717f3c3c51aa368bd25195afca414/AGENTS.md"
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "7af96a9fc7dd534b15b9117462aa7f6712cc84421196b8e5b727ccf3e2ace944",
+      "url": "https://github.com/eylema-dev/devguide/blob/e1c767eafa0717f3c3c51aa368bd25195afca414/CONTRIBUTING.md"
+    },
+    "docs/en/quality-gates.md": {
+      "sha256": "3614f88cc8323b1e6a83d123fe87025d3ae3607f7e8d7e8a7f94b8ed29d6f853",
+      "url": "https://github.com/eylema-dev/devguide/blob/e1c767eafa0717f3c3c51aa368bd25195afca414/docs/en/quality-gates.md"
+    },
+    "docs/en/tooling.md": {
+      "sha256": "9a2aba99784aa27914374e1be959b20e735335d665f18368c1f8e5360a843dda",
+      "url": "https://github.com/eylema-dev/devguide/blob/e1c767eafa0717f3c3c51aa368bd25195afca414/docs/en/tooling.md"
+    },
+    "tools/repository-set.json": {
+      "sha256": "379fd5d53729bf348b87c44324e935c5e2c4fa4f55aa469e9fef1ae740df3024",
+      "url": "https://github.com/eylema-dev/devguide/blob/e1c767eafa0717f3c3c51aa368bd25195afca414/tools/repository-set.json"
+    }
+  },
+  "preserved_worktrees": {
+    "core-worktree-1": {
+      "head": "ae8555126cf00d3485173874a1c17f8a76f4652f",
+      "branch": "chore/contribution-foundation",
+      "status_sha256": "2769bdb566dd9d1c0c13ea7237a5ea242c215ac3eb64fc35e112cc92177f64b2",
+      "content_manifest_sha256": "bedae031663b47041cf2756a717c87b9974032dd9831820d438d49817aa23893",
+      "file_count": 66,
+      "dirty": true
+    },
+    "core-worktree-2": {
+      "head": "406d1ab639cf70149f89832a1b03bd06d2d72633",
+      "branch": "detached",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "5cfda7baaded1d0fa004cccf21d8dd1ae27310affc3e4e12fa5585d88e2562b5",
+      "file_count": 70,
+      "dirty": false
+    },
+    "core-worktree-3": {
+      "head": "1b74d16e887df838852dc2fab7e77f7b6ec8764d",
+      "branch": "codex/eylema-logo",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "96eb0228313e812315f68fc6c410af51fff7ab7bbe9a05dd9a2f0620af712520",
+      "file_count": 42,
+      "dirty": false
+    },
+    "core-worktree-4": {
+      "head": "7f2e4efb2c506ed8d7a37540256abb5523ffb5fe",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "767da1d3bc00b039fff0ad25be7fdf04c0f9c458f5c9d8874520921dcc169628",
+      "file_count": 50,
+      "dirty": false
+    },
+    "core-worktree-5": {
+      "head": "47552f85b2a52904bf45d73c5f8b76de130fca9f",
+      "branch": "chore/ai-contribution-foundation",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "0588e94a8f5fe462413b080b02c5104a2002f32de1666bb1d7e7317726b72d30",
+      "file_count": 67,
+      "dirty": false
+    },
+    "eylema-docs-en": {
+      "head": "e51f2abc01bf05a479ff2d693e890f6c96ddc2bb",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "9a731599037cbd9982f3206594eaa8b6a88c5fb4ab5875818fe01959981cfe3d",
+      "file_count": 29,
+      "dirty": false
+    },
+    "eylema-docs-tr": {
+      "head": "7aad023323d904d7f74f7ed7bd3222a046066a03",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "04ccbe334366fa9f2fb740af97bb8e756afe1c0b72c66b0057d3557489f37c33",
+      "file_count": 32,
+      "dirty": false
+    },
+    "devguide": {
+      "head": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "a89fe0f0ad9bea7b2c93f8c6e3d46c8240f8ce31e7607e879ab2c1e5faeab79f",
+      "file_count": 44,
+      "dirty": false
+    },
+    ".github": {
+      "head": "d76840809ee2edc2acaab7bd9859001504fb3d27",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "c7244cfd675a89a67f31af863e2f628b22ab7e22da0d16264eded9e4916075a7",
+      "file_count": 26,
+      "dirty": false
+    },
+    "eylema-examples": {
+      "head": "4c26f576ccc3dfc2bbdcfa43af320e750e201371",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "378785dc1b9a58be98b89c59e643c98e969ff7dd5ef1c8f2f79a287a2ef2b7c0",
+      "file_count": 24,
+      "dirty": false
+    },
+    "eylema-evals": {
+      "head": "732c8d8b6523a0307907209152aea5efae3ea79f",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "e128f465da4f24c6e19e5f5442cc68b7fe9dde135b8803c39eced136c378fa18",
+      "file_count": 24,
+      "dirty": false
+    },
+    "eylema-models": {
+      "head": "818f8456158ef1a7e40fa05b022d0e09c3e7d1be",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "55ece929c70878f36e6cb383eb9bf2ff709315ef343edf64045b4be0964357eb",
+      "file_count": 24,
+      "dirty": false
+    },
+    "eylema-training": {
+      "head": "26a929ca32b649b7e18fdb3256b1a14ca71ef281",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "6ae334910f41aa208cf436a3e806697beb35783bf50ea3b2cc19216086a5866d",
+      "file_count": 24,
+      "dirty": false
+    },
+    "website": {
+      "head": "4a2c175e29f78828c232a1e2b35b5ebab4923c29",
+      "branch": "main",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_manifest_sha256": "b6c55c8030e4183c1562c003ffe7951db0bdace3e483117ef89e2718cd9e1700",
+      "file_count": 49,
+      "dirty": false
+    }
+  },
+  "preservation_scope": "HEAD, branch, porcelain status, tracked and non-ignored untracked file bytes; ignored caches are outside the byte snapshot and are not modified",
+  "decisions": {
+    "first_release": "experimental macOS on one M4 Pro with 24 GB unified memory",
+    "product_contract_update": "pending G03; current Linux/two-profile documents remain authoritative until reviewed changes",
+    "planned_model": "gpt-6.1-sol",
+    "planned_reasoning_effort": "high",
+    "production_policy": "first-party Rust; no third-party production Cargo packages",
+    "license": "pending real maintainer decision in G06",
+    "merge_deploy_permissions_spending": "not granted by G00",
+    "project_access": "not_run; Projects is optional; no token scope change is part of G00"
+  },
+  "readiness": "baseline evidence and Goal cards only; independent review and maintainer acceptance recorded separately",
+  "preservation_verification": {
+    "status": "passed",
+    "check": "Exact before/after HEAD, branch, porcelain status and file-content-manifest comparison for all 14 existing worktrees",
+    "before_after_match": true,
+    "verification_scope": "HEAD, branch, porcelain status, tracked and non-ignored untracked file bytes; ignored caches are outside the byte snapshot and are not modified"
+  }
+}

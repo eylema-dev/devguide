@@ -5,8 +5,8 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "621865e42a8ce241a07b63e9840b018cbc16a425e7d06bcdc2a9ffe695acebd8",
-      "tr_sha256": "b41787808b44f4348cae72be51569ade2f19a771f50073f9871ff6e64271e185"
+      "en_sha256": "0c76c213c3a10e1bd12542cfab1f24e23305f15e62b471c48eea20fedcfd158d",
+      "tr_sha256": "ba5f0b495c643c65f30c8225db9166bbe7b99d51ffd081add873cd6d77661816"
     },
     {
       "en": "CONTRIBUTING.md",
@@ -49,6 +49,12 @@
       "tr": "docs/tr/tooling.md",
       "en_sha256": "9a2aba99784aa27914374e1be959b20e735335d665f18368c1f8e5360a843dda",
       "tr_sha256": "7004096e6ffaf0b8789b7da138b286a14a698d7ce416b7f3488a6c4c7846b2c1"
+    },
+    {
+      "en": "docs/en/goal-program.md",
+      "tr": "docs/tr/goal-program.md",
+      "en_sha256": "6bba3ef2a0ba3a9bca9a055aa3a696950f44e4ade34f29070fd024450b2087b5",
+      "tr_sha256": "346ab825a480594f0ff81f258c60bb2189d7a47cf07fb6aa93ac0ac9eafab7a4"
     }
   ],
   "documents": []
