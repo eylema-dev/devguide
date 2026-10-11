@@ -1,6 +1,6 @@
 # Repository quality gates
 
-Revision **0.1.0**. [Türkçe](../tr/quality-gates.md).
+Revision **0.2.0**. [Türkçe](../tr/quality-gates.md).
 
 ## Current executable gate
 
@@ -38,4 +38,6 @@ References: [GitHub workflow syntax](https://docs.github.com/en/actions/referenc
 
 Each checkout validates its own files, exact repository role, maintained-document coverage and reviewed fingerprints. Core alone owns and validates the two machine schemas. Local single-language checks cannot compare both product languages. Devguide additionally runs `tools/check_workspace.py --fetch` over immutable repository pins: all six product-document pairs and their reviewed hashes, API identifiers/operations, roadmap IDs, cross-repository links, migration destinations/removals and shared-tool copies. Missing peers, stale pins/hashes and broken targets fail; no fetched member script is executed. The source guard applies to every documentation-stage repository and must be replaced with real implementation gates before runtime source is added.
 
-The pinned repository set is manually updated through linked PRs; it does not automatically track later default-branch changes. Independent review and a maintainer decision remain pending until actually recorded.
+Historical migration and current validation have separate inputs. [migration-snapshot.json](../../records/migration-snapshot.json) pins the accepted inventory and original destination commits; the checker reads Git blobs to verify all source, destination, previous-main and replaced-main hashes and rejects changes to the inventory itself. It does not compare today's maintained documents against historical destination hashes. Current translation fingerprints, API/roadmap parity, target existence, removal of core duplicates, navigation and shared-tool hashes still apply. A current edit needs reviewed current fingerprints and corresponding member pins; updating those never replaces historical evidence. Negative tests cover corrupt history, missing/escaping destinations, broken links, stale current fingerprints and restored originals.
+
+The pinned repository set is manually updated through linked PRs; it does not automatically track later default-branch changes. Historical public commits are fetched into a separate cache even when current member checkouts are supplied with `--workspace-file`; no fetched code executes. Independent review and a maintainer decision remain pending until actually recorded.

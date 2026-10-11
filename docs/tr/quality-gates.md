@@ -1,6 +1,6 @@
 # Depo kalite kontrolleri
 
-Sürüm **0.1.0**. [İngilizce](../en/quality-gates.md).
+Sürüm **0.2.0**. [İngilizce](../en/quality-gates.md).
 
 ## Bugün çalışan kapı
 
@@ -38,4 +38,6 @@ Kaynaklar: [GitHub workflow sözdizimi](https://docs.github.com/en/actions/refer
 
 Her çalışma dizini kendi dosyalarını, kesin depo rolünü, sürdürülen belge kapsamını ve incelenmiş parmak izlerini doğrular. İki makine şemasını yalnızca çekirdek yönetir ve doğrular. Tek dilli yerel kontroller iki ürün dilini karşılaştıramaz. Devguide ayrıca değişmez depo revizyonlarında `tools/check_workspace.py --fetch` çalıştırır: altı ürün belgesi çifti ve incelenmiş özetleri, API tanımlayıcıları/işlemleri, yol haritası kimlikleri, depolar arası bağlantılar, taşıma hedefleri/kaldırmaları ve ortak araç kopyaları denetlenir. Eksik eşler, eski revizyon/özetler ve kırık hedefler reddedilir; indirilen üye betiği yürütülmez. Kaynak koruması belge aşamasındaki tüm depolara uygulanır; çalışma zamanı kaynağı eklenmeden gerçek uygulama kapılarıyla değiştirilmelidir.
 
-Sabitlenmiş depo kümesi ilişkili PR’larla elle güncellenir; sonraki varsayılan dal değişikliklerini otomatik izlemez. Bağımsız inceleme ve bakımcı kararı gerçekten kaydedilene kadar beklemededir.
+Tarihsel taşıma ve güncel doğrulama ayrı girdiler kullanır. [migration-snapshot.json](../../records/migration-snapshot.json), kabul edilmiş envanteri ve ilk hedef commit’lerini sabitler; doğrulayıcı Git blob’larından kaynak, hedef, önceki-main ve değiştirilen-main hash’lerini doğrular ve envanterin değiştirilmesini reddeder. Bugün sürdürülen belgeleri tarihsel hedef hash’leriyle karşılaştırmaz. Güncel çeviri parmak izleri, API/yol haritası uyumu, hedef varlığı, çekirdek kopyalarının kaldırılması, gezinme ve ortak araç hash’leri uygulanmaya devam eder. Güncel değişiklik, incelenmiş güncel parmak izleri ve ilgili üye pinlerini gerektirir; bunları güncellemek tarihsel kanıtı değiştirmez. Olumsuz testler bozuk geçmişi, eksik/depo dışına çıkan hedefleri, kopuk bağlantıları, eski güncel parmak izlerini ve geri getirilen asılları kapsar.
+
+Sabitlenmiş depo kümesi ilişkili PR’larla elle güncellenir; sonraki varsayılan dal değişikliklerini otomatik izlemez. Güncel üye checkout’ları `--workspace-file` ile verildiğinde de tarihsel public commit’ler ayrı cache’e indirilir; indirilen kod yürütülmez. Bağımsız inceleme ve bakımcı kararı gerçekten kaydedilene kadar beklemededir.

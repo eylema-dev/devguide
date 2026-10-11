@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "purpose": "Immutable repository-split evidence; current documents use current reviewed translation hashes and layout/link checks.",
+  "inventory": {
+    "repository": "eylema-dev/devguide",
+    "revision": "e1c767eafa0717f3c3c51aa368bd25195afca414",
+    "path": "records/document-migration.json",
+    "sha256": "35504f2ab855aa777077bf872e7754bb1902feacc3a7f122c3278934afd500f4"
+  },
+  "destinations": {
+    "eylema-docs-en": {
+      "repository": "eylema-dev/eylema-docs-en",
+      "revision": "c4554afc3418a1167b5291d6d72c1d9495f4e425"
+    },
+    "eylema-docs-tr": {
+      "repository": "eylema-dev/eylema-docs-tr",
+      "revision": "8b353b0332270cda27bdec996b69a3f7172e6c2f"
+    },
+    "devguide": {
+      "repository": "eylema-dev/devguide",
+      "revision": "e1c767eafa0717f3c3c51aa368bd25195afca414"
+    }
+  },
+  "sources": {
+    "repository": "eylema-dev/eylema",
+    "revisions": [
+      "406d1ab639cf70149f89832a1b03bd06d2d72633",
+      "8e529b4747aef2648c241354858d28aaf416ecaa"
+    ]
+  }
+}
