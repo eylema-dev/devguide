@@ -1,0 +1,42 @@
+{
+  "task": "repository-split-r2",
+  "pull_requests": {
+    "eylema": {
+      "url": "https://github.com/eylema-dev/eylema/pull/4",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-docs-en": {
+      "url": "https://github.com/eylema-dev/eylema-docs-en/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-docs-tr": {
+      "url": "https://github.com/eylema-dev/eylema-docs-tr/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "devguide": {
+      "url": "https://github.com/eylema-dev/devguide/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    ".github": {
+      "url": "https://github.com/eylema-dev/.github/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-examples": {
+      "url": "https://github.com/eylema-dev/eylema-examples/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-evals": {
+      "url": "https://github.com/eylema-dev/eylema-evals/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-models": {
+      "url": "https://github.com/eylema-dev/eylema-models/pull/1",
+      "merge_status": "pending maintainer review"
+    },
+    "eylema-training": {
+      "url": "https://github.com/eylema-dev/eylema-training/pull/1",
+      "merge_status": "pending maintainer review"
+    }
+  },
+  "merge_order": "target repositories, then devguide, then eylema removal; no automatic merge"
+}

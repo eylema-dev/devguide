@@ -1,0 +1,19 @@
+# Starting a repository
+
+[Türkçe](../tr/repository-setup.md). First justify the boundary in the [repository map](repository-map.md). Name the maintainer request, owner, lifecycle, intended visibility and license status; a planning record is not authority.
+
+1. Inspect organization names and any destination directory; reuse an existing matching repo and preserve local work. Confirm the default branch.
+2. Create the authorized repository with a minimal README. Bootstrap is not implementation evidence. Start one scoped branch from its current main and record the base SHA and finite task budget.
+3. Write README and Turkish companion, scope/stage in repository.json, and thin contributor/provider adapters pointing to devguide. Declare which files or interfaces remain elsewhere; do not fork product contracts.
+4. Copy the reviewed tools, hash-locked requirements, negative tests, pinned read-only CI, issue/PR templates and CODEOWNERS. Record copied bytes in tools/vendor.json. No third-party production dependencies are introduced by these CI tools.
+5. Add meaningful stage-specific checks before accepting executable implementation. Run the exact local commands from AGENTS.md, review translation meaning and refresh fingerprints.
+6. Commit and publish the task branch. Update devguide's tools/repository-set.json with immutable member SHAs and reviewed translation hashes. Run its repository-set check, then publish linked PRs using the template.
+7. Inspect every diff for unrelated changes, private paths, credentials, operational data and weights. Record local and hosted CI separately, exact heads, self-review and pending independent review. Merge and branch-rule administration require actual maintainer authority.
+
+## Updating a split document
+
+Update English and Turkish in linked PRs. Each language repo records its reviewed local bytes. Devguide pins both revisions and the hash of every paired product document; its integration gate compares API identifiers, operation order and roadmap milestone/backlog IDs. A green local check does not prove that the other language is current. Review meaning before updating fingerprints.
+
+After member branches are pushed, run `.venv/bin/python tools/check_workspace.py --fetch` in devguide. Fetching reads only the fixed public eylema-dev repositories and full commit IDs; no member code runs. To check existing clean local clones instead, provide `--workspace-file` with a JSON mapping of repository short names to local checkout paths; keep this machine-specific file out of Git. The head of each checkout must match its pin.
+
+The integration manifest is an accepted snapshot candidate, not a monitor of latest main. Every later member change needs a companion manifest PR; there is no webhook, scheduled monitor or server-side cross-repository merge enforcement in this setup. Re-run integration after final member revisions and before maintainer acceptance.

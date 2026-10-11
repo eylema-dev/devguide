@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "members": {
+    "eylema": {
+      "repository": "eylema-dev/eylema",
+      "revision": "02e0083b7cdac7abfdbb28a22541e6c5bc4d466d"
+    },
+    "eylema-docs-en": {
+      "repository": "eylema-dev/eylema-docs-en",
+      "revision": "c4554afc3418a1167b5291d6d72c1d9495f4e425"
+    },
+    "eylema-docs-tr": {
+      "repository": "eylema-dev/eylema-docs-tr",
+      "revision": "8b353b0332270cda27bdec996b69a3f7172e6c2f"
+    },
+    ".github": {
+      "repository": "eylema-dev/.github",
+      "revision": "56fc6bfcc1ad7f2c070957fcb6618b7de7d82b94"
+    },
+    "eylema-examples": {
+      "repository": "eylema-dev/eylema-examples",
+      "revision": "d648d4ac6db983f31a4eafc6754f5e427acda9d9"
+    },
+    "eylema-evals": {
+      "repository": "eylema-dev/eylema-evals",
+      "revision": "7021d5a6d76565e2fa1ecf805a0001eb399db928"
+    },
+    "eylema-models": {
+      "repository": "eylema-dev/eylema-models",
+      "revision": "719d03356106c0c0539c06474d1eb23321a82deb"
+    },
+    "eylema-training": {
+      "repository": "eylema-dev/eylema-training",
+      "revision": "b668d37a1a4738d322cd7486aeba51a9c7dec073"
+    }
+  },
+  "product_translations": {
+    "api-reference": {
+      "en_sha256": "7614b6dfdb14ffa13b0a308469b4adfb9608d6a9ed8dae8cc1c88d33b2607e0c",
+      "tr_sha256": "545208f91009cf4f8da26835d5aa7dc3d5a4dd990d775d92b9a94c9622a188b0"
+    },
+    "architecture": {
+      "en_sha256": "5216be56972d5224bbe91f85a6a4523f191eadd9f2184cfd508df66182bebbed",
+      "tr_sha256": "d5df2c43393e7287f71c35df9eb7b949257decb519f4a5cffb33e7b60ef16c1d"
+    },
+    "development-and-operations": {
+      "en_sha256": "f5bc7a62bf4a1dde8f3a590f9771cb9f8b19742124b8209c95df78d16641f2c0",
+      "tr_sha256": "6d582abcdbe391ce731911b8a54e394d6b0d96fc67224d3990f4267c55a8e385"
+    },
+    "learning-and-training": {
+      "en_sha256": "b6932cc605544721cb0767f4cd4e72898168b01d33527707d198fee0b624665b",
+      "tr_sha256": "b453942a68f215d8aa418cf610cce96b15ca910af098163b30ec09cd94bce495"
+    },
+    "project-structure": {
+      "en_sha256": "e282a6f4d108d5e0901898eec6e474a9117012164414dd4accc4b9512c4a1137",
+      "tr_sha256": "572c35a11b1dd3adca0c1e477be219ddd1216cec84a3e555dfaed3996b8d45d0"
+    },
+    "roadmap": {
+      "en_sha256": "90e3a51f2ac4aba592d758981a6018a0b8590457beb545671b4adaeabe930254",
+      "tr_sha256": "29f91660d264a1ce88d7d7c2208e761ee8aa80cdf7313c5f5d2015c5fa4678bb"
+    }
+  }
+}
