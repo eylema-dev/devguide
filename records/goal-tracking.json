@@ -796,6 +796,77 @@
         "number": 12,
         "url": "https://github.com/eylema-dev/eylema/issues/12"
       },
+      "status": "accepted",
+      "milestone": {
+        "id": "M1",
+        "number": 2,
+        "title": "M1 \u2014 Owned Rust deterministic task core",
+        "url": "https://github.com/eylema-dev/eylema/milestone/2"
+      },
+      "labels": [
+        "goal",
+        "priority:unranked",
+        "milestone:M1",
+        "type:implementation",
+        "planning:EYL-004",
+        "platform:macos",
+        "status:accepted"
+      ],
+      "dependencies": [
+        "G08",
+        "G09"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-004"
+      ],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/43",
+          "head": "6953a52ef24d6d53203f48764e7ee5e48bb6f471",
+          "main": "9dbcb1ca4b48c8ca3ae01df43ebfa19209ec1841",
+          "tree": "7e6478709069aee75c6824e2eda2390799bf72e9",
+          "main_ci": {
+            "id": 38170174463,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38170174463",
+            "head": "9dbcb1ca4b48c8ca3ae01df43ebfa19209ec1841",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "6953a52ef24d6d53203f48764e7ee5e48bb6f471",
+            "reviewer": "g10_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/16",
+          "head": "348571e6b9c50dd81e0d7349284f90ae529739d2",
+          "main": "9ec707de516f2393b4930f64a051f790da26a177",
+          "tree": "2513a11c301e8e94c301e1a711c84489f15d491a",
+          "main_ci": {
+            "id": 38170181946,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38170181946",
+            "head": "9ec707de516f2393b4930f64a051f790da26a177",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "348571e6b9c50dd81e0d7349284f90ae529739d2",
+            "reviewer": "g10_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G11",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 13,
+        "url": "https://github.com/eylema-dev/eylema/issues/13"
+      },
       "status": "review",
       "milestone": {
         "id": "M1",
@@ -808,47 +879,9 @@
         "priority:unranked",
         "milestone:M1",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-004",
         "platform:macos",
         "status:review"
-      ],
-      "dependencies": [
-        "G08",
-        "G09"
-      ],
-      "conditional_dependencies": {},
-      "related_eyl": [
-        "EYL-004"
-      ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
-    },
-    {
-      "id": "G11",
-      "repository": "eylema-dev/eylema",
-      "issue": {
-        "number": 13,
-        "url": "https://github.com/eylema-dev/eylema/issues/13"
-      },
-      "status": "backlog",
-      "milestone": {
-        "id": "M1",
-        "number": 2,
-        "title": "M1 \u2014 Owned Rust deterministic task core",
-        "url": "https://github.com/eylema-dev/eylema/milestone/2"
-      },
-      "labels": [
-        "goal",
-        "status:backlog",
-        "priority:unranked",
-        "milestone:M1",
-        "type:implementation",
-        "blocked:dependency",
-        "planning:EYL-004",
-        "platform:macos"
       ],
       "dependencies": [
         "G10"
@@ -858,9 +891,7 @@
         "EYL-004"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "waiting_reasons": []
     },
     {
       "id": "G12",
