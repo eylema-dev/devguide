@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "task": "G05",
-  "observed_at": "2026-10-12T04:52:22.549015+00:00",
+  "observed_at": "2026-10-12T05:06:08.270174+00:00",
   "source_cards": "records/goal-index.json",
   "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
   "states": [
@@ -1007,7 +1007,7 @@
         "number": 15,
         "url": "https://github.com/eylema-dev/eylema/issues/15"
       },
-      "status": "review",
+      "status": "accepted",
       "milestone": {
         "id": "M2",
         "number": 3,
@@ -1021,7 +1021,7 @@
         "type:implementation",
         "planning:EYL-005",
         "platform:macos",
-        "status:review"
+        "status:accepted"
       ],
       "dependencies": [
         "G11",
@@ -1031,10 +1031,45 @@
       "related_eyl": [
         "EYL-005"
       ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Revision4 repairs tested; fresh separate final-head review and latest CI required before standing-authorized merge"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/46",
+          "head": "3178d6d12b85703ae32b77d5114459dc417c3c6b",
+          "main": "b75a546a386e1695a5f423d15c88de7ca427c044",
+          "tree": "526161a7dbbb08c97f6c83ee6a31afa4a7a2d034",
+          "main_ci": {
+            "id": 38206238284,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38206238284",
+            "head": "b75a546a386e1695a5f423d15c88de7ca427c044",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "3178d6d12b85703ae32b77d5114459dc417c3c6b",
+            "reviewer": "g13_recheck fresh separate exact-head context;99native/core43guide45Python/nativefour-process/private22boundarytests/integration9repo143Markdown/live47/original14followup preservation; no human GitHub approval"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/19",
+          "head": "b38bafb02f15727f11aa6621cb79d2299aff50fe",
+          "main": "34846219618caa4a7b50b354929c56bfe86dd144",
+          "tree": "8b61b81969bbbc5279e6e238133c822975bfedae",
+          "main_ci": {
+            "id": 38206246116,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38206246116",
+            "head": "34846219618caa4a7b50b354929c56bfe86dd144",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "b38bafb02f15727f11aa6621cb79d2299aff50fe",
+            "reviewer": "g13_recheck fresh separate exact-head context;99native/core43guide45Python/nativefour-process/private22boundarytests/integration9repo143Markdown/live47/original14followup preservation; no human GitHub approval"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G14",
@@ -1043,7 +1078,7 @@
         "number": 16,
         "url": "https://github.com/eylema-dev/eylema/issues/16"
       },
-      "status": "backlog",
+      "status": "review",
       "milestone": {
         "id": "M2",
         "number": 3,
@@ -1052,13 +1087,12 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M2",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-006",
-        "platform:macos"
+        "platform:macos",
+        "status:review"
       ],
       "dependencies": [
         "G09",
@@ -1073,7 +1107,7 @@
       ],
       "accepted_delivery": null,
       "waiting_reasons": [
-        "Accepted dependency deliveries pending"
+        "Fresh separate exact-head review and latest final-body CI pending"
       ]
     },
     {
