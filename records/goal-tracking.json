@@ -1293,7 +1293,7 @@
         "number": 3,
         "url": "https://github.com/eylema-dev/eylema-examples/issues/3"
       },
-      "status": "backlog",
+      "status": "implementing",
       "milestone": {
         "id": "M2",
         "number": 1,
@@ -1302,13 +1302,12 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M2",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-006",
-        "platform:macos"
+        "platform:macos",
+        "status:implementing"
       ],
       "dependencies": [
         "G16"
@@ -1318,9 +1317,7 @@
         "EYL-006"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "waiting_reasons": []
     },
     {
       "id": "G18",
