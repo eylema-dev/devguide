@@ -2,6 +2,7 @@
 
 `eylema-dev` için ortak katkı sözleşmeleri ve depo araçları. [English](README.md). İngilizce kanoniktir. Ürün/çalışma zamanı uygulaması sorumlu deposunda kalır.
 
+- [Proje token ve maliyet takibi](docs/tr/usage-accounting.md)
 - [GitHub Goal takibi ve koruma önerisi](docs/tr/github-work-management.md)
 - [macOS Goal programı ve G00 başlangıç kaydı](docs/tr/goal-program.md)
 - [Katkı sözleşmesi](AGENTS.md) ve [iş akışı](CONTRIBUTING.tr.md)

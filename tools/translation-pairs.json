@@ -5,14 +5,14 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "677fd0a1b2979f925935e2a1ff91b4580bfccf04cda1d99838cab4cd347375f4",
-      "tr_sha256": "5db1c1f10fd6e15c2c3402910da7d3df4376e0d22543e4f3ba2fb2604e5fca00"
+      "en_sha256": "21a12f3b476d4e20dc577177bdcdc667b8cdd4170065561bd6bb889c3638b3f1",
+      "tr_sha256": "a969981a11db21303a1740e7a1814bc9a044b401425b2fbf8a699adb8b455c2c"
     },
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "183c88843fbae5d3d1f797e6f60a0e0c34a2254f4ba7dcad171d930256cc888b",
-      "tr_sha256": "79a145b6bb2c737ad3946d4dcdd8fa9bd07522d58f80fe36e40ed4738e9ae5f2"
+      "en_sha256": "a4f3fa1ae4347ba03dbf664eff93f720d29e88082f1fbf1492093e92b6805435",
+      "tr_sha256": "f2f2a1d94676a9f53579a0f2342cd526914211b61a13ac04a1e5b02890ca67ee"
     },
     {
       "en": "docs/en/name-availability.md",
@@ -47,8 +47,8 @@
     {
       "en": "docs/en/tooling.md",
       "tr": "docs/tr/tooling.md",
-      "en_sha256": "947aad7b209384b82f9a7f998bca53678e0df184b84ddaa0a76b4ec0c3c88e69",
-      "tr_sha256": "1dd991e079d180e64bca9886aa67341422b88505b3f86ce393e0f668241b57c0"
+      "en_sha256": "926973db4a38d1353935e5f147af27b1ff0eaf267a756916b6232fb6fa42293b",
+      "tr_sha256": "6576ae27573ee758e5687d1baa53f59c8fda7bb40e3910033a0bde1b3a5960ef"
     },
     {
       "en": "docs/en/goal-program.md",
@@ -67,6 +67,12 @@
       "tr": "docs/tr/licensing.md",
       "en_sha256": "a74e126942b4987d9cd2a83331a4cfcd449f15f900c2c80d8d7d3d254677e6e0",
       "tr_sha256": "825f67254c37cf6bf25e2bd2abd121456468ce4f12f3ce40aaec495d9ab19f4b"
+    },
+    {
+      "en": "docs/en/usage-accounting.md",
+      "tr": "docs/tr/usage-accounting.md",
+      "en_sha256": "c4fc5d6562f27956cfcfb97d8a8fbbbb7be7974c4c5e7fc89be43b9addab0f3b",
+      "tr_sha256": "18cee6a260ed2ba7bc725f7e15da71aa261e880253b392327e950ffbc8c62fe3"
     }
   ],
   "documents": []

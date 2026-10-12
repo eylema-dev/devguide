@@ -54,3 +54,5 @@ Issue triage, authority validation, model access, independent review, task orche
 ## Cross-repository changes
 
 Follow the [repository setup and translation workflow](docs/en/repository-setup.md). Policy lives here; product docs live in their language repositories and schemas stay in core. Submit linked changes and refresh the pinned repository set after final member commits. The integration snapshot is not a continuously enforced cross-repository merge rule.
+
+For every new task/Goal, refresh the private [project token and cost ledger](docs/en/usage-accounting.md) before and after work, including repairs and separate reviews. Record the cutoff and usage delta locally; register new project roots/provider metadata before starting. Unknown usage/prices stay unknown, and private session records must not be published.
