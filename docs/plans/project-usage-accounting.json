@@ -1,0 +1,19 @@
+{
+  "task": "project-usage-accounting",
+  "revision": 1,
+  "maintainer_request": "Track historical and ongoing Eylema token usage by model and reasoning effort, with approximate costs; direct request in the current project chat on 12 October 2026.",
+  "base_revision": "32e256853205a6fb47aa660c761edb73f2d8c976",
+  "allowed_paths": ["tools/usage/", "tools/tests/test_usage.py", "docs/en/usage-accounting.md", "docs/tr/usage-accounting.md", "docs/en/tooling.md", "docs/tr/tooling.md", "CONTRIBUTING.md", "CONTRIBUTING.tr.md", "README.md", "README.tr.md", "tools/translation-pairs.json", "docs/plans/project-usage-accounting.json"],
+  "private_outputs": "Ignored local work/usage directory; no session records or machine paths in the public PR.",
+  "acceptance": {
+    "historical_usage": "Scan available project session metadata and response usage; include project descendants and resumed files, deduplicate response identities, report coverage gaps.",
+    "model_effort": "Bind each response to its recorded turn context; unknown metadata stays unknown.",
+    "cost": "Date and source the official public Standard API-equivalent rates; use request-level long-context rules and cached tokens without double counting reasoning; unpriced models stay unpriced.",
+    "persistence": "Idempotent private ledger, daily/model/effort summaries and changed snapshots; future work must refresh before/after Goals and register new roots or providers.",
+    "automation": "Quiet hourly thread heartbeat refreshes local reports; no provider/account changes or spending.",
+    "delivery": "Regression tests, unchanged repository gates, actual local backfill, separate exact-commit review and current GitHub CI before authorized merge."
+  },
+  "budgets": {"active_minutes": 120, "targeted_repairs": 3, "new_paid_provider_calls": 0},
+  "risks": ["Only available local records are measurable; deleted or other-provider histories and tool-only image/search costs are not invented.", "Configured model/effort is recorded metadata, not proof of a hidden served SKU.", "Subscription costs and API-equivalent estimates differ; prices are a dated valuation, not historical invoices."],
+  "roles": {"architect_implementer_verifier": "Codex, configured gpt-6.1-sol/high in the project chat; actual usage metadata is authoritative for accounting", "reviewer": "Pending separate context bound to final commit"}
+}

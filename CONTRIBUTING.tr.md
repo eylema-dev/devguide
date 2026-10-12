@@ -54,3 +54,5 @@ Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, 
 ## Depolar arası değişiklikler
 
 [Depo kurulum ve çeviri akışını](docs/tr/repository-setup.md) izleyin. Politika burada; ürün belgeleri dil depolarında, şemalar çekirdektedir. İlişkili değişiklikleri sunun ve son üye commit'lerinden sonra sabitlenmiş depo kümesini yenileyin. Entegrasyon anlık görüntüsü sürekli zorlanan depolar arası birleştirme kuralı değildir.
+
+Her yeni görev/Goal öncesi ve sonrasında, onarımlar ve ayrı incelemeler dahil özel [proje token ve maliyet defterini](docs/tr/usage-accounting.md) güncelleyin. Kesim zamanını ve tüketim artışını yerel kanıta kaydedin; yeni proje köklerini/provider metaverisini işe başlamadan kaydedin. Bilinmeyen tüketim/fiyat bilinmiyor olarak kalır; özel oturum kayıtları yayımlanmaz.
