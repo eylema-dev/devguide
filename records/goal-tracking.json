@@ -2205,7 +2205,7 @@
         "number": 32,
         "url": "https://github.com/eylema-dev/eylema/issues/32"
       },
-      "status": "backlog",
+      "status": "accepted",
       "milestone": {
         "id": "M7",
         "number": 8,
@@ -2214,22 +2214,38 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
-        "priority:unranked",
         "milestone:M7",
-        "type:implementation",
-        "blocked:dependency",
-        "platform:macos"
+        "platform:macos",
+        "priority:unranked",
+        "status:accepted",
+        "type:implementation"
       ],
       "dependencies": [
         "G38"
       ],
       "conditional_dependencies": {},
       "related_eyl": [],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/58",
+          "head": "57233a20abb21717c7fb9c22187716fbba6c1f3b",
+          "main": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+          "tree": "07d23416762c8a18427f27551eb7f2f3e579be36",
+          "main_ci": {
+            "id": 38298731953,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38298731953",
+            "head": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "57233a20abb21717c7fb9c22187716fbba6c1f3b",
+            "reviewer": "g39_review separate GPT-6.1 Sol/high Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G40",
