@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "task": "G05",
-  "observed_at": "2026-10-12T05:06:08.270174+00:00",
+  "observed_at": "2026-10-12T15:07:35Z",
   "source_cards": "records/goal-index.json",
   "observation": "Versioned issue/status snapshot; refresh through a scoped Goal PR. Frozen G00 cards remain historical. GitHub labels are planning metadata, not authority.",
   "states": [
@@ -1412,7 +1412,7 @@
         "number": 19,
         "url": "https://github.com/eylema-dev/eylema/issues/19"
       },
-      "status": "backlog",
+      "status": "accepted",
       "milestone": {
         "id": "M3",
         "number": 4,
@@ -1421,14 +1421,13 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M3",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-007",
         "platform:macos",
-        "platform:metal"
+        "platform:metal",
+        "status:accepted"
       ],
       "dependencies": [
         "G18"
@@ -1437,10 +1436,27 @@
       "related_eyl": [
         "EYL-007"
       ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/52",
+          "head": "2ff7ac8184bff6b932e728963dfdff89ffe6e5aa",
+          "main": "125bc562466ed6fffd6b27856035e6735f96dbe6",
+          "tree": "a367dbd3e7d623db65b6d5881d1152aaea4d50b2",
+          "main_ci": {
+            "id": 38267694058,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38267694058",
+            "head": "125bc562466ed6fffd6b27856035e6735f96dbe6",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "2ff7ac8184bff6b932e728963dfdff89ffe6e5aa",
+            "reviewer": "g16_review separate Codex context; exact-head PASS, no actionable findings; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G20",
