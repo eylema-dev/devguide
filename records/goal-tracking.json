@@ -1293,7 +1293,7 @@
         "number": 3,
         "url": "https://github.com/eylema-dev/eylema-examples/issues/3"
       },
-      "status": "implementing",
+      "status": "accepted",
       "milestone": {
         "id": "M2",
         "number": 1,
@@ -1307,7 +1307,7 @@
         "type:implementation",
         "planning:EYL-006",
         "platform:macos",
-        "status:implementing"
+        "status:accepted"
       ],
       "dependencies": [
         "G16"
@@ -1316,7 +1316,44 @@
       "related_eyl": [
         "EYL-006"
       ],
-      "accepted_delivery": null,
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema-examples",
+          "pr": "https://github.com/eylema-dev/eylema-examples/pull/5",
+          "head": "78afa3530ea377dfe51d3a7617edf7e230fb52ae",
+          "main": "67b23a27604f4b887cffd1b133e7dc5dcff7835f",
+          "tree": "c41cb72e5c96945ad0d99aa57f76ec523ec10f0d",
+          "main_ci": {
+            "id": 38233991255,
+            "url": "https://github.com/eylema-dev/eylema-examples/actions/runs/38233991255",
+            "head": "67b23a27604f4b887cffd1b133e7dc5dcff7835f",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "78afa3530ea377dfe51d3a7617edf7e230fb52ae",
+            "reviewer": "g16_review separate Codex context; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/24",
+          "head": "999ac20ba5733aa46c8d406f68fe45b4bc83b784",
+          "main": "7fbff582bea841d32a628ff32d38cc091822e595",
+          "tree": "1ebbe863f509ab5edc82b9a06acb76076bd73821",
+          "main_ci": {
+            "id": 38252765716,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38252765716",
+            "head": "7fbff582bea841d32a628ff32d38cc091822e595",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "999ac20ba5733aa46c8d406f68fe45b4bc83b784",
+            "reviewer": "g16_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
       "waiting_reasons": []
     },
     {
