@@ -1107,7 +1107,7 @@
       ],
       "accepted_delivery": null,
       "waiting_reasons": [
-        "Fresh separate exact-head review and latest final-body CI pending for core 3c2cd3e9181c390aefb0882bcac98b87d654b575 / guide d85fc58cc2e02f11c98c0c54df584e386d559c4d"
+        "Fresh separate exact-head review and latest final-body CI pending for current core and guide PR heads"
       ]
     },
     {
