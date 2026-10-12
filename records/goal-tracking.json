@@ -1078,6 +1078,80 @@
         "number": 16,
         "url": "https://github.com/eylema-dev/eylema/issues/16"
       },
+      "status": "accepted",
+      "milestone": {
+        "id": "M2",
+        "number": 3,
+        "title": "M2 \u2014 Saved-task local web console",
+        "url": "https://github.com/eylema-dev/eylema/milestone/3"
+      },
+      "labels": [
+        "goal",
+        "priority:unranked",
+        "milestone:M2",
+        "type:implementation",
+        "planning:EYL-006",
+        "platform:macos",
+        "status:accepted"
+      ],
+      "dependencies": [
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13"
+      ],
+      "conditional_dependencies": {},
+      "related_eyl": [
+        "EYL-006"
+      ],
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/47",
+          "head": "20a2fe35da9d1f5846bd2fc9fd33f863ead4e650",
+          "main": "626ea43bf61afe2c288cf6dd2b50a5b4af2ec0ee",
+          "tree": "0920ddb8fd3c075c5a296cbb0c67dd11cf2bd987",
+          "main_ci": {
+            "id": 38213864919,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38213864919",
+            "head": "626ea43bf61afe2c288cf6dd2b50a5b4af2ec0ee",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "20a2fe35da9d1f5846bd2fc9fd33f863ead4e650",
+            "reviewer": "g14_revision2_review separate exact-head context; deterministic per-read-reset mutant rejected; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/20",
+          "head": "261e5c6a60e186b4be9a3020a7ac58d1bc43dd11",
+          "main": "a287ae4decfe7ebbe1b0e12ad531702b5b327129",
+          "tree": "ce4b15e482217451a38590fab4951d3bd1bc81bf",
+          "main_ci": {
+            "id": 38213972200,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38213972200",
+            "head": "a287ae4decfe7ebbe1b0e12ad531702b5b327129",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "261e5c6a60e186b4be9a3020a7ac58d1bc43dd11",
+            "reviewer": "g14_revision2_review separate exact-head context; guide metadata/integration audited; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
+    },
+    {
+      "id": "G15",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 17,
+        "url": "https://github.com/eylema-dev/eylema/issues/17"
+      },
       "status": "review",
       "milestone": {
         "id": "M2",
@@ -1095,46 +1169,6 @@
         "status:review"
       ],
       "dependencies": [
-        "G09",
-        "G10",
-        "G11",
-        "G12",
-        "G13"
-      ],
-      "conditional_dependencies": {},
-      "related_eyl": [
-        "EYL-006"
-      ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Fresh separate exact-head review and latest final-body CI pending for current core and guide PR heads"
-      ]
-    },
-    {
-      "id": "G15",
-      "repository": "eylema-dev/eylema",
-      "issue": {
-        "number": 17,
-        "url": "https://github.com/eylema-dev/eylema/issues/17"
-      },
-      "status": "backlog",
-      "milestone": {
-        "id": "M2",
-        "number": 3,
-        "title": "M2 \u2014 Saved-task local web console",
-        "url": "https://github.com/eylema-dev/eylema/milestone/3"
-      },
-      "labels": [
-        "goal",
-        "status:backlog",
-        "priority:unranked",
-        "milestone:M2",
-        "type:implementation",
-        "blocked:dependency",
-        "planning:EYL-006",
-        "platform:macos"
-      ],
-      "dependencies": [
         "G14"
       ],
       "conditional_dependencies": {},
@@ -1142,9 +1176,7 @@
         "EYL-006"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "waiting_reasons": []
     },
     {
       "id": "G16",
