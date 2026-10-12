@@ -1262,7 +1262,7 @@
           "review": {
             "status": "passed",
             "reviewed_head": "f23f842dd5b0bd293203d8be07141aabde676e51",
-            "reviewer": "g16_review separate Codex context exact-head review after the core work-plan snapshot; PASS, no actionable findings; core plan pending text records pre-review state; no human GitHub approval claimed"
+            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
           }
         },
         {
@@ -1280,7 +1280,7 @@
           "review": {
             "status": "passed",
             "reviewed_head": "c0b2aa62adeb7713435556d8f787ffd967d34d7c",
-            "reviewer": "g16_review separate Codex context exact-head review after the core work-plan snapshot; PASS, no actionable findings; core plan pending text records pre-review state; no human GitHub approval claimed"
+            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
           }
         }
       ],
@@ -1399,7 +1399,7 @@
           "review": {
             "status": "passed",
             "reviewed_head": "7d6fd3e4761fab68f7340333b4da707ef4541f64",
-            "reviewer": "g16_review separate Codex context exact-head review after the core work-plan snapshot; PASS, no actionable findings; core plan pending text records pre-review state; no human GitHub approval claimed"
+            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
           }
         }
       ],
