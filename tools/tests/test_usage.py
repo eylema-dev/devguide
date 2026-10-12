@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 
 TOOL = Path(__file__).resolve().parents[1] / 'usage' / 'collect.py'
 spec = importlib.util.spec_from_file_location('usage_collect', TOOL)
@@ -170,6 +171,54 @@ class UsageTests(unittest.TestCase):
         with self.assertRaises(usage.UsageError):
             usage.refresh(self.config(), self.output, rates)
         self.assertFalse(self.output.exists())
+
+    def test_missing_root_and_complete_invalid_header_are_errors(self):
+        config = dict(self.config(), session_roots=[str(self.root / 'missing')])
+        with self.assertRaises(usage.UsageError):
+            usage.refresh(config, self.output, RATES)
+        for invalid in ('BROKEN\n', '[]\n', '{"type":"response_item"}\n'):
+            (self.source / 'bad.jsonl').write_text(invalid)
+            with self.assertRaises(usage.UsageError):
+                usage.refresh(self.config(), self.output, RATES)
+        self.assertFalse((self.output / 'ledger.json').exists())
+
+    def test_discovery_and_external_partial_lines_remain_visible_as_gaps(self):
+        (self.source / 'new.jsonl').write_text('{"type":')
+        external = self.root / 'external.jsonl'
+        external.write_text('{"provider":')
+        config = dict(self.config(), external_usage_files=[str(external)])
+        report = usage.refresh(config, self.output, RATES)
+        self.assertEqual(report['coverage']['deferred_discovery_headers'], 1)
+        self.assertEqual(report['coverage']['deferred_partial_lines'], 1)
+
+    def test_late_model_effort_enrichment_updates_price_without_changing_tokens(self):
+        self.session(items=[response()], context=False)
+        first = usage.refresh(self.config(), self.output, RATES)
+        self.assertEqual(first['summary']['unpriced_tokens']['total_tokens'], 110)
+        self.session(items=[response()])
+        second = usage.refresh(self.config(), self.output, RATES)
+        self.assertEqual(second['summary']['responses'], 1)
+        self.assertEqual(second['summary']['tokens'], first['summary']['tokens'])
+        self.assertEqual(second['summary']['unpriced_tokens'], {})
+        self.assertGreater(float(second['summary']['priced_standard_api_equivalent_usd']), 0)
+
+    def test_late_output_failure_preserves_history_and_next_refresh_repairs_report(self):
+        self.session(items=[response()])
+        usage.refresh(self.config(), self.output, RATES)
+        self.session(items=[response(), response(rid='second')])
+        original = usage.atomic
+        def fail_latest(path, content):
+            if path.name == 'latest.json':
+                raise OSError('synthetic IO failure')
+            original(path, content)
+        with mock.patch.object(usage, 'atomic', side_effect=fail_latest):
+            with self.assertRaises(OSError):
+                usage.refresh(self.config(), self.output, RATES)
+        self.assertEqual(len(json.loads((self.output / 'ledger.json').read_text())['responses']), 2)
+        self.assertEqual(json.loads((self.output / 'latest.json').read_text())['summary']['responses'], 1)
+        recovered = usage.refresh(self.config(), self.output, RATES)
+        self.assertEqual(recovered['summary']['responses'], 2)
+        self.assertEqual(json.loads((self.output / 'latest.json').read_text())['summary']['responses'], 2)
 
     def test_symlink_output_never_overwrites_other_file(self):
         self.session(items=[response()])

@@ -62,18 +62,22 @@ def records(path, diagnostics):
                 yield item
 
 
-def metadata(path):
+def metadata(path, diagnostics):
     with path.open('rb') as source:
         line = source.readline()
+    if not line.endswith(b'\n'):
+        diagnostics['deferred_discovery_headers'] += 1
+        return None
     try:
         item = json.loads(line)
     except (ValueError, UnicodeError):
-        return None
+        raise UsageError('Malformed complete discovery header') from None
     if not isinstance(item, dict):
-        return None
+        raise UsageError('Invalid discovery header')
     payload = item.get('payload')
-    if item.get('type') != 'session_meta' or not isinstance(payload, dict):
-        return None
+    if (item.get('type') != 'session_meta' or not isinstance(payload, dict)
+            or not isinstance(payload.get('id'), str) or not payload['id']):
+        raise UsageError('Invalid discovery session identity')
     return {key: payload.get(key) for key in
             ('id', 'parent_thread_id', 'forked_from_id', 'cwd', 'model_provider', 'timestamp')}
 
@@ -99,15 +103,17 @@ def project_cwd(cwd, roots, cache):
     return selected
 
 
-def discover(source_roots, project_roots, known_ids=()):
+def discover(source_roots, project_roots, known_ids=(), diagnostics=None):
+    diagnostics = diagnostics if diagnostics is not None else collections.Counter()
     metas = {}
     for root in source_roots:
-        if not root.exists():
-            continue
+        if not root.is_dir():
+            raise UsageError('Configured session root is missing or unavailable')
         for path in sorted(root.rglob('*.jsonl')):
             if path.is_symlink():
+                diagnostics['skipped_symlink_source_files'] += 1
                 continue
-            meta = metadata(path)
+            meta = metadata(path, diagnostics)
             if meta and isinstance(meta.get('id'), str):
                 metas[path] = meta
     roots = [Path(p).resolve() for p in project_roots]
@@ -181,13 +187,14 @@ def scan(files):
     return incoming, sessions, dict(diagnostics)
 
 
-def external_records(paths):
+def external_records(paths, diagnostics=None):
     """Explicit normalized provider exports; never infer effort, prices or totals."""
+    diagnostics = diagnostics if diagnostics is not None else collections.Counter()
     result = {}
     required = {'provider', 'response_id', 'session_id', 'turn_id', 'timestamp', 'model', 'effort', 'tokens'}
     for name in paths:
         path = Path(name).expanduser()
-        for obj in records(path, collections.Counter()):
+        for obj in records(path, diagnostics):
             if set(obj) != required or not all(isinstance(obj[k], str) and obj[k]
                                                for k in required - {'tokens'}):
                 raise UsageError('External usage must contain only normalized metadata')
@@ -227,7 +234,12 @@ def merge(previous, incoming):
     result = dict(previous)
     for key, value in incoming.items():
         if key in result and result[key] != value:
-            raise UsageError('Ledger conflicts with recorded response; preserve previous ledger')
+            old = result[key]
+            differences = {field for field in set(old) | set(value) if old.get(field) != value.get(field)}
+            if not (differences <= {'model', 'effort'}
+                    and all(old.get(field) == 'unknown' and value.get(field) != 'unknown'
+                            for field in differences)):
+                raise UsageError('Ledger conflicts with recorded response; preserve previous ledger')
         result[key] = value
     return result
 
@@ -345,10 +357,13 @@ def refresh(config, output, rates):
         previous = json.loads(ledger_path.read_text()) if ledger_path.exists() else {'version': 1, 'sessions': [], 'responses': {}}
         if previous.get('version') != 1:
             raise UsageError('Unsupported ledger version')
+        discovery_diagnostics = collections.Counter()
         files = discover([Path(p).expanduser() for p in config['session_roots']],
-                         config['project_roots'], previous['sessions'])
+                         config['project_roots'], previous['sessions'], discovery_diagnostics)
         incoming, sessions, diagnostics = scan(files)
-        external = external_records(config.get('external_usage_files', []))
+        discovery_diagnostics.update(diagnostics)
+        diagnostics = discovery_diagnostics
+        external = external_records(config.get('external_usage_files', []), diagnostics)
         incoming = merge(incoming, external)
         values = merge(previous['responses'], incoming)
         diagnostics['external_responses'] = len(external)
@@ -386,7 +401,7 @@ def main():
         report = refresh(json.loads(args.config.read_text()), args.output, json.loads(args.rates.read_text()))
     except (UsageError, OSError, ValueError, KeyError, decimal.InvalidOperation) as exc:
         # Never echo arbitrary raw source content, paths, provider errors or prompts.
-        parser.exit(1, f'Usage refresh failed ({type(exc).__name__}); previous ledger is retained.\n')
+        parser.exit(1, f'Usage refresh failed ({type(exc).__name__}); existing artifacts are not deleted; reports may be stale or partial. Resolve the source/IO failure and rerun.\n')
     print(json.dumps({'responses': report['summary']['responses'], 'tokens': report['summary']['tokens'],
                       'standard_api_equivalent_usd': report['summary']['priced_standard_api_equivalent_usd'],
                       'unpriced_tokens': report['summary']['unpriced_tokens'], 'coverage': report['coverage']}))
