@@ -76,6 +76,9 @@ class UsageTests(unittest.TestCase):
                         'https://github.com/eylema-dev/eylema.git'], check=True)
         self.assertTrue(usage.project_cwd(str(other), [], {}))
         subprocess.run(['git', '-C', str(other), 'remote', 'set-url', 'origin',
+                        'https://github.com/eylema-dev/eylemadotdev.git'], check=True)
+        self.assertTrue(usage.project_cwd(str(other), [], {}))
+        subprocess.run(['git', '-C', str(other), 'remote', 'set-url', 'origin',
                         'https://github.com/eylema-dev/eylema-evil.git'], check=True)
         self.assertFalse(usage.project_cwd(str(other), [], {}))
 

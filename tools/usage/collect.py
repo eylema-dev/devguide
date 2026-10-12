@@ -19,7 +19,7 @@ FIELDS = ('input_tokens', 'cached_input_tokens', 'cache_write_input_tokens',
           'output_tokens', 'reasoning_output_tokens', 'total_tokens')
 REPOSITORIES = {'eylema', 'devguide', 'eylema-docs-en', 'eylema-docs-tr',
                 'eylema-evals', 'eylema-examples', 'eylema-models',
-                'eylema-training', 'eylema-website', '.github'}
+                'eylema-training', 'eylemadotdev', '.github'}
 SAFE_LABEL = re.compile(r'[A-Za-z0-9_.:/-]{1,160}\Z')
 
 
