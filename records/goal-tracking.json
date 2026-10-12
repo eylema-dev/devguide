@@ -2155,7 +2155,7 @@
         "number": 31,
         "url": "https://github.com/eylema-dev/eylema/issues/31"
       },
-      "status": "backlog",
+      "status": "accepted",
       "milestone": {
         "id": "M7",
         "number": 8,
@@ -2164,12 +2164,11 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M7",
         "type:implementation",
-        "blocked:dependency",
-        "platform:macos"
+        "platform:macos",
+        "status:accepted"
       ],
       "dependencies": [
         "G05",
@@ -2177,10 +2176,27 @@
       ],
       "conditional_dependencies": {},
       "related_eyl": [],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/57",
+          "head": "2bbf0dac5b837d9a5fa128558722773d533b67ff",
+          "main": "cf47ef609e633bac3d6533075dff5d1dd1f4221e",
+          "tree": "02de392e0a0cddc8dad007242f0948dd233423f4",
+          "main_ci": {
+            "id": 38291411820,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38291411820",
+            "head": "cf47ef609e633bac3d6533075dff5d1dd1f4221e",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "2bbf0dac5b837d9a5fa128558722773d533b67ff",
+            "reviewer": "g16_review separate Codex context; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G39",
