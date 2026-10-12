@@ -23,7 +23,7 @@
     },
     "eylema-evals": {
       "repository": "eylema-dev/eylema-evals",
-      "revision": "eee2145440416d042a607264bf8217f16e31c266"
+      "revision": "9f2225cbfa150416f776165cf1c65624eca1f260"
     },
     "eylema-models": {
       "repository": "eylema-dev/eylema-models",
