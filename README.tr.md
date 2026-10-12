@@ -10,4 +10,6 @@
 - [Taşıma, birleştirme sırası ve geri dönüş](docs/tr/repository-migration.md)
 - [Tarihsel isim kararı](docs/tr/name-availability.md)
 
-Yerel kontroller belgeleri ve katkı iskeletini doğrular. Depo kümesi kontrolü sabitlenmiş açık depo commit'lerini veri olarak okur; çeviri/API/yol haritası uyumunu, ortak araç özetlerini ve bağlantıları denetler. İndirilen çalışma dizinlerinden kod yürütmez. Uygulama, GPU, model veya eğitim davranışını kanıtlamaz. Bağımsız bakımcı incelemesi hâlâ gereklidir; birleştirme, dal kuralı veya dağıtım burada otomatikleştirilmez. Lisans seçimi beklemektedir.
+Yerel kontroller belgeleri ve katkı iskeletini doğrular. Depo kümesi kontrolü sabitlenmiş açık depo commit'lerini veri olarak okur; çeviri/API/yol haritası uyumunu, ortak araç özetlerini ve bağlantıları denetler. İndirilen çalışma dizinlerinden kod yürütmez. Uygulama, GPU, model veya eğitim davranışını kanıtlamaz. Bağımsız bakımcı incelemesi hâlâ gereklidir; birleştirme, dal kuralı veya dağıtım burada otomatikleştirilmez. Kendi kaynak kodumuz ve belgelerimiz [Apache-2.0](LICENSE) lisanslıdır. Ayrı belirtilen üçüncü taraf içerikleri, model ağırlıkları ve veri kümeleri kendi koşullarını korur.
+
+- [Apache-2.0 lisans ve katkı kapsamı](docs/tr/licensing.md)

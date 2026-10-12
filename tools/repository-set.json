@@ -3,61 +3,61 @@
   "members": {
     "eylema": {
       "repository": "eylema-dev/eylema",
-      "revision": "d3e9fa69b45983fcb63442612a49f430fb13c174"
+      "revision": "911386eba5c3f50e195c6c9549861fa7b13d74a3"
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",
-      "revision": "a65eac5de1f5adeb8abacdd73c95bc98ac31ff5b"
+      "revision": "aa80d3d2c61d5331de76cb825f9fa8c98b7093e2"
     },
     "eylema-docs-tr": {
       "repository": "eylema-dev/eylema-docs-tr",
-      "revision": "a1aecc95e6424e25f606796b62975aea8ca98f6a"
+      "revision": "caf96866a45e2a5ae46628d36774f311596c22f7"
     },
     ".github": {
       "repository": "eylema-dev/.github",
-      "revision": "4e4367251542ff858a5daa6d270c7d87d43be6df"
+      "revision": "f08ac8912d8459a587ef3f049a62bae0d00ba201"
     },
     "eylema-examples": {
       "repository": "eylema-dev/eylema-examples",
-      "revision": "c5361f75922ff72ac0963aef4698b0d49675be8c"
+      "revision": "08c9c429ef0558cae9d6b788da0b759a26f9b079"
     },
     "eylema-evals": {
       "repository": "eylema-dev/eylema-evals",
-      "revision": "9f2225cbfa150416f776165cf1c65624eca1f260"
+      "revision": "3a80f7810e9222ceac989dd5f59f9a24a8104b4e"
     },
     "eylema-models": {
       "repository": "eylema-dev/eylema-models",
-      "revision": "9718bfcd4b3789ca7834453f8bfe509d87c8a8f4"
+      "revision": "97f98a8a55d99ff290dd2d17ca5f4b8ec556cc3e"
     },
     "eylema-training": {
       "repository": "eylema-dev/eylema-training",
-      "revision": "7691a954a0fcc726b181d98afbc7f19063809cdb"
+      "revision": "bd39279eaff50c3aec3fcac03034fd175ea55fd3"
     }
   },
   "product_translations": {
     "api-reference": {
-      "en_sha256": "a9508b7255a03da53d486ce039015de1b8ef826a3c1d6ece0393ab340f29d74a",
-      "tr_sha256": "c5d3d3ccb02a340e0e2e7114af4d384a0cf3b976be500fd40fd9d0aedd7717f3"
+      "en_sha256": "2f11ae8a1e5b0a5182bc02ce7af83bedfb4fd07e7c4d8ad101d740e05e575687",
+      "tr_sha256": "a51dff89da9fa78bca252fa671ff7858a0ad9efc5515f4f0bb1f0e8033cf31fb"
     },
     "architecture": {
-      "en_sha256": "9b3dab65f48fbe47530f9b242cf190a042c26ad669419775dddf22b6a03ed19a",
-      "tr_sha256": "11e097eb20edf4092347daecbaed8af85a17d87e2468d6612ee6945c9aea5b9f"
+      "en_sha256": "218053ed07ecaabb0a769ebb8033a6feb3549fd95abcbad6b9ad5554d3b72e7b",
+      "tr_sha256": "b760d9bec56e2a4dea1ecfe3f15a0352f4eb206900f6aded735c5618ef428746"
     },
     "development-and-operations": {
-      "en_sha256": "70ce5c67a0dd9d7ad20367d4730ca1c214822fff72cdd0e352983766e58ac91e",
-      "tr_sha256": "a5d2dc1ed662c3c26cc07522ec6643a013990c72ee2e93fcde85f5c5ffee6d49"
+      "en_sha256": "58fb558e410def405111333377cee5a34de23c27194a9e2313313fdc9f9b56dc",
+      "tr_sha256": "4fc4674b11a30e09283a03b30794a5e4d3ecd51bad4fecf2fe50c089c1e41b3e"
     },
     "learning-and-training": {
-      "en_sha256": "dd297ee1f66a84e90de516884068a90bbed771443387392314947de86e1c1c82",
-      "tr_sha256": "4600203bd7ce9034f8d8c20c9a028090165f61fea13caa259f91f4242b8e0666"
+      "en_sha256": "265efc1cc826ef04ff1f56f52e09274348e1e22f72ebe64973deb328c1ec7088",
+      "tr_sha256": "cee9b83a95c39b3142456b206c9754873c833bddb587281e758e123d5506bd38"
     },
     "project-structure": {
-      "en_sha256": "b4652f3343f7dd6e578024814ea2fe3758aca9946b23899194b65238b37275ed",
-      "tr_sha256": "c7425617a7f784e0165db00b327b95349044f84b2b087f7209a6b89fe8faf6f4"
+      "en_sha256": "18e8e37769e30a26d4893c3ecdee626a03aa93c4c2a3d1142869b11267ef571b",
+      "tr_sha256": "a97b1edc9191a2a8f8e49dcfea6578155027449fa9a774e347bd617e92fb2893"
     },
     "roadmap": {
-      "en_sha256": "957609dc8f4a3dca19fcc4bfa5aa9c2d85f4587fe328f5c1a9f9d4c93e0a4858",
-      "tr_sha256": "f6b7cc669b4d0110599e9de625d4693b757f21ec4e6d6bf7640952ae3869f324"
+      "en_sha256": "3733fbb4c38ace59d2bffa84999ae933e997815ff51500e78057eb751e2109d4",
+      "tr_sha256": "cbe5c10175adf65dd170985926e5702fd056b5b2fd3248556f451ecac4c2569e"
     }
   }
 }

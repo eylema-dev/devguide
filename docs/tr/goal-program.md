@@ -12,7 +12,7 @@ Kart bir yürütüm önerisidir; yetki veya kabul edilmiş bağımlılık değil
 
 Zaman damgalı [başlangıç kaydı](../../records/g00-baseline.json), on deponun güncel main commit/ağaçlarını, rollerini, commit bağlı kontrollerini, klasik koruma ve uygulanan kurallarını, ortak politika hash’lerini ve mevcut 14 çalışma ağacının özetlerini içerir. Canlı kayıt değil, tarihsel kanıttır. `tools/repository-set.json` ayrı kabul edilmiş entegrasyon pin kümesi olarak kalır; güncel main SHA’ları pinlerin yerine geçirilmez.
 
-Çekirdekte zorunlu `repository-checks`, güncel tabana dayanma, adminlere uygulama ve konuşma çözümü vardır; zorunlu inceleme onayı sıfırdır. Kayıt anında diğer dokuz depoda klasik koruma dönmedi ve uygulanan kural/ruleset yoktu. Ayarlar değiştirilmez. CI depo kontrollerini kanıtlar; Rust/GPU/model/eğitim yürütümünü kanıtlamaz. Projects erişimi sınanmaz ve isteğe bağlıdır. Lisans seçimi G06’da kalır.
+Çekirdekte zorunlu `repository-checks`, güncel tabana dayanma, adminlere uygulama ve konuşma çözümü vardır; zorunlu inceleme onayı sıfırdır. Kayıt anında diğer dokuz depoda klasik koruma dönmedi ve uygulanan kural/ruleset yoktu. Ayarlar değiştirilmez. CI depo kontrollerini kanıtlar; Rust/GPU/model/eğitim yürütümünü kanıtlamaz. Projects erişimi sınanmaz ve isteğe bağlıdır. 12 Ekim 2026 tarihli [Apache-2.0 kararı](licensing.md) G06 lisans seçimini kapatır; bağlantılı PR incelemesi, varlık kökeni ve dağıtım kabulü ayrıdır.
 
 Kirli çekirdek ve eş depolar korunur: reset, temizlik, dal değiştirme, stash veya ilgisiz işi commit etme yapılmaz. Özel yerel doğrulama kesin yol/durum/dosya özetlerini kullanır; kamu kaydında yalnız taşınabilir takma ad ve hash bulunur. HEAD, dal, izlenen/ignore edilmeyen izlenmeyen dosya baytları ve durum önce/sonra eşleşmelidir. Ignore edilen cache’ler bayt denetimi dışında kalır ve değiştirilmez. G00 kayıtlı main’den yeni temiz devguide checkout’unda çalışır.
 
@@ -70,8 +70,12 @@ Kirli çekirdek ve eş depolar korunur: reset, temizlik, dal değiştirme, stash
 
 ## Sıra, riskler ve devir
 
-Sayısal sırayı değil bağımlılık grafiğini izle: G18 ve G27, G23’ten önce gelir; G38–G43, GPU/eğitimi beklemeden M2 sonrasında yapılabilir. G06 karar hazırlığı olarak yürür ve G45 dağıtımını bloke eder. W01 içeriği G03 sonrası hazırlayabilir; çalışan ürün anlatımı G44 gerektirir. Bütün M1–M7 gerekleri G44’e bağlanır. M0–M7 ve EYL-001–008 plan kimlikleridir; gerçek milestone/issue bağlantılarını G05 oluşturur.
+Sayısal sırayı değil bağımlılık grafiğini izle: G18 ve G27, G23’ten önce gelir; G38–G43, GPU/eğitimi beklemeden M2 sonrasında yapılabilir. G06 lisans seçimi kararlaştırılmıştır; bağlantılı teslimatın inceleme ve köken kabulü G45 için gereklidir. W01 içeriği G03 sonrası hazırlayabilir; çalışan ürün anlatımı G44 gerektirir. Bütün M1–M7 gerekleri G44’e bağlanır. M0–M7 ve EYL-001–008 plan kimlikleridir; gerçek milestone/issue bağlantılarını G05 oluşturur.
 
 G01 değişmez taşıma kanıtını güncel belge kontrolünden ayırır; G02 Rust kabulünden önce gerçek uygulama kapılarını ekler. G03 macOS planını ürün sözleşmeleriyle uyumlar. Kurulu Unsloth, seçilen Qwen3-0.6B veya önerilen Rust 1.99.0 desteği kanıtlamaz; kendi Goal’lerinde sınanırlar. Metal ve WebGPU ayrı bağlamlardır; ortak kuyruk/evrensel sıfır kopya varsayılmaz. Aynı cihazın farklı yük profilleri iki cihaz değildir. Ağırlık, özel eğitim örneği veya kimlik bilgisi kamu Git’ine konmaz.
 
 G00 başlangıç kaydı, tüm kartlar, PR kontrolleri, koruma denetimi ve ayrı incelemeyi devreder. G01 ancak maintainer G00’ı kabul ettikten ve kabul edilmiş main SHA bağlandıktan sonra başlar. Geri dönüş kapsamlı revert PR’ıdır. Kabul edilen yollar, bütçe ve karar kaydı için [G00 çalışma planına](../plans/g00-baseline.md) bak. Güncel durumlar ve kabul edilen teslimler ayrı G05 kaydında tutulur; sabit kart tamamlanmayı kanıtlamaz.
+
+## Kabul edilen öncelik güncellemesi — 12 Ekim 2026
+
+[Güncel ürün kararları](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/project-structure.md), isteğe bağlı model/eğitim tamamlanmadan kullanılabilir M2 görev konsolu önizlemesini ve sınırlı tek ihtiyaçtan PR’a kanıtı önceler. G38–G43 kabul edilmiş M2/G17 temelinden yürütülebilir; tam G44/G45 sürümü bütün kabul kapılarını korur. Mac mini M4/24 GB ve Linux RTX 4070 Ti Super/16 GB VRAM + 32 GB RAM, birincil M4 Pro hedefini değiştirmeden veya yeni backend desteği iddia etmeden sahibinin bildirdiği test envanterine katılır. Tarihsel Goal kartları ve kabul edilmiş yürütüm kanıtları korunur.

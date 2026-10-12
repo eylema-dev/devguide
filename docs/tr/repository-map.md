@@ -21,7 +21,7 @@ Revizyon **0.2.0**, 11 Ekim 2026. [English](../en/repository-map.md). Depo oluş
 
 Örnekler açık API'leri gösterir; çalışma zamanının çatallanmış kopyalarını taşımaz. Değerlendirmeler iş yüklerini ve ölçüm araçlarını yönetir; çalışma zamanı optimizasyonlarını değil. Model üstverisi lisanslı varlıklara ve kabul edilmiş kanıtlara bağlanır; ağırlıklar ayrıca onaylanmış varlık deposuna aittir. Eğitim tarifleri ve ortam kilitleri eğitim deposundadır; veri kabulü, gizlilik, lisanslar ve hesaplama harcamaları ayrı kabul edilmiş görev gerektirir. Burada varlık deposu, kayıt servisi veya eğitim hizmeti kurulmaz.
 
-Marka varlıkları ve mevcut üretim betiği, ayrı yaşam döngüsü gerekene kadar çekirdekte kalır. Web sitesi mevcut ayrı projedir. Yeni iskeletler Rust, GPU, çıkarım, eğitim, kıyaslama veya örnek uygulama gerçekleştirmiş sayılmaz. Açık dağıtım lisansı kararı beklemektedir.
+Marka varlıkları ve mevcut üretim betiği, ayrı yaşam döngüsü gerekene kadar çekirdekte kalır. Web sitesi mevcut ayrı projedir. Yeni iskeletler Rust, GPU, çıkarım, eğitim, kıyaslama veya örnek uygulama gerçekleştirmiş sayılmaz. Kendi kaynak/belgelerimiz Apache-2.0 kullanır; [varlığa özgü haklar](licensing.md) ayrıdır.
 
 ## Gerekçe olduğunda depo ayırın
 
