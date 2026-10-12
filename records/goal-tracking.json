@@ -1506,7 +1506,7 @@
           "review": {
             "status": "passed",
             "reviewed_head": "ea7ecd30bedc9a0c319e0222f22cebc2fe1b368a",
-            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+            "reviewer": "g16_review separate Codex context exact-head review after the core work-plan snapshot; PASS, no actionable findings; core plan pending text records pre-review state; no human GitHub approval claimed"
           }
         }
       ],
