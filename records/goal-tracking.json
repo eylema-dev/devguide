@@ -1152,7 +1152,7 @@
         "number": 17,
         "url": "https://github.com/eylema-dev/eylema/issues/17"
       },
-      "status": "review",
+      "status": "accepted",
       "milestone": {
         "id": "M2",
         "number": 3,
@@ -1166,7 +1166,7 @@
         "type:implementation",
         "planning:EYL-006",
         "platform:macos",
-        "status:review"
+        "status:accepted"
       ],
       "dependencies": [
         "G14"
@@ -1175,7 +1175,44 @@
       "related_eyl": [
         "EYL-006"
       ],
-      "accepted_delivery": null,
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/48",
+          "head": "c9575d451f2c8832faec68ad765fec7e5f047250",
+          "main": "5f97930c8b2f9771af2700eb71e963bc64f6caa4",
+          "tree": "0e601721e836f8c79eec8f7b1fb81d0b53dafef9",
+          "main_ci": {
+            "id": 38216611059,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38216611059",
+            "head": "5f97930c8b2f9771af2700eb71e963bc64f6caa4",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "c9575d451f2c8832faec68ad765fec7e5f047250",
+            "reviewer": "g15_review separate Codex context exact-head review; no blocking findings; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/21",
+          "head": "a3f2d501681e1ce7bd7f04aba698cc6eb22aa7ed",
+          "main": "46497ae1f0fd80f9276decd08ea6eb622647547a",
+          "tree": "5f7d6685cb19760e54ffa9fa5434c8c418d7273e",
+          "main_ci": {
+            "id": 38216814697,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38216814697",
+            "head": "46497ae1f0fd80f9276decd08ea6eb622647547a",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "a3f2d501681e1ce7bd7f04aba698cc6eb22aa7ed",
+            "reviewer": "g15_review separate Codex context exact-head review; no blocking findings; no human GitHub approval claimed"
+          }
+        }
+      ],
       "waiting_reasons": []
     },
     {
@@ -1185,7 +1222,7 @@
         "number": 18,
         "url": "https://github.com/eylema-dev/eylema/issues/18"
       },
-      "status": "backlog",
+      "status": "implementing",
       "milestone": {
         "id": "M2",
         "number": 3,
@@ -1194,13 +1231,12 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M2",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-006",
-        "platform:macos"
+        "platform:macos",
+        "status:implementing"
       ],
       "dependencies": [
         "G14",
@@ -1211,9 +1247,7 @@
         "EYL-006"
       ],
       "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "waiting_reasons": []
     },
     {
       "id": "G17",
