@@ -1222,7 +1222,7 @@
         "number": 18,
         "url": "https://github.com/eylema-dev/eylema/issues/18"
       },
-      "status": "implementing",
+      "status": "accepted",
       "milestone": {
         "id": "M2",
         "number": 3,
@@ -1236,7 +1236,7 @@
         "type:implementation",
         "planning:EYL-006",
         "platform:macos",
-        "status:implementing"
+        "status:accepted"
       ],
       "dependencies": [
         "G14",
@@ -1246,7 +1246,44 @@
       "related_eyl": [
         "EYL-006"
       ],
-      "accepted_delivery": null,
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/49",
+          "head": "f23f842dd5b0bd293203d8be07141aabde676e51",
+          "main": "b06b7bac1aa121a4fee81e9fd0f79e4cf2eeeb3f",
+          "tree": "42cc29d9ad1155bd1ef42c48d3a0d49aeb5368dd",
+          "main_ci": {
+            "id": 38221125609,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38221125609",
+            "head": "b06b7bac1aa121a4fee81e9fd0f79e4cf2eeeb3f",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "f23f842dd5b0bd293203d8be07141aabde676e51",
+            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/22",
+          "head": "c0b2aa62adeb7713435556d8f787ffd967d34d7c",
+          "main": "9adb3e85d6102abb8e3774246d4f00fe76745e8b",
+          "tree": "36193861b3e010c7ef197c71f7c1e2e734b64ea9",
+          "main_ci": {
+            "id": 38221804166,
+            "url": "https://github.com/eylema-dev/devguide/actions/runs/38221804166",
+            "head": "9adb3e85d6102abb8e3774246d4f00fe76745e8b",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "c0b2aa62adeb7713435556d8f787ffd967d34d7c",
+            "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+          }
+        }
+      ],
       "waiting_reasons": []
     },
     {
