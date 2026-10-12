@@ -1465,7 +1465,7 @@
         "number": 20,
         "url": "https://github.com/eylema-dev/eylema/issues/20"
       },
-      "status": "backlog",
+      "status": "accepted",
       "milestone": {
         "id": "M3",
         "number": 4,
@@ -1474,11 +1474,10 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
+        "status:accepted",
         "priority:unranked",
         "milestone:M3",
         "type:implementation",
-        "blocked:dependency",
         "planning:EYL-007",
         "platform:macos",
         "platform:webgpu"
@@ -1491,10 +1490,27 @@
       "related_eyl": [
         "EYL-007"
       ],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/53",
+          "head": "ea7ecd30bedc9a0c319e0222f22cebc2fe1b368a",
+          "main": "99e791aaba9cccc2a8bdf4b0ce3a5eb572983e2b",
+          "tree": "117842c5acec933924415a8e2946f9cdd3968146",
+          "main_ci": {
+            "id": 38271468209,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38271468209",
+            "head": "99e791aaba9cccc2a8bdf4b0ce3a5eb572983e2b",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "ea7ecd30bedc9a0c319e0222f22cebc2fe1b368a",
+            "reviewer": "g16_review separate Codex context exact-head review after the core work-plan snapshot; PASS, no actionable findings; core plan pending text records pre-review state; no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G21",
