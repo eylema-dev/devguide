@@ -205,6 +205,23 @@ class UsageTests(unittest.TestCase):
         self.assertEqual(second['summary']['unpriced_tokens'], {})
         self.assertGreater(float(second['summary']['priced_standard_api_equivalent_usd']), 0)
 
+    def test_removed_context_preserves_known_attribution_and_accepts_new_responses(self):
+        self.session(items=[response()])
+        first = usage.refresh(self.config(), self.output, RATES)
+        self.session(items=[response(), response(rid='new-without-context')], context=False)
+        second = usage.refresh(self.config(), self.output, RATES)
+        self.assertEqual(second['summary']['responses'], 2)
+        self.assertEqual(second['summary']['tokens']['total_tokens'], 220)
+        self.assertEqual(second['summary']['unpriced_tokens']['total_tokens'], 110)
+        self.assertEqual(second['summary']['priced_standard_api_equivalent_usd'],
+                         first['summary']['priced_standard_api_equivalent_usd'])
+        ledger = json.loads((self.output / 'ledger.json').read_text())['responses']
+        self.assertEqual(sorted(v['model'] for v in ledger.values()), ['gpt-6.1-sol', 'unknown'])
+        self.session(items=[response(), {'type': 'turn_context', 'payload':
+                     dict(turn_id='turn', model='gpt-6-luna', effort='high')}], context=False)
+        with self.assertRaises(usage.UsageError):
+            usage.refresh(self.config(), self.output, RATES)
+
     def test_late_output_failure_preserves_history_and_next_refresh_repairs_report(self):
         self.session(items=[response()])
         usage.refresh(self.config(), self.output, RATES)

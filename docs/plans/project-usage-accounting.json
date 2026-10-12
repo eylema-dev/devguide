@@ -41,7 +41,7 @@
     "reviewer": "Pending separate context bound to final commit"
   },
   "repair_usage": {
-    "targeted_repairs_used": 2,
-    "reason": "Independent review: explicit discovery failures/gaps, deferred external diagnostics, late context enrichment and truthful IO recovery. Canonical website remote inventory corrected to eylemadotdev."
+    "targeted_repairs_used": 3,
+    "reason": "Independent review: explicit discovery failures/gaps, deferred external diagnostics, late context enrichment and truthful IO recovery. Canonical website remote inventory corrected to eylemadotdev. Re-review: preserve previously known model/effort if source context later disappears, while accepting new unknown responses."
   }
 }

@@ -237,9 +237,13 @@ def merge(previous, incoming):
             old = result[key]
             differences = {field for field in set(old) | set(value) if old.get(field) != value.get(field)}
             if not (differences <= {'model', 'effort'}
-                    and all(old.get(field) == 'unknown' and value.get(field) != 'unknown'
+                    and all(old.get(field) == 'unknown' or value.get(field) == 'unknown'
                             for field in differences)):
                 raise UsageError('Ledger conflicts with recorded response; preserve previous ledger')
+            value = dict(value)
+            for field in differences:
+                if value[field] == 'unknown':
+                    value[field] = old[field]
         result[key] = value
     return result
 
