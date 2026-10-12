@@ -1,0 +1,11 @@
+# G39 acceptance integration — revision 1
+
+Maintainer request: execute the complete Goal action plan and merge each completed scoped card after current checks and separate review. Current accepted priority schedules the G38–G43 need-to-PR proof before optional model/training completion. This integration grants no settings, release, access or spending authority.
+
+Base: devguide main5b7643f395835c16a07ec146e97d891278574899. Allowed paths: this plan, records/goal-tracking.json (G39 only) and tools/repository-set.json (core pin only). Preserve frozen card dependencies, accepted product/licensing decisions and prepared protection requests.
+
+Acceptance mapping: G39-A1 requires the actual controlled-workspace delivery: accepted-base detached worktree, preserved staged/unstaged/untracked caller state, scoped paths and regular-file artifact bounds, owned single-process cancellation/timeout/revocation, finite output and secret-canary denial. Authority remains an explicitly synthetic resolver in the proof; filesystem/Git/sandbox/process effects execute natively. The deprecated macOS sandbox-exec dependency fails closed; provider/compiler/GitHub effects remain G40–G43. Integration requires exact component review/current PR CI, identical reviewed/main trees, exact successful main CI, closed accepted primary issue and read-only live Goal/pinned-workspace checks. Record acceptance only after component evidence is verified.
+
+Architect/implementer/verifier: Codex context resumed with user-configured GPT-6.1 Sol / high; initial exact SKU unavailable. Tools: Git/GitHub CLI and Python metadata validators. Reviewer: separate exact-head context required. Budget:45 active minutes, at most2 targeted repairs, no new spending. Risks: stale pins, premature accepted state and treating synthetic authority as authenticated provider/PR evidence.
+
+Local gates: exact venv/hashed install, all Python tests, repository/template/populated-body/diff checks, tools/check_goal_tracking.py --fetch and tools/check_workspace.py --fetch. Publish scoped PR, obtain separate review/current CI, merge under existing authority and verify exact main CI/tree. After G39 acceptance, proceed to G40 from fresh accepted main.
