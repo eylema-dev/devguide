@@ -1,0 +1,185 @@
+{
+  "task": "accepted-project-decisions",
+  "revision": 1,
+  "date": "2026-10-12",
+  "authority": "Direct maintainer request in this chat accepting recommendations 1,2,4,5,6,8 and Apache 2.0; Linux confirmed in follow-up.",
+  "delivery": "draft PRs; independent review and merge pending",
+  "decision_ids": [
+    "D1-developer-task-console",
+    "D2-early-preview-and-pr-proof",
+    "D3-three-device-inventory",
+    "D4-single-user-loopback",
+    "D5-owned-rust-contracts-eyl-eylj",
+    "D6-explicit-platform-boundary",
+    "D7-apache-2.0",
+    "D8-bounded-first-learning-experiment"
+  ],
+  "hardware": [
+    {
+      "alias": "mbp-m4-pro-24",
+      "owner_reported": "MacBook Pro M4 Pro 24 GB unified memory",
+      "role": "primary",
+      "execution_this_change": "not_run"
+    },
+    {
+      "alias": "mini-m4-24",
+      "owner_reported": "Mac mini M4 24 GB unified memory",
+      "role": "comparison",
+      "execution_this_change": "not_run"
+    },
+    {
+      "alias": "rtx4070ti-super-16-32",
+      "owner_reported": "RTX 4070 Ti Super 16 GB VRAM and 32 GB system RAM",
+      "os_family": "Linux",
+      "cpu": null,
+      "distribution": null,
+      "driver": null,
+      "role": "later comparison and training feasibility",
+      "execution_this_change": "not_run"
+    }
+  ],
+  "license": "Apache-2.0",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "runtime_changes": false,
+  "hardware_support_expanded": false,
+  "training_started": false,
+  "merge_authorized": false,
+  "independent_review": "pending",
+  "verification_environment": {
+    "os": "27.0.1",
+    "architecture": "arm64",
+    "python": "Python 3.15.0",
+    "rust": "1.99.0"
+  },
+  "checks": {
+    "eylema": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 47
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed",
+      "rust": {
+        "status": "passed",
+        "native_tests": 117,
+        "fmt": "passed",
+        "clippy": "passed",
+        "build": "passed",
+        "portable_library_wasm_build": "passed"
+      }
+    },
+    "eylema-docs-en": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    "eylema-docs-tr": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    "devguide": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 48
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    ".github": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    "eylema-examples": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed",
+      "rust": {
+        "status": "passed",
+        "native_tests": 5,
+        "fmt": "passed",
+        "clippy": "passed",
+        "build": "passed",
+        "wasm": "not_applicable: native-only consumer"
+      }
+    },
+    "eylema-evals": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 38
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    "eylema-models": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    },
+    "eylema-training": {
+      "repository_tests": {
+        "status": "passed",
+        "count": 31
+      },
+      "repository_validation": "passed",
+      "pr_template": "passed",
+      "diff_check": "passed",
+      "license_bytes_and_metadata": "passed"
+    }
+  },
+  "member_revisions": {
+    "eylema": "ceea3a7b02b124cb9b7f90b153a0088e06a6fec3",
+    "eylema-docs-en": "aa80d3d2c61d5331de76cb825f9fa8c98b7093e2",
+    "eylema-docs-tr": "caf96866a45e2a5ae46628d36774f311596c22f7",
+    ".github": "f08ac8912d8459a587ef3f049a62bae0d00ba201",
+    "eylema-examples": "08c9c429ef0558cae9d6b788da0b759a26f9b079",
+    "eylema-evals": "3a80f7810e9222ceac989dd5f59f9a24a8104b4e",
+    "eylema-models": "97f98a8a55d99ff290dd2d17ca5f4b8ec556cc3e",
+    "eylema-training": "bd39279eaff50c3aec3fcac03034fd175ea55fd3"
+  },
+  "integration": {
+    "status": "passed",
+    "repositories": 9,
+    "product_translation_pairs": 6,
+    "api_operations": 20,
+    "current_migration_destinations": 26,
+    "immutable_historical_records": 26,
+    "markdown_documents": 158,
+    "command": ".venv/bin/python tools/check_workspace.py --workspace-file <private-local-mapping>"
+  },
+  "hosted_ci": "pending at local record creation; consult the exact PR head checks",
+  "review": "self-review completed by Codex; independent review pending",
+  "original_checkout_preservation": "passed: original HEAD, status and tracked/nonignored file bytes unchanged"
+}

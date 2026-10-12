@@ -21,7 +21,7 @@ The core starts as one Rust workspace: contract types, deterministic runtime, jo
 
 Examples demonstrate public APIs; they must not carry forked runtime code. Evaluations own workloads and measurement harnesses, not runtime optimizations. Model metadata points to licensed artifacts and accepted evidence; weights belong in a separately approved artifact store. Training owns recipes and environment locks; data admission, privacy, licenses and any compute spending require their own accepted task. No artifact store, registry or training service is provisioned here.
 
-Brand assets and their existing render script stay in core until they have a separate lifecycle. The website remains a separate existing project. No Rust, GPU, inference, training, benchmark or example implementation is claimed by the new scaffolds. Public distribution licensing remains pending.
+Brand assets and their existing render script stay in core until they have a separate lifecycle. The website remains a separate existing project. No Rust, GPU, inference, training, benchmark or example implementation is claimed by the new scaffolds. First-party source/documentation use Apache-2.0; [artifact-specific rights](licensing.md) remain separate.
 
 ## Split a repository when there is a reason
 

@@ -5,14 +5,14 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "5388a5134327ef31f906d6bf58954a39cc4da32cae44f8292109d9a6b96b10a6",
-      "tr_sha256": "0cf94cc5c79e9376005ed929f8ce733cede64e07172d08451168586d16ebe677"
+      "en_sha256": "677fd0a1b2979f925935e2a1ff91b4580bfccf04cda1d99838cab4cd347375f4",
+      "tr_sha256": "5db1c1f10fd6e15c2c3402910da7d3df4376e0d22543e4f3ba2fb2604e5fca00"
     },
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "7af96a9fc7dd534b15b9117462aa7f6712cc84421196b8e5b727ccf3e2ace944",
-      "tr_sha256": "0b68aa88a1d9d53b082a2283ed3f78511f437b8efb9ae184e216ea91b7e24d2f"
+      "en_sha256": "183c88843fbae5d3d1f797e6f60a0e0c34a2254f4ba7dcad171d930256cc888b",
+      "tr_sha256": "79a145b6bb2c737ad3946d4dcdd8fa9bd07522d58f80fe36e40ed4738e9ae5f2"
     },
     {
       "en": "docs/en/name-availability.md",
@@ -29,8 +29,8 @@
     {
       "en": "docs/en/repository-map.md",
       "tr": "docs/tr/repository-map.md",
-      "en_sha256": "4fd9645fa41388bb16518ee5e12ef1ab24e6925d82ed857833507495df4325f5",
-      "tr_sha256": "986aaf51ee720ea6ff350253b08d9ba1e1483e5d1424ed58bd976d0fed679585"
+      "en_sha256": "852b5f3cfe4b74890199151dcfae663b5bc24f9464fc4e2808d905304bebfd5c",
+      "tr_sha256": "24e51b92ce1008b21590ca5fc3ed04e41d717d00fc2bdafdc4d3e971e16ca252"
     },
     {
       "en": "docs/en/repository-migration.md",
@@ -53,14 +53,20 @@
     {
       "en": "docs/en/goal-program.md",
       "tr": "docs/tr/goal-program.md",
-      "en_sha256": "bb93c73c57ba038294e5b6808b891ab74e6d01b89926c5e6b50940e2cf6d5e71",
-      "tr_sha256": "07562f38c21cdcdc8f6a70d9b2470e2045e4f2926c8d8b8bd4ac0dc4e9d91e5f"
+      "en_sha256": "fba69450cfcb7e1980f0ceda9b6dc7a3b58dfc64cec2e2853b51d86577999cfd",
+      "tr_sha256": "02f0f971d4f09af9d9467e9a192960527584a826a9dd15529fdbb54e05fc5d55"
     },
     {
       "en": "docs/en/github-work-management.md",
       "tr": "docs/tr/github-work-management.md",
-      "en_sha256": "2f22235c59c69fca85274623ef23acb41ad3142be296c179d207097278f982b8",
-      "tr_sha256": "13206931c4256b2c59f677029c1db3c677c39c0717c061311b9ccd935503cb9a"
+      "en_sha256": "12e0de7632be53953d4622c6cc837f7d5594482924a966a035a8ed193fa0e35e",
+      "tr_sha256": "84437e3d37feb9de7a05fa4f849b07db675b336a0ce0fe357502be9bb443c439"
+    },
+    {
+      "en": "docs/en/licensing.md",
+      "tr": "docs/tr/licensing.md",
+      "en_sha256": "a74e126942b4987d9cd2a83331a4cfcd449f15f900c2c80d8d7d3d254677e6e0",
+      "tr_sha256": "825f67254c37cf6bf25e2bd2abd121456468ce4f12f3ce40aaec495d9ab19f4b"
     }
   ],
   "documents": []

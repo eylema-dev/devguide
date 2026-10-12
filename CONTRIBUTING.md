@@ -45,7 +45,7 @@ English/Turkish fingerprints detect unrecorded edits; API identifier parity dete
 
 `CODEOWNERS` names the initial maintainer. It does not by itself require approval. This change supplies CI and a review policy; branch rulesets are separately administered and must not be described as enforced unless verified. Changes to CI, policy or schemas need maintainer attention; a PR cannot establish its own approval merely by relaxing checks.
 
-The repository has no selected distribution license yet. License selection and contribution terms are an explicit release gate in the roadmap; do not add a license, CLA or DCO claim on somebody else's behalf. For suspected vulnerabilities, do not put exploitable details or secrets in a public issue; use GitHub's private reporting route if enabled, otherwise request a private channel from the maintainer without publishing the details.
+The maintainer selected [Apache-2.0](LICENSE) on 12 October 2026 for first-party Eylema source and documentation. Contributions intentionally submitted for inclusion follow section 5 of that license unless explicitly stated otherwise; separately agreed terms are preserved. No separate CLA or DCO requirement is introduced. Record provenance and retain third-party notices; model/data permissions remain artifact-specific. See the [licensing scope](docs/en/licensing.md). For suspected vulnerabilities, do not put exploitable details or secrets in a public issue; use GitHub's private reporting route if enabled, otherwise request a private channel from the maintainer without publishing the details.
 
 ## What is not automated yet
 

@@ -45,7 +45,7 @@ EN/TR parmak izleri kayda geçirilmemiş düzenlemeleri, API kimliği eşliği s
 
 `CODEOWNERS` ilk bakımcıyı belirtir; tek başına onayı zorunlu kılmaz. Bu değişiklik CI ve inceleme politikasını sağlar; dal kuralları ayrı yönetilir ve doğrulanmadan uygulanıyor denmez. CI, politika veya şema değişiklikleri bakımcı incelemesi ister; PR kontrolleri gevşeterek kendi onayını oluşturamaz.
 
-Henüz dağıtım lisansı seçilmedi. Lisans ve katkı koşulları yol haritasında açık sürüm kapısıdır; başkası adına lisans, CLA veya DCO kabulü eklemeyin. Şüpheli açıkların sömürü ayrıntılarını veya sırları public issue'ya koymayın; GitHub özel bildirim kanalı açıksa kullanın, değilse ayrıntıları yayımlamadan bakımcıdan özel kanal isteyin.
+Bakımcı 12 Ekim 2026 tarihinde kendi Eylema kaynak kodu ve belgeleri için [Apache-2.0](LICENSE) seçti. Projeye dahil edilmek üzere bilerek sunulan katkılar, aksi açıkça belirtilmedikçe lisansın 5. maddesine tabidir; ayrıca anlaşılmış koşullar korunur. Ayrı CLA veya DCO zorunluluğu getirilmez. Kökeni kaydedin ve üçüncü taraf bildirimlerini koruyun; model/veri izinleri varlığa özgüdür. [Lisans kapsamına](docs/tr/licensing.md) bakın. Şüpheli açıkların sömürü ayrıntılarını veya sırları public issue'ya koymayın; GitHub özel bildirim kanalı açıksa kullanın, değilse ayrıntıları yayımlamadan bakımcıdan özel kanal isteyin.
 
 ## Henüz otomatik olmayanlar
 
