@@ -1,0 +1,11 @@
+# G22 acceptance integration — revision 1
+
+Maintainer request: execute the complete Goal action plan and merge each completed scoped card after current checks and separate review. G22 Chrome approvals allowed two bounded local-console intervals; completed observations used112772ms and60706ms. This integration grants no settings, rights, release, access or spending authority.
+
+Base: devguide main959453a79c6190bbbb25a3b97d11daa5fccae8c7, preserving independently accepted product/licensing decisions. Allowed paths: this plan, records/goal-tracking.json (G22 only) and tools/repository-set.json (core/evals pins only). Frozen Goal cards/dependencies and other records remain authoritative.
+
+Acceptance mapping: G22-A1 binds three real120-frame trials, same-process native overlap98/89/90 and five checked calls after each view closes; raw measurements and failed first attempt are preserved by evals. G22-A2 requires separately reviewed exact component heads, successful current PR checks, reviewed/main identical trees, exact main CI, closed accepted primary issue and live47-Goal/pinned-workspace checks. Record only after verifying all component delivery evidence; candidate measurement revisions remain explicit even when a same-tree merge is accepted. This metadata check does not itself establish GPU execution.
+
+Architect/implementer/verifier: Codex current context, inherited GPT-6 family; exact SKU not exposed. Tools: Git/GitHub CLI, Python repository/live metadata validators. Reviewer: separate exact final-head review required in /root/g16_review; no human GitHub approval inferred. Budget:45 active minutes and at most2 targeted repairs; no new spending. Risks: stale upstream pins, premature accepted state, accidental changes to prepared protections, and confusing measured candidate with merge revision.
+
+Local gates: hashed CI-tool install, all Python tests, repository check, populated PR body/template validation, diff check, tools/check_goal_tracking.py --fetch and tools/check_workspace.py --fetch. Inspect scope/private data; publish scoped PR, obtain separate review/current CI, use existing merge authority, verify exact main CI and clean accepted checkout. All runtime/raw evidence belongs to the linked core/evals deliveries. After acceptance, follow the frozen dependency graph: G27 precedes G23.

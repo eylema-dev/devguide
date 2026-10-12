@@ -1571,7 +1571,7 @@
         "number": 4,
         "url": "https://github.com/eylema-dev/eylema-evals/issues/4"
       },
-      "status": "backlog",
+      "status": "accepted",
       "milestone": {
         "id": "M3",
         "number": 1,
@@ -1580,24 +1580,58 @@
       },
       "labels": [
         "goal",
-        "status:backlog",
         "priority:unranked",
         "milestone:M3",
         "type:evaluation",
-        "blocked:dependency",
         "platform:macos",
         "platform:metal",
-        "platform:webgpu"
+        "platform:webgpu",
+        "status:accepted"
       ],
       "dependencies": [
         "G21"
       ],
       "conditional_dependencies": {},
       "related_eyl": [],
-      "accepted_delivery": null,
-      "waiting_reasons": [
-        "Accepted dependency deliveries pending"
-      ]
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/56",
+          "head": "7da0ca14605d568fb76f9ce48aa09efac86f127f",
+          "main": "4c6f5223a981bad839bfbcc2fae7ba532365f7ff",
+          "tree": "9f7ad210ee0ed53b00952f979a3cbad53d672bd3",
+          "main_ci": {
+            "id": 38288087611,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38288087611",
+            "head": "4c6f5223a981bad839bfbcc2fae7ba532365f7ff",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "7da0ca14605d568fb76f9ce48aa09efac86f127f",
+            "reviewer": "g16_review separate Codex context exact-head PASS; bounded source and final hardware records inspected, accepted/failed results recomputed byte-for-byte, HTML extraction/source/artifact/workload bindings and EN/TR limits verified; no actionable findings, no human GitHub approval claimed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-evals",
+          "pr": "https://github.com/eylema-dev/eylema-evals/pull/9",
+          "head": "7a57256f89a80927e2348c4b1667937c4e3b2eb3",
+          "main": "358aa619883ee930c8cf4d6476edec432ed4f560",
+          "tree": "3180ed4daa4b07bce534c245d7013e3fb00486b7",
+          "main_ci": {
+            "id": 38288110174,
+            "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38288110174",
+            "head": "358aa619883ee930c8cf4d6476edec432ed4f560",
+            "status": "passed"
+          },
+          "review": {
+            "status": "passed",
+            "reviewed_head": "7a57256f89a80927e2348c4b1667937c4e3b2eb3",
+            "reviewer": "g16_review separate Codex context exact-head PASS; bounded source and final hardware records inspected, accepted/failed results recomputed byte-for-byte, HTML extraction/source/artifact/workload bindings and EN/TR limits verified; no actionable findings, no human GitHub approval claimed"
+          }
+        }
+      ],
+      "waiting_reasons": []
     },
     {
       "id": "G23",
