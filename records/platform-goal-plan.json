@@ -2902,36 +2902,51 @@
     },
     {
       "id": "G63",
-      "plan_card_revision": 1,
+      "plan_card_revision": 3,
       "title": "Project-private data and egress boundaries",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 73,
         "url": "https://github.com/eylema-dev/eylema/issues/73"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
       "dependencies": [
         "G46",
         "G13"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-host/",
-        "crates/eylema-journal/",
-        "docs/en/",
-        "docs/tr/",
-        "tools/translation-pairs.json"
+        "crates/eylema-contracts/src/project_data.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-host/src/project_data.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/project_data.rs",
+        "crates/eylema-host/tests/project_data_native.rs",
+        "docs/en/project-data.md",
+        "docs/tr/project-data.md",
+        "README.md",
+        "README.tr.md",
+        "tools/translation-pairs.json",
+        "crates/eylema-journal/src/lib.rs"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g63-project-data.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Own episode/artifact namespaces and retention per project; private is default. Separate execution, collection, training, external disclosure and ecosystem export permissions follow derivatives and trained candidates.",
       "acceptance": [
         {
           "id": "G63-A1",
           "requirement": "Own episode/artifact namespaces and retention per project; private is default. Separate execution, collection, training, external disclosure and ecosystem export permissions follow derivatives and trained candidates.",
           "check": "Cross-project read/import, unauthorized external disclosure, permission withdrawal, retention and derivative-label tests; raw reasoning/secrets never enter export records.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -2948,16 +2963,64 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Bound G46 main04175b3/G13 mainb75a546; finite native synthetic scope and exact limits in docs/plans/g63-project-data.md; no model/provider/training/G40 trial; real human enrollment staysG73.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/97",
+          "head": "7e2bf3f794533443f309cbf72a0ace801d522af3",
+          "main": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
+          "tree": "57a6c8b44566f2e2c6540fafe52556e4a6024e3a",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "7e2bf3f794533443f309cbf72a0ace801d522af3",
+            "reviewer": "Codex reviewer /root/g63_project_data_review (separate context)"
+          },
+          "main_ci": {
+            "id": 38466670069,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38466670069",
+            "head": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "g63_project_data_review separate exact-head context"
+      },
+      "executed_evidence": {
+        "native_tests_passed": 189,
+        "native_tests_ignored": 1,
+        "new_behavior_tests": 12,
+        "new_actual_native_file_tests": 1,
+        "python_tests_passed": 47,
+        "semantic_replay_cases": {
+          "malformed_events": 26,
+          "bad_configs": 4,
+          "valid_controls": 4
+        },
+        "environment": "ARM64 macOS; Rust1.99.0; Python3.15.0 locally/3.14CI",
+        "ignored_reason": "Existing actual Metal hardware test is not required for this project-data scope.",
+        "review": "Initial review required known-event semantic replay coverage; one test-only pass resolved it at finalhead.",
+        "limits": "Data-use API and actual synthetic native IO only; trusted host owner/ingestion/storage/clock/hash.",
+        "not_run": [
+          "new project-data Wasm execution",
+          "actual human enrollment",
+          "RAG/graph recall",
+          "model inference/training",
+          "complete harness jobs",
+          "physical crash/erasure/encryption",
+          "hostile same-user OS isolation"
+        ],
+        "pr_ci": {
+          "id": 38466297027,
+          "head": "7e2bf3f794533443f309cbf72a0ace801d522af3",
+          "status": "passed"
+        },
+        "body_egress": "closed metadata only; no arbitrary payload"
       }
     },
     {

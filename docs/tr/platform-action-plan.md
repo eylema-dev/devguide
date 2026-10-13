@@ -38,7 +38,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | Goal | Teslimat | Bağımlılıklar | Durum |
 |---|---|---|---|
 | **G46** | Döngü, rol ve model bağlama sözleşmeleri | G08, G09, G13, G17, G39 | `accepted` |
-| **G63** | Projeye özel veri ve çıkış sınırları | G46, G13 | `planned` |
+| **G63** | Projeye özel veri ve çıkış sınırları | G46, G13 | `accepted` |
 | **G87** | Bellek sözleşmeleri, yönlendirme ve yaşam döngüsü | G46, G63 | `planned` |
 | **G54** | Türlü araç kaydı ve harness eylem yürütmesi | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Karar kanıtı ve döngü ölçümleri | G46, G54, G18, G63 | `planned` |
