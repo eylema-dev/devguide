@@ -436,7 +436,7 @@
         },
         {
           "id": "G25-A1",
-          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
         }
@@ -2357,15 +2357,15 @@
     },
     {
       "id": "G54",
-      "plan_card_revision": 1,
+      "plan_card_revision": 3,
       "title": "Typed tool registry and harness action execution",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 66,
         "url": "https://github.com/eylema-dev/eylema/issues/66"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "a7c34655b5a76b0aac904c6e09f9b68859c62312",
       "dependencies": [
         "G46",
         "G10",
@@ -2376,21 +2376,39 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-runtime/",
-        "crates/eylema-host/",
-        "docs/en/",
-        "docs/tr/",
-        "tools/translation-pairs.json"
+        "crates/eylema-contracts/src/tool.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/tool_contracts.rs",
+        "crates/eylema-runtime/src/tool.rs",
+        "crates/eylema-runtime/src/lib.rs",
+        "crates/eylema-runtime/tests/tool_registry.rs",
+        "crates/eylema-host/src/tool.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/tools.rs",
+        "docs/en/typed-tools.md",
+        "docs/tr/typed-tools.md",
+        "docs/en/deterministic-runtime.md",
+        "docs/tr/deterministic-runtime.md",
+        "tools/translation-pairs.json",
+        "crates/eylema-host/src/project_data.rs"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g54-typed-tools.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Map model proposals to owned typed skills/tools with input/output/effect contracts, scoped authority and budgets; verified outcomes, partial effects and unknown effects remain distinct.",
       "acceptance": [
         {
           "id": "G54-A1",
           "requirement": "Map model proposals to owned typed skills/tools with input/output/effect contracts, scoped authority and budgets; verified outcomes, partial effects and unknown effects remain distinct.",
           "check": "Actual owned deterministic-tool execution; denied/stale/oversized proposals produce no unauthorized effect; retry/idempotency, effective stop and unknown-effect reconciliation tests.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -2407,16 +2425,53 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "AcceptedG46/G10/G11/G13/G39/G63 actualmain+CI bound; own closed read/add profiles overG10/G11/G13 plus G63source gate;1active execution/8actions/64profiles, exact technicalplan; zero model/provider/process/training/G40/newdependency/spend.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/99",
+          "head": "898b206144dfe5f9df14af7f36c3e23261dd6444",
+          "main": "93eb457754d076fa0efc8586432edfb9245645b4",
+          "tree": "4cc193c9a33c0a53eb416e98a55e4c0bda1d3deb",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "898b206144dfe5f9df14af7f36c3e23261dd6444",
+            "reviewer": "Codex reviewer /root/g54_tools_review (separate context)"
+          },
+          "main_ci": {
+            "id": 38480315444,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38480315444",
+            "head": "93eb457754d076fa0efc8586432edfb9245645b4",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "Codex reviewer /root/g54_tools_review, separate exact-head context"
+      },
+      "executed_evidence": {
+        "native_tests_passed": 232,
+        "native_tests_ignored": 1,
+        "new_portable_tests": 3,
+        "new_registry_tests": 3,
+        "new_facade_tests": 19,
+        "python_tests_passed": 47,
+        "environment": "ARM64 macOS; Rust1.99.0; Python3.15.0 locally/3.14CI",
+        "ignored_reason": "Existing actual Metal hardware test is not required for typed tools.",
+        "review": "Three repairs used; deadline, revoked-actor terminalization and mandatory actual scoped intervention for current/retained source inputs have RED-to-GREEN evidence. Final separate review passed.",
+        "limits": "Two owned read/add handlers; actual source/session/ancestry authorization and scoped stop; eligible ingestion/private journals/compatible truthful clocks required. Fresh dedicated host only; no durable typed source reattachment or resumed execution.",
+        "not_run": [
+          "new tool Wasm execution",
+          "generic process/plugin/database tool",
+          "model inference/training",
+          "actual human authentication",
+          "full harness jobs or performance acceptance"
+        ],
+        "production_dependencies": "only owned workspace Rust crates; no engine exception"
       }
     },
     {

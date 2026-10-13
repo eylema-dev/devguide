@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "23d6167e725ecf38fb426dfcf643520468a0e81aa8293c26b153f536abf2fa57",
-      "tr_sha256": "cf483e313f9066c11b36212a61adb48ff5aec37c50c5f6fd7c0ae4aed219a188"
+      "en_sha256": "0efe00b748caff14320a2b841736ad5bdb0dd58a4405e84cf75ff362a80a4529",
+      "tr_sha256": "09d48b2df3ba86c143e7a6cbc524ae24e6d9208e93f7b4f97406da00e45a296d"
     },
     {
       "en": "docs/en/memory-layer.md",
