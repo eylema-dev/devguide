@@ -436,7 +436,7 @@
         },
         {
           "id": "G25-A1",
-          "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
         }
@@ -4449,14 +4449,14 @@
     },
     {
       "id": "G87",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Memory contracts, routing and lifecycle",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 93,
         "url": "https://github.com/eylema-dev/eylema/issues/93"
       },
-      "status": "review",
+      "status": "accepted",
       "base_sha": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
       "dependencies": [
         "G46",
@@ -4493,7 +4493,7 @@
           "id": "G87-A1",
           "requirement": "Own typed working/episodic/semantic/procedural/knowledge-graph/analytical memory contracts; source, scope, kind, validity, confidence, verification, lineage and purpose travel with every item. Backend/query profiles are versioned; memory cannot grant authority.",
           "check": "Reject unknown kinds, unbounded/context-overflow queries, missing provenance, cross-project purpose access, stale embedding spaces and model-produced permission changes. Test deterministic TTL, revocation, cache invalidation and unsupported backend rejection.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -4511,13 +4511,51 @@
         "actual": null
       },
       "activation": "Accepted G46/G63 actualmain/CI bound; exact-reference memory adapter and portablekind/profile/query/source contracts,32sources/64KiBserializedcontext/128profile+source entries, explicitunknown token capacity, exactscope/budgets in docs/plans/g87-memory-contracts.md. No new model/provider/database/training/G40 trial.",
-      "accepted_delivery": null,
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/98",
+          "head": "9931a9002a577a654b40f1fbb1577d9a2c818df1",
+          "main": "a7c34655b5a76b0aac904c6e09f9b68859c62312",
+          "tree": "ace0fd4c7518e1dc4bf45942351a04b646368a5d",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "9931a9002a577a654b40f1fbb1577d9a2c818df1",
+            "reviewer": "Codex reviewer /root/g87_memory_review (separate context)"
+          },
+          "main_ci": {
+            "id": 38472122333,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38472122333",
+            "head": "a7c34655b5a76b0aac904c6e09f9b68859c62312",
+            "status": "passed"
+          }
+        }
+      ],
       "blockers": [],
       "roles": {
         "architect": "parent Codex",
         "implementer": "parent Codex",
         "verifier": "parent Codex",
-        "independent_reviewer": "pending fresh separate exact-head review"
+        "independent_reviewer": "Codex reviewer /root/g87_memory_review, separate exact-head context"
+      },
+      "executed_evidence": {
+        "native_tests_passed": 207,
+        "native_tests_ignored": 1,
+        "new_portable_tests": 4,
+        "new_native_memory_tests": 14,
+        "python_tests_passed": 47,
+        "environment": "ARM64 macOS; Rust1.99.0; Python3.15.0 locally/3.14CI",
+        "ignored_reason": "Existing actual Metal hardware test is not required for memory contracts.",
+        "review": "Two P1 handoff expiry regressions reproduced RED then GREEN; final common persisted time checks session/ancestry and every memory TTL. Final separate review passed.",
+        "limits": "Owned exact references over actual G63 authorization; immutable host-attested metadata, no automatic truth/DLP/human authentication.",
+        "not_run": [
+          "new memory Wasm execution",
+          "vector/graph recall/SQL/analytical engine",
+          "tokenizer/model inference/training",
+          "actual human enrollment",
+          "full harness jobs or performance acceptance"
+        ],
+        "production_dependencies": "only owned workspace Rust crates; no engine exception"
       }
     },
     {

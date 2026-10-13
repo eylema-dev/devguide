@@ -39,7 +39,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 |---|---|---|---|
 | **G46** | Döngü, rol ve model bağlama sözleşmeleri | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Projeye özel veri ve çıkış sınırları | G46, G13 | `accepted` |
-| **G87** | Bellek sözleşmeleri, yönlendirme ve yaşam döngüsü | G46, G63 | `review` |
+| **G87** | Bellek sözleşmeleri, yönlendirme ve yaşam döngüsü | G46, G63 | `accepted` |
 | **G54** | Türlü araç kaydı ve harness eylem yürütmesi | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Karar kanıtı ve döngü ölçümleri | G46, G54, G18, G63 | `planned` |
 | **G75** | Sürümlü skill sözleşmesi ve yeniden kullanım paketleri | G46, G54, G50, G63, G87 | `planned` |
@@ -116,4 +116,4 @@ G79, önceden kabul edilmiş native eğitim adayı/checkpoint'ini değerlendirme
 
 ## Bellek uzantısı
 
-[Bellek katmanı](memory-layer.md) çalışma, episodik, semantik, prosedürel, knowledge graph ve analitik belleği ayırır. G87–G90 sınırlı kendi Rust eklemelerimizdir; SQLite/DuckDB referans/veri alışverişi adayıdır, onaylı motor değildir. Bakımcı CortexDB ile knowledge graph kastettiğini açıkladı. G72 artık G88’i içerir, G74/G75 G87’yi, G79/G82 G89’u gerektirir; bütün yeni kapılar G44’e bağlanır. Güncel kartlar 68 sınırlı kayıt taşır (kalan 23 özgün ve 45 ek); G46 kesin core-main kanıtıyla kabul edilmiştir, bellek kapıları planlı kalır. Kabul edilmiş geçmiş, özgün gereksinimler ve G40 sınırları değişmez. Kaynak kısıtları embedding, graph ilişkisi, cache, özet, analitik ve eğitilmiş adayı izler. Bellek yetki vermez.
+[Bellek katmanı](memory-layer.md) çalışma, episodik, semantik, prosedürel, knowledge graph ve analitik belleği ayırır. G87–G90 sınırlı kendi Rust eklemelerimizdir; SQLite/DuckDB referans/veri alışverişi adayıdır, onaylı motor değildir. Bakımcı CortexDB ile knowledge graph kastettiğini açıkladı. G72 artık G88’i içerir, G74/G75 G87’yi, G79/G82 G89’u gerektirir; bütün yeni kapılar G44’e bağlanır. Güncel kartlar 68 sınırlı kayıt taşır (kalan 23 özgün ve 45 ek); G46 kesin core-main kanıtıyla kabul edilmiştir, G63 ve G87 kesin core-main ve güncel CI kanıtıyla kabul edilmiştir; G88–G90 planlı kalır. Kabul edilmiş geçmiş, özgün gereksinimler ve G40 sınırları değişmez. Kaynak kısıtları embedding, graph ilişkisi, cache, özet, analitik ve eğitilmiş adayı izler. Bellek yetki vermez.
