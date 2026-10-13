@@ -21,3 +21,7 @@ Actual Instant admission/action/terminal/cancellation durations: up to9step samp
 | Delivery | Full exact AGENTS/native gates, EN/TR semantic review/fingerprints, live cards/pinned integration, genuine separate final-head review/current CI, authorized merge/identical main CI, separate guideproof audit |
 
 Initial missing modules/methods produced actual RED. A targeted regression proved a read-only observer could attach metadata; original sealed admission actor binding resolved it RED-to-GREEN (repair1/3). No grant/kernel validator was relaxed. Full gates and fresh review remain pending until executed. Private usage refreshed before/after the Goal; no rate or membership changes.
+
+## Accepted core delivery
+
+Separate final-head review passed at `1abce36012aa4a4a8650b850c2a0e35311b4ab5c`. [PR100](https://github.com/eylema-dev/eylema/pull/100) merged as `b9f43bb1417a34ab6717ae4748168035a9f263ca`, identical tree `a31e6c99c23bb21b9adf081626f5a4e650a26015`. [Main CI](https://github.com/eylema-dev/eylema/actions/runs/38483003440) passed;239Rust/47Python,2portable/5native decision tests. Actual64serial cycles/63repeat samples and1scopedstop; unknown physicalmemory/reservations and unexecutedmodels remain explicit. Guideproof delta requires separate review/currentCI before its merge.
