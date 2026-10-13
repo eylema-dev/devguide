@@ -88,6 +88,26 @@ def validate_plan(plan, index, tracking):
     require('no automatic investment/spend' in plan['capacity_planning'], 'No automatic investment')
     require({'G30', 'G57', 'G68', 'G70', 'G54', 'G50', 'G63', 'G73'} <= set(current['G72']['dependencies']), 'Early local job gates')
     require(not {'G49', 'G52', 'G53', 'G59', 'G60', 'G61', 'G62', 'G32'} & set(current['G72']['dependencies']), 'Early text proof independent of optional modalities')
+    memory = plan['memory_policy']
+    require(set(memory['kinds']) == {'working', 'episodic', 'semantic', 'procedural', 'knowledge_graph', 'analytical'}
+            and len(memory['kinds']) == 6, 'Complete distinct memory kinds')
+    require(memory['authority'] == 'retrieved_memory_is_untrusted_evidence'
+            and memory['default'] == 'project_private' and memory['derivative_permissions_inherited'] is True,
+            'Memory scope and evidence authority')
+    require(memory['write_promotion'] == 'verified_outcome_or_explicit_review'
+            and memory['retention'] == 'bounded_expiry_and_revocation_follow_indexes_caches_and_derivatives',
+            'Reviewed memory promotion and lifecycle')
+    require(memory['backend_policy'] == 'first_party_rust_production; SQLite and DuckDB are reference/interop candidates, no dependency exception or hidden engine'
+            and memory['cortexdb_meaning'] == 'knowledge_graph_pattern_not_selected_product', 'Memory backend and graph policy')
+    require(memory['goals'] == ['G87', 'G88', 'G89', 'G90'] and set(memory['goals']) <= set(new), 'Memory gate identity')
+    memory_dependencies = {
+        'G87': {'G46', 'G63'}, 'G88': {'G87', 'G70', 'G50'},
+        'G89': {'G87', 'G33', 'G50'}, 'G90': {'G88', 'G89'},
+        'G72': {'G88'}, 'G71': {'G88'}, 'G74': {'G87'},
+        'G75': {'G87'}, 'G79': {'G89'}, 'G82': {'G89'},
+    }
+    require(all(required <= set(current[gid]['dependencies']) for gid, required in memory_dependencies.items()),
+            'Memory acceptance before consuming jobs')
     require(plan['first_implementation_goal'] == 'G46', 'Independent first implementation slice')
     require(sum(g['status'] == 'implementing' for g in goals) <= 1, 'One implementation Goal')
     issue_urls = set()

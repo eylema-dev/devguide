@@ -1,10 +1,10 @@
 # Rust model harness action plan
 
-Revision **1.0.0**, 13 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
+Revision **1.1.0**, 13 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
 
 The maintainer requests Eylema as a composable Rust harness that completes planned work by combining local open-weight models and optionally explicitly configured external frontier models. Local inference remains owned Rust. Nine roles are stable interfaces; audio STT/TTS, visual perception and domain text profiles are independently accepted. RAG/embeddings, private project records and permitted ecosystem packages are first-class work. [Architecture and model examples](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/architecture.md#rust-harness-model-roles-and-domain-selection) bind this plan; [current cards](../../records/platform-goal-plan.json) are English canonical.
 
-Twenty-four accepted Goals retain their immutable evidence. Twenty-three remaining original cards keep their issue IDs and every original required dependency; G46–G86 add forty-one separately reviewable slices. Historical [G00 cards](../../records/goal-index.json) and [tracking](../../records/goal-tracking.json) are preserved, not rewritten as completion. This revision is not runtime/model/performance proof. G06's license choice is settled while its delivery remains open. G40 remains blocked at existing PR #59 with zero new time, repair, call or privacy allowance; no provider/host/crash trial is activated by this revision.
+Twenty-four accepted Goals retain their immutable evidence. Twenty-three remaining original cards keep their issue IDs and every original required dependency; G46–G90 add forty-five separately reviewable slices. Historical [G00 cards](../../records/goal-index.json) and [tracking](../../records/goal-tracking.json) are preserved, not rewritten as completion. This revision is not runtime/model/performance proof. G06's license choice is settled while its delivery remains open. G40 remains blocked at existing PR #59 with zero new time, repair, call or privacy allowance; no provider/host/crash trial is activated by this revision.
 
 ## Reassessment of the existing foundation
 
@@ -39,9 +39,10 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 |---|---|---|---|
 | **G46** | Loop, role and model-binding contracts | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Project-private data and egress boundaries | G46, G13 | `planned` |
+| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
 | **G54** | Typed tool registry and harness action execution | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `planned` |
-| **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63 | `planned` |
+| **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `planned` |
 | **G73** | Real human harness authorization and stop | G46, G11, G14, G16, G63 | `planned` |
 | **G27** | Model contract | G03, G18, G46 | `planned` |
 | **G56** | Open-weight structured-decision model profile | G27, G46 | `planned` |
@@ -54,8 +55,9 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G57** | Owned Rust CPU structured-decision execution | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `planned` |
 | **G70** | Project-scoped owned Rust retrieval index | G68, G63, G13 | `planned` |
-| **G74** | Decision router and RAG/skill dispatch | G57, G54, G50, G70, G75, G63 | `planned` |
-| **G72** | Early end-to-end local text/RAG job proof | G30, G57, G68, G70, G54, G50, G63, G73 | `planned` |
+| **G74** | Decision router and RAG/skill dispatch | G57, G54, G50, G70, G75, G63, G87 | `planned` |
+| **G88** | Owned episodic, semantic and knowledge-graph memory | G87, G70, G50 | `planned` |
+| **G72** | Early end-to-end local text/RAG job proof | G30, G57, G68, G70, G54, G50, G63, G73, G88 | `planned` |
 | **G24** | Metal tensor operations | G19, G23 | `planned` |
 | **G25** | Placement task | G20, G23, G46, G54 | `planned` |
 | **G31** | Metal model execution | G24, G30 | `planned` |
@@ -78,27 +80,29 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G66** | Composable subflows and domain model selection | G46, G48, G54, G63 | `planned` |
 | **G55** | Explicit external-model role adapter | G46, G54, G39, G63 | `planned` |
 | **G32** | Language-driven tasks | G22, G26, G31, G48, G50, G54, G53, G58 | `planned` |
-| **G71** | RAG subflow and grounded job acceptance | G72, G69, G50, G66, G74 | `planned` |
+| **G71** | RAG subflow and grounded job acceptance | G72, G69, G50, G66, G74, G88 | `planned` |
 | **G33** | Episodes and corrections | G32, G46, G50, G63 | `planned` |
 | **G34** | Dataset revision | G33, G63 | `planned` |
 | **G77** | In-product bounded improvement jobs | G76, G34, G63, G75, G39 | `planned` |
 | **G84** | Owned Rust CPU LoRA training | G83, G76, G78, G77, G34 | `planned` |
 | **G85** | Owned Rust Metal LoRA training | G84, G24, G31 | `planned` |
 | **G86** | Owned Rust QLoRA training profile | G85, G76, G78 | `planned` |
-| **G82** | Capacity and investment planning inside Eylema | G80, G81, G50, G66, G77 | `planned` |
 | **G64** | Shareable ecosystem package builder | G33, G34, G63 | `planned` |
 | **G65** | Ecosystem catalogue and compatible imports | G27, G64 | `planned` |
 | **G35** | Local Unsloth recipe | G27, G34, G77, G76 | `planned` |
 | **G36** | Export and reacceptance | G31, G35, G78 | `planned` |
 | **G37** | Model set and rollback | G36, G46, G50, G65 | `planned` |
 | **G51** | Reusable harness applications and model replacement | G32, G37, G48, G50, G54, G55, G66 | `planned` |
-| **G79** | Integrated improvement and skill promotion proof | G77, G78, G36, G37, G75, G51, G84, G85, G86 | `planned` |
+| **G89** | Owned analytical memory and improvement snapshots | G87, G33, G50 | `planned` |
+| **G82** | Capacity and investment planning inside Eylema | G80, G81, G50, G66, G77, G89 | `planned` |
+| **G79** | Integrated improvement and skill promotion proof | G77, G78, G36, G37, G75, G51, G84, G85, G86, G89 | `planned` |
 | **G06** | Distribution and rights | G00 | `planned` |
 | **G40** | Codex adapter | G39 | `blocked` |
 | **G41** | Second adapter | G39 | `planned` |
 | **G42** | GitHub delivery | G38, G39, G40, G41, G54 | `planned` |
 | **G43** | Real development acceptance | G42, G50 | `planned` |
-| **G44** | Complete macOS acceptance | All original release gates; G46–G86 | `planned` |
+| **G90** | Memory backend profiles and controlled interchange | G88, G89 | `planned` |
+| **G44** | Complete macOS acceptance | All original release gates; G46–G90 | `planned` |
 | **G45** | Experimental distribution package | G06, G44 | `planned` |
 | **W01** | Website accuracy | G03 | `planned` |
 
@@ -109,3 +113,7 @@ Project-private data, derivatives and embeddings stay project-scoped by default.
 Run `.venv/bin/python tools/check_platform_plan.py` for structural/history/dependency/budget checks and `--fetch` for read-only current issue/accepted-proof audit. The legacy tracker remains the historical accepted-evidence snapshot; its live audit is not the current revised backlog audit. Checker success does not establish reviewer independence or runtime/model correctness. The first bounded implementation plan is [G46](../plans/g46-platform-contracts.md).
 
 G79 integrates the already accepted native-training candidate/checkpoint into evaluation/promotion and skill packaging; it has zero new training candidates and does not reset search allowance.
+
+## Memory extension
+
+The [memory layer](memory-layer.md) separates working, episodic, semantic, procedural, knowledge-graph and analytical memory. G87–G90 are bounded own-Rust additions; SQLite/DuckDB are reference/interchange candidates, not approved engines. The maintainer clarified CortexDB as knowledge graph. G72 now includes G88, G74/G75 require G87, and G79/G82 require G89; all new gates feed G44. Current cards contain 68 scoped records (23 remaining originals plus 45 additions); G46 is accepted with exact core-main evidence, while these memory gates remain planned. Accepted history, original requirements and G40 limits are unchanged. Source restrictions follow embeddings, graph relations, caches, summaries, analytics and trained candidates. Memory never grants authority.

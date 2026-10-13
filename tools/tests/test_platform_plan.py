@@ -63,6 +63,18 @@ class PlatformPlanTests(unittest.TestCase):
             with self.subTest(key=key):
                 self.check_bad(lambda p: p['policy'].update({key: value}))
 
+    def test_memory_scope_authority_and_backend_policy_fail_closed(self):
+        for key, value in [('default', 'shared'), ('derivative_permissions_inherited', False),
+                           ('authority', 'memory_grants_authority'), ('backend_policy', 'hidden_sql_engine')]:
+            with self.subTest(key=key):
+                self.check_bad(lambda p: p['memory_policy'].update({key: value}))
+        self.check_bad(lambda p: p['memory_policy']['kinds'].remove('knowledge_graph'))
+        for gid, dependency in [('G72', 'G88'), ('G71', 'G88'), ('G74', 'G87'),
+                                ('G75', 'G87'), ('G79', 'G89'), ('G82', 'G89'),
+                                ('G87', 'G63'), ('G88', 'G70'), ('G89', 'G33'), ('G90', 'G89')]:
+            with self.subTest(goal=gid, dependency=dependency):
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['dependencies'].remove(dependency))
+
     def test_g40_does_not_gain_a_new_trial_or_repair_allowance(self):
         for key, value in [('active_minutes', 15), ('new_provider_calls', 1), ('max_targeted_repairs', 1)]:
             with self.subTest(key=key):
