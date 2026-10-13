@@ -107,3 +107,5 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 Projeye özel veri, türev ve embedding varsayılan olarak projede kalır. Paylaşım adayı ekosistem kabulünden önce izin/hak/soy bağı taşır; içe alma etkinleştirme vermez. RAG kaynağı yetki veremez. Dokuz rol birleşebilir isteğe bağlı katılımcıdır; her işte dokuz model çalıştırma zorunluluğu değildir. Model/operatör tanımı native destek değildir. Gerçek yerel kabul artifact/profil/cihaz başına kaydedilir; desteksiz profil açık hata verir.
 
 Yapı/tarihçe/bağımlılık/bütçe için `.venv/bin/python tools/check_platform_plan.py`, salt okunur güncel issue/kabul kanıtı için `--fetch` çalıştırılır. Eski tracker kabul kanıtının tarihsel snapshot’ıdır; live audit’i revize iş listesinin güncel denetimi değildir. Kontrol başarısı incelemeci bağımsızlığını veya runtime/model doğruluğunu kanıtlamaz. İlk sınırlı uygulama planı [G46](../plans/g46-platform-contracts.md) içindedir.
+
+G79, önceden kabul edilmiş native eğitim adayı/checkpoint'ini değerlendirme/terfi ve skill paketlemeye bağlar; sıfır yeni eğitim adayı vardır ve arama hakkını sıfırlamaz.

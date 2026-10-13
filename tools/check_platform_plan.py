@@ -37,7 +37,10 @@ def validate_proof(proof, repository):
     require(proof['repository'] == repository and all(sha(proof[k]) for k in ('head', 'main', 'tree')), 'Accepted revision binding')
     require(bool(re.fullmatch(re.escape('https://github.com/' + repository + '/pull/') + '[1-9][0-9]*', proof['pr'])), 'Accepted owned PR')
     review, ci = proof['review'], proof['main_ci']
-    require(review['status'] == 'passed' and review['reviewed_head'] == proof['head'] and review['reviewer'], 'Separate exact-head review')
+    reviewer = review['reviewer']
+    require(review['status'] == 'passed' and review['reviewed_head'] == proof['head']
+            and isinstance(reviewer, str) and bool(reviewer.strip())
+            and not re.search(r'\b(?:unassigned|pending|unknown|tbd|todo)\b', reviewer, re.I), 'Separate exact-head review')
     require(type(ci['id']) is int and ci['id'] > 0 and ci['head'] == proof['main'] and ci['status'] == 'passed'
             and ci['url'] == f"https://github.com/{repository}/actions/runs/{ci['id']}", 'Exact-main CI')
 
@@ -104,6 +107,9 @@ def validate_plan(plan, index, tracking):
                     and set(historical[gid]['dependencies']) <= set(dependencies)
                     and historical[gid]['conditional_dependencies'] == conditional, 'No waived original required gate')
             require(card['issue'] == legacy[gid]['issue'], 'Preserved original issue identity')
+            original_acceptance = {(a['id'], a['requirement'], a['check']) for a in historical[gid]['acceptance']}
+            current_acceptance = {(a['id'], a['requirement'], a['check']) for a in card['acceptance']}
+            require(original_acceptance <= current_acceptance, 'Original required acceptance preserved')
         require(card['allowed_paths'] and all(relative(p) for p in card['allowed_paths']), 'Portable bounded scope')
         require(set(card['roles']) == {'architect', 'implementer', 'verifier', 'independent_reviewer'}
                 and all(isinstance(actor, str) and actor for actor in card['roles'].values()), 'Execution role slots')
@@ -114,10 +120,12 @@ def validate_plan(plan, index, tracking):
                 and budget['token_budget'] is None and budget['new_spending'] is False
                 and type(budget['new_provider_calls']) is int and budget['new_provider_calls'] == 0
                 and type(budget['review_minutes']) is int and 0 < budget['review_minutes'] <= 15, 'Finite execution and review budget')
+        require(type(budget['training_candidate_limit']) is int
+                and budget['training_candidate_limit'] in (0, 1), 'Finite training candidate budget')
         require(gid == 'G40' or budget['active_minutes'] > 0, 'Positive new-task allowance')
         if gid == 'G40':
             require(card['status'] == 'blocked' and budget['active_minutes'] == 0
-                    and budget['max_targeted_repairs'] == 0 and card['blockers'], 'G40 blocked with no reset')
+                    and budget['max_targeted_repairs'] == 0 and budget['training_candidate_limit'] == 0 and card['blockers'], 'G40 blocked with no reset')
         require(card['status'] in STATES, 'Current execution state')
         model = card['model']
         require(model['planned'] == 'gpt-6.1-sol' and model['reasoning_effort'] == 'high', 'Planned model settings')
@@ -127,6 +135,7 @@ def validate_plan(plan, index, tracking):
                     and issue['url'] == f"https://github.com/{repo}/issues/{issue['number']}"
                     and issue['url'] not in issue_urls, 'Unique owned issue')
             issue_urls.add(issue['url'])
+        require(len(card['acceptance']) == len({a['id'] for a in card['acceptance']}), 'Unique acceptance identities')
         require(card['acceptance'] and all(a['requirement'] and a['check'] and a['id'].startswith(gid + '-') for a in card['acceptance']), 'Acceptance-to-check mapping')
         if card['status'] == 'accepted':
             require(issue is not None and all(a['result'] == 'passed' for a in card['acceptance']), 'Executed required acceptance')

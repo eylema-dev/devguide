@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from check_platform_plan import validate_plan
+from check_platform_plan import validate_plan, validate_proof
 
 
 class PlatformPlanTests(unittest.TestCase):
@@ -91,6 +91,29 @@ class PlatformPlanTests(unittest.TestCase):
         self.check_bad(lambda p: p.update(capacity_planning='automatic procurement'))
         self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == 'G72')['dependencies'].remove('G73'))
         self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == 'G72')['dependencies'].append('G60'))
+
+    def test_training_candidate_limit_rejects_unbounded_and_wrong_types(self):
+        for value in [None, -1, 2, 999, True, False, '1']:
+            with self.subTest(value=value):
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == 'G84')['budget'].update(training_candidate_limit=value))
+        self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == 'G40')['budget'].update(training_candidate_limit=1))
+
+    def test_placeholder_reviewer_cannot_claim_passed_review(self):
+        proof = copy.deepcopy(next(g for g in self.tracking['goals'] if g['status'] == 'accepted')['accepted_delivery'][0])
+        validate_proof(proof, proof['repository'])
+        for actor in ['', '   ', None, 12, 'unassigned; separate context and exact reviewed SHA required', 'pending', 'TBD', 'unknown', 'TODO']:
+            with self.subTest(actor=actor):
+                proof['review']['reviewer'] = actor
+                with self.assertRaises(ValueError):
+                    validate_proof(proof, proof['repository'])
+
+    def test_original_acceptance_cannot_be_removed_rewritten_or_duplicated(self):
+        for gid in ['G44', 'G35']:
+            with self.subTest(gid=gid):
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'].pop())
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1].update(requirement='Weakened evidence'))
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1].update(check='Only static check'))
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'].append(copy.deepcopy(next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1])))
 
 
 if __name__ == '__main__':

@@ -3844,12 +3844,12 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {},
-      "objective": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product.",
+      "objective": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
       "acceptance": [
         {
           "id": "G79-A1",
-          "requirement": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product.",
-          "check": "One real bounded local training candidate; independent outcome/quality/resource comparison including regressions, effective stop, failed promotion, rights/lineage inheritance and reusable skill validation.",
+          "requirement": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
+          "check": "Reuse the exact candidate and checkpoint already accepted by native training gates; no new training candidate; independent outcome/quality/resource comparison including regressions, effective stop, failed promotion, rights/lineage inheritance and reusable skill validation.",
           "result": "not_run"
         }
       ],
