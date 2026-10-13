@@ -2107,15 +2107,15 @@
     },
     {
       "id": "G50",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Decision evidence and loop measurements",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 62,
         "url": "https://github.com/eylema-dev/eylema/issues/62"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "verification",
+      "base_sha": "93eb457754d076fa0efc8586432edfb9245645b4",
       "dependencies": [
         "G46",
         "G54",
@@ -2124,14 +2124,29 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-host/",
-        "crates/eylema-web/",
-        "docs/en/",
-        "docs/tr/",
+        "crates/eylema-contracts/src/decision.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/decision_contracts.rs",
+        "crates/eylema-host/src/decision.rs",
+        "crates/eylema-host/src/tool.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/tools.rs",
+        "docs/en/decision-evidence.md",
+        "docs/tr/decision-evidence.md",
+        "docs/en/typed-tools.md",
+        "docs/tr/typed-tools.md",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g50-decision-evidence.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Bind alternatives, selected route/action, score meaning, calibration status, constraints and actual outcomes to exact loop/model versions; deterministic explanations expose unknowns and performance without hidden reasoning.",
       "acceptance": [
         {
@@ -2155,16 +2170,14 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "AcceptedG46/G54/G18/G63 actualmain/CI checked. Own fixed typed-tool driver choice/actualoutcome correlation,64serial actualnative cycle+1cancellation measurements; no executedmodel/GPU/physicalmemory claim, originalactor-only pre-step declarations and live source authorization; finite scopedplan. Zero provider/model/training/G40/engine/dependency/spending trial.",
       "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
-      ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "unassigned; genuine separate exact-head context required"
       }
     },
     {
