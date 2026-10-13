@@ -2357,15 +2357,15 @@
     },
     {
       "id": "G54",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Typed tool registry and harness action execution",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 66,
         "url": "https://github.com/eylema-dev/eylema/issues/66"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "review",
+      "base_sha": "a7c34655b5a76b0aac904c6e09f9b68859c62312",
       "dependencies": [
         "G46",
         "G10",
@@ -2376,14 +2376,32 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-runtime/",
-        "crates/eylema-host/",
-        "docs/en/",
-        "docs/tr/",
-        "tools/translation-pairs.json"
+        "crates/eylema-contracts/src/tool.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/tool_contracts.rs",
+        "crates/eylema-runtime/src/tool.rs",
+        "crates/eylema-runtime/src/lib.rs",
+        "crates/eylema-runtime/tests/tool_registry.rs",
+        "crates/eylema-host/src/tool.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/tools.rs",
+        "docs/en/typed-tools.md",
+        "docs/tr/typed-tools.md",
+        "docs/en/deterministic-runtime.md",
+        "docs/tr/deterministic-runtime.md",
+        "tools/translation-pairs.json",
+        "crates/eylema-host/src/project_data.rs"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g54-typed-tools.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Map model proposals to owned typed skills/tools with input/output/effect contracts, scoped authority and budgets; verified outcomes, partial effects and unknown effects remain distinct.",
       "acceptance": [
         {
@@ -2407,16 +2425,14 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "AcceptedG46/G10/G11/G13/G39/G63 actualmain+CI bound; own closed read/add profiles overG10/G11/G13 plus G63source gate;1active execution/8actions/64profiles, exact technicalplan; zero model/provider/process/training/G40/newdependency/spend.",
       "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
-      ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "pending fresh separate exact-head review"
       }
     },
     {
