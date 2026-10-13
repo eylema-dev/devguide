@@ -2432,7 +2432,7 @@
         "architect": "parent Codex",
         "implementer": "parent Codex",
         "verifier": "parent Codex",
-        "independent_reviewer": "pending fresh separate exact-head review"
+        "independent_reviewer": "separate g54_tools_review; repaired exact-head verdict pending"
       }
     },
     {
