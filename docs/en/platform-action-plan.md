@@ -39,7 +39,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 |---|---|---|---|
 | **G46** | Loop, role and model-binding contracts | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Project-private data and egress boundaries | G46, G13 | `accepted` |
-| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
+| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `accepted` |
 | **G54** | Typed tool registry and harness action execution | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `planned` |
 | **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `planned` |
@@ -116,4 +116,4 @@ G79 integrates the already accepted native-training candidate/checkpoint into ev
 
 ## Memory extension
 
-The [memory layer](memory-layer.md) separates working, episodic, semantic, procedural, knowledge-graph and analytical memory. G87–G90 are bounded own-Rust additions; SQLite/DuckDB are reference/interchange candidates, not approved engines. The maintainer clarified CortexDB as knowledge graph. G72 now includes G88, G74/G75 require G87, and G79/G82 require G89; all new gates feed G44. Current cards contain 68 scoped records (23 remaining originals plus 45 additions); G46 is accepted with exact core-main evidence, while these memory gates remain planned. Accepted history, original requirements and G40 limits are unchanged. Source restrictions follow embeddings, graph relations, caches, summaries, analytics and trained candidates. Memory never grants authority.
+The [memory layer](memory-layer.md) separates working, episodic, semantic, procedural, knowledge-graph and analytical memory. G87–G90 are bounded own-Rust additions; SQLite/DuckDB are reference/interchange candidates, not approved engines. The maintainer clarified CortexDB as knowledge graph. G72 now includes G88, G74/G75 require G87, and G79/G82 require G89; all new gates feed G44. Current cards contain 68 scoped records (23 remaining originals plus 45 additions); G46 is accepted with exact core-main evidence, G63 and G87 are accepted with exact core-main and current CI evidence; G88–G90 remain planned. Accepted history, original requirements and G40 limits are unchanged. Source restrictions follow embeddings, graph relations, caches, summaries, analytics and trained candidates. Memory never grants authority.
