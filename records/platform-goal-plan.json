@@ -1,0 +1,4349 @@
+{
+  "format_version": 1,
+  "program": "Rust model harness platform",
+  "revision": 1,
+  "date": "2026-10-13",
+  "historical_cards_sha256": "6bd95fbabbb605eade23f0d25b5cfbd762294b8e9b1f521f955fec4c2b529c06",
+  "legacy_tracking_sha256": "5de8ca6b53bf02e4faaf1364b3c1541b6de9a349940206adaae85c399748fadc",
+  "accepted_goal_ids": [
+    "G00",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18",
+    "G19",
+    "G20",
+    "G21",
+    "G22",
+    "G38",
+    "G39"
+  ],
+  "accepted_evidence_source": "records/goal-tracking.json",
+  "design": {
+    "architecture": "0.6.0",
+    "api": "0.3.0",
+    "development": "0.2.0",
+    "learning": "0.2.0",
+    "runtime": "0.1.0",
+    "eyl": 1,
+    "eylj": 1
+  },
+  "roles": [
+    "perception",
+    "reasoning",
+    "planning",
+    "decision",
+    "policy",
+    "world_model",
+    "specialist",
+    "critic",
+    "representation"
+  ],
+  "policy": {
+    "local_inference": "first_party_rust_only",
+    "external_production_rust_crates": false,
+    "hidden_inference_engine": false,
+    "external_models": "explicit_opt_in_role_assignment; separate data/call/spend authority; no silent fallback",
+    "xstate": "proposed_orchestration_only; reviewed inventory/profile decision before integration",
+    "hardware": "primary M4 Pro 24 GB; other devices unaccepted",
+    "model_output_is_authority": false,
+    "private_reasoning_collection": false,
+    "native_training": "first_party_rust_for_accepted_profiles; Unsloth-like tools are explicit reviewed reference/recipe tooling, not hidden production engines"
+  },
+  "execution_rule": "One implementation Goal at a time. Check exact head, genuine separate review and current CI before maintainer-authorized merge; bind accepted main before the next dependent card. Refresh private usage before and after every Goal.",
+  "first_implementation_goal": "G46",
+  "remaining_original_goal_ids": [
+    "G06",
+    "G23",
+    "G24",
+    "G25",
+    "G26",
+    "G27",
+    "G28",
+    "G29",
+    "G30",
+    "G31",
+    "G32",
+    "G33",
+    "G34",
+    "G35",
+    "G36",
+    "G37",
+    "G40",
+    "G41",
+    "G42",
+    "G43",
+    "G44",
+    "G45",
+    "W01"
+  ],
+  "new_goal_ids": [
+    "G46",
+    "G47",
+    "G48",
+    "G49",
+    "G50",
+    "G51",
+    "G52",
+    "G53",
+    "G54",
+    "G55",
+    "G56",
+    "G57",
+    "G58",
+    "G59",
+    "G60",
+    "G61",
+    "G62",
+    "G63",
+    "G64",
+    "G65",
+    "G66",
+    "G67",
+    "G68",
+    "G69",
+    "G70",
+    "G71",
+    "G72",
+    "G73",
+    "G74",
+    "G75",
+    "G76",
+    "G77",
+    "G78",
+    "G79",
+    "G80",
+    "G81",
+    "G82",
+    "G83",
+    "G84",
+    "G85",
+    "G86"
+  ],
+  "recommended_order": [
+    "G46",
+    "G63",
+    "G54",
+    "G50",
+    "G75",
+    "G73",
+    "G27",
+    "G56",
+    "G67",
+    "G80",
+    "G23",
+    "G28",
+    "G29",
+    "G30",
+    "G57",
+    "G68",
+    "G70",
+    "G74",
+    "G72",
+    "G24",
+    "G25",
+    "G31",
+    "G81",
+    "G69",
+    "G58",
+    "G49",
+    "G52",
+    "G53",
+    "G59",
+    "G76",
+    "G83",
+    "G26",
+    "G78",
+    "G60",
+    "G61",
+    "G62",
+    "G47",
+    "G48",
+    "G66",
+    "G55",
+    "G32",
+    "G71",
+    "G33",
+    "G34",
+    "G77",
+    "G84",
+    "G85",
+    "G86",
+    "G82",
+    "G64",
+    "G65",
+    "G35",
+    "G36",
+    "G37",
+    "G51",
+    "G79",
+    "G06",
+    "G40",
+    "G41",
+    "G42",
+    "G43",
+    "G44",
+    "G45",
+    "W01"
+  ],
+  "goals": [
+    {
+      "id": "G06",
+      "plan_card_revision": 2,
+      "title": "Distribution and rights",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 11,
+        "url": "https://github.com/eylema-dev/devguide/issues/11"
+      },
+      "status": "planned",
+      "base_sha": "6552a1c443ccbe33db3e2cabb4ae37a5897009af",
+      "dependencies": [
+        "G00"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "docs/en/",
+        "docs/tr/",
+        "records/"
+      ],
+      "linked_scope": {
+        "eylema-models": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Finish accepted Apache-2.0 delivery and artifact rights evidence; keep chosen license settled.",
+      "acceptance": [
+        {
+          "id": "G06-P1",
+          "requirement": "Finish accepted Apache-2.0 delivery and artifact rights evidence; keep chosen license settled.",
+          "check": "Review linked distribution/provenance records; no new license choice.",
+          "result": "not_run"
+        },
+        {
+          "id": "G06-A1",
+          "requirement": "Real maintainer license/contribution decisions and third-party provenance are recorded",
+          "check": "Maintainer decision review, rights/provenance inventory and model/training record checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G23",
+      "plan_card_revision": 2,
+      "title": "CPU tensor reference",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 22,
+        "url": "https://github.com/eylema-dev/eylema/issues/22"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G18",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Owned CPU operators support versioned language/policy/world/decision/perception profiles without assuming one architecture proves another.",
+      "acceptance": [
+        {
+          "id": "G23-P1",
+          "requirement": "Owned CPU operators support versioned language/policy/world/decision/perception profiles without assuming one architecture proves another.",
+          "check": "Independent reference and failure vectors for each accepted operator subset.",
+          "result": "not_run"
+        },
+        {
+          "id": "G23-A1",
+          "requirement": "Selected operators match independent vectors and reject invalid shape/overflow/NaN cases",
+          "check": "Independent numerical reference and shape/dtype/nonfinite failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G24",
+      "plan_card_revision": 2,
+      "title": "Metal tensor operations",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 23,
+        "url": "https://github.com/eylema-dev/eylema/issues/23"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G19",
+        "G23"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "shaders/metal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Owned Metal operators preserve CPU semantics and declared precision/layout under combined harness load.",
+      "acceptance": [
+        {
+          "id": "G24-P1",
+          "requirement": "Owned Metal operators preserve CPU semantics and declared precision/layout under combined harness load.",
+          "check": "Real M4 parity and bounds at predeclared tolerances.",
+          "result": "not_run"
+        },
+        {
+          "id": "G24-A1",
+          "requirement": "Actual M4 kernels agree with CPU within predeclared tolerances",
+          "check": "Real CPU/Metal operator parity and failure tests before changing tolerance",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G25",
+      "plan_card_revision": 2,
+      "title": "Placement task",
+      "repository": "eylema-dev/eylema-examples",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-examples/issues/4"
+      },
+      "status": "planned",
+      "base_sha": "cbfda4f13f9805c158132aca59ebe6bb9b8af7dc",
+      "dependencies": [
+        "G20",
+        "G23",
+        "G46",
+        "G54"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "placement/"
+      ],
+      "linked_scope": {
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Placement is a reusable loop definition with typed observations, actions and an owned deterministic tool baseline.",
+      "acceptance": [
+        {
+          "id": "G25-P1",
+          "requirement": "Placement is a reusable loop definition with typed observations, actions and an owned deterministic tool baseline.",
+          "check": "Fixed-seed closed-loop outcomes through the shared harness contracts.",
+          "result": "not_run"
+        },
+        {
+          "id": "G25-A1",
+          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G26",
+      "plan_card_revision": 2,
+      "title": "Small learned models",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 24,
+        "url": "https://github.com/eylema-dev/eylema/issues/24"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G24",
+        "G25",
+        "G46",
+        "G83"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "crates/eylema-runtime/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {
+        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Separate policy and world/dynamics roles produce typed actions and next-state predictions in owned Rust.",
+      "acceptance": [
+        {
+          "id": "G26-P1",
+          "requirement": "Separate policy and world/dynamics roles produce typed actions and next-state predictions in owned Rust.",
+          "check": "Held-out closed-loop success and multi-step errors; deterministic baseline and role ablation.",
+          "result": "not_run"
+        },
+        {
+          "id": "G26-A1",
+          "requirement": "Held-out policy/dynamics closed-loop success, multistep errors and constraints are compared with baseline",
+          "check": "Pinned training/eval runs; publish unsuccessful candidates; acceptance needs actual improvement/quality floors",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G27",
+      "plan_card_revision": 2,
+      "title": "Model contract",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/3"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G03",
+        "G18",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "objective": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
+      "acceptance": [
+        {
+          "id": "G27-P1",
+          "requirement": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
+          "check": "Manifest compatibility, rights, operator, preprocessing, model-versus-role identity and unsupported-profile rejection.",
+          "result": "not_run"
+        },
+        {
+          "id": "G27-A1",
+          "requirement": "Qwen3-0.6B source/artifact/tokenizer/operator hashes, rights and narrow configuration are pinned",
+          "check": "Artifact identity/rights/operator audit; selection alone is not runtime support",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G28",
+      "plan_card_revision": 2,
+      "title": "Weight loader",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 25,
+        "url": "https://github.com/eylema-dev/eylema/issues/25"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G09",
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Own bounded weight loading and validation for each separately accepted artifact profile.",
+      "acceptance": [
+        {
+          "id": "G28-P1",
+          "requirement": "Own bounded weight loading and validation for each separately accepted artifact profile.",
+          "check": "Bad offsets/dtypes/shapes, changed/missing tensors and precision/layout mismatches fail.",
+          "result": "not_run"
+        },
+        {
+          "id": "G28-A1",
+          "requirement": "Selected safetensors/conversion subset rejects bad offsets/dtype/shape/missing/changed tensors",
+          "check": "Malformed and changed-artifact fixtures plus reference load comparison",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G29",
+      "plan_card_revision": 2,
+      "title": "Tokenizer and template",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 26,
+        "url": "https://github.com/eylema-dev/eylema/issues/26"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G27"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Pin tokenizer/template and preprocessing per profile; compatible role interfaces do not imply interchangeable tokenization.",
+      "acceptance": [
+        {
+          "id": "G29-P1",
+          "requirement": "Pin tokenizer/template and preprocessing per profile; compatible role interfaces do not imply interchangeable tokenization.",
+          "check": "Independent EN/TR/Unicode/special-token vectors and profile mismatch tests.",
+          "result": "not_run"
+        },
+        {
+          "id": "G29-A1",
+          "requirement": "EN/TR/Unicode examples match reference token IDs including special tokens/template",
+          "check": "Pinned independent tokenizer vectors and special-token/template regression tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G30",
+      "plan_card_revision": 2,
+      "title": "CPU model execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 27,
+        "url": "https://github.com/eylema-dev/eylema/issues/27"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "crates/eylema-tensor/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Run Qwen reasoning/planning/specialist/critic profiles on the owned CPU path; a shared model may fill several roles but outputs remain distinct.",
+      "acceptance": [
+        {
+          "id": "G30-P1",
+          "requirement": "Run Qwen reasoning/planning/specialist/critic profiles on the owned CPU path; a shared model may fill several roles but outputs remain distinct.",
+          "check": "Reference attention/KV/logits, actual bounded local execution and role-output validation.",
+          "result": "not_run"
+        },
+        {
+          "id": "G30-A1",
+          "requirement": "Transformer/attention/KV/logits agree with reference; context and stop bounds work",
+          "check": "Layer/logit vectors and actual bounded CPU generation/cancellation tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G31",
+      "plan_card_revision": 2,
+      "title": "Metal model execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 28,
+        "url": "https://github.com/eylema-dev/eylema/issues/28"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G24",
+        "G30"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "shaders/metal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Owned M4 Metal language execution combines with local policy/world/decision roles under one measured resource budget.",
+      "acceptance": [
+        {
+          "id": "G31-P1",
+          "requirement": "Owned M4 Metal language execution combines with local policy/world/decision roles under one measured resource budget.",
+          "check": "Actual numerical/task quality, streaming/stop, cold/warm and combined load measurements.",
+          "result": "not_run"
+        },
+        {
+          "id": "G31-A1",
+          "requirement": "The same pinned model really runs/streams/stops on M4 with numerical and resource bounds",
+          "check": "Actual CPU/Metal numerical/generation comparison, streaming/stop/memory checks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G32",
+      "plan_card_revision": 2,
+      "title": "Language-driven tasks",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 29,
+        "url": "https://github.com/eylema-dev/eylema/issues/29"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G22",
+        "G26",
+        "G31",
+        "G48",
+        "G50",
+        "G54",
+        "G53",
+        "G58"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "crates/eylema-runtime/",
+        "web/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Natural-language jobs use the cooperative role loop to produce authorized typed tool actions and verify real completion.",
+      "acceptance": [
+        {
+          "id": "G32-P1",
+          "requirement": "Natural-language jobs use the cooperative role loop to produce authorized typed tool actions and verify real completion.",
+          "check": "EN/TR job success, disagreement/replanning, no unauthorized effect, explicit local-only mode and role-ablation comparison.",
+          "result": "not_run"
+        },
+        {
+          "id": "G32-A1",
+          "requirement": "EN/TR goals become typed authorized proposals under combined LLM/policy/3D load; no hidden cloud fallback",
+          "check": "Actual combined user journeys, invalid/denied-proposal tests and locality audit",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G33",
+      "plan_card_revision": 2,
+      "title": "Episodes and corrections",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 30,
+        "url": "https://github.com/eylema-dev/eylema/issues/30"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G32",
+        "G46",
+        "G50",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-learning/",
+        "crates/eylema-contracts/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Capture permitted episodes across all roles, separating proposals, actual tools/results, human corrections, failures and unknowns.",
+      "acceptance": [
+        {
+          "id": "G33-P1",
+          "requirement": "Capture permitted episodes across all roles, separating proposals, actual tools/results, human corrections, failures and unknowns.",
+          "check": "Consent/redaction/provenance/withdrawal and exact loop/model/action lineage tests.",
+          "result": "not_run"
+        },
+        {
+          "id": "G33-A1",
+          "requirement": "Training admission rejects content without consent; observations and teacher suggestions remain distinct",
+          "check": "Consent/provenance/correction admission and redaction tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G34",
+      "plan_card_revision": 2,
+      "title": "Dataset revision",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 3,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/3"
+      },
+      "status": "planned",
+      "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
+      "dependencies": [
+        "G33",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "data/",
+        "tools/",
+        "recipes/"
+      ],
+      "linked_scope": {},
+      "objective": "Curate versioned role-specific datasets; related episodes and derivatives never cross train/holdout.",
+      "acceptance": [
+        {
+          "id": "G34-P1",
+          "requirement": "Curate versioned role-specific datasets; related episodes and derivatives never cross train/holdout.",
+          "check": "Rights/lineage, grouping, consent withdrawal and immutable holdout rejection tests.",
+          "result": "not_run"
+        },
+        {
+          "id": "G34-A1",
+          "requirement": "Episode derivatives never leak between train/holdout and every sample has permitted lineage",
+          "check": "Deterministic dedup/split/provenance/rights negative tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G35",
+      "plan_card_revision": 2,
+      "title": "Local Unsloth recipe",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/4"
+      },
+      "status": "planned",
+      "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
+      "dependencies": [
+        "G27",
+        "G34",
+        "G77",
+        "G76"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "recipes/",
+        "environments/",
+        "tools/"
+      ],
+      "linked_scope": {},
+      "objective": "One bounded local training recipe improves a declared role from permitted harness data.",
+      "acceptance": [
+        {
+          "id": "G35-P1",
+          "requirement": "One bounded local training recipe improves a declared role from permitted harness data.",
+          "check": "Pinned M4 recipe, one candidate, actual checkpoint/resource evidence; no automatic activation.",
+          "result": "not_run"
+        },
+        {
+          "id": "G35-A1",
+          "requirement": "A bounded pinned LoRA run completes on this M4 with checkpoint and resource evidence",
+          "check": "One small smoke run followed by actual local training; installed tools alone do not pass",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 1
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G36",
+      "plan_card_revision": 2,
+      "title": "Export and reacceptance",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 5,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/5"
+      },
+      "status": "planned",
+      "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
+      "dependencies": [
+        "G31",
+        "G35",
+        "G78"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "recipes/",
+        "tools/",
+        "results/"
+      ],
+      "linked_scope": {
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Reaccept the trained candidate in its owned Rust role profile before promotion.",
+      "acceptance": [
+        {
+          "id": "G36-P1",
+          "requirement": "Reaccept the trained candidate in its owned Rust role profile before promotion.",
+          "check": "Numerical/token/preprocessing and held-out job-quality comparison including regressions.",
+          "result": "not_run"
+        },
+        {
+          "id": "G36-A1",
+          "requirement": "Exported candidate matches tokenizer/numerical/task contracts in owned Rust and held-out comparisons",
+          "check": "Actual export and Rust candidate/current evaluation on independent tasks",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 1
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G37",
+      "plan_card_revision": 2,
+      "title": "Model set and rollback",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/4"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G36",
+        "G46",
+        "G50",
+        "G65"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "releases/",
+        "assignments/"
+      ],
+      "linked_scope": {
+        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Version role assignments independently of loop definitions and preserve in-flight versions through activation/rollback.",
+      "acceptance": [
+        {
+          "id": "G37-P1",
+          "requirement": "Version role assignments independently of loop definitions and preserve in-flight versions through activation/rollback.",
+          "check": "Two measured workload assignments, shadow/canary, state reset, failed candidate and truthful rollback tests.",
+          "result": "not_run"
+        },
+        {
+          "id": "G37-A1",
+          "requirement": "Approval/canary/active/rollback and measured same-device workload assignment pin in-flight versions",
+          "check": "Actual failed-canary rollback and workload-change/version-binding tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G40",
+      "plan_card_revision": 2,
+      "title": "Codex adapter",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 33,
+        "url": "https://github.com/eylema-dev/eylema/issues/33"
+      },
+      "status": "blocked",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-development/adapters/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Preserve existing unresolved Codex acceptance, original call/repair/privacy limits and PR #59. No fresh allowance is granted by this program revision.",
+      "acceptance": [
+        {
+          "id": "G40-P1",
+          "requirement": "Preserve existing unresolved Codex acceptance, original call/repair/privacy limits and PR #59. No fresh allowance is granted by this program revision.",
+          "check": "Resume only after a concrete separately authorized bounded continuation; no unresolved provider failure admitted as success.",
+          "result": "not_run"
+        },
+        {
+          "id": "G40-A1",
+          "requirement": "Real configured Codex call/structured output/timeout/quota/model-unavailable behaviors are evidenced",
+          "check": "Live provider contract smoke plus timeout/quota/unavailable failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 0,
+        "max_targeted_repairs": 0,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Existing unresolved G40 host/provider acceptance; PR #59; prior limits unchanged; no new trials or crash/log reads."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G41",
+      "plan_card_revision": 2,
+      "title": "Second adapter",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 34,
+        "url": "https://github.com/eylema-dev/eylema/issues/34"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-development/adapters/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Second development provider uses the same bounded harness development contract with actual existing access.",
+      "acceptance": [
+        {
+          "id": "G41-P1",
+          "requirement": "Second development provider uses the same bounded harness development contract with actual existing access.",
+          "check": "Configured provider smoke/failure evidence and exact model/provider metadata; no purchase or inferred access.",
+          "result": "not_run"
+        },
+        {
+          "id": "G41-A1",
+          "requirement": "Claude passes the same contract with actual access and recorded provider revision",
+          "check": "Live second-provider contract smoke and matching failure tests",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G42",
+      "plan_card_revision": 2,
+      "title": "GitHub delivery",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 35,
+        "url": "https://github.com/eylema-dev/eylema/issues/35"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G54"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-development/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Harness delivery reconciles branch/PR identities after uncertain responses; model/tool workers have no publication credential.",
+      "acceptance": [
+        {
+          "id": "G42-P1",
+          "requirement": "Harness delivery reconciles branch/PR identities after uncertain responses; model/tool workers have no publication credential.",
+          "check": "Actual idempotent GitHub delivery and scoped process/token boundary tests.",
+          "result": "not_run"
+        },
+        {
+          "id": "G42-A1",
+          "requirement": "Task/revision retries find the same branch/draft PR after unknown responses; task code lacks write token",
+          "check": "Unknown-result reconciliation, idempotency and credential-isolation tests plus real draft PR",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G43",
+      "plan_card_revision": 2,
+      "title": "Real development acceptance",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 36,
+        "url": "https://github.com/eylema-dev/eylema/issues/36"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G42",
+        "G50"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-development/",
+        "docs/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Both accepted provider adapters complete bounded real development jobs through code/checks/separate review/PR.",
+      "acceptance": [
+        {
+          "id": "G43-P1",
+          "requirement": "Both accepted provider adapters complete bounded real development jobs through code/checks/separate review/PR.",
+          "check": "Time, repair, intervention, failures and model/effort cost evidence; manual PR creation is not autonomous proof.",
+          "result": "not_run"
+        },
+        {
+          "id": "G43-A1",
+          "requirement": "Both providers complete bounded real need/code/tests/separate-review/PR chains with time/repair/intervention records",
+          "check": "Two live same-contract tasks and exact-head independent review/CI evidence",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G44",
+      "plan_card_revision": 2,
+      "title": "Complete macOS acceptance",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 37,
+        "url": "https://github.com/eylema-dev/eylema/issues/37"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42",
+        "G43",
+        "G46",
+        "G47",
+        "G48",
+        "G49",
+        "G50",
+        "G51",
+        "G52",
+        "G53",
+        "G54",
+        "G55",
+        "G56",
+        "G57",
+        "G58",
+        "G59",
+        "G60",
+        "G61",
+        "G62",
+        "G63",
+        "G64",
+        "G65",
+        "G66",
+        "G67",
+        "G68",
+        "G69",
+        "G70",
+        "G71",
+        "G72",
+        "G73",
+        "G74",
+        "G75",
+        "G76",
+        "G77",
+        "G78",
+        "G79",
+        "G80",
+        "G81",
+        "G82",
+        "G83",
+        "G84",
+        "G85",
+        "G86"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "docs/",
+        "release/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {
+        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eylema-docs-en": "docs/",
+        "eylema-docs-tr": "docs/"
+      },
+      "objective": "Full M4 acceptance includes all original capabilities plus reusable harness, nine roles, owned local decision/perception execution, evidence, model replacement and permitted data loop.",
+      "acceptance": [
+        {
+          "id": "G44-P1",
+          "requirement": "Full M4 acceptance includes all original capabilities plus reusable harness, nine roles, owned local decision/perception execution, evidence, model replacement and permitted data loop.",
+          "check": "One exact candidate; all original twelve steps plus new platform acceptance. Unrun required capability blocks release.",
+          "result": "not_run"
+        },
+        {
+          "id": "G44-A1",
+          "requirement": "All twelve full macOS acceptance steps pass on one clean profile at the same candidate revision",
+          "check": "Clean-profile task/recovery/GPU/LLM/consent/training/export/promotion/rollback/two-provider PR replay",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G45",
+      "plan_card_revision": 2,
+      "title": "Experimental distribution package",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 38,
+        "url": "https://github.com/eylema-dev/eylema/issues/38"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G06",
+        "G44"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "release/",
+        "docs/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {
+        "eylema-docs-en": "docs/",
+        "eylema-docs-tr": "docs/",
+        "devguide": "role-owned artifacts; enumerate exact paths in the execution revision"
+      },
+      "objective": "Package only accepted owned-Rust harness assets with model/backend boundaries, rights and reproducible installation/rollback.",
+      "acceptance": [
+        {
+          "id": "G45-P1",
+          "requirement": "Package only accepted owned-Rust harness assets with model/backend boundaries, rights and reproducible installation/rollback.",
+          "check": "Exact binary/web/artifact hashes, notices, clean reinstall and local/external configuration isolation.",
+          "result": "not_run"
+        },
+        {
+          "id": "G45-A1",
+          "requirement": "ARM64 binary/web assets/install/rollback have hashes, rights, dependencies and clean reinstall evidence",
+          "check": "Reproducible package/hash inventory and clean install/rollback; publishing requires separate authority",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "W01",
+      "plan_card_revision": 2,
+      "title": "Website accuracy",
+      "repository": "eylema-dev/eylemadotdev",
+      "issue": {
+        "number": 4,
+        "url": "https://github.com/eylema-dev/eylemadotdev/issues/4"
+      },
+      "status": "planned",
+      "base_sha": "e379050263f00f0160845a8395f142489f3cc11d",
+      "dependencies": [
+        "G03"
+      ],
+      "conditional_dependencies": {
+        "working_product_claims": [
+          "G44"
+        ]
+      },
+      "allowed_paths": [
+        "README.md",
+        "src/",
+        "public/",
+        "records/"
+      ],
+      "linked_scope": {},
+      "objective": "Website explains the Rust harness and role/local/external boundaries accurately.",
+      "acceptance": [
+        {
+          "id": "W01-P1",
+          "requirement": "Website explains the Rust harness and role/local/external boundaries accurately.",
+          "check": "EN/TR claims reflect actual accepted capabilities; working-product claims require G44 and publication needs separate authority.",
+          "result": "not_run"
+        },
+        {
+          "id": "W01-A1",
+          "requirement": "EN/TR claims and quickstart match accepted product; DNS/TLS checked separately; publication binds Git/Actions/live SHA",
+          "check": "Website build/browser/language checks and independent DNS/TLS/release-SHA checks if publishing is authorized",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Acceptance not executed; dependencies and activation bindings required."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G46",
+      "plan_card_revision": 1,
+      "title": "Loop, role and model-binding contracts",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 60,
+        "url": "https://github.com/eylema-dev/eylema/issues/60"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G08",
+        "G09",
+        "G13",
+        "G17",
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/src/platform.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/platform_contracts.rs",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Two distinct loop definitions share the same contracts; constructor tests cover all nine optional role kinds and compatible bindings. Reject schema, units, preprocessing, action semantics, duplicate, dangling and unbounded-loop cases. Binding metadata is not execution authority.",
+      "acceptance": [
+        {
+          "id": "G46-A1",
+          "requirement": "Two distinct loop definitions share the same contracts; constructor tests cover all nine optional role kinds and compatible bindings. Reject schema, units, preprocessing, action semantics, duplicate, dangling and unbounded-loop cases. Binding metadata is not execution authority.",
+          "check": "Contract tests with placement and document-review consumers; mutation fixtures reject each incompatible boundary; native and portable Wasm gates.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G47",
+      "plan_card_revision": 1,
+      "title": "XState orchestration inventory and profile",
+      "repository": "eylema-dev/devguide",
+      "issue": {
+        "number": 36,
+        "url": "https://github.com/eylema-dev/devguide/issues/36"
+      },
+      "status": "planned",
+      "base_sha": "6552a1c443ccbe33db3e2cabb4ae37a5897009af",
+      "dependencies": [
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "docs/en/tooling.md",
+        "docs/tr/tooling.md",
+        "docs/plans/",
+        "tools/tests/"
+      ],
+      "linked_scope": {},
+      "objective": "Pin XState and host/build runtime, rights and process bounds; review the explicit orchestration-only dependency/profile decision under existing policy before any production integration. Owned Rust inference is unchanged.",
+      "acceptance": [
+        {
+          "id": "G47-A1",
+          "requirement": "Pin XState and host/build runtime, rights and process bounds; review the explicit orchestration-only dependency/profile decision under existing policy before any production integration. Owned Rust inference is unchanged.",
+          "check": "Inventory/provenance audit, bounded profile proposal, negative dependency/profile tests and separate policy review; publishing a record grants no permission.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G48",
+      "plan_card_revision": 1,
+      "title": "Bounded workflow and Rust reconciliation",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 61,
+        "url": "https://github.com/eylema-dev/eylema/issues/61"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G47",
+        "G13",
+        "G21"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-runtime/",
+        "crates/eylema-web/",
+        "adapters/xstate/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Compose, start, inspect, stop and reopen a bounded loop; workflow restart reconciles Rust execution IDs before retries, and native stop bypasses the coordinator. XState owns no authority.",
+      "acceptance": [
+        {
+          "id": "G48-A1",
+          "requirement": "Compose, start, inspect, stop and reopen a bounded loop; workflow restart reconciles Rust execution IDs before retries, and native stop bypasses the coordinator. XState owns no authority.",
+          "check": "Actual local coordinator tests for duplicate delivery, crash/replay, unknown effects, browser closure, budget expiry, direct stop and rejection of stale state; EN/TR browser flow.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G49",
+      "plan_card_revision": 1,
+      "title": "Perception model artifact and operator profile",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 8,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/8"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G27",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "objective": "Select one feasible MiniCPM perception profile with exact weights/tokenizer/preprocessing/operator/rights hashes and M4 resource ceiling; vision and optional audio profiles stay distinct.",
+      "acceptance": [
+        {
+          "id": "G49-A1",
+          "requirement": "Select one feasible MiniCPM perception profile with exact weights/tokenizer/preprocessing/operator/rights hashes and M4 resource ceiling; vision and optional audio profiles stay distinct.",
+          "check": "Static artifact/operator audit plus development-reference vectors; no remote custom code execution, engine adoption or download implied by model selection.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G50",
+      "plan_card_revision": 1,
+      "title": "Decision evidence and loop measurements",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 62,
+        "url": "https://github.com/eylema-dev/eylema/issues/62"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G54",
+        "G18",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Bind alternatives, selected route/action, score meaning, calibration status, constraints and actual outcomes to exact loop/model versions; deterministic explanations expose unknowns and performance without hidden reasoning.",
+      "acceptance": [
+        {
+          "id": "G50-A1",
+          "requirement": "Bind alternatives, selected route/action, score meaning, calibration status, constraints and actual outcomes to exact loop/model versions; deterministic explanations expose unknowns and performance without hidden reasoning.",
+          "check": "Negative evidence/provenance tests; actual outcome correlation; measured cold/warm, p95/p99 latency, throughput, reservation versus physical-memory distinctions and cancellation; no causal claim from attribution.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G51",
+      "plan_card_revision": 1,
+      "title": "Reusable harness applications and model replacement",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 63,
+        "url": "https://github.com/eylema-dev/eylema/issues/63"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G32",
+        "G37",
+        "G48",
+        "G50",
+        "G54",
+        "G55",
+        "G66"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Placement and document-evidence jobs run on the same harness; two compatible accepted local assignments swap at step boundaries without platform rewrites, preserve in-flight identity and complete bounded planned work.",
+      "acceptance": [
+        {
+          "id": "G51-A1",
+          "requirement": "Placement and document-evidence jobs run on the same harness; two compatible accepted local assignments swap at step boundaries without platform rewrites, preserve in-flight identity and complete bounded planned work.",
+          "check": "Real end-to-end two-application tests, failed swap/canary rollback, output/side-effect verification and deterministic/full-loop/role-ablation comparison at frozen quality/resource thresholds.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G52",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU perception execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 64,
+        "url": "https://github.com/eylema-dev/eylema/issues/64"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G49",
+        "G23",
+        "G28",
+        "G29",
+        "G30"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Implement the selected perception encoder/projector and required multimodal operator path in owned Rust; malformed input and unsupported profiles fail before inference.",
+      "acceptance": [
+        {
+          "id": "G52-A1",
+          "requirement": "Implement the selected perception encoder/projector and required multimodal operator path in owned Rust; malformed input and unsupported profiles fail before inference.",
+          "check": "Independent CPU reference vectors, preprocessing/token/shape parity, actual pinned-artifact local inference, bounded input/context/cancel and peak-memory measurements.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G53",
+      "plan_card_revision": 1,
+      "title": "Owned Rust Metal perception execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 65,
+        "url": "https://github.com/eylema-dev/eylema/issues/65"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G52",
+        "G24",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-platform/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "The same accepted perception profile executes on M4 Metal with CPU parity and combined policy/planner/view resource bounds; no hidden inference engine.",
+      "acceptance": [
+        {
+          "id": "G53-A1",
+          "requirement": "The same accepted perception profile executes on M4 Metal with CPU parity and combined policy/planner/view resource bounds; no hidden inference engine.",
+          "check": "Real M4 readback, frozen numerical tolerances, cold/warm/combined latency and memory distributions, resource exhaustion, model stop and device/worker failure tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G54",
+      "plan_card_revision": 1,
+      "title": "Typed tool registry and harness action execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 66,
+        "url": "https://github.com/eylema-dev/eylema/issues/66"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G10",
+        "G11",
+        "G13",
+        "G39",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-runtime/",
+        "crates/eylema-host/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Map model proposals to owned typed skills/tools with input/output/effect contracts, scoped authority and budgets; verified outcomes, partial effects and unknown effects remain distinct.",
+      "acceptance": [
+        {
+          "id": "G54-A1",
+          "requirement": "Map model proposals to owned typed skills/tools with input/output/effect contracts, scoped authority and budgets; verified outcomes, partial effects and unknown effects remain distinct.",
+          "check": "Actual owned deterministic-tool execution; denied/stale/oversized proposals produce no unauthorized effect; retry/idempotency, effective stop and unknown-effect reconciliation tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G55",
+      "plan_card_revision": 1,
+      "title": "Explicit external-model role adapter",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 67,
+        "url": "https://github.com/eylema-dev/eylema/issues/67"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G54",
+        "G39",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-development/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Users register explicit external model capabilities and map normalized role outputs through the same contracts; local-only profiles never send data or silently fall back. External data/call/spend permissions are separate.",
+      "acceptance": [
+        {
+          "id": "G55-A1",
+          "requirement": "Users register explicit external model capabilities and map normalized role outputs through the same contracts; local-only profiles never send data or silently fall back. External data/call/spend permissions are separate.",
+          "check": "Controlled local protocol fixture exercises version, malformed/partial output, timeout, unavailable model, scope and cost/call bounds; real provider compatibility requires a separately bound authorized profile and actual smoke evidence.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G56",
+      "plan_card_revision": 1,
+      "title": "Open-weight structured-decision model profile",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 9,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/9"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G27",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "objective": "Choose a feasible open-weight decision/router/scoring candidate instead of fixing a closed Jev dependency; pin exact artifact, tokenizer, heads, operators, choice/yes-no/score semantics and calibration metadata.",
+      "acceptance": [
+        {
+          "id": "G56-A1",
+          "requirement": "Choose a feasible open-weight decision/router/scoring candidate instead of fixing a closed Jev dependency; pin exact artifact, tokenizer, heads, operators, choice/yes-no/score semantics and calibration metadata.",
+          "check": "Candidate comparison and rights/operator audit; independent frozen reference vectors for multi-question outputs; reject unsupported architecture/preprocessing. Selection is not native support.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G57",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU structured-decision execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 68,
+        "url": "https://github.com/eylema-dev/eylema/issues/68"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G56",
+        "G23",
+        "G28",
+        "G29",
+        "G30"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Run the accepted structured-decision candidate in owned Rust and normalize choice/yes-no/score outputs with finite bounds; scores never authorize effects or prove calibration.",
+      "acceptance": [
+        {
+          "id": "G57-A1",
+          "requirement": "Run the accepted structured-decision candidate in owned Rust and normalize choice/yes-no/score outputs with finite bounds; scores never authorize effects or prove calibration.",
+          "check": "Actual pinned-artifact CPU run and independent logits/probability/head reference; malformed questions, output schema, multi-question batching, context, memory and stop tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G58",
+      "plan_card_revision": 1,
+      "title": "Owned Rust Metal structured-decision execution",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 69,
+        "url": "https://github.com/eylema-dev/eylema/issues/69"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G57",
+        "G24",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-platform/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Run the same decision profile on M4 Metal and measure fast routing/scoring under planner/policy/world/perception contention while retaining quality and cancellation limits.",
+      "acceptance": [
+        {
+          "id": "G58-A1",
+          "requirement": "Run the same decision profile on M4 Metal and measure fast routing/scoring under planner/policy/world/perception contention while retaining quality and cancellation limits.",
+          "check": "Real CPU/Metal head parity and frozen task-quality thresholds; cold/warm/combined p95/p99, throughput, memory, queue/stop and unavailable/device-failure tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G59",
+      "plan_card_revision": 1,
+      "title": "Separate STT and TTS artifact/operator profiles",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 10,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/10"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G27",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "objective": "Pin separate speech-to-text and text-to-speech candidates, audio format/rate/chunk/timestamp/language/voice rights and required operators. TTS is production, not audio perception.",
+      "acceptance": [
+        {
+          "id": "G59-A1",
+          "requirement": "Pin separate speech-to-text and text-to-speech candidates, audio format/rate/chunk/timestamp/language/voice rights and required operators. TTS is production, not audio perception.",
+          "check": "Independent waveform/text/reference audit, Turkish/English quality fixtures, voice/data rights and unsupported-format/profile rejection; no support from selection alone.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G60",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU speech-to-text",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 70,
+        "url": "https://github.com/eylema-dev/eylema/issues/70"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G59",
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Run one accepted STT profile in owned Rust with bounded audio segmentation, timing, transcription and interruption; no hidden transcription service.",
+      "acceptance": [
+        {
+          "id": "G60-A1",
+          "requirement": "Run one accepted STT profile in owned Rust with bounded audio segmentation, timing, transcription and interruption; no hidden transcription service.",
+          "check": "Actual local artifact/reference run; frozen EN/TR WER/CER, resampling/token/timestamp tests, noisy/empty/truncated audio, latency/memory and effective-stop evidence.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G61",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU text-to-speech",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 71,
+        "url": "https://github.com/eylema-dev/eylema/issues/71"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G59",
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Run one accepted TTS acoustic/vocoder profile in owned Rust with separate text/voice/language/sample-rate and bounded chunk output contracts.",
+      "acceptance": [
+        {
+          "id": "G61-A1",
+          "requirement": "Run one accepted TTS acoustic/vocoder profile in owned Rust with separate text/voice/language/sample-rate and bounded chunk output contracts.",
+          "check": "Actual local synthesis/reference evidence, frozen intelligibility/pronunciation checks, voice isolation, bounded duration, malformed text, chunk cancellation and latency/memory.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G62",
+      "plan_card_revision": 1,
+      "title": "Owned Rust Metal audio and combined streaming",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 72,
+        "url": "https://github.com/eylema-dev/eylema/issues/72"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G60",
+        "G61",
+        "G24",
+        "G21"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-platform/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Accepted STT/TTS profiles use owned Metal paths where supported and combine with visual/text/decision work without unbounded audio buffering or stale speech.",
+      "acceptance": [
+        {
+          "id": "G62-A1",
+          "requirement": "Accepted STT/TTS profiles use owned Metal paths where supported and combine with visual/text/decision work without unbounded audio buffering or stale speech.",
+          "check": "Real CPU/Metal parity, first-transcript/first-audio and realtime-factor limits, queue/buffer/memory peaks, overload and end-to-end interruption under combined load.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G63",
+      "plan_card_revision": 1,
+      "title": "Project-private data and egress boundaries",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 73,
+        "url": "https://github.com/eylema-dev/eylema/issues/73"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G13"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-journal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Own episode/artifact namespaces and retention per project; private is default. Separate execution, collection, training, external disclosure and ecosystem export permissions follow derivatives and trained candidates.",
+      "acceptance": [
+        {
+          "id": "G63-A1",
+          "requirement": "Own episode/artifact namespaces and retention per project; private is default. Separate execution, collection, training, external disclosure and ecosystem export permissions follow derivatives and trained candidates.",
+          "check": "Cross-project read/import, unauthorized external disclosure, permission withdrawal, retention and derivative-label tests; raw reasoning/secrets never enter export records.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G64",
+      "plan_card_revision": 1,
+      "title": "Shareable ecosystem package builder",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 9,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/9"
+      },
+      "status": "planned",
+      "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
+      "dependencies": [
+        "G33",
+        "G34",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "datasets/",
+        "recipes/",
+        "packages/",
+        "tools/"
+      ],
+      "linked_scope": {},
+      "objective": "Select permitted records/datasets/models/evaluations into bounded portable share candidates with explicit terms, provenance, redactions and derivative consent; private stays private.",
+      "acceptance": [
+        {
+          "id": "G64-A1",
+          "requirement": "Select permitted records/datasets/models/evaluations into bounded portable share candidates with explicit terms, provenance, redactions and derivative consent; private stays private.",
+          "check": "Synthetic package export/lineage and rights tests reject private fields, local paths, secrets and disallowed derivatives. A candidate file is not publication; actual publication needs its own authority.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G65",
+      "plan_card_revision": 1,
+      "title": "Ecosystem catalogue and compatible imports",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 11,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/11"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G27",
+        "G64"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/",
+        "packages/"
+      ],
+      "linked_scope": {},
+      "objective": "Version shareable model/data/evaluation packages and validate imports against role/artifact/rights contracts; imported metadata never grants project access or model activation.",
+      "acceptance": [
+        {
+          "id": "G65-A1",
+          "requirement": "Version shareable model/data/evaluation packages and validate imports against role/artifact/rights contracts; imported metadata never grants project access or model activation.",
+          "check": "Offline synthetic import checks for changed hashes, incompatible profiles, revoked permissions, restricted data and missing lineage; no automatic execution/download/activation.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G66",
+      "plan_card_revision": 1,
+      "title": "Composable subflows and domain model selection",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 74,
+        "url": "https://github.com/eylema-dev/eylema/issues/74"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G48",
+        "G54",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-runtime/",
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Users compose nested bounded workflows and role subprofiles, choosing among accepted domain models by task quality/resources; child scopes/budgets cannot exceed parents.",
+      "acceptance": [
+        {
+          "id": "G66-A1",
+          "requirement": "Users compose nested bounded workflows and role subprofiles, choosing among accepted domain models by task quality/resources; child scopes/budgets cannot exceed parents.",
+          "check": "Actual nested-loop jobs, unsupported domain/subprofile, parent/child budget and authority containment, quality-based selection, disagreement/replanning and direct stop tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G67",
+      "plan_card_revision": 1,
+      "title": "Embedding artifact and retrieval behavior profile",
+      "repository": "eylema-dev/eylema-models",
+      "issue": {
+        "number": 12,
+        "url": "https://github.com/eylema-dev/eylema-models/issues/12"
+      },
+      "status": "planned",
+      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "dependencies": [
+        "G27",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "catalog/",
+        "contracts/"
+      ],
+      "linked_scope": {},
+      "objective": "Select a feasible text embedding profile with exact tokenizer/pooling/normalization/dimensions/query-document prefixes, EN/TR coverage, artifact rights and operator references.",
+      "acceptance": [
+        {
+          "id": "G67-A1",
+          "requirement": "Select a feasible text embedding profile with exact tokenizer/pooling/normalization/dimensions/query-document prefixes, EN/TR coverage, artifact rights and operator references.",
+          "check": "Pinned independent vectors and retrieval fixtures; reject dimension, pooling, prefix and normalization mismatches. Popularity does not prove Turkish quality or Rust support.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G68",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU embeddings",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 75,
+        "url": "https://github.com/eylema-dev/eylema/issues/75"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G67",
+        "G23",
+        "G28",
+        "G29"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Produce bounded document/query embeddings in owned Rust for the accepted profile and exact model revision; preprocessing and pooling are part of the contract.",
+      "acceptance": [
+        {
+          "id": "G68-A1",
+          "requirement": "Produce bounded document/query embeddings in owned Rust for the accepted profile and exact model revision; preprocessing and pooling are part of the contract.",
+          "check": "Actual pinned-artifact CPU/reference vectors, cosine/ranking tolerances, Unicode/EN/TR/empty/oversized input and bounded batching/memory/cancellation tests.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G69",
+      "plan_card_revision": 1,
+      "title": "Owned Rust Metal embeddings",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 76,
+        "url": "https://github.com/eylema-dev/eylema/issues/76"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G68",
+        "G24",
+        "G21"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-platform/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Accepted embeddings execute on M4 Metal with CPU parity and combined harness resource accounting; no hidden embedding provider.",
+      "acceptance": [
+        {
+          "id": "G69-A1",
+          "requirement": "Accepted embeddings execute on M4 Metal with CPU parity and combined harness resource accounting; no hidden embedding provider.",
+          "check": "Actual M4 vector/ranking parity, throughput, cold/warm p95/p99, batching/memory and effective stop under language/perception/audio contention.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G70",
+      "plan_card_revision": 1,
+      "title": "Project-scoped owned Rust retrieval index",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 77,
+        "url": "https://github.com/eylema-dev/eylema/issues/77"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G68",
+        "G63",
+        "G13"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-retrieval/",
+        "crates/eylema-host/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
+      "acceptance": [
+        {
+          "id": "G70-A1",
+          "requirement": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
+          "check": "Actual synthetic indexing/reopen/search, recall and ranking fixtures; cross-project leakage, stale/deleted documents, incompatible vectors, corrupt index, size and retention boundaries fail.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G71",
+      "plan_card_revision": 1,
+      "title": "RAG subflow and grounded job acceptance",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 78,
+        "url": "https://github.com/eylema-dev/eylema/issues/78"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G72",
+        "G69",
+        "G50",
+        "G66",
+        "G74"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-retrieval/",
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Compose retrieval, optional reranking, reasoning/planning and source-bound answers as a reusable harness subflow; source content cannot authorize tools or external disclosure.",
+      "acceptance": [
+        {
+          "id": "G71-A1",
+          "requirement": "Compose retrieval, optional reranking, reasoning/planning and source-bound answers as a reusable harness subflow; source content cannot authorize tools or external disclosure.",
+          "check": "Real EN/TR grounded jobs with citation verification, no-source/contradiction/hostile-document tests, dataset/permission isolation and retrieval/full-loop/role-ablation comparison.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G72",
+      "plan_card_revision": 1,
+      "title": "Early end-to-end local text/RAG job proof",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 79,
+        "url": "https://github.com/eylema-dev/eylema/issues/79"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G30",
+        "G57",
+        "G68",
+        "G70",
+        "G54",
+        "G50",
+        "G63",
+        "G73"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-runtime/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Complete a project-private source-bound report job using owned Rust embeddings/planning/decision, typed tools, verified output, bounded repair and durable reopen. Vision/audio/world/3D are not required for this first text proof.",
+      "acceptance": [
+        {
+          "id": "G72-A1",
+          "requirement": "Complete a project-private source-bound report job using owned Rust embeddings/planning/decision, typed tools, verified output, bounded repair and durable reopen. Vision/audio/world/3D are not required for this first text proof.",
+          "check": "Actual M4 job with fixed EN/TR documents, verified citations/output, denied/unsupported/no-evidence cases, failed-step repair ceiling, effective user stop, restart and private data/cost lineage.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G73",
+      "plan_card_revision": 1,
+      "title": "Real human harness authorization and stop",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 80,
+        "url": "https://github.com/eylema-dev/eylema/issues/80"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G11",
+        "G14",
+        "G16",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-platform/",
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Complete the existing real-person session/enrollment boundary, scoped job approvals and effective stop; AI-simulated human fixtures remain separately labeled and cannot grant actual human authority.",
+      "acceptance": [
+        {
+          "id": "G73-A1",
+          "requirement": "Complete the existing real-person session/enrollment boundary, scoped job approvals and effective stop; AI-simulated human fixtures remain separately labeled and cannot grant actual human authority.",
+          "check": "Real maintainer interaction on the primary Mac plus native rejection tests for impersonation/stale/revoked/expired scope; remaining work stops, completed effects stay visible, restart requires fresh enrollment.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G74",
+      "plan_card_revision": 1,
+      "title": "Decision router and RAG/skill dispatch",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 81,
+        "url": "https://github.com/eylema-dev/eylema/issues/81"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G57",
+        "G54",
+        "G50",
+        "G70",
+        "G75",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-runtime/",
+        "crates/eylema-host/",
+        "crates/eylema-retrieval/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Route retrieval-grounded jobs to RAG, code/document work to accepted specialists and typed skills, with explicit choice/score semantics, uncertainty and domain/resource limits.",
+      "acceptance": [
+        {
+          "id": "G74-A1",
+          "requirement": "Route retrieval-grounded jobs to RAG, code/document work to accepted specialists and typed skills, with explicit choice/score semantics, uncertainty and domain/resource limits.",
+          "check": "Real routing outcomes and fixed route fixtures; absent/stale/contradictory sources, unsupported skills and low-confidence decisions cannot bypass permission or be mislabeled completed.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G75",
+      "plan_card_revision": 1,
+      "title": "Versioned skill contracts and reusable packages",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 82,
+        "url": "https://github.com/eylema-dev/eylema/issues/82"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G46",
+        "G54",
+        "G50",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-runtime/",
+        "crates/eylema-host/",
+        "skills/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Package a bounded subflow/tool/model assignment as a reusable skill with typed inputs/outputs, model/artifact dependencies, project permissions, budgets and acceptance evidence.",
+      "acceptance": [
+        {
+          "id": "G75-A1",
+          "requirement": "Package a bounded subflow/tool/model assignment as a reusable skill with typed inputs/outputs, model/artifact dependencies, project permissions, budgets and acceptance evidence.",
+          "check": "Two owned deterministic skills reused across loop definitions; incompatible model/adapter/schema/permissions and unbounded nested execution fail. Private-derived skill artifacts inherit restrictions.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G76",
+      "plan_card_revision": 1,
+      "title": "Per-model fine-tune and LoRA/QLoRA profiles",
+      "repository": "eylema-dev/eylema-training",
+      "issue": {
+        "number": 10,
+        "url": "https://github.com/eylema-dev/eylema-training/issues/10"
+      },
+      "status": "planned",
+      "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
+      "dependencies": [
+        "G27",
+        "G46"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "recipes/",
+        "contracts/",
+        "adapters/",
+        "tools/"
+      ],
+      "linked_scope": {},
+      "objective": "Declare training support per exact model profile: adapter targets/rank/alpha, tokenizer/template, base precision/quantization, trainable heads and data/rights requirements. LoRA/QLoRA and unsupported methods are explicit.",
+      "acceptance": [
+        {
+          "id": "G76-A1",
+          "requirement": "Declare training support per exact model profile: adapter targets/rank/alpha, tokenizer/template, base precision/quantization, trainable heads and data/rights requirements. LoRA/QLoRA and unsupported methods are explicit.",
+          "check": "Model-specific recipe/reference audit and negative target/shape/base/tokenizer/quantization/permission fixtures; native accepted training executes in owned Rust; reviewed external tools supply explicit development reference vectors/recipes only. Additional model families need their own accepted operator/profile dependencies.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G77",
+      "plan_card_revision": 1,
+      "title": "In-product bounded improvement jobs",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 83,
+        "url": "https://github.com/eylema-dev/eylema/issues/83"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G76",
+        "G34",
+        "G63",
+        "G75",
+        "G39"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-runtime/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Eylema selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
+      "acceptance": [
+        {
+          "id": "G77-A1",
+          "requirement": "Eylema selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
+          "check": "Controlled local training-job fixture covers permission, frozen dataset/holdout, finite candidate/time/repair limits, interruption, partial checkpoint, private storage and unsupported-backend outcomes.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G78",
+      "plan_card_revision": 1,
+      "title": "Owned Rust adapter load and merge parity",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 84,
+        "url": "https://github.com/eylema-dev/eylema/issues/84"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G76",
+        "G28",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-model/",
+        "crates/eylema-tensor/",
+        "crates/eylema-host/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Load or explicitly merge accepted LoRA/QLoRA-derived adapters against exact base/tokenizer/operator/quantization profiles in owned Rust; pin active adapter versions and state-reset semantics.",
+      "acceptance": [
+        {
+          "id": "G78-A1",
+          "requirement": "Load or explicitly merge accepted LoRA/QLoRA-derived adapters against exact base/tokenizer/operator/quantization profiles in owned Rust; pin active adapter versions and state-reset semantics.",
+          "check": "Independent numerical adapter/reference vectors and actual supported local base execution; wrong base/targets/rank/shape/precision and unsupported quantization fail, with in-flight identity preserved.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G79",
+      "plan_card_revision": 1,
+      "title": "Integrated improvement and skill promotion proof",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 85,
+        "url": "https://github.com/eylema-dev/eylema/issues/85"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G77",
+        "G78",
+        "G36",
+        "G37",
+        "G75",
+        "G51",
+        "G84",
+        "G85",
+        "G86"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "skills/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
+      "acceptance": [
+        {
+          "id": "G79-A1",
+          "requirement": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
+          "check": "Reuse the exact candidate and checkpoint already accepted by native training gates; no new training candidate; independent outcome/quality/resource comparison including regressions, effective stop, failed promotion, rights/lineage inheritance and reusable skill validation.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G80",
+      "plan_card_revision": 1,
+      "title": "Checked resource requirement estimator",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 86,
+        "url": "https://github.com/eylema-dev/eylema/issues/86"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G27",
+        "G46",
+        "G21",
+        "G18"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-runtime/",
+        "crates/eylema-host/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Estimate per-profile weights, KV/recurrent state, workspace, concurrent reservations, RAG index/storage and adapter-training states using checked units and explicit assumptions/intervals; unknowns stay unknown.",
+      "acceptance": [
+        {
+          "id": "G80-A1",
+          "requirement": "Estimate per-profile weights, KV/recurrent state, workspace, concurrent reservations, RAG index/storage and adapter-training states using checked units and explicit assumptions/intervals; unknowns stay unknown.",
+          "check": "Independent sizing fixtures for dense/MoE/quantized/context/batch/retrieval/training cases, overflow, missing coefficients and unified-versus-discrete memory; no claimed performance from formulas alone.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G81",
+      "plan_card_revision": 1,
+      "title": "Measured hardware calibration and capacity profiles",
+      "repository": "eylema-dev/eylema-evals",
+      "issue": {
+        "number": 10,
+        "url": "https://github.com/eylema-dev/eylema-evals/issues/10"
+      },
+      "status": "planned",
+      "base_sha": "358aa619883ee930c8cf4d6476edec432ed4f560",
+      "dependencies": [
+        "G80",
+        "G18",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "workloads/",
+        "contracts/",
+        "src/",
+        "measurements/"
+      ],
+      "linked_scope": {},
+      "objective": "Calibrate supported estimates with actual named-device cold/warm/combined inference measurements; training coefficients remain unknown until separately accepted native training runs provide measurements. Retain intervals, missing values and environmental/model revisions.",
+      "acceptance": [
+        {
+          "id": "G81-A1",
+          "requirement": "Calibrate supported estimates with actual named-device cold/warm/combined inference measurements; training coefficients remain unknown until separately accepted native training runs provide measurements. Retain intervals, missing values and environmental/model revisions.",
+          "check": "Actual M4 baseline, prediction-versus-observation error and stale/profile-mismatch rejection; other devices remain unaccepted until measured. Reservation peaks are not physical allocation.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G82",
+      "plan_card_revision": 1,
+      "title": "Capacity and investment planning inside Eylema",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 87,
+        "url": "https://github.com/eylema-dev/eylema/issues/87"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G80",
+        "G81",
+        "G50",
+        "G66",
+        "G77"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-host/",
+        "crates/eylema-web/",
+        "apps/eylema/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Compare current-hardware model/context/precision/scheduling options and, when needed, additional hardware or explicitly permitted external serving using dated price/currency/terms snapshots and transparent uncertainty.",
+      "acceptance": [
+        {
+          "id": "G82-A1",
+          "requirement": "Compare current-hardware model/context/precision/scheduling options and, when needed, additional hardware or explicitly permitted external serving using dated price/currency/terms snapshots and transparent uncertainty.",
+          "check": "Traceable sizing/cost scenarios with unknown prices, stale quotes, privacy-ineligible external options and quality-floor rejection; recommendations are reviewable proposals, never automatic procurement or spend.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G83",
+      "plan_card_revision": 1,
+      "title": "Owned Rust gradients and training operators",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 88,
+        "url": "https://github.com/eylema-dev/eylema/issues/88"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G23",
+        "G76"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Implement bounded owned backward/gradient/optimizer operations for the first accepted policy/adapter profiles; supported training operators are independent of inference support.",
+      "acceptance": [
+        {
+          "id": "G83-A1",
+          "requirement": "Implement bounded owned backward/gradient/optimizer operations for the first accepted policy/adapter profiles; supported training operators are independent of inference support.",
+          "check": "Independent analytical/finite-difference and loss/optimizer reference vectors; shape/nonfinite/overflow, frozen-base and gradient-boundary rejection with no external training runtime hidden in production.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G84",
+      "plan_card_revision": 1,
+      "title": "Owned Rust CPU LoRA training",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 89,
+        "url": "https://github.com/eylema-dev/eylema/issues/89"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G83",
+        "G76",
+        "G78",
+        "G77",
+        "G34"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-host/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eylema improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
+      "acceptance": [
+        {
+          "id": "G84-A1",
+          "requirement": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eylema improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
+          "check": "Actual bounded M4 CPU candidate, independent update/loss reference, held-out outcome, adapter targets/rank/alpha, stop/partial-checkpoint recovery and resource evidence.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 1
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G85",
+      "plan_card_revision": 1,
+      "title": "Owned Rust Metal LoRA training",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 90,
+        "url": "https://github.com/eylema-dev/eylema/issues/90"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G84",
+        "G24",
+        "G31"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-platform/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "The same fixed supported LoRA candidate configuration trains in owned M4 Metal with CPU update/loss parity and measured combined resource bounds.",
+      "acceptance": [
+        {
+          "id": "G85-A1",
+          "requirement": "The same fixed supported LoRA candidate configuration trains in owned M4 Metal with CPU update/loss parity and measured combined resource bounds.",
+          "check": "Actual M4 training/readback, predeclared tolerance, frozen base, gradient/optimizer memory peaks, throughput and effective interruption; parity repeats are not candidate search.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 1
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G86",
+      "plan_card_revision": 1,
+      "title": "Owned Rust QLoRA training profile",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 91,
+        "url": "https://github.com/eylema-dev/eylema/issues/91"
+      },
+      "status": "planned",
+      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "dependencies": [
+        "G85",
+        "G76",
+        "G78"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-tensor/",
+        "crates/eylema-model/",
+        "crates/eylema-host/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Add one explicitly supported quantized frozen-base adapter training profile in owned Rust; quantization/dequantization and optimizer states are versioned, not universally inferred from four-bit weights.",
+      "acceptance": [
+        {
+          "id": "G86-A1",
+          "requirement": "Add one explicitly supported quantized frozen-base adapter training profile in owned Rust; quantization/dequantization and optimizer states are versioned, not universally inferred from four-bit weights.",
+          "check": "One bounded supported candidate with independent quantization/update/reference and held-out comparison; wrong quantization/base/target layouts, nonfinite values, resource exhaustion and checkpoint failures reject.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 1
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    }
+  ],
+  "evidence_boundary": "Historical accepted evidence is preserved. Current cards revise future work only; all new runtime/model/performance/training acceptance is not_run. G40 gains no time, repair, call, privacy or host allowance.",
+  "capability_profiles": [
+    "speech_to_text",
+    "text_to_speech",
+    "image_video_perception",
+    "text_reasoning",
+    "text_planning",
+    "text_code",
+    "text_evaluation",
+    "embedding",
+    "decision_choice",
+    "decision_score",
+    "action_policy",
+    "world_prediction"
+  ],
+  "data_policy": {
+    "default": "project_private",
+    "sharing": "explicit_candidate_then_reviewed_ecosystem_admission",
+    "permissions": [
+      "execute",
+      "collect",
+      "train",
+      "external_disclosure",
+      "ecosystem_export"
+    ],
+    "derivative_permissions_inherited": true,
+    "automatic_private_sharing": false,
+    "raw_audio_video": "separate_opt_in"
+  },
+  "improvement_methods": [
+    "model_specific_fine_tune",
+    "lora",
+    "qlora",
+    "held_out_evaluation",
+    "controlled_promotion",
+    "versioned_skill_packaging"
+  ],
+  "capacity_planning": "checked per-model/workflow estimates with measured calibration, uncertainty and dated price assumptions; no automatic investment/spend"
+}

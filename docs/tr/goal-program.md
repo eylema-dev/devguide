@@ -79,3 +79,7 @@ G00 başlangıç kaydı, tüm kartlar, PR kontrolleri, koruma denetimi ve ayrı 
 ## Kabul edilen öncelik güncellemesi — 12 Ekim 2026
 
 [Güncel ürün kararları](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/project-structure.md), isteğe bağlı model/eğitim tamamlanmadan kullanılabilir M2 görev konsolu önizlemesini ve sınırlı tek ihtiyaçtan PR’a kanıtı önceler. G38–G43 kabul edilmiş M2/G17 temelinden yürütülebilir; tam G44/G45 sürümü bütün kabul kapılarını korur. Mac mini M4/24 GB ve Linux RTX 4070 Ti Super/16 GB VRAM + 32 GB RAM, birincil M4 Pro hedefini değiştirmeden veya yeni backend desteği iddia etmeden sahibinin bildirdiği test envanterine katılır. Tarihsel Goal kartları ve kabul edilmiş yürütüm kanıtları korunur.
+
+## Güncel harness yürütme revizyonu
+
+13 Ekim 2026 bakımcı revizyonu [güncel platform aksiyon planı](platform-action-plan.md) ve [revize kalan kartlardır](../../records/platform-goal-plan.json). Yukarıdaki tarihsel kartlar ve kabul edilen teslimler değişmez kanıt olarak kalır. Güncel bekleyen kapsam/sıra/durum ve G46–G86 yeni kayda aittir; güncel issue/kanıt denetimi için `tools/check_platform_plan.py --fetch` kullanılır.

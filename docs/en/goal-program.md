@@ -79,3 +79,7 @@ G00 hands off the baseline, complete cards, PR checks, preservation audit and se
 ## Accepted priority update — 12 October 2026
 
 The [current product decisions](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/project-structure.md) prioritize a usable M2 task-console preview and one bounded need-to-PR proof before optional model/training completion. G38–G43 remain executable from their accepted M2/G17 base; the full G44/G45 release retains all acceptance gates. Mac mini M4/24 GB and Linux RTX 4070 Ti Super/16 GB VRAM + 32 GB RAM join the owner-reported test inventory, without replacing the primary M4 Pro acceptance target or claiming new backend support. Historical Goal cards and accepted execution evidence are preserved.
+
+## Current harness execution revision
+
+The 13 October 2026 maintainer revision is the [current platform action plan](platform-action-plan.md), with [revised remaining cards](../../records/platform-goal-plan.json). Historical cards and accepted deliveries above remain immutable evidence. Current pending scope/order/status and added G46–G86 cards belong to the new record; use `tools/check_platform_plan.py --fetch` for their current issue/proof audit.

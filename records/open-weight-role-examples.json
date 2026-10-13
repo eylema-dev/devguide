@@ -1,0 +1,361 @@
+{
+  "format_version": 1,
+  "observed_at": "2026-10-13T18:09:19.736510+00:00",
+  "date": "2026-10-13",
+  "method": "Read-only public Hugging Face API snapshot. downloads_30d is repository downloads, not unique users, quality or a global role ranking. Popular published examples and role-specific specialists are intentionally distinguished.",
+  "metric_definition": "https://huggingface.co/docs/hub/models-download-stats",
+  "role_candidates": {
+    "perception": [
+      "Qwen/Qwen3-VL-8B-Instruct",
+      "openbmb/MiniCPM-V-4_5"
+    ],
+    "reasoning": [
+      "Qwen/Qwen3-4B",
+      "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+    ],
+    "planning": [
+      "Qwen/Qwen3-8B",
+      "openai/gpt-oss-20b"
+    ],
+    "decision": [
+      "facebook/bart-large-mnli",
+      "vllm-sr/Decision-2.0-Kai-0.6B"
+    ],
+    "policy": [
+      "openvla/openvla-7b",
+      "lerobot/smolvla_base"
+    ],
+    "world_model": [
+      "facebook/vjepa2-vitl-fpc64-256",
+      "nvidia/Cosmos-Predict2.5-2B"
+    ],
+    "specialist": [
+      "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "Qwen/Qwen3-4B"
+    ],
+    "critic": [
+      "Qwen/Qwen3-8B",
+      "Skywork/Skywork-Reward-V2-Qwen3-8B"
+    ],
+    "representation": [
+      "sentence-transformers/all-MiniLM-L6-v2",
+      "BAAI/bge-m3",
+      "intfloat/multilingual-e5-small"
+    ]
+  },
+  "modality_candidates": {
+    "speech_to_text": [
+      "openai/whisper-large-v3-turbo",
+      "nvidia/parakeet-tdt-0.6b-v3"
+    ],
+    "text_to_speech": [
+      "hexgrad/Kokoro-82M",
+      "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
+    ],
+    "image_video_perception": [
+      "Qwen/Qwen3-VL-8B-Instruct",
+      "openbmb/MiniCPM-V-4_5"
+    ]
+  },
+  "models": [
+    {
+      "id": "Qwen/Qwen3-4B",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-4B",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-4B",
+      "source_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "downloads_30d": 12626778,
+      "likes": 759,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "Qwen/Qwen3-8B",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-8B",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-8B",
+      "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "downloads_30d": 9880368,
+      "likes": 2115,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "Qwen/Qwen3-0.6B",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-0.6B",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "source_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "downloads_30d": 30726361,
+      "likes": 1812,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "source": "https://huggingface.co/api/models/openai/gpt-oss-20b",
+      "model_card": "https://huggingface.co/openai/gpt-oss-20b",
+      "source_revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "downloads_30d": 5979446,
+      "likes": 5174,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+      "source": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+      "model_card": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+      "source_revision": "916b56a44061fd5cd7d6a8fb632557ed4f724f60",
+      "downloads_30d": 346084,
+      "likes": 925,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "transformers"
+    },
+    {
+      "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "source_revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+      "downloads_30d": 398061,
+      "likes": 1282,
+      "pipeline_tag": "text-generation",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "Qwen/Qwen3-VL-8B-Instruct",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-VL-8B-Instruct",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+      "source_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "downloads_30d": 8036055,
+      "likes": 1196,
+      "pipeline_tag": "image-text-to-text",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "facebook/bart-large-mnli",
+      "source": "https://huggingface.co/api/models/facebook/bart-large-mnli",
+      "model_card": "https://huggingface.co/facebook/bart-large-mnli",
+      "source_revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+      "downloads_30d": 2469015,
+      "likes": 1627,
+      "pipeline_tag": "zero-shot-classification",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "transformers"
+    },
+    {
+      "id": "vllm-sr/Decision-2.0-Kai-0.6B",
+      "source": "https://huggingface.co/api/models/vllm-sr/Decision-2.0-Kai-0.6B",
+      "model_card": "https://huggingface.co/vllm-sr/Decision-2.0-Kai-0.6B",
+      "source_revision": "cc7f30cda9e7c7b28c5f71ef33f01e09385f1c4b",
+      "downloads_30d": 1806,
+      "likes": 41,
+      "pipeline_tag": "zero-shot-classification",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "vllm-sr/Decision-2.0-Sol-2B",
+      "source": "https://huggingface.co/api/models/vllm-sr/Decision-2.0-Sol-2B",
+      "model_card": "https://huggingface.co/vllm-sr/Decision-2.0-Sol-2B",
+      "source_revision": "df30237f9c1ced5765fdbb499dd1f2c7dca478ad",
+      "downloads_30d": 1140,
+      "likes": 18,
+      "pipeline_tag": "zero-shot-classification",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "lerobot/smolvla_base",
+      "source": "https://huggingface.co/api/models/lerobot/smolvla_base",
+      "model_card": "https://huggingface.co/lerobot/smolvla_base",
+      "source_revision": "5e8d12a6e2975b0e5e5fce7c8caf47c371d257b6",
+      "downloads_30d": 135996,
+      "likes": 469,
+      "pipeline_tag": "robotics",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "lerobot"
+    },
+    {
+      "id": "openvla/openvla-7b",
+      "source": "https://huggingface.co/api/models/openvla/openvla-7b",
+      "model_card": "https://huggingface.co/openvla/openvla-7b",
+      "source_revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+      "downloads_30d": 152118,
+      "likes": 262,
+      "pipeline_tag": "robotics",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "transformers"
+    },
+    {
+      "id": "facebook/vjepa2-vitl-fpc64-256",
+      "source": "https://huggingface.co/api/models/facebook/vjepa2-vitl-fpc64-256",
+      "model_card": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256",
+      "source_revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "downloads_30d": 316399,
+      "likes": 215,
+      "pipeline_tag": "video-classification",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "transformers"
+    },
+    {
+      "id": "nvidia/Cosmos-Predict2.5-2B",
+      "source": "https://huggingface.co/api/models/nvidia/Cosmos-Predict2.5-2B",
+      "model_card": "https://huggingface.co/nvidia/Cosmos-Predict2.5-2B",
+      "source_revision": "85f8ae7bfe8f5525c8d103429524dcf12f98bf7b",
+      "downloads_30d": 5720,
+      "likes": 191,
+      "pipeline_tag": null,
+      "gated": "auto",
+      "license_tag": "other",
+      "library_name": "cosmos"
+    },
+    {
+      "id": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "source": "https://huggingface.co/api/models/Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "model_card": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "source_revision": "6f19fdefb933293d4898bdb59a96f7223d998659",
+      "downloads_30d": 2014,
+      "likes": 25,
+      "pipeline_tag": "text-classification",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "BAAI/bge-m3",
+      "source": "https://huggingface.co/api/models/BAAI/bge-m3",
+      "model_card": "https://huggingface.co/BAAI/bge-m3",
+      "source_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "downloads_30d": 32825246,
+      "likes": 3890,
+      "pipeline_tag": "sentence-similarity",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "sentence-transformers"
+    },
+    {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "source": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2",
+      "model_card": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+      "source_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "downloads_30d": 220348634,
+      "likes": 6337,
+      "pipeline_tag": "sentence-similarity",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "sentence-transformers"
+    },
+    {
+      "id": "intfloat/multilingual-e5-small",
+      "source": "https://huggingface.co/api/models/intfloat/multilingual-e5-small",
+      "model_card": "https://huggingface.co/intfloat/multilingual-e5-small",
+      "source_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "downloads_30d": 10051718,
+      "likes": 463,
+      "pipeline_tag": "sentence-similarity",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "sentence-transformers"
+    },
+    {
+      "id": "openai/whisper-large-v3-turbo",
+      "source": "https://huggingface.co/api/models/openai/whisper-large-v3-turbo",
+      "model_card": "https://huggingface.co/openai/whisper-large-v3-turbo",
+      "source_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+      "downloads_30d": 6342753,
+      "likes": 3445,
+      "pipeline_tag": "automatic-speech-recognition",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "transformers"
+    },
+    {
+      "id": "nvidia/parakeet-tdt-0.6b-v3",
+      "source": "https://huggingface.co/api/models/nvidia/parakeet-tdt-0.6b-v3",
+      "model_card": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+      "source_revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+      "downloads_30d": 622817,
+      "likes": 1193,
+      "pipeline_tag": "automatic-speech-recognition",
+      "gated": false,
+      "license_tag": "cc-by-4.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "hexgrad/Kokoro-82M",
+      "source": "https://huggingface.co/api/models/hexgrad/Kokoro-82M",
+      "model_card": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "source_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "downloads_30d": 10639234,
+      "likes": 7247,
+      "pipeline_tag": "text-to-speech",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": null
+    },
+    {
+      "id": "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "model_card": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "source_revision": "85e237c12c027371202489a0ec509ded67b5e4b5",
+      "downloads_30d": 1041642,
+      "likes": 204,
+      "pipeline_tag": "text-to-speech",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": null
+    },
+    {
+      "id": "openbmb/MiniCPM-V-4_5",
+      "source": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4_5",
+      "model_card": "https://huggingface.co/openbmb/MiniCPM-V-4_5",
+      "source_revision": "daef484c35ec93210ec93c5e901f8f3e9b78ee34",
+      "downloads_30d": 87245,
+      "likes": 1106,
+      "pipeline_tag": "image-text-to-text",
+      "gated": false,
+      "license_tag": "apache-2.0",
+      "library_name": "transformers"
+    },
+    {
+      "id": "ResembleAI/chatterbox",
+      "source": "https://huggingface.co/api/models/ResembleAI/chatterbox",
+      "model_card": "https://huggingface.co/ResembleAI/chatterbox",
+      "source_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "downloads_30d": 1641216,
+      "likes": 1845,
+      "pipeline_tag": "text-to-speech",
+      "gated": false,
+      "license_tag": "mit",
+      "library_name": "chatterbox"
+    }
+  ],
+  "selection_policy": "Role/task quality, EN/TR/domain coverage, rights, owned Rust operator/profile support and combined resource limits precede popularity. No example is accepted Eylema support, downloaded weights or installed inference dependency.",
+  "family_notes": [
+    {
+      "source": "https://github.com/resemble-ai/chatterbox",
+      "note": "Multilingual Chatterbox variants include Turkish in the publisher language list; the base repository download count is not a variant-specific quality measure."
+    },
+    {
+      "source": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256",
+      "note": "This checkpoint is a video representation encoder; action-conditioned prediction/planning requires its own compatible profile."
+    }
+  ]
+}

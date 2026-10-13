@@ -22,3 +22,7 @@ Ayarları uygulamak, somut istekler incelendikten sonra ayrıca gerçek maintain
 [G05 planı](../plans/g05-github-work-management.md) kabul edilen kapsamı, tabanları, sonlu bütçeleri, kontrolleri ve geri dönüşü kaydeder. Kapsamlı Git değişikliklerini PR ile geri al; tarihsel issue/milestone’ları silme veya başka görevin ortamını kaldırma. Ayar geri dönüşü kendi yetkisini ve kaydedilmiş önceki durumu gerektirir. Planlama metaverisi ve depo CI’ı runtime, GPU, model, eğitim veya sürüm kabulü kanıtlamaz.
 
 Maintainer açıkça mevcut ayarları korumayı ve öneriyi hazırlık olarak bırakmayı seçti. Bu nedenle G05, incelenen plan metaverisi/araçlarını ve korunan öneriyi yönetim yazımı olmadan teslim eder. Sonradan uygulamak yeni açık yönetim kararı gerektirir; kapsamlı merge için sürekli yetki ayrıdır.
+
+## Güncel harness yürütme revizyonu
+
+13 Ekim 2026 bakımcı revizyonu [güncel platform aksiyon planı](platform-action-plan.md) ve [revize kalan kartlardır](../../records/platform-goal-plan.json). Yukarıdaki tarihsel kartlar ve kabul edilen teslimler değişmez kanıt olarak kalır. Güncel bekleyen kapsam/sıra/durum ve G46–G86 yeni kayda aittir; güncel issue/kanıt denetimi için `tools/check_platform_plan.py --fetch` kullanılır.

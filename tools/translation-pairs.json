@@ -5,8 +5,8 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "21a12f3b476d4e20dc577177bdcdc667b8cdd4170065561bd6bb889c3638b3f1",
-      "tr_sha256": "a969981a11db21303a1740e7a1814bc9a044b401425b2fbf8a699adb8b455c2c"
+      "en_sha256": "453b949796bea26a6168d714cebef87b23872d9bf4122554f2d1d3e11d69427c",
+      "tr_sha256": "d77587a912f8db967ecceb52f83c84c6f9e9dd2e30d7891fd8bf9987a849d21e"
     },
     {
       "en": "CONTRIBUTING.md",
@@ -53,14 +53,14 @@
     {
       "en": "docs/en/goal-program.md",
       "tr": "docs/tr/goal-program.md",
-      "en_sha256": "fba69450cfcb7e1980f0ceda9b6dc7a3b58dfc64cec2e2853b51d86577999cfd",
-      "tr_sha256": "02f0f971d4f09af9d9467e9a192960527584a826a9dd15529fdbb54e05fc5d55"
+      "en_sha256": "d14831db937e53ce7f88f50790ecb4a1d23622020ff5120aff549af1460be07a",
+      "tr_sha256": "7ff68e6702b9bf00bfc4c5d58842f8bfbc0feb285a85bb02534336e87b3ac268"
     },
     {
       "en": "docs/en/github-work-management.md",
       "tr": "docs/tr/github-work-management.md",
-      "en_sha256": "12e0de7632be53953d4622c6cc837f7d5594482924a966a035a8ed193fa0e35e",
-      "tr_sha256": "84437e3d37feb9de7a05fa4f849b07db675b336a0ce0fe357502be9bb443c439"
+      "en_sha256": "9417edb9c260832dc33aab67dd305db206476e07270f07f615fba76453c25f79",
+      "tr_sha256": "80c8b25b012eb9afd7894d0757e6f199bae88a2cff9d6538e810a13ab31e8e4a"
     },
     {
       "en": "docs/en/licensing.md",
@@ -73,7 +73,12 @@
       "tr": "docs/tr/usage-accounting.md",
       "en_sha256": "c4fc5d6562f27956cfcfb97d8a8fbbbb7be7974c4c5e7fc89be43b9addab0f3b",
       "tr_sha256": "18cee6a260ed2ba7bc725f7e15da71aa261e880253b392327e950ffbc8c62fe3"
+    },
+    {
+      "en": "docs/en/platform-action-plan.md",
+      "tr": "docs/tr/platform-action-plan.md",
+      "en_sha256": "c561a9d094ed8d0f9b16c241aa085b106a860eddddd53d2c820b307124dea45d",
+      "tr_sha256": "fb21c66f4f4b965e664d3a922db77611ae05d18bd9dc1392a2a80794ed1387b6"
     }
-  ],
-  "documents": []
+  ]
 }
