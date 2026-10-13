@@ -39,7 +39,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 |---|---|---|---|
 | **G46** | Loop, role and model-binding contracts | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Project-private data and egress boundaries | G46, G13 | `accepted` |
-| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
+| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `review` |
 | **G54** | Typed tool registry and harness action execution | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `planned` |
 | **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `planned` |
