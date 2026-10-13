@@ -41,7 +41,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G63** | Project-private data and egress boundaries | G46, G13 | `accepted` |
 | **G87** | Memory contracts, routing and lifecycle | G46, G63 | `accepted` |
 | **G54** | Typed tool registry and harness action execution | G46, G10, G11, G13, G39, G63 | `accepted` |
-| **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `planned` |
+| **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `accepted` |
 | **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `planned` |
 | **G73** | Real human harness authorization and stop | G46, G11, G14, G16, G63 | `planned` |
 | **G27** | Model contract | G03, G18, G46 | `planned` |

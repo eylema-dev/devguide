@@ -2107,15 +2107,15 @@
     },
     {
       "id": "G50",
-      "plan_card_revision": 1,
+      "plan_card_revision": 3,
       "title": "Decision evidence and loop measurements",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 62,
         "url": "https://github.com/eylema-dev/eylema/issues/62"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "93eb457754d076fa0efc8586432edfb9245645b4",
       "dependencies": [
         "G46",
         "G54",
@@ -2124,21 +2124,36 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-host/",
-        "crates/eylema-web/",
-        "docs/en/",
-        "docs/tr/",
+        "crates/eylema-contracts/src/decision.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/decision_contracts.rs",
+        "crates/eylema-host/src/decision.rs",
+        "crates/eylema-host/src/tool.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/tools.rs",
+        "docs/en/decision-evidence.md",
+        "docs/tr/decision-evidence.md",
+        "docs/en/typed-tools.md",
+        "docs/tr/typed-tools.md",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g50-decision-evidence.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Bind alternatives, selected route/action, score meaning, calibration status, constraints and actual outcomes to exact loop/model versions; deterministic explanations expose unknowns and performance without hidden reasoning.",
       "acceptance": [
         {
           "id": "G50-A1",
           "requirement": "Bind alternatives, selected route/action, score meaning, calibration status, constraints and actual outcomes to exact loop/model versions; deterministic explanations expose unknowns and performance without hidden reasoning.",
           "check": "Negative evidence/provenance tests; actual outcome correlation; measured cold/warm, p95/p99 latency, throughput, reservation versus physical-memory distinctions and cancellation; no causal claim from attribution.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -2155,16 +2170,56 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "AcceptedG46/G54/G18/G63 actualmain/CI checked. Own fixed typed-tool driver choice/actualoutcome correlation,64serial actualnative cycle+1cancellation measurements; no executedmodel/GPU/physicalmemory claim, originalactor-only pre-step declarations and live source authorization; finite scopedplan. Zero provider/model/training/G40/engine/dependency/spending trial.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/100",
+          "head": "1abce36012aa4a4a8650b850c2a0e35311b4ab5c",
+          "main": "b9f43bb1417a34ab6717ae4748168035a9f263ca",
+          "tree": "a31e6c99c23bb21b9adf081626f5a4e650a26015",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "1abce36012aa4a4a8650b850c2a0e35311b4ab5c",
+            "reviewer": "Codex reviewer /root/g50_decision_review (separate context)"
+          },
+          "main_ci": {
+            "id": 38483003440,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38483003440",
+            "head": "b9f43bb1417a34ab6717ae4748168035a9f263ca",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "Codex reviewer /root/g50_decision_review, separate exact-head context"
+      },
+      "executed_evidence": {
+        "native_tests_passed": 239,
+        "native_tests_ignored": 1,
+        "new_portable_tests": 2,
+        "new_native_decision_tests": 5,
+        "python_tests_passed": 47,
+        "actual_serial_cycles": 64,
+        "repeat_samples": 63,
+        "actual_scoped_stop_trials": 1,
+        "environment": "ARM64 macOS; Rust1.99.0; Python3.15.0 locally/3.14CI",
+        "ignored_reason": "Existing Metal hardware test is not required for decision evidence.",
+        "review": "Read-only-author regression RED then GREEN; original sealed admission actor and current scoped source reads enforced. Separate whole-branch review passed.",
+        "limits": "Actual owned read/add driver, first/repeat monotonic call times and serial wall-span rate; unverified declared score/calibration/model; no causal claim. Payload ceiling distinct from unknown reservations/physicalRSS/VRAM. Transient fresh-only provenance; already returned snapshots cannot be recalled.",
+        "not_run": [
+          "new decision Wasm execution",
+          "model/GPU/inference/training",
+          "actual person login",
+          "physical memory and resource-reservation measurement",
+          "persistent decision dataset or public export",
+          "full multimodel loop or controlled performance comparison"
+        ],
+        "production_dependencies": "only owned workspace Rust crates; no engine exception"
       }
     },
     {
