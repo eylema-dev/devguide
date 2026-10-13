@@ -39,6 +39,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 |---|---|---|---|
 | **G46** | Loop, role and model-binding contracts | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Project-private data and egress boundaries | G46, G13 | `planned` |
+| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
 | **G54** | Typed tool registry and harness action execution | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Decision evidence and loop measurements | G46, G54, G18, G63 | `planned` |
 | **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `planned` |
@@ -55,6 +56,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `planned` |
 | **G70** | Project-scoped owned Rust retrieval index | G68, G63, G13 | `planned` |
 | **G74** | Decision router and RAG/skill dispatch | G57, G54, G50, G70, G75, G63, G87 | `planned` |
+| **G88** | Owned episodic, semantic and knowledge-graph memory | G87, G70, G50 | `planned` |
 | **G72** | Early end-to-end local text/RAG job proof | G30, G57, G68, G70, G54, G50, G63, G73, G88 | `planned` |
 | **G24** | Metal tensor operations | G19, G23 | `planned` |
 | **G25** | Placement task | G20, G23, G46, G54 | `planned` |
@@ -85,22 +87,20 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G84** | Owned Rust CPU LoRA training | G83, G76, G78, G77, G34 | `planned` |
 | **G85** | Owned Rust Metal LoRA training | G84, G24, G31 | `planned` |
 | **G86** | Owned Rust QLoRA training profile | G85, G76, G78 | `planned` |
-| **G82** | Capacity and investment planning inside Eylema | G80, G81, G50, G66, G77, G89 | `planned` |
 | **G64** | Shareable ecosystem package builder | G33, G34, G63 | `planned` |
 | **G65** | Ecosystem catalogue and compatible imports | G27, G64 | `planned` |
 | **G35** | Local Unsloth recipe | G27, G34, G77, G76 | `planned` |
 | **G36** | Export and reacceptance | G31, G35, G78 | `planned` |
 | **G37** | Model set and rollback | G36, G46, G50, G65 | `planned` |
 | **G51** | Reusable harness applications and model replacement | G32, G37, G48, G50, G54, G55, G66 | `planned` |
+| **G89** | Owned analytical memory and improvement snapshots | G87, G33, G50 | `planned` |
+| **G82** | Capacity and investment planning inside Eylema | G80, G81, G50, G66, G77, G89 | `planned` |
 | **G79** | Integrated improvement and skill promotion proof | G77, G78, G36, G37, G75, G51, G84, G85, G86, G89 | `planned` |
 | **G06** | Distribution and rights | G00 | `planned` |
 | **G40** | Codex adapter | G39 | `blocked` |
 | **G41** | Second adapter | G39 | `planned` |
 | **G42** | GitHub delivery | G38, G39, G40, G41, G54 | `planned` |
 | **G43** | Real development acceptance | G42, G50 | `planned` |
-| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
-| **G88** | Owned episodic, semantic and knowledge-graph memory | G87, G70, G50 | `planned` |
-| **G89** | Owned analytical memory and improvement snapshots | G87, G33, G50 | `planned` |
 | **G90** | Memory backend profiles and controlled interchange | G88, G89 | `planned` |
 | **G44** | Complete macOS acceptance | All original release gates; G46–G90 | `planned` |
 | **G45** | Experimental distribution package | G06, G44 | `planned` |

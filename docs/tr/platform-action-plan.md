@@ -39,6 +39,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 |---|---|---|---|
 | **G46** | Döngü, rol ve model bağlama sözleşmeleri | G08, G09, G13, G17, G39 | `accepted` |
 | **G63** | Projeye özel veri ve çıkış sınırları | G46, G13 | `planned` |
+| **G87** | Bellek sözleşmeleri, yönlendirme ve yaşam döngüsü | G46, G63 | `planned` |
 | **G54** | Türlü araç kaydı ve harness eylem yürütmesi | G46, G10, G11, G13, G39, G63 | `planned` |
 | **G50** | Karar kanıtı ve döngü ölçümleri | G46, G54, G18, G63 | `planned` |
 | **G75** | Sürümlü skill sözleşmesi ve yeniden kullanım paketleri | G46, G54, G50, G63, G87 | `planned` |
@@ -55,6 +56,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G68** | Kendi Rust CPU embedding yürütmemiz | G67, G23, G28, G29 | `planned` |
 | **G70** | Projeye bağlı kendi Rust erişim indeksimiz | G68, G63, G13 | `planned` |
 | **G74** | Karar router’ı ve RAG/skill yönlendirmesi | G57, G54, G50, G70, G75, G63, G87 | `planned` |
+| **G88** | Kendi episodik, semantik ve knowledge graph belleğimiz | G87, G70, G50 | `planned` |
 | **G72** | Erken uçtan uca yerel metin/RAG iş kanıtı | G30, G57, G68, G70, G54, G50, G63, G73, G88 | `planned` |
 | **G24** | Metal tensor işlemleri | G19, G23 | `planned` |
 | **G25** | Yerleşim görevi | G20, G23, G46, G54 | `planned` |
@@ -85,23 +87,21 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G84** | Kendi Rust CPU LoRA eğitimimiz | G83, G76, G78, G77, G34 | `planned` |
 | **G85** | Kendi Rust Metal LoRA eğitimimiz | G84, G24, G31 | `planned` |
 | **G86** | Kendi Rust QLoRA eğitim profilimiz | G85, G76, G78 | `planned` |
-| **G82** | Eylema içinde kapasite ve yatırım planlama | G80, G81, G50, G66, G77, G89 | `planned` |
 | **G64** | Paylaşılabilir ekosistem paket oluşturucusu | G33, G34, G63 | `planned` |
 | **G65** | Ekosistem kataloğu ve uyumlu içe alma | G27, G64 | `planned` |
 | **G35** | Yerel Unsloth tarifi | G27, G34, G77, G76 | `planned` |
 | **G36** | Export ve yeniden kabul | G31, G35, G78 | `planned` |
 | **G37** | Model seti ve rollback | G36, G46, G50, G65 | `planned` |
 | **G51** | Yeniden kullanılabilir harness uygulamaları ve model değişimi | G32, G37, G48, G50, G54, G55, G66 | `planned` |
+| **G89** | Kendi analitik belleğimiz ve iyileştirme snapshot’ları | G87, G33, G50 | `planned` |
+| **G82** | Eylema içinde kapasite ve yatırım planlama | G80, G81, G50, G66, G77, G89 | `planned` |
 | **G79** | Bütünleşik iyileştirme ve skill terfi kanıtı | G77, G78, G36, G37, G75, G51, G84, G85, G86, G89 | `planned` |
 | **G06** | Dağıtım ve haklar | G00 | `planned` |
 | **G40** | Codex adaptörü | G39 | `blocked` |
 | **G41** | İkinci adaptör | G39 | `planned` |
 | **G42** | GitHub teslimi | G38, G39, G40, G41, G54 | `planned` |
 | **G43** | Gerçek geliştirme kabulü | G42, G50 | `planned` |
-| **G87** | Memory contracts, routing and lifecycle | G46, G63 | `planned` |
-| **G88** | Owned episodic, semantic and knowledge-graph memory | G87, G70, G50 | `planned` |
-| **G89** | Owned analytical memory and improvement snapshots | G87, G33, G50 | `planned` |
-| **G90** | Memory backend profiles and controlled interchange | G88, G89 | `planned` |
+| **G90** | Bellek backend profilleri ve kontrollü veri alışverişi | G88, G89 | `planned` |
 | **G44** | Tam macOS kabulü | Tüm özgün sürüm kapıları; G46–G90 | `planned` |
 | **G45** | Deneysel dağıtım paketi | G06, G44 | `planned` |
 | **W01** | Website doğruluğu | G03 | `planned` |
