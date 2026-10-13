@@ -22,3 +22,7 @@ Applying these settings needs separate actual maintainer authorization after rev
 The [G05 plan](../plans/g05-github-work-management.md) records accepted scope, bases, finite budgets, checks and recovery. Revert scoped Git changes through a PR; do not delete historical issues/milestones or remove another task's environment. Any settings recovery needs its own authority and saved prior state. Planning metadata and repository CI do not prove runtime, GPU, model, training or release acceptance.
 
 The maintainer explicitly chose to retain current settings and leave the proposal prepared. G05 therefore delivers the reviewed planning metadata/tooling and the retained proposal without administration writes. Applying it later requires a new explicit administration decision; the standing scoped merge authorization remains separate.
+
+## Current harness execution revision
+
+The 13 October 2026 maintainer revision is the [current platform action plan](platform-action-plan.md), with [revised remaining cards](../../records/platform-goal-plan.json). Historical cards and accepted deliveries above remain immutable evidence. Current pending scope/order/status and added G46–G86 cards belong to the new record; use `tools/check_platform_plan.py --fetch` for their current issue/proof audit.

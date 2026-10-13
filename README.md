@@ -2,6 +2,7 @@
 
 Shared contributor contracts and repository tooling for `eylema-dev`. [Türkçe](README.tr.md). English is canonical. Product/runtime implementation remains in its owning repository.
 
+- [Current Rust harness action plan and remaining Goal cards](docs/en/platform-action-plan.md)
 - [Project token and cost accounting](docs/en/usage-accounting.md)
 - [GitHub Goal tracking and protection proposal](docs/en/github-work-management.md)
 - [macOS Goal program and G00 baseline](docs/en/goal-program.md)
