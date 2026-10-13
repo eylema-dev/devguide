@@ -7,11 +7,11 @@
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",
-      "revision": "aa80d3d2c61d5331de76cb825f9fa8c98b7093e2"
+      "revision": "3103987bc4b503e647f1de47c66a541f48ef756a"
     },
     "eylema-docs-tr": {
       "repository": "eylema-dev/eylema-docs-tr",
-      "revision": "caf96866a45e2a5ae46628d36774f311596c22f7"
+      "revision": "16e271da458595d19bdcf67db302285a2f40b819"
     },
     ".github": {
       "repository": "eylema-dev/.github",
@@ -40,8 +40,8 @@
       "tr_sha256": "a51dff89da9fa78bca252fa671ff7858a0ad9efc5515f4f0bb1f0e8033cf31fb"
     },
     "architecture": {
-      "en_sha256": "218053ed07ecaabb0a769ebb8033a6feb3549fd95abcbad6b9ad5554d3b72e7b",
-      "tr_sha256": "b760d9bec56e2a4dea1ecfe3f15a0352f4eb206900f6aded735c5618ef428746"
+      "en_sha256": "d3365d99dffe0a4c28a43b3c900d48a9970411b7c631e73c0bd4cb78de3bf048",
+      "tr_sha256": "ed0811cc00d1b678010a7591da92d57513c07b9625a18b35d702bfa5c5a80630"
     },
     "development-and-operations": {
       "en_sha256": "58fb558e410def405111333377cee5a34de23c27194a9e2313313fdc9f9b56dc",
@@ -52,12 +52,12 @@
       "tr_sha256": "cee9b83a95c39b3142456b206c9754873c833bddb587281e758e123d5506bd38"
     },
     "project-structure": {
-      "en_sha256": "18e8e37769e30a26d4893c3ecdee626a03aa93c4c2a3d1142869b11267ef571b",
-      "tr_sha256": "a97b1edc9191a2a8f8e49dcfea6578155027449fa9a774e347bd617e92fb2893"
+      "en_sha256": "cb34094744efafd853ccfbcd8f135426b49424964b062df65761e049d14394ef",
+      "tr_sha256": "763694c7539d513746bb32cef17a41e973cc40700b5f2202cdf51c6e5e2d6417"
     },
     "roadmap": {
-      "en_sha256": "3733fbb4c38ace59d2bffa84999ae933e997815ff51500e78057eb751e2109d4",
-      "tr_sha256": "cbe5c10175adf65dd170985926e5702fd056b5b2fd3248556f451ecac4c2569e"
+      "en_sha256": "9fe9071677ce79b5b6e9dd01764c8d9e479565fdd3d7c77d1430cb7fcce0747d",
+      "tr_sha256": "959c27e8be23bdad5960460361b5836d06c64e028221754256bc5f75f92ddcb1"
     }
   }
 }
