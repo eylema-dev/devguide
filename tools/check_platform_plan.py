@@ -99,9 +99,15 @@ def validate_plan(plan, index, tracking):
             'Reviewed memory promotion and lifecycle')
     require(memory['backend_policy'] == 'first_party_rust_production; SQLite and DuckDB are reference/interop candidates, no dependency exception or hidden engine'
             and memory['cortexdb_meaning'] == 'knowledge_graph_pattern_not_selected_product', 'Memory backend and graph policy')
-    require(memory['goals'] == ['G87', 'G88', 'G89', 'G90'] and set(memory['goals']) <= set(new)
-            and 'G88' in current['G72']['dependencies'] and 'G87' in current['G74']['dependencies']
-            and 'G89' in current['G79']['dependencies'], 'Memory acceptance before consuming jobs')
+    require(memory['goals'] == ['G87', 'G88', 'G89', 'G90'] and set(memory['goals']) <= set(new), 'Memory gate identity')
+    memory_dependencies = {
+        'G87': {'G46', 'G63'}, 'G88': {'G87', 'G70', 'G50'},
+        'G89': {'G87', 'G33', 'G50'}, 'G90': {'G88', 'G89'},
+        'G72': {'G88'}, 'G71': {'G88'}, 'G74': {'G87'},
+        'G75': {'G87'}, 'G79': {'G89'}, 'G82': {'G89'},
+    }
+    require(all(required <= set(current[gid]['dependencies']) for gid, required in memory_dependencies.items()),
+            'Memory acceptance before consuming jobs')
     require(plan['first_implementation_goal'] == 'G46', 'Independent first implementation slice')
     require(sum(g['status'] == 'implementing' for g in goals) <= 1, 'One implementation Goal')
     issue_urls = set()

@@ -69,7 +69,11 @@ class PlatformPlanTests(unittest.TestCase):
             with self.subTest(key=key):
                 self.check_bad(lambda p: p['memory_policy'].update({key: value}))
         self.check_bad(lambda p: p['memory_policy']['kinds'].remove('knowledge_graph'))
-        self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == 'G72')['dependencies'].remove('G88'))
+        for gid, dependency in [('G72', 'G88'), ('G71', 'G88'), ('G74', 'G87'),
+                                ('G75', 'G87'), ('G79', 'G89'), ('G82', 'G89'),
+                                ('G87', 'G63'), ('G88', 'G70'), ('G89', 'G33'), ('G90', 'G89')]:
+            with self.subTest(goal=gid, dependency=dependency):
+                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['dependencies'].remove(dependency))
 
     def test_g40_does_not_gain_a_new_trial_or_repair_allowance(self):
         for key, value in [('active_minutes', 15), ('new_provider_calls', 1), ('max_targeted_repairs', 1)]:
