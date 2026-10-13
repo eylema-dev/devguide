@@ -1797,14 +1797,14 @@
     },
     {
       "id": "G46",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Loop, role and model-binding contracts",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 60,
         "url": "https://github.com/eylema-dev/eylema/issues/60"
       },
-      "status": "planned",
+      "status": "review",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
       "dependencies": [
         "G08",
@@ -1820,9 +1820,20 @@
         "crates/eylema-contracts/tests/platform_contracts.rs",
         "docs/en/",
         "docs/tr/",
-        "tools/translation-pairs.json"
+        "tools/translation-pairs.json",
+        "README.md",
+        "README.tr.md"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/devguide": [
+          "records/platform-goal-plan.json",
+          "tools/repository-set.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/translation-pairs.json",
+          "docs/plans/g46-platform-contracts.md"
+        ]
+      },
       "objective": "Two distinct loop definitions share the same contracts; constructor tests cover all nine optional role kinds and compatible bindings. Reject schema, units, preprocessing, action semantics, duplicate, dangling and unbounded-loop cases. Binding metadata is not execution authority.",
       "acceptance": [
         {
@@ -1846,15 +1857,15 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Bound current accepted core main 0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52 and accepted G08/G09/G13/G17/G39 proofs. Maintainer explicitly requested current foundation reassessment; add synchronized README discovery/vision/version correction. Native tests and portable compile only; no model/provider trials.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
+        "architect": "Codex parent context",
+        "implementer": "Codex parent context",
+        "verifier": "Codex parent context",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
       }
     },

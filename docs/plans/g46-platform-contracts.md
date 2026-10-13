@@ -28,13 +28,13 @@
 - A local-only loop cannot bind an external deployment; configuration never grants disclosure authority.
 - A model/profile swap must rebuild and validate the immutable loop; existing bindings retain exact artifact identity.
 
-## One coherent task: reusable typed definitions
+### Task 1: Reusable typed definitions
 
 **Files:**
 - Create `crates/eylema-contracts/src/platform.rs`.
 - Modify `crates/eylema-contracts/src/lib.rs` to export `pub mod platform`.
 - Create `crates/eylema-contracts/tests/platform_contracts.rs`.
-- Update only the relevant core `docs/en/` and `docs/tr/` evidence companions and `tools/translation-pairs.json`.
+- Update the relevant core `docs/en/` and `docs/tr/` evidence companions, `README.md`/`README.tr.md` discovery/vision/version notes and `tools/translation-pairs.json`. Revision 2 incorporates the maintainer request to reassess the current foundation.
 
 **Interfaces:**
 - Existing `ResourceId::new(impl Into<String>) -> Result<ResourceId, ValidationError>`, `Revision::new(u64)` and `ValidationError` are reused. New context-specific IDs wrap validated `ResourceId` with the same bounded ASCII contract: `LoopId`, `RoleId`, `ModelId`, `ModelProfileId`, `SemanticProfileId`, `ProjectId`. Each exposes `new` and `as_str`.
