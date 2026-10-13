@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "program": "Rust model harness platform",
-  "revision": 1,
+  "revision": 2,
   "date": "2026-10-13",
   "historical_cards_sha256": "6bd95fbabbb605eade23f0d25b5cfbd762294b8e9b1f521f955fec4c2b529c06",
   "legacy_tracking_sha256": "5de8ca6b53bf02e4faaf1364b3c1541b6de9a349940206adaae85c399748fadc",
@@ -131,11 +131,16 @@
     "G83",
     "G84",
     "G85",
-    "G86"
+    "G86",
+    "G87",
+    "G88",
+    "G89",
+    "G90"
   ],
   "recommended_order": [
     "G46",
     "G63",
+    "G87",
     "G54",
     "G50",
     "G75",
@@ -152,6 +157,7 @@
     "G68",
     "G70",
     "G74",
+    "G88",
     "G72",
     "G24",
     "G25",
@@ -182,19 +188,21 @@
     "G84",
     "G85",
     "G86",
-    "G82",
     "G64",
     "G65",
     "G35",
     "G36",
     "G37",
     "G51",
+    "G89",
+    "G82",
     "G79",
     "G06",
     "G40",
     "G41",
     "G42",
     "G43",
+    "G90",
     "G44",
     "G45",
     "W01"
@@ -428,7 +436,7 @@
         },
         {
           "id": "G25-A1",
-          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
         }
@@ -1515,7 +1523,7 @@
     },
     {
       "id": "G44",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Complete macOS acceptance",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1602,7 +1610,11 @@
         "G83",
         "G84",
         "G85",
-        "G86"
+        "G86",
+        "G87",
+        "G88",
+        "G89",
+        "G90"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -3368,7 +3380,7 @@
     },
     {
       "id": "G71",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "RAG subflow and grounded job acceptance",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3382,7 +3394,8 @@
         "G69",
         "G50",
         "G66",
-        "G74"
+        "G74",
+        "G88"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -3431,7 +3444,7 @@
     },
     {
       "id": "G72",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Early end-to-end local text/RAG job proof",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3448,7 +3461,8 @@
         "G54",
         "G50",
         "G63",
-        "G73"
+        "G73",
+        "G88"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -3562,7 +3576,7 @@
     },
     {
       "id": "G74",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Decision router and RAG/skill dispatch",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3577,7 +3591,8 @@
         "G50",
         "G70",
         "G75",
-        "G63"
+        "G63",
+        "G87"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -3626,7 +3641,7 @@
     },
     {
       "id": "G75",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Versioned skill contracts and reusable packages",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3639,7 +3654,8 @@
         "G46",
         "G54",
         "G50",
-        "G63"
+        "G63",
+        "G87"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -3872,7 +3888,7 @@
     },
     {
       "id": "G79",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Integrated improvement and skill promotion proof",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3890,7 +3906,8 @@
         "G51",
         "G84",
         "G85",
-        "G86"
+        "G86",
+        "G89"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -4061,7 +4078,7 @@
     },
     {
       "id": "G82",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Capacity and investment planning inside Eylema",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4075,7 +4092,8 @@
         "G81",
         "G50",
         "G66",
-        "G77"
+        "G77",
+        "G89"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -4365,6 +4383,248 @@
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
       }
+    },
+    {
+      "id": "G87",
+      "plan_card_revision": 1,
+      "title": "Memory contracts, routing and lifecycle",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 93,
+        "url": "https://github.com/eylema-dev/eylema/issues/93"
+      },
+      "status": "planned",
+      "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
+      "dependencies": [
+        "G46",
+        "G63"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-journal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Own typed working/episodic/semantic/procedural/knowledge-graph/analytical memory contracts; source, scope, kind, validity, confidence, verification, lineage and purpose travel with every item. Backend/query profiles are versioned; memory cannot grant authority.",
+      "acceptance": [
+        {
+          "id": "G87-A1",
+          "requirement": "Own typed working/episodic/semantic/procedural/knowledge-graph/analytical memory contracts; source, scope, kind, validity, confidence, verification, lineage and purpose travel with every item. Backend/query profiles are versioned; memory cannot grant authority.",
+          "check": "Reject unknown kinds, unbounded/context-overflow queries, missing provenance, cross-project purpose access, stale embedding spaces and model-produced permission changes. Test deterministic TTL, revocation, cache invalidation and unsupported backend rejection.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; memory/backend proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G88",
+      "plan_card_revision": 1,
+      "title": "Owned episodic, semantic and knowledge-graph memory",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 94,
+        "url": "https://github.com/eylema-dev/eylema/issues/94"
+      },
+      "status": "planned",
+      "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
+      "dependencies": [
+        "G87",
+        "G70",
+        "G50"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-journal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Implement bounded first-party Rust episode/fact/entity/relation storage and hybrid source-linked recall. Preserve contradictory claims, observed versus estimated/predicted status and validity intervals; only independently verified or explicitly reviewed material becomes reusable knowledge.",
+      "acceptance": [
+        {
+          "id": "G88-A1",
+          "requirement": "Implement bounded first-party Rust episode/fact/entity/relation storage and hybrid source-linked recall. Preserve contradictory claims, observed versus estimated/predicted status and validity intervals; only independently verified or explicitly reviewed material becomes reusable knowledge.",
+          "check": "Actual native synchronize/reopen plus held-out EN/TR memory-assisted document jobs. Check graph/vector/lexical recall, join/filter scope before ranking, citation/source revisions, contradictions and temporal validity; revoke/delete source and prove affected cached/index/graph recall unavailable. Compare flat RAG and memory-enabled outcomes under fixed bounds.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; memory/backend proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G89",
+      "plan_card_revision": 1,
+      "title": "Owned analytical memory and improvement snapshots",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 95,
+        "url": "https://github.com/eylema-dev/eylema/issues/95"
+      },
+      "status": "planned",
+      "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
+      "dependencies": [
+        "G87",
+        "G33",
+        "G50"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-journal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Own bounded immutable column-oriented evaluation/resource/episode summary snapshots and aggregate queries for model routing, curation and resource planning; analytics is derived data with inherited permissions.",
+      "acceptance": [
+        {
+          "id": "G89-A1",
+          "requirement": "Own bounded immutable column-oriented evaluation/resource/episode summary snapshots and aggregate queries for model routing, curation and resource planning; analytics is derived data with inherited permissions.",
+          "check": "Known-answer aggregate/selection tests, snapshot version and lineage, source withdrawal, bounded disk/memory/latency and restart tests. Analytics proposals never automatically train, alter policy or spend; raw private reasoning/secrets excluded from analytic export schema.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; memory/backend proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
+    },
+    {
+      "id": "G90",
+      "plan_card_revision": 1,
+      "title": "Memory backend profiles and controlled interchange",
+      "repository": "eylema-dev/eylema",
+      "issue": {
+        "number": 96,
+        "url": "https://github.com/eylema-dev/eylema/issues/96"
+      },
+      "status": "planned",
+      "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
+      "dependencies": [
+        "G88",
+        "G89"
+      ],
+      "conditional_dependencies": {},
+      "allowed_paths": [
+        "crates/eylema-contracts/",
+        "crates/eylema-host/",
+        "crates/eylema-journal/",
+        "docs/en/",
+        "docs/tr/",
+        "tools/translation-pairs.json"
+      ],
+      "linked_scope": {},
+      "objective": "Versioned backend capability registry selects owned transactional, graph/vector or analytical stores for the workload. SQLite-shaped transaction and DuckDB-shaped analytics profiles are reference/interop candidates; any actual external engine needs its own reviewed inventory and authorization. No silent substitution.",
+      "acceptance": [
+        {
+          "id": "G90-A1",
+          "requirement": "Versioned backend capability registry selects owned transactional, graph/vector or analytical stores for the workload. SQLite-shaped transaction and DuckDB-shaped analytics profiles are reference/interop candidates; any actual external engine needs its own reviewed inventory and authorization. No silent substitution.",
+          "check": "Two owned store profiles through the same interface, missing/unsupported profile failure, exact schema/units/index revision, preserved IDs/lineage/retention and bounded import/export with purpose gates. Test portable fixtures; do not claim SQLite/DuckDB native-file compatibility or executed engine support without a pinned accepted reference run.",
+          "result": "not_run"
+        }
+      ],
+      "budget": {
+        "active_minutes": 120,
+        "max_targeted_repairs": 3,
+        "token_budget": null,
+        "new_spending": false,
+        "new_provider_calls": 0,
+        "review_minutes": 15,
+        "training_candidate_limit": 0
+      },
+      "model": {
+        "planned": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "actual": null
+      },
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "accepted_delivery": null,
+      "blockers": [
+        "Not implemented or accepted; memory/backend proofs remain not_run."
+      ],
+      "roles": {
+        "architect": "record at activation",
+        "implementer": "record at activation",
+        "verifier": "record at activation",
+        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+      }
     }
   ],
   "evidence_boundary": "Historical accepted evidence is preserved. Current cards revise future work only; all new runtime/model/performance/training acceptance is not_run. G40 gains no time, repair, call, privacy or host allowance.",
@@ -4404,5 +4664,28 @@
     "controlled_promotion",
     "versioned_skill_packaging"
   ],
-  "capacity_planning": "checked per-model/workflow estimates with measured calibration, uncertainty and dated price assumptions; no automatic investment/spend"
+  "capacity_planning": "checked per-model/workflow estimates with measured calibration, uncertainty and dated price assumptions; no automatic investment/spend",
+  "memory_policy": {
+    "kinds": [
+      "working",
+      "episodic",
+      "semantic",
+      "procedural",
+      "knowledge_graph",
+      "analytical"
+    ],
+    "authority": "retrieved_memory_is_untrusted_evidence",
+    "default": "project_private",
+    "derivative_permissions_inherited": true,
+    "write_promotion": "verified_outcome_or_explicit_review",
+    "retention": "bounded_expiry_and_revocation_follow_indexes_caches_and_derivatives",
+    "backend_policy": "first_party_rust_production; SQLite and DuckDB are reference/interop candidates, no dependency exception or hidden engine",
+    "cortexdb_meaning": "knowledge_graph_pattern_not_selected_product",
+    "goals": [
+      "G87",
+      "G88",
+      "G89",
+      "G90"
+    ]
+  }
 }
