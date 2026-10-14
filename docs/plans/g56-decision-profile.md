@@ -15,3 +15,11 @@ Executed local checks:286 Rust passed,1 existing Metal test ignored;47 core Pyth
 Configured openai/gpt-6.1-sol/high was observed via the accepted metadata-only usage collector; hidden serving identity unknown. Actual owner approved sol61-high-contracts-2026-10-14 for this catalog/contracts/development-test/document scope, valid through2026-11-13. Architect/implementer/verifier are parent Codex; reviewer is a genuinely separate context. CI and registry strings do not authorize task/data/model/merge permissions. Conditional actual maintainer merge authority applies after current checks and review pass. Before/after private usage records preserve unknown pricing/coverage and separate Standard API equivalent from actual subscription cost.
 
 Eylema's target is a resource-aware local cooperative specialist ecosystem, developed under controlled qualified frontier-LLM contribution. Anonymous reviewed ecosystem experience and private institutional RAG/fine-tune require explicit eligible-data boundaries; this task performs no experience collection, anonymization or publication.
+
+## Accepted source delivery
+
+Separate source review passed at `3d25c35a5bf602e60eb06871ef812a995bfef614`; [eylema-dev/eylema PR](https://github.com/eylema-dev/eylema/pull/104) merged as `a863e8bd68e9be23ab3f326c53a9ae875b9a270b`, identical tree `fa14e0003a71a28358b8cce4d2db10e51a89344a`; [exact main CI](https://github.com/eylema-dev/eylema/actions/runs/38540642017) passed.
+
+Separate source review passed at `13882c9cf1ba9e27aa4e9f93a7e5b5de1863f547`; [eylema-dev/eylema-models PR](https://github.com/eylema-dev/eylema-models/pull/14) merged as `680db8a0b3a5bd08f8d20c47419a82c72b3217e3`, identical tree `9c7f09db049e900d94092d7e588b7972e8d0743f`; [exact main CI](https://github.com/eylema-dev/eylema-models/actions/runs/38540645714) passed.
+
+All286 Rust/47 core Python/50 models Python/83 guide Python passed with1 existing Metal ignore, native metadata fixture6tests and catalog/reference8tests. Actual source whole-branch review229/900seconds passed,0/3 targeted repairs used. Model/tokenizer/weights/GPU/training/performance and application provider execution remain not_run. Final accepted-guide/currentCI/main correlation follows; source acceptance does not establish native G57 execution.

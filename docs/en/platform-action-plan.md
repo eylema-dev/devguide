@@ -45,7 +45,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G75** | Versioned skill contracts and reusable packages | G46, G54, G50, G63, G87 | `accepted` |
 | **G73** | Real human harness authorization and stop | G46, G11, G14, G16, G63 | `accepted` |
 | **G27** | Model contract | G03, G18, G46 | `accepted` |
-| **G56** | Open-weight structured-decision model profile | G27, G46 | `verification` |
+| **G56** | Open-weight structured-decision model profile | G27, G46 | `accepted` |
 | **G67** | Embedding artifact and retrieval behavior profile | G27, G46 | `planned` |
 | **G80** | Checked resource requirement estimator | G27, G46, G21, G18 | `planned` |
 | **G23** | CPU tensor reference | G18, G27 | `planned` |

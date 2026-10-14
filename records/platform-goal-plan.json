@@ -3022,14 +3022,14 @@
     },
     {
       "id": "G56",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Open-weight structured-decision model profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 9,
         "url": "https://github.com/eylema-dev/eylema-models/issues/9"
       },
-      "status": "verification",
+      "status": "accepted",
       "base_sha": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
       "dependencies": [
         "G27",
@@ -3075,13 +3075,13 @@
           "id": "G56-A1",
           "requirement": "Choose a feasible open-weight decision/router/scoring candidate instead of fixing a closed Jev dependency; pin exact artifact, tokenizer, heads, operators, choice/yes-no/score semantics and calibration metadata.",
           "check": "Candidate comparison and rights/operator audit; independent frozen reference vectors for multi-question outputs; reject unsupported architecture/preprocessing. Selection is not native support.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G56-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -3101,15 +3101,50 @@
         "qualification": "sol61-high-contracts-2026-10-14; actual maintainer-approved scoped contribution profile, valid through2026-11-13"
       },
       "activation": "Actual maintainer approved bounded Qwen3-Reranker score-profile design; conditional standing merge authority after checks/currentCI/genuine separate review. Limited contribution profile also actually approved. 120 active minutes/3 repairs/15 separate-review minutes. Static public discovery at most12 responses/8MiB; no weights/tokenizer execution/model/provider calls. Batch1/context4096/max_new_tokens1 reserved, scoring does not generate; 4questions x4options, uncalibrated score-micros. Existing inline method, owned Rust fixture tests only; production model contract unchanged.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Current PR CI, genuine separate whole-branch review and accepted-main proof pending. Native model execution remains deferred to G57."
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/104",
+          "head": "3d25c35a5bf602e60eb06871ef812a995bfef614",
+          "main": "a863e8bd68e9be23ab3f326c53a9ae875b9a270b",
+          "tree": "fa14e0003a71a28358b8cce4d2db10e51a89344a",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "3d25c35a5bf602e60eb06871ef812a995bfef614",
+            "reviewer": "Codex reviewer /root/g27_model_review, genuine separate G56 whole-branch final-head report"
+          },
+          "main_ci": {
+            "id": 38540642017,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38540642017",
+            "head": "a863e8bd68e9be23ab3f326c53a9ae875b9a270b",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/14",
+          "head": "13882c9cf1ba9e27aa4e9f93a7e5b5de1863f547",
+          "main": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
+          "tree": "9c7f09db049e900d94092d7e588b7972e8d0743f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "13882c9cf1ba9e27aa4e9f93a7e5b5de1863f547",
+            "reviewer": "Codex reviewer /root/g27_model_review, genuine separate G56 whole-branch final-head report"
+          },
+          "main_ci": {
+            "id": 38540645714,
+            "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38540645714",
+            "head": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
         "architect": "parent Codex qualified gpt-6.1-sol/high",
         "implementer": "parent Codex inline, qualified gpt-6.1-sol/high",
         "verifier": "parent Codex native Rust/Python/Git/gh",
-        "independent_reviewer": "pending genuine separate final-head reviewer /root/g27_model_review"
+        "independent_reviewer": "Codex reviewer /root/g27_model_review genuine separate exact frozen source heads passed; accepted guide proof audit follows"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
       "dependency_deliveries": {
@@ -3189,7 +3224,9 @@
           "application provider calls"
         ],
         "repairs_used": 0,
-        "qualified_profile": "sol61-high-contracts-2026-10-14"
+        "qualified_profile": "sol61-high-contracts-2026-10-14",
+        "independent_review": "Source whole3-repository review passed at229/900seconds;6 native/50 model Python independently executed and13 Decimal80 reference rows recomputed; final accepted-guide proof audit pending.",
+        "delivery": "Core and model catalog source PRs authorized squash-merged; identical reviewed/main trees and exact main CI required jobs passed. Guide source acceptance record is not its own final delivery proof."
       }
     },
     {

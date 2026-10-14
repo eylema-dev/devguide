@@ -45,7 +45,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G75** | Sürümlü skill sözleşmesi ve yeniden kullanım paketleri | G46, G54, G50, G63, G87 | `accepted` |
 | **G73** | Gerçek insan harness yetkisi ve durdurma | G46, G11, G14, G16, G63 | `accepted` |
 | **G27** | Model sözleşmesi | G03, G18, G46 | `accepted` |
-| **G56** | Açık ağırlıklı yapılandırılmış karar modeli profili | G27, G46 | `verification` |
+| **G56** | Açık ağırlıklı yapılandırılmış karar modeli profili | G27, G46 | `accepted` |
 | **G67** | Embedding artifact ve erişim davranış profili | G27, G46 | `planned` |
 | **G80** | Kontrollü kaynak ihtiyacı tahmini | G27, G46, G21, G18 | `planned` |
 | **G23** | CPU tensor referansı | G18, G27 | `planned` |
