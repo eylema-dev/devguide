@@ -950,7 +950,7 @@
     },
     {
       "id": "G28",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Weight loader",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -958,7 +958,7 @@
         "url": "https://github.com/eylema-dev/eylema/issues/25"
       },
       "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "base_sha": "6605080fcae225e099775f7856349c0aac6aa011",
       "dependencies": [
         "G09",
         "G27"
@@ -968,9 +968,26 @@
         "crates/eylema-model/",
         "docs/en/",
         "docs/tr/",
-        "tools/translation-pairs.json"
+        "tools/translation-pairs.json",
+        "Cargo.toml",
+        "Cargo.lock",
+        "crates/eylema-platform/src/lib.rs",
+        "crates/eylema-platform/src/sha256_stream.rs",
+        "crates/eylema-platform/tests/sha256_stream.rs"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/devguide": [
+          "docs/plans/g28-weight-loader.md",
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json",
+          "records/contribution-model-profiles.json",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md"
+        ]
+      },
       "objective": "Own bounded weight loading and validation for each separately accepted artifact profile.",
       "acceptance": [
         {
@@ -1004,20 +1021,110 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high confirmed in last completed current-chat response metadata; serving identity unknown; active response not yet stored"
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Actual maintainer approved scope/design preparation only: own crate Cargo registration and separate bounded native SHA256 stream without increasing existing4MiB wire hash limit. Written EN/TR design, actual task-scoped contribution-profile binding and concrete plan review remain pending; no production/scaffolding/native-call or Goal acceptance activated. Preserve120active minutes/3targetedrepairs/15separate-review minutes including preparation. No weights/provider/model/training/newspending/G40 changes. Standing conditional merge authority only after actual checks/currentCI/genuine final-head review.",
       "accepted_delivery": null,
       "blockers": [
-        "Acceptance not executed; dependencies and activation bindings required."
+        "Written design and concrete-plan human reviews required before production.",
+        "Structural validator scope fits current contracts profile; proposed G28-only native binding coverage needs actual owner confirmation before activation.",
+        "Artifact loading/native hash/G28 acceptance not executed."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex configuredgpt-6.1-sol/high, written design preparation only",
+        "implementer": "not activated; inline method retained after required reviews",
+        "verifier": "parent Git/Python/SDK/document reads; native loading/hash behavior not_run",
+        "independent_reviewer": "unassigned; genuine separate qualified final-head review before delivery"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G09": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/41",
+            "head": "4a1638c24e926781e75b94d24dff599577610408",
+            "main": "c05e6327b63cfda59d48b964fc639d82440d849f",
+            "tree": "a5111c0579ef14571e18348c9c46dae987e097c5",
+            "main_ci": {
+              "id": 38167862320,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38167862320",
+              "head": "c05e6327b63cfda59d48b964fc639d82440d849f",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "4a1638c24e926781e75b94d24dff599577610408",
+              "reviewer": "g09_review separate Codex context; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/devguide",
+            "pr": "https://github.com/eylema-dev/devguide/pull/15",
+            "head": "6349f00a3f865035078e5d5a5a02b10ba075de79",
+            "main": "d40c89b0939091bfbe365b230e7b4b5f82fad600",
+            "tree": "9aa4af0776d8fbf60e4389205d78cd17cb616a01",
+            "main_ci": {
+              "id": 38167869418,
+              "url": "https://github.com/eylema-dev/devguide/actions/runs/38167869418",
+              "head": "d40c89b0939091bfbe365b230e7b4b5f82fad600",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "6349f00a3f865035078e5d5a5a02b10ba075de79",
+              "reviewer": "g09_review separate Codex context; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "preparation_binding": {
+        "design": "https://github.com/eylema-dev/eylema/blob/codex/g28-weight-loader/docs/en/g28-weight-loader-design.md",
+        "owner_decision": "Actual human approved G28 scope/design preparation on14October2026; no implementation/design/qualification acceptance inferred.",
+        "artifact_cap_bytes": 2147483648,
+        "current_qualification_candidate": "sol61-high-contracts-2026-10-14",
+        "profile_scope_decision": "pending actual owner G28-only native-binding confirmation",
+        "reference_format_commit": "e246a2560645b7525f5775669ed816eb57c5bcc8",
+        "sdk_reference": "macosx27.0 CommonDigest.h SHA25683a9705bbc8d44f27ee61801064ee99288496a038d623f152aa30db6819e9ca6; read-only, no service calls",
+        "design_commit": "8f1ae3e87b2e347eef4a19c62557eeca2269f906"
+      }
     },
     {
       "id": "G29",

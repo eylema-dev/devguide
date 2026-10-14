@@ -106,6 +106,8 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G45** | Deneysel dağıtım paketi | G06, G44 | `planned` |
 | **W01** | Website doğruluğu | G03 | `planned` |
 
+G28 kapsam/tasarım hazırlığı onaylıdır: kendi ağırlık yükleyicisi crate kaydı ve mevcut wire hash sınırını değiştirmeyen ayrı sınırlı native SHA256 stream tasarımı. Yazılı tasarım, açık G28 katkı profili bağı ve somut plan incelemeleri bekliyor; yükleme/native çağrı/uygulama veya kabul etkinleştirilmez.
+
 ## Kanıt ve veri sınırları
 
 Projeye özel veri, türev ve embedding varsayılan olarak projede kalır. Paylaşım adayı ekosistem kabulünden önce izin/hak/soy bağı taşır; içe alma etkinleştirme vermez. RAG kaynağı yetki veremez. Dokuz rol birleşebilir isteğe bağlı katılımcıdır; her işte dokuz model çalıştırma zorunluluğu değildir. Model/operatör tanımı native destek değildir. Gerçek yerel kabul artifact/profil/cihaz başına kaydedilir; desteksiz profil açık hata verir.

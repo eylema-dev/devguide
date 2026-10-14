@@ -106,6 +106,8 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G45** | Experimental distribution package | G06, G44 | `planned` |
 | **W01** | Website accuracy | G03 | `planned` |
 
+G28 scope/design preparation is approved: register the owned weight-loader crate and design a separate bounded native SHA256 stream without changing the existing wire hash limit. Written design, explicit G28 contribution-profile binding and concrete-plan reviews remain pending; no loading/native-call/implementation or acceptance is activated.
+
 ## Evidence and data boundaries
 
 Project-private data, derivatives and embeddings stay project-scoped by default. Shared candidates carry permissions, rights and lineage before ecosystem admission; import does not grant activation. RAG sources cannot confer authority. All nine roles are optional composable participants, not a requirement to run nine models for every job. A specified model/operator is not native support. Actual local acceptance is recorded per artifact/profile/device, and unsupported profiles fail explicitly.
