@@ -47,8 +47,8 @@
     {
       "en": "docs/en/tooling.md",
       "tr": "docs/tr/tooling.md",
-      "en_sha256": "926973db4a38d1353935e5f147af27b1ff0eaf267a756916b6232fb6fa42293b",
-      "tr_sha256": "6576ae27573ee758e5687d1baa53f59c8fda7bb40e3910033a0bde1b3a5960ef"
+      "en_sha256": "60e19fa8629de2543b240f5ebae662cc51921a3db70e6310eef7c1ceb8cc2cb3",
+      "tr_sha256": "eaad3dfcb2bf84cc9c7d502864562c30f7909f69e8647b7e141ff85d4014068b"
     },
     {
       "en": "docs/en/goal-program.md",
@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "783c723eb98d1b7c36d43b5d0b6d5e8e56f3ddc9e26fb6962e7e9d872f2cb619",
-      "tr_sha256": "ff55287836b95a32bc11bc6d32602208ff2dde6729534b3e741e0a58318098b1"
+      "en_sha256": "2e4140e2c6d568f691da573c88a692b7291e173081f2e08c2bc77011830804a6",
+      "tr_sha256": "973ee6e5bb71b5f4bceed18c8c6726afe33cef0bff896c54c613254584e0206e"
     },
     {
       "en": "docs/en/memory-layer.md",
