@@ -3995,14 +3995,14 @@
     },
     {
       "id": "G67",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Embedding artifact and retrieval behavior profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 12,
         "url": "https://github.com/eylema-dev/eylema-models/issues/12"
       },
-      "status": "verification",
+      "status": "accepted",
       "base_sha": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
       "dependencies": [
         "G27",
@@ -4048,13 +4048,13 @@
           "id": "G67-A1",
           "requirement": "Select a feasible text embedding profile with exact tokenizer/pooling/normalization/dimensions/query-document prefixes, EN/TR coverage, artifact rights and operator references.",
           "check": "Pinned independent vectors and retrieval fixtures; reject dimension, pooling, prefix and normalization mismatches. Popularity does not prove Turkish quality or Rust support.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G67-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -4074,15 +4074,50 @@
         "qualification": "Actual owner-approved sol61-high-contracts-2026-10-14; scoped contracts/catalog/devtests/docs through2026-11-13"
       },
       "activation": "Actual maintainer explicitly approved bounded G67 embedding design: pinned Qwen3-Embedding-0.6B,1024dims,last valid token,L2,separate query/document preprocessing; batch1/context4096/max4queriesx4documents; existing inline method. Standing conditional actual merge after local/latestCI/genuine separate review. No new architecture approval needed for existing manifest/catalog/EYL flow.120 active minutes/3 repairs/15 separate-review minutes. Static public discovery12responses/8MiB, actual10responses/2,834,116bytes. No weights/tokenizer/model/provider execution or new dependency. Query prefix91UTF8bytes/model32768cap/profile4096; reservedmax_new_tokens1 does not generate. Original G40 rights unchanged.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Current PR CI, genuine separate whole-branch review and accepted-main proof pending; native model/EN-TR quality remains G68. Initial existing worker-startup timing failure retained for review; latest unchanged full check passed."
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/105",
+          "head": "a1f24a08bd15eab01a209f0e3615d781ff34c402",
+          "main": "9c91fa1905faaa3604645222cbc62dc504552452",
+          "tree": "0087629b1b517fa2c93fbe8335352fc813429188",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "a1f24a08bd15eab01a209f0e3615d781ff34c402",
+            "reviewer": "Codex reviewer /root/g67_embedding_review, genuine separate G67 whole-branch final-head report"
+          },
+          "main_ci": {
+            "id": 38549269812,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38549269812",
+            "head": "9c91fa1905faaa3604645222cbc62dc504552452",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/15",
+          "head": "4298e14c15b6917b80adf7ffdfda446c775ca0fa",
+          "main": "09b9b92e250367148bf8396e87aa4c70fee1abcc",
+          "tree": "dc4926f1d31f3b1387675b4925b27406d2133ba4",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "4298e14c15b6917b80adf7ffdfda446c775ca0fa",
+            "reviewer": "Codex reviewer /root/g67_embedding_review, genuine separate G67 whole-branch final-head report"
+          },
+          "main_ci": {
+            "id": 38549284081,
+            "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38549284081",
+            "head": "09b9b92e250367148bf8396e87aa4c70fee1abcc",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
         "architect": "parent Codex qualified configured gpt-6.1-sol/high",
         "implementer": "parent Codex inline same qualified settings",
         "verifier": "parent Codex Rust/Python/Git/gh, no model engine",
-        "independent_reviewer": "pending genuine separate fresh-context reviewer /root/g67_embedding_review, configured requested gpt-6.1-sol/high"
+        "independent_reviewer": "Codex reviewer /root/g67_embedding_review genuine fresh whole-branch source heads passed; accepted-guide audit follows"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
       "dependency_deliveries": {
@@ -4168,7 +4203,9 @@
           "application provider calls"
         ],
         "repairs_used": 0,
-        "qualified_profile": "sol61-high-contracts-2026-10-14"
+        "qualified_profile": "sol61-high-contracts-2026-10-14",
+        "review": "Genuine fresh whole25file source review240/900seconds passed, independently5cases/6queryvectors/9documentvectors/12cosines/groups/4UTF8fixtures checked; exact-sourceCI passed. Initial existing worker-startup timeout retained nonblocking reproducibility risk, no source/test weakening or causalproof/bugfix claim.",
+        "delivery": "Actual authorized core/models squash merges, exact reviewed/main tree equality and current exactmainCI requiredjobs passed. Final guide acceptance record is not its own final delivery proof."
       }
     },
     {
