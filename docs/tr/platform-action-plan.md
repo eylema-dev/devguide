@@ -49,7 +49,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G67** | Embedding artifact ve erişim davranış profili | G27, G46 | `accepted` |
 | **G80** | Kontrollü kaynak ihtiyacı tahmini | G27, G46, G21, G18 | `accepted` |
 | **G23** | CPU tensor referansı | G18, G27 | `accepted` |
-| **G28** | Ağırlık yükleyici | G09, G27 | `planned` |
+| **G28** | Ağırlık yükleyici | G09, G27 | `accepted` |
 | **G29** | Tokenizer ve şablon | G27 | `planned` |
 | **G30** | CPU model yürütümü | G23, G28, G29 | `planned` |
 | **G57** | Kendi Rust CPU yapılandırılmış karar yürütmemiz | G56, G23, G28, G29, G30 | `planned` |
@@ -106,7 +106,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G45** | Deneysel dağıtım paketi | G06, G44 | `planned` |
 | **W01** | Website doğruluğu | G03 | `planned` |
 
-G28 kapsam/tasarım hazırlığı onaylıdır: kendi ağırlık yükleyicisi crate kaydı ve mevcut wire hash sınırını değiştirmeyen ayrı sınırlı native SHA256 stream tasarımı. Yazılı tasarım ve yalnız G28’e özel açık katkı profili bağı onaylıdır; somut planın insan incelemesi bekliyor. Yükleme/native çağrı/uygulama veya kabul etkinleştirilmez.
+G28 kapsam/tasarım hazırlığı onaylandı: kendi ağırlık yükleyici crate’imizi kaydet ve mevcut wire hash sınırını değiştirmeyen ayrı sınırlı native SHA256 akışı tasarla. Yazılı tasarım, G28’e özel katkı profil bağı ve somut sohbet içi plan onaylandı. Sınırlı kaynak uygulaması son ayrı inceleme/güncel CI/aynı kabul edilmiş main kanıtından geçti; koordineli devguide incelemesi ve güncel CI hâlâ gerekir.
 
 ## Kanıt ve veri sınırları
 
@@ -137,3 +137,5 @@ Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/
 ## Unsloth eğitim kabiliyeti uyarlaması
 
 İnsan tarafından onaylanan [Unsloth kabiliyet incelemesi](unsloth-capabilities.md), planned G34/G35/G76/G77/G78/G79/G83/G85/G86 kartlarına U1 kriteri ekler: sürümlü veri/eğitim reçeteleri, açık model-özel hedef/yöntemler, doğru gradient accumulation, açılan bellek optimizasyonlarının bağımsız doğrulanması ve soy bağına bağlı adapter teslimi/promotion. G35, Owned local training recipe olarak netleştirilir; özgün kriterler kalır. Hermes H1, bağımlılıklar, bütçeler, aday hakları, kabul edilmiş geçmiş ve G40 korunur. Yeni modalite/RL/precision/backend seçenekleri ayrı gerçek kabul gelene kadar unsupported/keşif kalır. Dış motor, ağırlık/provider/eğitim koşusu veya benchmark garantisi eklenmez.
+
+G28 kaynak kabulü PR108 ile tamamlandı:335native/47Python testi, sınırlı sentetik bayt/hash/layout kontrolleri ve dört derlenmiş mutasyon denemesi; okumadan önce önek sınırı onarımı yeni ayrı inceleme ve tam commit/mainCI’dan geçti. Kendi opak BF16/F32 snapshot ve native akışımız yalnız bu yapısal profil için kabul edildi; gerçek ağırlık,2GiB kapasite, model/tokenizer/GPU/eğitim/throughput kanıtlanmadı.

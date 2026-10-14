@@ -957,7 +957,7 @@
         "number": 25,
         "url": "https://github.com/eylema-dev/eylema/issues/25"
       },
-      "status": "planned",
+      "status": "accepted",
       "base_sha": "6605080fcae225e099775f7856349c0aac6aa011",
       "dependencies": [
         "G09",
@@ -994,19 +994,19 @@
           "id": "G28-P1",
           "requirement": "Own bounded weight loading and validation for each separately accepted artifact profile.",
           "check": "Bad offsets/dtypes/shapes, changed/missing tensors and precision/layout mismatches fail.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G28-A1",
           "requirement": "Selected safetensors/conversion subset rejects bad offsets/dtype/shape/missing/changed tensors",
           "check": "Malformed and changed-artifact fixtures plus reference load comparison",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G28-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -1023,17 +1023,33 @@
         "reasoning_effort": "high",
         "actual": "gpt-6.1-sol/high confirmed in last completed current-chat response metadata; serving identity unknown; active response not yet stored"
       },
-      "activation": "Actual owner approved scope preparation, written EN/TR G28 design and G28-only binding of existing contracts profile. Concrete inline implementation plan is complete but human plan review remains pending; no production/scaffolding/native call or acceptance activated. Original120active minutes/3targetedrepairs/15separate-review minutes include preparation; no reset. Preserve zero weights/provider/model/training/spending, original dependencies/acceptance, G40 and standing conditional merge after actual checks/currentCI/genuine final-head review.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Concrete implementation-plan human review required before production.",
-        "Actual weight loading/native hash/G28 acceptance and independent final-head review not executed."
+      "activation": "Actual owner approved G28 scope, written design/G28-only existing contracts-profile binding and concrete inline plan. Original120/3/900 includes44.55minutes preparation at activation; no reset. Bind base6605080, G09/G27 accepted proofs and exact scoped paths; zero application provider/model/weights/training/spending. Original checks/currentCI/genuine separate qualified final-head review and identical-main proof required before standing-authorized merge.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/108",
+          "head": "2675f14054e6c044abc31792d82457344283fa7a",
+          "main": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+          "tree": "9613bc8942e206f5cee9c551db48e8deb716bb1f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "2675f14054e6c044abc31792d82457344283fa7a",
+            "reviewer": "g28_repaired_review genuine fresh configuredgpt-6.1-sol/high context under owner-admitted G28 binding; initial Important prefix-bound defect independently resolved; no remaining findings"
+          },
+          "main_ci": {
+            "id": 38607296855,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38607296855",
+            "head": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "parent Codex configuredgpt-6.1-sol/high, written design preparation only",
-        "implementer": "not activated; inline method retained after required reviews",
-        "verifier": "parent Git/Python/SDK/document reads; native loading/hash behavior not_run",
-        "independent_reviewer": "unassigned; genuine separate qualified final-head review before delivery"
+        "architect": "parent Codex configuredgpt-6.1-sol/high, actual owner-approved written design",
+        "implementer": "parent Codex inline configuredgpt-6.1-sol/high under actual G28-only binding",
+        "verifier": "parent exact Rust/Python/SDK ABI and source mutation checks;335native/47Python local passed,1existing gatedMetalignore; actual 5MiB stream, no2GiB/model acceptance",
+        "independent_reviewer": "g28_source_review initial and g28_repaired_review genuine fresh configuredgpt-6.1-sol/high final source contexts; final2675f14 passed; separate guide review required before guide delivery"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
       "dependency_deliveries": {
@@ -1116,7 +1132,7 @@
       },
       "preparation_binding": {
         "design": "https://github.com/eylema-dev/eylema/blob/codex/g28-weight-loader/docs/en/g28-weight-loader-design.md",
-        "owner_decision": "Actual human approved written design and G28-only profile binding on14October2026; concrete-plan review remains pending.",
+        "owner_decision": "Actual human approved written design, G28-only profile binding and concrete inline execution plan on14October2026; original budget includes preparation, no reset.",
         "artifact_cap_bytes": 2147483648,
         "current_qualification_candidate": "sol61-high-contracts-2026-10-14",
         "profile_scope_decision": "actual owner approved G28-only structural loader/minimal existing native-service binding; production acceptance not_run",
@@ -1125,7 +1141,20 @@
         "design_commit": "8f1ae3e87b2e347eef4a19c62557eeca2269f906",
         "contribution_task_binding": "sol61-high-contracts-g28-binding-2026-10-14",
         "concrete_plan": "docs/plans/g28-weight-loader.md",
-        "concrete_plan_status": "prepared_pending_human_review"
+        "concrete_plan_status": "actual_owner_approved"
+      },
+      "verification": {
+        "environment": "AppleM4Pro/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
+        "native_tests": 335,
+        "python_tests": 47,
+        "model_tests": 13,
+        "stream_tests": 7,
+        "existing_metal_ignore": 1,
+        "mutations": "4actual compiled source mutants caught; first missing-shader harness compilation not counted; restored original12model tests green before repair",
+        "repair1": "Separate reviewer found declared1..7bytes could consume8byte prefix; BF16/F32 panic-on-read regression RED then GREEN after pre-read size lower bound. One of3targeted repairs used.",
+        "limits": "Opaque BF16/F32 small127/134byte synthetic artifacts and5MiB stream;2GiB capacity, realweights/tokenizer/model/GPU/training/throughput/newWasmexecution not_run; blocking reader/deadline and logicalRSS boundaries explicit",
+        "source_ci": "Latest ready finalhead38606378626passed; merged exactmain38607296855passed",
+        "review": "536.7reported source seconds plus40conservative parent coordination;576.7/900charged before guide review, no reset"
       }
     },
     {
