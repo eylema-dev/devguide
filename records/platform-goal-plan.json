@@ -5337,15 +5337,15 @@
     },
     {
       "id": "G80",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Checked resource requirement estimator",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 86,
         "url": "https://github.com/eylema-dev/eylema/issues/86"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "9c91fa1905faaa3604645222cbc62dc504552452",
       "dependencies": [
         "G27",
         "G46",
@@ -5361,26 +5361,35 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/devguide": [
+          "docs/plans/g80-resource-estimator.md",
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Estimate per-profile weights, KV/recurrent state, workspace, concurrent reservations, RAG index/storage and adapter-training states using checked units and explicit assumptions/intervals; unknowns stay unknown.",
       "acceptance": [
         {
           "id": "G80-A1",
           "requirement": "Estimate per-profile weights, KV/recurrent state, workspace, concurrent reservations, RAG index/storage and adapter-training states using checked units and explicit assumptions/intervals; unknowns stay unknown.",
           "check": "Independent sizing fixtures for dense/MoE/quantized/context/batch/retrieval/training cases, overflow, missing coefficients and unified-versus-discrete memory; no claimed performance from formulas alone.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G80-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G80-R1",
           "requirement": "Model-independent local setup estimates architecture/layout/precision, resident versus active MoE parameters, requested context/KV/recurrent/modal buffers and simultaneous cooperating portfolios, with explicit uncertainty.",
           "check": "Independent dense/MoE/quantized/new-type/context/batch/RAG/training/shared-role/time-overlap fixtures; reject overflow/missing coefficients/stale profile and unified-pool double counting. Formula does not prove runtime/performance.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -5395,20 +5404,151 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol / high configured; hidden serving identity unknown"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Actual maintainer approved written G80 design and concrete implementation plan; preserved inline method. Current main/accepted G27 G46 G21 G18 immutable PR/review/main-CI proofs bound. Owned pure bounded Rust sizing only; no execution admission or runtime model/training/weights/provider/dependency/G40 changes.120active minutes/3targetedrepairs/15reviewminutes; conditional merge authority remains. Actual owner-qualified sol61-high-contracts-2026-10-14 through2026-11-13; serving identity unknown.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/106",
+          "head": "d648a73ee9c840a00dfe9a57a063abd4d6d6b4a2",
+          "main": "177e9d322b82682683ae84ec8e84a13a04de11e9",
+          "tree": "7868e7fd20299d6ac9c5a71d4751435250c69ed2",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "d648a73ee9c840a00dfe9a57a063abd4d6d6b4a2",
+            "reviewer": "/root/g80_resource_review separate configuredgpt-6.1-sol/high context;8files and10independent native fixtures/sweeps; no findings"
+          },
+          "main_ci": {
+            "id": 38562767594,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38562767594",
+            "head": "177e9d322b82682683ae84ec8e84a13a04de11e9",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex inline",
+        "verifier": "parent native/Git/Python/gh",
+        "independent_reviewer": "/root/g80_resource_review genuine separate configuredgpt-6.1-sol/high context;8files and10independent native fixtures/sweeps PASS, no findings; final guide audit pending"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ],
+        "G46": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/92",
+            "head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+            "main": "04175b3a7a04a414aa6b7746204233b921da03fa",
+            "tree": "1e6120f51d9eacad72f094ad85e86b32fc2b77a9",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+              "reviewer": "Codex reviewer /root/g46_platform_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38459444726,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38459444726",
+              "head": "04175b3a7a04a414aa6b7746204233b921da03fa",
+              "status": "passed"
+            }
+          }
+        ],
+        "G21": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/54",
+            "head": "bdf553c7512350d78c04c28e58acbd2b95237aad",
+            "main": "d3e9fa69b45983fcb63442612a49f430fb13c174",
+            "tree": "44690c9c22b0bfe5a6b3eb76cf6f81ac217b607b",
+            "main_ci": {
+              "id": 38278420548,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38278420548",
+              "head": "d3e9fa69b45983fcb63442612a49f430fb13c174",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "bdf553c7512350d78c04c28e58acbd2b95237aad",
+              "reviewer": "g16_review separate Codex context exact-head PASS after the core work-plan snapshot; G21-A2 per-class stress finding resolved, nine targeted tests passed, no actionable findings; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G18": [
+          {
+            "repository": "eylema-dev/eylema-evals",
+            "pr": "https://github.com/eylema-dev/eylema-evals/pull/7",
+            "head": "7d6fd3e4761fab68f7340333b4da707ef4541f64",
+            "main": "9f2225cbfa150416f776165cf1c65624eca1f260",
+            "tree": "d2affe168b5edc9479524e290598772afb1966ea",
+            "main_ci": {
+              "id": 38265221384,
+              "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38265221384",
+              "head": "9f2225cbfa150416f776165cf1c65624eca1f260",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "7d6fd3e4761fab68f7340333b4da707ef4541f64",
+              "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+            }
+          }
+        ]
+      },
+      "executed_evidence": {
+        "native_tests": 300,
+        "existing_ignored_metal": 1,
+        "core_python_tests": 47,
+        "new_sizing_tests": 8,
+        "unchanged_admission_tests": 9,
+        "reviewer_isolated_native_tests": 10,
+        "source_ci": 38562357812,
+        "not_run": [
+          "model/weights/training/GPU/performance/calibration/investment",
+          "new runtime module Wasm execution"
+        ],
+        "retained_risk": "Original unchanged G67 development-host worker-startup timeout; baseline/final native passed, no source/test/threshold fix or waiver."
+      }
     },
     {
       "id": "G81",

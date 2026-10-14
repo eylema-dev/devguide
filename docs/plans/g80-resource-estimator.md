@@ -8,7 +8,7 @@
 
 **Tech Stack:** Existing Rust 1.99.0 workspace and standard library; existing Python repository tooling. No new dependency or provisioning profile.
 
-**Spec:** `eylema-dev/eylema:docs/en/g80-resource-estimator-design.md`, local design commit `65531e4a3c17c277f77f8a7c2c2a633f1daaf533`, explicitly approved by the maintainer on 14 October 2026; Turkish companion `docs/tr/g80-resource-estimator-design.md`. This technical task record follows the established devguide `docs/plans/` convention. This plan itself awaits actual human review.
+**Spec:** `eylema-dev/eylema:docs/en/g80-resource-estimator-design.md`, local design commit `65531e4a3c17c277f77f8a7c2c2a633f1daaf533`, explicitly approved by the maintainer on 14 October 2026; Turkish companion `docs/tr/g80-resource-estimator-design.md`. This technical task record follows the established devguide `docs/plans/` convention. The maintainer explicitly approved this concrete plan on14October2026; existing inline method retained.
 
 ## Global Constraints
 
@@ -116,4 +116,8 @@ With complete totals, upper <= usable means `EstimatedFit`; lower > usable means
 
 G80-A1/R1: Task1 literal arithmetic and invalid/unknown fixtures, Task2 identity/overlap/pool/cardinality cases, Task3 complete declared workload. G80-CP1: actual eligible author and genuinely separate reviewer with exact-head evidence plus actual human plan approval/standing conditional merge authority. Existing admission regressions/full unchanged native gate ensure the new module does not replace transient admission. Tensor inference, real weight loading, training, hardware utilization, calibration and investment outcomes remain `not_run`/outside G80, never inferred from formulas.
 
-Plan self-review: approved spec sections map to Tasks1–3; five Review Focus classes map to explicit assertions; signatures/types are fixed above, including report-level snapshot uncertainty. Hand arithmetic was independently recomputed without estimator code (including complete450..452 portfolio and quantized tail overhead12..14). Bounded borrowed/fixed-array design satisfies no allocations; no new engine, dependencies or permission. Implementation/review budgets remain unstarted and production code remains unchanged. Human implementation-plan review is pending; this record is not independent review, runtime evidence or authorization by itself.
+Plan self-review: approved spec sections map to Tasks1–3; five Review Focus classes map to explicit assertions; signatures/types are fixed above, including report-level snapshot uncertainty. Hand arithmetic was independently recomputed without estimator code (including complete450..452 portfolio and quantized tail overhead12..14). Bounded borrowed/fixed-array design satisfies no allocations; no new engine, dependencies or permission. Source implementation and final-head review completed within the finite budget; accepted guide evidence follows; this record is not independent review, runtime evidence or authorization by itself.
+
+## Accepted source delivery
+
+Source PR[106](https://github.com/eylema-dev/eylema/pull/106) merged from reviewed head`d648a73ee9c840a00dfe9a57a063abd4d6d6b4a2` to main`177e9d322b82682683ae84ec8e84a13a04de11e9`, identical tree`7868e7fd20299d6ac9c5a71d4751435250c69ed2`. [Exact main CI](https://github.com/eylema-dev/eylema/actions/runs/38562767594)passed. Local300Rust/1existingMetalignore,47Python,8new sizing/9unchanged admission tests passed; separate reviewer10isolated native fixtures/sweeps passed, no findings. No targeted repair; initial construction compiler/clippy corrections changed no check. Original G67 startup risk retained, no waiver/fix. Formula sizing alone does not accept models/training/performance.
