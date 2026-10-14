@@ -3995,25 +3995,53 @@
     },
     {
       "id": "G67",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Embedding artifact and retrieval behavior profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 12,
         "url": "https://github.com/eylema-dev/eylema-models/issues/12"
       },
-      "status": "planned",
-      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "status": "verification",
+      "base_sha": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
       "dependencies": [
         "G27",
         "G46"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "catalog/",
-        "contracts/"
+        "catalog/qwen3-embedding-0.6b.v1.json",
+        "catalog/qwen3-embedding-0.6b.v1.eyl",
+        "contracts/embedding-profile.v1.json",
+        "contracts/qwen3-embedding-operators.v1.json",
+        "contracts/embedding-reference.v1.json",
+        "tools/embedding_catalog.py",
+        "tools/tests/test_embedding_catalog.py",
+        "docs/en/embedding-profile.md",
+        "docs/tr/embedding-profile.md",
+        "README.md",
+        "README.tr.md",
+        "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/eylema": [
+          "crates/eylema-contracts/tests/embedding_model_contracts.rs",
+          "crates/eylema-contracts/tests/fixtures/qwen3-embedding-profile.v1.eyl",
+          "docs/en/embedding-model-profile.md",
+          "docs/tr/embedding-model-profile.md",
+          "tools/translation-pairs.json"
+        ],
+        "eylema-dev/devguide": [
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/plans/g67-embedding-profile.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Select a feasible text embedding profile with exact tokenizer/pooling/normalization/dimensions/query-document prefixes, EN/TR coverage, artifact rights and operator references.",
       "acceptance": [
         {
@@ -4041,20 +4069,107 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": null,
+        "configured_evidence": "Accepted metadata-only usage collector matched configured openai/gpt-6.1-sol/high; hidden serving identity unknown.",
+        "qualification": "Actual owner-approved sol61-high-contracts-2026-10-14; scoped contracts/catalog/devtests/docs through2026-11-13"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Actual maintainer explicitly approved bounded G67 embedding design: pinned Qwen3-Embedding-0.6B,1024dims,last valid token,L2,separate query/document preprocessing; batch1/context4096/max4queriesx4documents; existing inline method. Standing conditional actual merge after local/latestCI/genuine separate review. No new architecture approval needed for existing manifest/catalog/EYL flow.120 active minutes/3 repairs/15 separate-review minutes. Static public discovery12responses/8MiB, actual10responses/2,834,116bytes. No weights/tokenizer/model/provider execution or new dependency. Query prefix91UTF8bytes/model32768cap/profile4096; reservedmax_new_tokens1 does not generate. Original G40 rights unchanged.",
       "accepted_delivery": null,
       "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+        "Current PR CI, genuine separate whole-branch review and accepted-main proof pending; native model/EN-TR quality remains G68. Initial existing worker-startup timing failure retained for review; latest unchanged full check passed."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex qualified configured gpt-6.1-sol/high",
+        "implementer": "parent Codex inline same qualified settings",
+        "verifier": "parent Codex Rust/Python/Git/gh, no model engine",
+        "independent_reviewer": "pending genuine separate final-head reviewer /root/g27_model_review"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ],
+        "G46": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/92",
+            "head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+            "main": "04175b3a7a04a414aa6b7746204233b921da03fa",
+            "tree": "1e6120f51d9eacad72f094ad85e86b32fc2b77a9",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+              "reviewer": "Codex reviewer /root/g46_platform_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38459444726,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38459444726",
+              "head": "04175b3a7a04a414aa6b7746204233b921da03fa",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "execution_evidence": {
+        "core_head": "a1f24a08bd15eab01a209f0e3615d781ff34c402",
+        "models_head": "4298e14c15b6917b80adf7ffdfda446c775ca0fa",
+        "local": "Latest complete native gate292passed/1existingMetalignore;47corePython/58modelsPython passed,6newnative fixture tests/8newdevtests. 83guidePython/repository/PRbody/whitespace/pinned9repo218Markdown/current68live passed.",
+        "source": "Pinned Qwen97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3, measured config/README/tokenizer_config/vocab/pooling/modules/sentence-prefix metadata; weights/fulltokenizer hashes advertised only, READMElicense declaration/noLICENSE. Flatpooling-config alias maps exact1_Pooling/config.json.",
+        "reference": "5independent synthetic cases/6queries/9documents/12cosines plus4EN-TRprefix fixtures. Direct Decimal80sqrt oracle frozen separately from max-scaling devnormalizer. No model predictions or Turkish quality acceptance.",
+        "boundaries": "1024vector,lastvalidcontiguousmask,L2norm<=1e-12 reject,4queriesx4documents/context4096/batch1; reference4positions/4compactnonzero coordinates and full1024expansion. New operators UnsupportedLocal(Operators), LocalOnly cannot route externally.",
+        "verification_limitations": {
+          "initial_environment": "cargo absent from shell PATH; inherited RUST_LOG rejected by unchanged gate. Correct installed-toolchain PATH and child-only removal of RUST_LOG used; no policy/source change.",
+          "initial_native_failure": "Existing unchanged eylema-development-host isolation::explicit_cancel_reaps_exact_owned_child_without_arbitrary_pid_api failed actual worker startup2s assertion in first full run. Isolated diagnostic1/1 passed0.30s; one subsequent complete unchanged gate passed292/1ignore. No causal proof or bugfix claimed; original failure log retained and currentCI/separate review still required."
+        },
+        "not_run": [
+          "model inference",
+          "tokenizer execution/token count/EOS",
+          "weights",
+          "GPU",
+          "native numeric kernels",
+          "EN/TR retrieval quality",
+          "memory/performance",
+          "training",
+          "application provider calls"
+        ],
+        "repairs_used": 0,
+        "qualified_profile": "sol61-high-contracts-2026-10-14"
+      }
     },
     {
       "id": "G68",
