@@ -3685,15 +3685,15 @@
     },
     {
       "id": "G73",
-      "plan_card_revision": 1,
+      "plan_card_revision": 3,
       "title": "Real human harness authorization and stop",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 80,
         "url": "https://github.com/eylema-dev/eylema/issues/80"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "verification",
+      "base_sha": "a70ea6293aae7ea47af8a588f4e7b0461b99fa37",
       "dependencies": [
         "G46",
         "G11",
@@ -3703,15 +3703,36 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-platform/",
-        "crates/eylema-host/",
-        "crates/eylema-web/",
-        "apps/eylema/",
-        "docs/en/",
-        "docs/tr/",
-        "tools/translation-pairs.json"
+        "crates/eylema-platform/src/lib.rs",
+        "crates/eylema-platform/src/human.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/src/human.rs",
+        "crates/eylema-host/src/command.rs",
+        "crates/eylema-web/src/lib.rs",
+        "crates/eylema-web/tests/http.rs",
+        "apps/eylema/src/cli.rs",
+        "apps/eylema/src/human_proof.rs",
+        "apps/eylema/tests/cli_service.rs",
+        "docs/en/real-human.md",
+        "docs/tr/real-human.md",
+        "docs/en/local-browser.md",
+        "docs/tr/local-browser.md",
+        "docs/en/local-cli.md",
+        "docs/tr/local-cli.md",
+        "tools/translation-pairs.json",
+        "crates/eylema-runtime/src/lib.rs",
+        "crates/eylema-runtime/tests/executor.rs"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g73-device-owner.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Complete the existing real-person session/enrollment boundary, scoped job approvals and effective stop; AI-simulated human fixtures remain separately labeled and cannot grant actual human authority.",
       "acceptance": [
         {
@@ -3735,16 +3756,187 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1–300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
       "accepted_delivery": null,
       "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+        "Actual device-owner interaction, full gates/current CI and separate final-head review remain not_run."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex inline",
+        "verifier": "parent Codex actual native/Python/Git/gh",
+        "independent_reviewer": "Separate Codex /root/g73_human_review, initial P2 found; repaired-head review pending"
+      },
+      "dependency_deliveries": {
+        "G46": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/92",
+            "head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+            "main": "04175b3a7a04a414aa6b7746204233b921da03fa",
+            "tree": "1e6120f51d9eacad72f094ad85e86b32fc2b77a9",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+              "reviewer": "Codex reviewer /root/g46_platform_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38459444726,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38459444726",
+              "head": "04175b3a7a04a414aa6b7746204233b921da03fa",
+              "status": "passed"
+            }
+          }
+        ],
+        "G11": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/44",
+            "head": "edbec25f1b44ada352a06a90a02f21f448873b06",
+            "main": "68ba77a95a66370900e4b210ff04d89441109758",
+            "tree": "c044f46946227ac38fa84fdcba853b0849cbf51c",
+            "main_ci": {
+              "id": 38171836336,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38171836336",
+              "head": "68ba77a95a66370900e4b210ff04d89441109758",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "edbec25f1b44ada352a06a90a02f21f448873b06",
+              "reviewer": "g11_review renewed separate Codex context after resolved P1; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/devguide",
+            "pr": "https://github.com/eylema-dev/devguide/pull/17",
+            "head": "2b0f2687fff0fd4cf93c94ddc9554ab11b16a2ff",
+            "main": "944369280819cdb7d1b1857886d00e6783fae4f5",
+            "tree": "50b851b314fedd9c1e88cd17dcb04f08a6bd18fb",
+            "main_ci": {
+              "id": 38171842796,
+              "url": "https://github.com/eylema-dev/devguide/actions/runs/38171842796",
+              "head": "944369280819cdb7d1b1857886d00e6783fae4f5",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2b0f2687fff0fd4cf93c94ddc9554ab11b16a2ff",
+              "reviewer": "g11_review renewed separate Codex context after resolved P1; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G14": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/47",
+            "head": "20a2fe35da9d1f5846bd2fc9fd33f863ead4e650",
+            "main": "626ea43bf61afe2c288cf6dd2b50a5b4af2ec0ee",
+            "tree": "0920ddb8fd3c075c5a296cbb0c67dd11cf2bd987",
+            "main_ci": {
+              "id": 38213864919,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38213864919",
+              "head": "626ea43bf61afe2c288cf6dd2b50a5b4af2ec0ee",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "20a2fe35da9d1f5846bd2fc9fd33f863ead4e650",
+              "reviewer": "g14_revision2_review separate exact-head context; deterministic per-read-reset mutant rejected; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/devguide",
+            "pr": "https://github.com/eylema-dev/devguide/pull/20",
+            "head": "261e5c6a60e186b4be9a3020a7ac58d1bc43dd11",
+            "main": "a287ae4decfe7ebbe1b0e12ad531702b5b327129",
+            "tree": "ce4b15e482217451a38590fab4951d3bd1bc81bf",
+            "main_ci": {
+              "id": 38213972200,
+              "url": "https://github.com/eylema-dev/devguide/actions/runs/38213972200",
+              "head": "a287ae4decfe7ebbe1b0e12ad531702b5b327129",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "261e5c6a60e186b4be9a3020a7ac58d1bc43dd11",
+              "reviewer": "g14_revision2_review separate exact-head context; guide metadata/integration audited; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G16": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/49",
+            "head": "f23f842dd5b0bd293203d8be07141aabde676e51",
+            "main": "b06b7bac1aa121a4fee81e9fd0f79e4cf2eeeb3f",
+            "tree": "42cc29d9ad1155bd1ef42c48d3a0d49aeb5368dd",
+            "main_ci": {
+              "id": 38221125609,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38221125609",
+              "head": "b06b7bac1aa121a4fee81e9fd0f79e4cf2eeeb3f",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "f23f842dd5b0bd293203d8be07141aabde676e51",
+              "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/devguide",
+            "pr": "https://github.com/eylema-dev/devguide/pull/22",
+            "head": "c0b2aa62adeb7713435556d8f787ffd967d34d7c",
+            "main": "9adb3e85d6102abb8e3774246d4f00fe76745e8b",
+            "tree": "36193861b3e010c7ef197c71f7c1e2e734b64ea9",
+            "main_ci": {
+              "id": 38221804166,
+              "url": "https://github.com/eylema-dev/devguide/actions/runs/38221804166",
+              "head": "9adb3e85d6102abb8e3774246d4f00fe76745e8b",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "c0b2aa62adeb7713435556d8f787ffd967d34d7c",
+              "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G63": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/97",
+            "head": "7e2bf3f794533443f309cbf72a0ace801d522af3",
+            "main": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
+            "tree": "57a6c8b44566f2e2c6540fafe52556e4a6024e3a",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "7e2bf3f794533443f309cbf72a0ace801d522af3",
+              "reviewer": "Codex reviewer /root/g63_project_data_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38466670069,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38466670069",
+              "head": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "executed_evidence": {
+        "native_tests_passed": 265,
+        "python_tests_passed": 47,
+        "new_platform_tests": 6,
+        "new_host_tests": 7,
+        "new_web_tests": 2,
+        "new_cli_tests": 1,
+        "targeted_repairs_used": 2,
+        "physical_person_authentication": "not_run",
+        "actual_auth_attempts_used": 0,
+        "capability_preflight": "available; not authentication",
+        "environment": "Apple M4 Pro/24GiB macOS27.0.1ARM64 Rust1.99 Python3.15local/3.14CI",
+        "limits": "Actual readonly owner-key FIFO head; earlier received head cancellation remains effective before revoked tail; typed cooperative pause keeps service alive, other failures propagate. Unit person success simulated only; real person/full job/model/performance acceptance not_run.",
+        "new_runtime_tests": 1
       }
     },
     {
