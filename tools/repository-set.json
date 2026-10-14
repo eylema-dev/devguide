@@ -3,7 +3,7 @@
   "members": {
     "eylema": {
       "repository": "eylema-dev/eylema",
-      "revision": "01761ce0a46c084b3f8af4ff117fb78a06fe1846"
+      "revision": "92fc2244c3b6f966e5e374b652e1b5adf3e8158f"
     },
     "eylema-docs-en": {
       "repository": "eylema-dev/eylema-docs-en",

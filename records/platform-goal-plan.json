@@ -3685,14 +3685,14 @@
     },
     {
       "id": "G73",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Real human harness authorization and stop",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 80,
         "url": "https://github.com/eylema-dev/eylema/issues/80"
       },
-      "status": "verification",
+      "status": "accepted",
       "base_sha": "a70ea6293aae7ea47af8a588f4e7b0461b99fa37",
       "dependencies": [
         "G46",
@@ -3739,7 +3739,7 @@
           "id": "G73-A1",
           "requirement": "Complete the existing real-person session/enrollment boundary, scoped job approvals and effective stop; AI-simulated human fixtures remain separately labeled and cannot grant actual human authority.",
           "check": "Real maintainer interaction on the primary Mac plus native rejection tests for impersonation/stale/revoked/expired scope; remaining work stops, completed effects stay visible, restart requires fresh enrollment.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -3757,15 +3757,32 @@
         "actual": null
       },
       "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1–300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Actual device-owner interaction, full gates/current CI and separate final-head review remain not_run."
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/102",
+          "head": "cf8e58df016125db7160f3efa3743aa72a36ca6c",
+          "main": "92fc2244c3b6f966e5e374b652e1b5adf3e8158f",
+          "tree": "383cb661bb49a51e2cede8501fe89b939a17f065",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "cf8e58df016125db7160f3efa3743aa72a36ca6c",
+            "reviewer": "Codex reviewer /root/g73_human_review (separate context; physical evidence audited)"
+          },
+          "main_ci": {
+            "id": 38520035788,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38520035788",
+            "head": "92fc2244c3b6f966e5e374b652e1b5adf3e8158f",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
         "architect": "parent Codex",
         "implementer": "parent Codex inline",
         "verifier": "parent Codex actual native/Python/Git/gh",
-        "independent_reviewer": "Separate Codex /root/g73_human_review, initial P2 found; repaired-head review pending"
+        "independent_reviewer": "Codex reviewer /root/g73_human_review, separate final-head source and physical-evidence audit"
       },
       "dependency_deliveries": {
         "G46": [
@@ -3931,12 +3948,27 @@
         "new_web_tests": 2,
         "new_cli_tests": 1,
         "targeted_repairs_used": 2,
-        "physical_person_authentication": "not_run",
-        "actual_auth_attempts_used": 0,
+        "physical_person_authentication": "passed",
+        "actual_auth_attempts_used": 1,
         "capability_preflight": "available; not authentication",
         "environment": "Apple M4 Pro/24GiB macOS27.0.1ARM64 Rust1.99 Python3.15local/3.14CI",
-        "limits": "Actual readonly owner-key FIFO head; earlier received head cancellation remains effective before revoked tail; typed cooperative pause keeps service alive, other failures propagate. Unit person success simulated only; real person/full job/model/performance acceptance not_run.",
-        "new_runtime_tests": 1
+        "limits": "Actual local OS device owner, exact counter proposal approval, value2 and effective stop before remaining value3, revoked privilege denial, reopen with preserved Cancelled/value2 and fresh enrollment required. Automated impersonation/expiry tests are simulated separately; no global identity or arbitrary future-job authority.",
+        "new_runtime_tests": 1,
+        "native_tests_ignored": 1,
+        "physical_trial_total_seconds": 20.1,
+        "private_journals_used": 1,
+        "deterministic_tasks_used": 2,
+        "listeners_used": 0,
+        "service_children_used": 0,
+        "review": "Separate whole source, repaired FIFO adversarial probes, paired notes and actual physical fixed-evidence audit passed; no human GitHub approval fabricated.",
+        "not_run": [
+          "actual start--human/browser interaction",
+          "remote identity",
+          "arbitrary full harness/model job",
+          "GPU/model/training/provider/G40/process-isolation trial",
+          "Wasm or other-platform execution",
+          "full performance acceptance"
+        ]
       }
     },
     {
