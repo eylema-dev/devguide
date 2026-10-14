@@ -130,4 +130,4 @@ Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/
 
 ## Hermes kabiliyet uyarlaması
 
-İnsan tarafından onaylanan [Hermes kabiliyet incelemesi](hermes-capabilities.md), kalanG51/G64/G65/G74/G77/G79/G88/G89kartlarına H1kriteri ekler: kademeli skill/araç yükleme, kapsamlı recall/soy bağı, kalıcı işbirliği ve incelenmiş deneyimden skill/reçete/taşınabilir aday akışları. Asıl bağımlılık, kriter, bütçe ve kabul edilmiş/geçmiş/G40kanıtları korunur. Kartlar planned/not_run kalır; Hermes motoru veya yeni runtime kurulmaz. G80kabul edilmiş boyutlandırmadır; deneysel model/eğitim desteği değildir.
+İnsan tarafından onaylanan [Hermes kabiliyet incelemesi](hermes-capabilities.md), kalanG51/G64/G65/G74/G77/G79/G88/G89kartlarına H1kriteri ekler: kademeli skill/araç yükleme, kapsama bağlı recall/soy bağı, kalıcı işbirliği ve incelenmiş deneyimden skill/reçete/taşınabilir aday akışları. Asıl bağımlılık, kriter, bütçe ve kabul edilmiş/geçmiş/G40kanıtları korunur. Kartlar planned/not_run kalır; Hermes motoru veya yeni runtime kurulmaz. G80kabul edilmiş boyutlandırmadır; deneysel model/eğitim desteği değildir.
