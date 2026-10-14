@@ -1,6 +1,8 @@
-# Eylema developer guide
+# Eyleme developer guide
 
-Shared contributor contracts and repository tooling for `eylema-dev`. [Türkçe](README.tr.md). English is canonical. Product/runtime implementation remains in its owning repository.
+**Name update — 14 October 2026:** The product is **Eyleme** (formerly Eylema); the companion product is **Derleme** (formerly Derlema), and **Onama** keeps its name. The GitHub organization is now `eyleme-dev` (formerly `eylema-dev`). The main repository is now `eyleme-dev/eyleme`. Auxiliary repository basenames, domains, commands, crate/package names, environment variables, data paths and protocol/schema identifiers retain their current spelling for compatibility. Historical evidence preserves its original names and URLs.
+
+Shared contributor contracts and repository tooling for `eyleme-dev`. [Türkçe](README.tr.md). English is canonical. Product/runtime implementation remains in its owning repository.
 
 - [Current Rust harness action plan and remaining Goal cards](docs/en/platform-action-plan.md)
 - [Project token and cost accounting](docs/en/usage-accounting.md)

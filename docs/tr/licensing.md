@@ -8,7 +8,7 @@ Değiştirilmemiş [Apache License, Version 2.0](../../LICENSE), eşgüdümlü d
 
 Projeye dahil edilmek üzere bilerek sunulan katkılar, katkıcı aksi yönde açıkça belirtmedikçe 5. maddeyi izler; mevcut ayrı anlaşma koşulları geçerliliğini korur. Ayrı CLA, DCO veya imza iş akışı getirilmez. Bakımcı, etiketi veya AI tarafından üretilmiş kodu hak kanıtı saymak yerine uyumsuz/belirsiz koşulları katkıyı kabul etmeden çözmelidir.
 
-Yazarlık, telif, patent, atıf ve diğer zorunlu bildirimler korunur. Kopyalanan içerik ve bağımlılıkların kaynağı/revizyonu ve koşulları kaydedilir. NOTICE kendi Eylema çalışmasına atıf yapar; kapsamlı üçüncü taraf denetimi iddia etmez veya katkıcı anlaşması uydurmaz. Lisans seçimi yeni üretim bağımlılığına izin vermez ve kendi Rust bileşenlerimiz politikasını kaldırmaz.
+Yazarlık, telif, patent, atıf ve diğer zorunlu bildirimler korunur. Kopyalanan içerik ve bağımlılıkların kaynağı/revizyonu ve koşulları kaydedilir. NOTICE kendi Eyleme çalışmasına atıf yapar; kapsamlı üçüncü taraf denetimi iddia etmez veya katkıcı anlaşması uydurmaz. Lisans seçimi yeni üretim bağımlılığına izin vermez ve kendi Rust bileşenlerimiz politikasını kaldırmaz.
 
 ## Model, veri ve varlıklar
 

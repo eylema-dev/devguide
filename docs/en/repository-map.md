@@ -4,16 +4,16 @@ Revision **0.2.0**, 11 October 2026. [Türkçe](../tr/repository-map.md). Reposi
 
 | Repository | Responsibility |
 |---|---|
-| [eylema](https://github.com/eylema-dev/eylema) | Core Rust workspace, contracts, CLI and machine schemas |
-| [eylema-docs-en](https://github.com/eylema-dev/eylema-docs-en) | Canonical English product contracts and roadmap |
-| [eylema-docs-tr](https://github.com/eylema-dev/eylema-docs-tr) | Turkish companions and historical Turkish drafts |
-| [devguide](https://github.com/eylema-dev/devguide) | Shared policy, tooling source, repository registry and integration checks |
-| [.github](https://github.com/eylema-dev/.github) | Organization profile and default community templates |
-| [eylema-examples](https://github.com/eylema-dev/eylema-examples) | Consumer examples pinned to the core API |
-| [eylema-evals](https://github.com/eylema-dev/eylema-evals) | Synthetic fixtures, evaluation harnesses and reproducible results |
-| [eylema-models](https://github.com/eylema-dev/eylema-models) | Catalog metadata, compatibility and model-set manifests; no weights |
-| [eylema-training](https://github.com/eylema-dev/eylema-training) | Training recipes, environment locks and permitted data preparation |
-| [eylemadotdev](https://github.com/eylema-dev/eylemadotdev) | Existing promotional website; managed independently of this split |
+| [Eyleme](https://github.com/eyleme-dev/eyleme) | Core Rust workspace, contracts, CLI and machine schemas |
+| [eylema-docs-en](https://github.com/eyleme-dev/eylema-docs-en) | Canonical English product contracts and roadmap |
+| [eylema-docs-tr](https://github.com/eyleme-dev/eylema-docs-tr) | Turkish companions and historical Turkish drafts |
+| [devguide](https://github.com/eyleme-dev/devguide) | Shared policy, tooling source, repository registry and integration checks |
+| [.github](https://github.com/eyleme-dev/.github) | Organization profile and default community templates |
+| [eylema-examples](https://github.com/eyleme-dev/eylema-examples) | Consumer examples pinned to the core API |
+| [eylema-evals](https://github.com/eyleme-dev/eylema-evals) | Synthetic fixtures, evaluation harnesses and reproducible results |
+| [eylema-models](https://github.com/eyleme-dev/eylema-models) | Catalog metadata, compatibility and model-set manifests; no weights |
+| [eylema-training](https://github.com/eyleme-dev/eylema-training) | Training recipes, environment locks and permitted data preparation |
+| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | Existing promotional website; managed independently of this split |
 
 ## Ownership and boundaries
 

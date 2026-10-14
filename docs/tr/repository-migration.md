@@ -6,7 +6,7 @@ Bakımcı üç belge/geliştirici deposunu istedi, ardından projeye özel ek de
 
 ## Kaynaklar ve hedefler
 
-[Makine tarafından okunabilen envanter](../../records/document-migration.json), 26 belge/kayıt aktarımının kesin kaynak yollarını/revizyonlarını/özetlerini ve son hedef yollarını/özetlerini eşler. Entegre edilen çekirdek main içindeki 21 dosya çekirdek PR’ında kaldırılır; üç katkı giriş dosyası ince yönlendirmelere dönüşür. PR #2 eşzamanlı olarak `8e529b4747aef2648c241354858d28aaf416ecaa` revizyonuyla birleşti ve görev dalına alındı. Diğer aktarımlar açık katkı taslağı [eylema PR #3](https://github.com/eylema-dev/eylema/pull/3), `406d1ab639cf70149f89832a1b03bd06d2d72633` revizyonundandır; ilk görev konsolu yönü korunur, birleşmemiş politika kabul edilmiş sayılmaz. [Özgün main](https://github.com/eylema-dev/eylema/blob/214a2c3d5313a251f1aae720b2ac1565f273d76b/README.md) Git geçmişinde erişilebilirdir.
+[Makine tarafından okunabilen envanter](../../records/document-migration.json), 26 belge/kayıt aktarımının kesin kaynak yollarını/revizyonlarını/özetlerini ve son hedef yollarını/özetlerini eşler. Entegre edilen çekirdek main içindeki 21 dosya çekirdek PR’ında kaldırılır; üç katkı giriş dosyası ince yönlendirmelere dönüşür. PR #2 eşzamanlı olarak `8e529b4747aef2648c241354858d28aaf416ecaa` revizyonuyla birleşti ve görev dalına alındı. Diğer aktarımlar açık katkı taslağı [eylema PR #3](https://github.com/eyleme-dev/eyleme/pull/3), `406d1ab639cf70149f89832a1b03bd06d2d72633` revizyonundandır; ilk görev konsolu yönü korunur, birleşmemiş politika kabul edilmiş sayılmaz. [Özgün main](https://github.com/eyleme-dev/eyleme/blob/214a2c3d5313a251f1aae720b2ac1565f273d76b/README.md) Git geçmişinde erişilebilirdir.
 
 | İçerik | Hedef |
 |---|---|

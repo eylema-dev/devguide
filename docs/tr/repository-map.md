@@ -4,16 +4,16 @@ Revizyon **0.2.0**, 11 Ekim 2026. [English](../en/repository-map.md). Depo oluş
 
 | Depo | Sorumluluk |
 |---|---|
-| [eylema](https://github.com/eylema-dev/eylema) | Rust çekirdeği, sözleşmeler, CLI ve makine şemaları |
-| [eylema-docs-en](https://github.com/eylema-dev/eylema-docs-en) | Kanonik İngilizce ürün sözleşmeleri ve yol haritası |
-| [eylema-docs-tr](https://github.com/eylema-dev/eylema-docs-tr) | Türkçe karşılıklar ve tarihsel Türkçe taslaklar |
-| [devguide](https://github.com/eylema-dev/devguide) | Ortak politika, araç kaynakları, depo kaydı ve entegrasyon kontrolleri |
-| [.github](https://github.com/eylema-dev/.github) | Organizasyon profili ve varsayılan katkı şablonları |
-| [eylema-examples](https://github.com/eylema-dev/eylema-examples) | Çekirdek API sürümüne sabitlenmiş tüketici örnekleri |
-| [eylema-evals](https://github.com/eylema-dev/eylema-evals) | Sentetik örnekler, değerlendirme araçları ve tekrarlanabilir sonuçlar |
-| [eylema-models](https://github.com/eylema-dev/eylema-models) | Katalog üstverisi, uyumluluk ve model kümesi manifestleri; ağırlık içermez |
-| [eylema-training](https://github.com/eylema-dev/eylema-training) | Eğitim tarifleri, ortam kilitleri ve izinli veri hazırlama |
-| [eylemadotdev](https://github.com/eylema-dev/eylemadotdev) | Mevcut tanıtım sitesi; bu bölünmeden bağımsız yönetilir |
+| [Eyleme](https://github.com/eyleme-dev/eyleme) | Rust çekirdeği, sözleşmeler, CLI ve makine şemaları |
+| [eylema-docs-en](https://github.com/eyleme-dev/eylema-docs-en) | Kanonik İngilizce ürün sözleşmeleri ve yol haritası |
+| [eylema-docs-tr](https://github.com/eyleme-dev/eylema-docs-tr) | Türkçe karşılıklar ve tarihsel Türkçe taslaklar |
+| [devguide](https://github.com/eyleme-dev/devguide) | Ortak politika, araç kaynakları, depo kaydı ve entegrasyon kontrolleri |
+| [.github](https://github.com/eyleme-dev/.github) | Organizasyon profili ve varsayılan katkı şablonları |
+| [eylema-examples](https://github.com/eyleme-dev/eylema-examples) | Çekirdek API sürümüne sabitlenmiş tüketici örnekleri |
+| [eylema-evals](https://github.com/eyleme-dev/eylema-evals) | Sentetik örnekler, değerlendirme araçları ve tekrarlanabilir sonuçlar |
+| [eylema-models](https://github.com/eyleme-dev/eylema-models) | Katalog üstverisi, uyumluluk ve model kümesi manifestleri; ağırlık içermez |
+| [eylema-training](https://github.com/eyleme-dev/eylema-training) | Eğitim tarifleri, ortam kilitleri ve izinli veri hazırlama |
+| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | Mevcut tanıtım sitesi; bu bölünmeden bağımsız yönetilir |
 
 ## Sahiplik ve sınırlar
 

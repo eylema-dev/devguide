@@ -1,6 +1,8 @@
-# Eylema geliştirici rehberi
+# Eyleme geliştirici rehberi
 
-`eylema-dev` için ortak katkı sözleşmeleri ve depo araçları. [English](README.md). İngilizce kanoniktir. Ürün/çalışma zamanı uygulaması sorumlu deposunda kalır.
+**Ad güncellemesi — 14 Ekim 2026:** Ürünün adı **Eyleme** (önceki adı Eylema), tamamlayıcı ürünün adı **Derleme** (önceki adı Derlema) oldu; **Onama** aynı kaldı. GitHub organizasyonunun adı artık `eyleme-dev` (önceki adı `eylema-dev`). Ana deponun adı artık `eyleme-dev/eyleme`. Yardımcı depoların kısa adları, alan adları, komutlar, crate/paket adları, ortam değişkenleri, veri yolları ve protokol/şema tanımlayıcıları uyumluluk için mevcut yazımlarını korur. Tarihsel kanıtlar özgün ad ve bağlantıları korur.
+
+`eyleme-dev` için ortak katkı sözleşmeleri ve depo araçları. [English](README.md). İngilizce kanoniktir. Ürün/çalışma zamanı uygulaması sorumlu deposunda kalır.
 
 - [Güncel Rust harness aksiyon planı ve kalan Goal kartları](docs/tr/platform-action-plan.md)
 - [Proje token ve maliyet takibi](docs/tr/usage-accounting.md)

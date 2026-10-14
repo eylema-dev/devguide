@@ -17,7 +17,7 @@ import tempfile
 
 FIELDS = ('input_tokens', 'cached_input_tokens', 'cache_write_input_tokens',
           'output_tokens', 'reasoning_output_tokens', 'total_tokens')
-REPOSITORIES = {'eylema', 'devguide', 'eylema-docs-en', 'eylema-docs-tr',
+REPOSITORIES = {'eylema', 'eyleme', 'devguide', 'eylema-docs-en', 'eylema-docs-tr',
                 'eylema-evals', 'eylema-examples', 'eylema-models',
                 'eylema-training', 'eylemadotdev', '.github'}
 SAFE_LABEL = re.compile(r'[A-Za-z0-9_.:/-]{1,160}\Z')
@@ -95,8 +95,9 @@ def project_cwd(cwd, roots, cache):
                                    'remote', 'get-url', 'origin'], capture_output=True,
                                   text=True, timeout=3, check=False)
             remote = proc.stdout.strip()
-            match = re.fullmatch(r'(?:https://github\.com/|git@github\.com:)eylema-dev/([^/]+?)(?:\.git)?', remote)
-            selected = proc.returncode == 0 and bool(match) and match.group(1) in REPOSITORIES
+            match = re.fullmatch(r'(?:https://github\.com/|git@github\.com:)(eyleme-dev|eylema-dev)/([^/]+?)(?:\.git)?', remote)
+            selected = (proc.returncode == 0 and bool(match) and match.group(2) in REPOSITORIES
+                        and not (match.group(1) == 'eylema-dev' and match.group(2) == 'eyleme'))
         except (OSError, subprocess.TimeoutExpired):
             selected = False
     cache[cwd] = selected
@@ -319,7 +320,7 @@ def atomic(path, content):
 
 def report_markdown(report):
     s = report['summary']
-    lines = ['# Eylema token ve maliyet takibi', '', f"Güncellendi (UTC): {report['generated_at']}", '',
+    lines = ['# Eyleme token ve maliyet takibi', '', f"Güncellendi (UTC): {report['generated_at']}", '',
              f"Toplam: **{s['tokens'].get('total_tokens', 0):,} token**, {s['responses']:,} yanıt; "
              f"{report['coverage']['ledger_sessions']} sohbet.", '',
              '| Model | Effort | Giriş | Önbellek (giriş içinde) | Çıkış | Toplam | API karşılığı USD |',
@@ -335,7 +336,7 @@ def report_markdown(report):
               '', f"Tarife tarihi: {report['pricing']['valuation_date']}; [resmî kaynak]({report['pricing']['source']}).",
               '', 'Bu hesap gerçek ChatGPT/Codex faturası değildir. Kayıtlardaki model/effort ayarını kullanır; '
               'gizli sunucu model kimliğini doğrulamaz. Reasoning çıkışa dahildir. Uzun bağlam kuralı her yanıta uygulanır.',
-              '', 'Kapsam: erişilebilir yerel Codex kayıtları, Eylema depo kökleri ve ilişkili alt/fork sohbetleri. '
+              '', 'Kapsam: erişilebilir yerel Codex kayıtları, Eyleme depo kökleri ve ilişkili alt/fork sohbetleri. '
               'Silinmiş geçmiş, başka hesap/cihaz/provider kayıtları, görsel/arama araçlarının ayrı ücretleri, '
               'abonelik, vergi ve kur dönüşümü bu tutara dahil değildir; bunlar sıfır kabul edilmez.',
               '', f"Kapsam durumu: {json.dumps(report['coverage'], ensure_ascii=False)}", '']

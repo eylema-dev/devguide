@@ -214,10 +214,10 @@
       "id": "G06",
       "plan_card_revision": 3,
       "title": "Distribution and rights",
-      "repository": "eylema-dev/devguide",
+      "repository": "eyleme-dev/devguide",
       "issue": {
         "number": 11,
-        "url": "https://github.com/eylema-dev/devguide/issues/11"
+        "url": "https://github.com/eyleme-dev/devguide/issues/11"
       },
       "status": "planned",
       "base_sha": "6552a1c443ccbe33db3e2cabb4ae37a5897009af",
@@ -286,10 +286,10 @@
       "id": "G23",
       "plan_card_revision": 4,
       "title": "CPU tensor reference",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 22,
-        "url": "https://github.com/eylema-dev/eylema/issues/22"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/22"
       },
       "status": "accepted",
       "base_sha": "177e9d322b82682683ae84ec8e84a13a04de11e9",
@@ -467,10 +467,10 @@
       "id": "G24",
       "plan_card_revision": 3,
       "title": "Metal tensor operations",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 23,
-        "url": "https://github.com/eylema-dev/eylema/issues/23"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/23"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -539,10 +539,10 @@
       "id": "G25",
       "plan_card_revision": 3,
       "title": "Placement task",
-      "repository": "eylema-dev/eylema-examples",
+      "repository": "eyleme-dev/eylema-examples",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eylema-dev/eylema-examples/issues/4"
+        "url": "https://github.com/eyleme-dev/eylema-examples/issues/4"
       },
       "status": "planned",
       "base_sha": "cbfda4f13f9805c158132aca59ebe6bb9b8af7dc",
@@ -569,7 +569,7 @@
         },
         {
           "id": "G25-A1",
-          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
         },
@@ -611,10 +611,10 @@
       "id": "G26",
       "plan_card_revision": 3,
       "title": "Small learned models",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 24,
-        "url": "https://github.com/eylema-dev/eylema/issues/24"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/24"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -688,10 +688,10 @@
       "id": "G27",
       "plan_card_revision": 4,
       "title": "Model contract",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 3,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/3"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/3"
       },
       "status": "accepted",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -943,7 +943,7 @@
         "environment": "M4Pro24GiB/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
         "limits": "Actual owned Rust declared-metadata validation and exact model/core EYL fixture, no inference/quality/authority from matching. Large file hashes publisher advertised only; no model/tokenizer/GPU/training/provider/G40 execution. ExternalConfigured is explicit unavailable intent, never fallback.",
         "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification.",
-        "repair2": "Renewed review found combined token\u00d7Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
+        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
         "review": "Separate final source review passed at exact core/model heads; all initial fourP2 plus combinedQ projection overflow closed by2source repair passes; third pass fixes the accepted-card regression fixture. Separate review498/900seconds before delivery proof audit. No human GitHub approval claimed.",
         "repair3": "Accepted G27 makes G23 dependency-complete. Historical-position activation test wrongly expected rejection. Negative activation now explicitly targets G44 with unaccepted dependencies and asserts the exact existing failure reason; production validator unchanged."
       }
@@ -952,10 +952,10 @@
       "id": "G28",
       "plan_card_revision": 4,
       "title": "Weight loader",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 25,
-        "url": "https://github.com/eylema-dev/eylema/issues/25"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/25"
       },
       "status": "accepted",
       "base_sha": "6605080fcae225e099775f7856349c0aac6aa011",
@@ -1161,10 +1161,10 @@
       "id": "G29",
       "plan_card_revision": 3,
       "title": "Tokenizer and template",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 26,
-        "url": "https://github.com/eylema-dev/eylema/issues/26"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/26"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1231,10 +1231,10 @@
       "id": "G30",
       "plan_card_revision": 3,
       "title": "CPU model execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 27,
-        "url": "https://github.com/eylema-dev/eylema/issues/27"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/27"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1304,10 +1304,10 @@
       "id": "G31",
       "plan_card_revision": 3,
       "title": "Metal model execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 28,
-        "url": "https://github.com/eylema-dev/eylema/issues/28"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/28"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1376,10 +1376,10 @@
       "id": "G32",
       "plan_card_revision": 3,
       "title": "Language-driven tasks",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 29,
-        "url": "https://github.com/eylema-dev/eylema/issues/29"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/29"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1458,10 +1458,10 @@
       "id": "G33",
       "plan_card_revision": 4,
       "title": "Episodes and corrections",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 30,
-        "url": "https://github.com/eylema-dev/eylema/issues/30"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/30"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1544,10 +1544,10 @@
       "id": "G34",
       "plan_card_revision": 5,
       "title": "Dataset revision",
-      "repository": "eylema-dev/eylema-training",
+      "repository": "eyleme-dev/eylema-training",
       "issue": {
         "number": 3,
-        "url": "https://github.com/eylema-dev/eylema-training/issues/3"
+        "url": "https://github.com/eyleme-dev/eylema-training/issues/3"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1632,10 +1632,10 @@
       "id": "G35",
       "plan_card_revision": 4,
       "title": "Owned local training recipe",
-      "repository": "eylema-dev/eylema-training",
+      "repository": "eyleme-dev/eylema-training",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eylema-dev/eylema-training/issues/4"
+        "url": "https://github.com/eyleme-dev/eylema-training/issues/4"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1710,10 +1710,10 @@
       "id": "G36",
       "plan_card_revision": 3,
       "title": "Export and reacceptance",
-      "repository": "eylema-dev/eylema-training",
+      "repository": "eyleme-dev/eylema-training",
       "issue": {
         "number": 5,
-        "url": "https://github.com/eylema-dev/eylema-training/issues/5"
+        "url": "https://github.com/eyleme-dev/eylema-training/issues/5"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1784,10 +1784,10 @@
       "id": "G37",
       "plan_card_revision": 3,
       "title": "Model set and rollback",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/4"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/4"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -1863,10 +1863,10 @@
       "id": "G40",
       "plan_card_revision": 2,
       "title": "Codex adapter",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 33,
-        "url": "https://github.com/eylema-dev/eylema/issues/33"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/33"
       },
       "status": "blocked",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1926,10 +1926,10 @@
       "id": "G41",
       "plan_card_revision": 3,
       "title": "Second adapter",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 34,
-        "url": "https://github.com/eylema-dev/eylema/issues/34"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/34"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -1996,10 +1996,10 @@
       "id": "G42",
       "plan_card_revision": 3,
       "title": "GitHub delivery",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 35,
-        "url": "https://github.com/eylema-dev/eylema/issues/35"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/35"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2076,10 +2076,10 @@
       "id": "G43",
       "plan_card_revision": 3,
       "title": "Real development acceptance",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 36,
-        "url": "https://github.com/eylema-dev/eylema/issues/36"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/36"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2156,10 +2156,10 @@
       "id": "G44",
       "plan_card_revision": 4,
       "title": "Complete macOS acceptance",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 37,
-        "url": "https://github.com/eylema-dev/eylema/issues/37"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/37"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2313,10 +2313,10 @@
       "id": "G45",
       "plan_card_revision": 3,
       "title": "Experimental distribution package",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 38,
-        "url": "https://github.com/eylema-dev/eylema/issues/38"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/38"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2389,10 +2389,10 @@
       "id": "W01",
       "plan_card_revision": 3,
       "title": "Website accuracy",
-      "repository": "eylema-dev/eylemadotdev",
+      "repository": "eyleme-dev/eylemadotdev",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eylema-dev/eylemadotdev/issues/4"
+        "url": "https://github.com/eyleme-dev/eylemadotdev/issues/4"
       },
       "status": "planned",
       "base_sha": "e379050263f00f0160845a8395f142489f3cc11d",
@@ -2463,10 +2463,10 @@
       "id": "G46",
       "plan_card_revision": 2,
       "title": "Loop, role and model-binding contracts",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 60,
-        "url": "https://github.com/eylema-dev/eylema/issues/60"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/60"
       },
       "status": "accepted",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2585,10 +2585,10 @@
       "id": "G47",
       "plan_card_revision": 2,
       "title": "XState orchestration inventory and profile",
-      "repository": "eylema-dev/devguide",
+      "repository": "eyleme-dev/devguide",
       "issue": {
         "number": 36,
-        "url": "https://github.com/eylema-dev/devguide/issues/36"
+        "url": "https://github.com/eyleme-dev/devguide/issues/36"
       },
       "status": "planned",
       "base_sha": "6552a1c443ccbe33db3e2cabb4ae37a5897009af",
@@ -2649,10 +2649,10 @@
       "id": "G48",
       "plan_card_revision": 2,
       "title": "Bounded workflow and Rust reconciliation",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 61,
-        "url": "https://github.com/eylema-dev/eylema/issues/61"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/61"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2719,10 +2719,10 @@
       "id": "G49",
       "plan_card_revision": 2,
       "title": "Perception model artifact and operator profile",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 8,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/8"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/8"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -2782,10 +2782,10 @@
       "id": "G50",
       "plan_card_revision": 3,
       "title": "Decision evidence and loop measurements",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 62,
-        "url": "https://github.com/eylema-dev/eylema/issues/62"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/62"
       },
       "status": "accepted",
       "base_sha": "93eb457754d076fa0efc8586432edfb9245645b4",
@@ -2899,10 +2899,10 @@
       "id": "G51",
       "plan_card_revision": 3,
       "title": "Reusable harness applications and model replacement",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 63,
-        "url": "https://github.com/eylema-dev/eylema/issues/63"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/63"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -2977,10 +2977,10 @@
       "id": "G52",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU perception execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 64,
-        "url": "https://github.com/eylema-dev/eylema/issues/64"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/64"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3046,10 +3046,10 @@
       "id": "G53",
       "plan_card_revision": 2,
       "title": "Owned Rust Metal perception execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 65,
-        "url": "https://github.com/eylema-dev/eylema/issues/65"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/65"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3114,10 +3114,10 @@
       "id": "G54",
       "plan_card_revision": 3,
       "title": "Typed tool registry and harness action execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 66,
-        "url": "https://github.com/eylema-dev/eylema/issues/66"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/66"
       },
       "status": "accepted",
       "base_sha": "a7c34655b5a76b0aac904c6e09f9b68859c62312",
@@ -3233,10 +3233,10 @@
       "id": "G55",
       "plan_card_revision": 2,
       "title": "Explicit external-model role adapter",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 67,
-        "url": "https://github.com/eylema-dev/eylema/issues/67"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/67"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3302,10 +3302,10 @@
       "id": "G56",
       "plan_card_revision": 4,
       "title": "Open-weight structured-decision model profile",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 9,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/9"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/9"
       },
       "status": "accepted",
       "base_sha": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
@@ -3511,10 +3511,10 @@
       "id": "G57",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU structured-decision execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 68,
-        "url": "https://github.com/eylema-dev/eylema/issues/68"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/68"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3580,10 +3580,10 @@
       "id": "G58",
       "plan_card_revision": 2,
       "title": "Owned Rust Metal structured-decision execution",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 69,
-        "url": "https://github.com/eylema-dev/eylema/issues/69"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/69"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3648,10 +3648,10 @@
       "id": "G59",
       "plan_card_revision": 2,
       "title": "Separate STT and TTS artifact/operator profiles",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/10"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/10"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -3711,10 +3711,10 @@
       "id": "G60",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU speech-to-text",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 70,
-        "url": "https://github.com/eylema-dev/eylema/issues/70"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/70"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3779,10 +3779,10 @@
       "id": "G61",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU text-to-speech",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 71,
-        "url": "https://github.com/eylema-dev/eylema/issues/71"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/71"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3847,10 +3847,10 @@
       "id": "G62",
       "plan_card_revision": 2,
       "title": "Owned Rust Metal audio and combined streaming",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 72,
-        "url": "https://github.com/eylema-dev/eylema/issues/72"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/72"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -3916,10 +3916,10 @@
       "id": "G63",
       "plan_card_revision": 3,
       "title": "Project-private data and egress boundaries",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 73,
-        "url": "https://github.com/eylema-dev/eylema/issues/73"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/73"
       },
       "status": "accepted",
       "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
@@ -4039,10 +4039,10 @@
       "id": "G64",
       "plan_card_revision": 4,
       "title": "Shareable ecosystem package builder",
-      "repository": "eylema-dev/eylema-training",
+      "repository": "eyleme-dev/eylema-training",
       "issue": {
         "number": 9,
-        "url": "https://github.com/eylema-dev/eylema-training/issues/9"
+        "url": "https://github.com/eyleme-dev/eylema-training/issues/9"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -4117,10 +4117,10 @@
       "id": "G65",
       "plan_card_revision": 4,
       "title": "Ecosystem catalogue and compatible imports",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 11,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/11"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/11"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -4199,10 +4199,10 @@
       "id": "G66",
       "plan_card_revision": 2,
       "title": "Composable subflows and domain model selection",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 74,
-        "url": "https://github.com/eylema-dev/eylema/issues/74"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/74"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4275,10 +4275,10 @@
       "id": "G67",
       "plan_card_revision": 4,
       "title": "Embedding artifact and retrieval behavior profile",
-      "repository": "eylema-dev/eylema-models",
+      "repository": "eyleme-dev/eylema-models",
       "issue": {
         "number": 12,
-        "url": "https://github.com/eylema-dev/eylema-models/issues/12"
+        "url": "https://github.com/eyleme-dev/eylema-models/issues/12"
       },
       "status": "accepted",
       "base_sha": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
@@ -4490,10 +4490,10 @@
       "id": "G68",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU embeddings",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 75,
-        "url": "https://github.com/eylema-dev/eylema/issues/75"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/75"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4558,10 +4558,10 @@
       "id": "G69",
       "plan_card_revision": 2,
       "title": "Owned Rust Metal embeddings",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 76,
-        "url": "https://github.com/eylema-dev/eylema/issues/76"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/76"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4626,10 +4626,10 @@
       "id": "G70",
       "plan_card_revision": 2,
       "title": "Project-scoped owned Rust retrieval index",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 77,
-        "url": "https://github.com/eylema-dev/eylema/issues/77"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/77"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4694,10 +4694,10 @@
       "id": "G71",
       "plan_card_revision": 3,
       "title": "RAG subflow and grounded job acceptance",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 78,
-        "url": "https://github.com/eylema-dev/eylema/issues/78"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/78"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4765,10 +4765,10 @@
       "id": "G72",
       "plan_card_revision": 3,
       "title": "Early end-to-end local text/RAG job proof",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 79,
-        "url": "https://github.com/eylema-dev/eylema/issues/79"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/79"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -4840,10 +4840,10 @@
       "id": "G73",
       "plan_card_revision": 4,
       "title": "Real human harness authorization and stop",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 80,
-        "url": "https://github.com/eylema-dev/eylema/issues/80"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/80"
       },
       "status": "accepted",
       "base_sha": "a70ea6293aae7ea47af8a588f4e7b0461b99fa37",
@@ -4909,7 +4909,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1\u2013300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
+      "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1–300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
       "accepted_delivery": [
         {
           "repository": "eylema-dev/eylema",
@@ -5128,10 +5128,10 @@
       "id": "G74",
       "plan_card_revision": 4,
       "title": "Decision router and RAG/skill dispatch",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 81,
-        "url": "https://github.com/eylema-dev/eylema/issues/81"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/81"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -5177,7 +5177,7 @@
         {
           "id": "G74-H1",
           "requirement": "Gradual skill/reference and deferred typed-tool discovery preserve immutable version, purpose authority and context budgets; discovery never grants execution.",
-          "check": "Catalog\u2192describe\u2192authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
+          "check": "Catalog→describe→authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
           "result": "not_run"
         }
       ],
@@ -5212,10 +5212,10 @@
       "id": "G75",
       "plan_card_revision": 4,
       "title": "Versioned skill contracts and reusable packages",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 82,
-        "url": "https://github.com/eylema-dev/eylema/issues/82"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/82"
       },
       "status": "accepted",
       "base_sha": "b9f43bb1417a34ab6717ae4748168035a9f263ca",
@@ -5274,7 +5274,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "AcceptedG46/G54/G50/G63/G87 mainCI checked. Closed skill/v1 leaf artifacts over own read/add handlers, flat1\u20138call/iteration loop with expanded\u22648,8control sources/4096byte artifacts/128retainedexecutions. Actualtwo-package/two-loop native reuse; mandatory real scoped intervention and live retained control/argument/ancestor/session checks. Models/otheradapters/nestedprograms unavailable; transient lineage, no new model/provider/G40/physicalprocess/training/engine/dependency/spending trial.",
+      "activation": "AcceptedG46/G54/G50/G63/G87 mainCI checked. Closed skill/v1 leaf artifacts over own read/add handlers, flat1–8call/iteration loop with expanded≤8,8control sources/4096byte artifacts/128retainedexecutions. Actualtwo-package/two-loop native reuse; mandatory real scoped intervention and live retained control/argument/ancestor/session checks. Models/otheradapters/nestedprograms unavailable; transient lineage, no new model/provider/G40/physicalprocess/training/engine/dependency/spending trial.",
       "accepted_delivery": [
         {
           "repository": "eylema-dev/eylema",
@@ -5331,10 +5331,10 @@
       "id": "G76",
       "plan_card_revision": 3,
       "title": "Per-model fine-tune and LoRA/QLoRA profiles",
-      "repository": "eylema-dev/eylema-training",
+      "repository": "eyleme-dev/eylema-training",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eylema-dev/eylema-training/issues/10"
+        "url": "https://github.com/eyleme-dev/eylema-training/issues/10"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -5408,10 +5408,10 @@
       "id": "G77",
       "plan_card_revision": 4,
       "title": "In-product bounded improvement jobs",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 83,
-        "url": "https://github.com/eylema-dev/eylema/issues/83"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/83"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -5433,11 +5433,11 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {},
-      "objective": "Eylema selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
+      "objective": "Eyleme selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
       "acceptance": [
         {
           "id": "G77-A1",
-          "requirement": "Eylema selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
+          "requirement": "Eyleme selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
           "check": "Controlled local training-job fixture covers permission, frozen dataset/holdout, finite candidate/time/repair limits, interruption, partial checkpoint, private storage and unsupported-backend outcomes.",
           "result": "not_run"
         },
@@ -5491,10 +5491,10 @@
       "id": "G78",
       "plan_card_revision": 3,
       "title": "Owned Rust adapter load and merge parity",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 84,
-        "url": "https://github.com/eylema-dev/eylema/issues/84"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/84"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -5565,10 +5565,10 @@
       "id": "G79",
       "plan_card_revision": 5,
       "title": "Integrated improvement and skill promotion proof",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 85,
-        "url": "https://github.com/eylema-dev/eylema/issues/85"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/85"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -5595,11 +5595,11 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {},
-      "objective": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
+      "objective": "Complete Eyleme data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
       "acceptance": [
         {
           "id": "G79-A1",
-          "requirement": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
+          "requirement": "Complete Eyleme data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
           "check": "Reuse the exact candidate and checkpoint already accepted by native training gates; no new training candidate; independent outcome/quality/resource comparison including regressions, effective stop, failed promotion, rights/lineage inheritance and reusable skill validation.",
           "result": "not_run"
         },
@@ -5659,10 +5659,10 @@
       "id": "G80",
       "plan_card_revision": 3,
       "title": "Checked resource requirement estimator",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 86,
-        "url": "https://github.com/eylema-dev/eylema/issues/86"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/86"
       },
       "status": "accepted",
       "base_sha": "9c91fa1905faaa3604645222cbc62dc504552452",
@@ -5874,10 +5874,10 @@
       "id": "G81",
       "plan_card_revision": 2,
       "title": "Measured hardware calibration and capacity profiles",
-      "repository": "eylema-dev/eylema-evals",
+      "repository": "eyleme-dev/eylema-evals",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eylema-dev/eylema-evals/issues/10"
+        "url": "https://github.com/eyleme-dev/eylema-evals/issues/10"
       },
       "status": "planned",
       "base_sha": "358aa619883ee930c8cf4d6476edec432ed4f560",
@@ -5945,11 +5945,11 @@
     {
       "id": "G82",
       "plan_card_revision": 3,
-      "title": "Capacity and investment planning inside Eylema",
-      "repository": "eylema-dev/eylema",
+      "title": "Capacity and investment planning inside Eyleme",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 87,
-        "url": "https://github.com/eylema-dev/eylema/issues/87"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/87"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -6023,10 +6023,10 @@
       "id": "G83",
       "plan_card_revision": 3,
       "title": "Owned Rust gradients and training operators",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 88,
-        "url": "https://github.com/eylema-dev/eylema/issues/88"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/88"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -6095,10 +6095,10 @@
       "id": "G84",
       "plan_card_revision": 2,
       "title": "Owned Rust CPU LoRA training",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 89,
-        "url": "https://github.com/eylema-dev/eylema/issues/89"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/89"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -6119,11 +6119,11 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {},
-      "objective": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eylema improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
+      "objective": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eyleme improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
       "acceptance": [
         {
           "id": "G84-A1",
-          "requirement": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eylema improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
+          "requirement": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eyleme improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
           "check": "Actual bounded M4 CPU candidate, independent update/loss reference, held-out outcome, adapter targets/rank/alpha, stop/partial-checkpoint recovery and resource evidence.",
           "result": "not_run"
         },
@@ -6165,10 +6165,10 @@
       "id": "G85",
       "plan_card_revision": 3,
       "title": "Owned Rust Metal LoRA training",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 90,
-        "url": "https://github.com/eylema-dev/eylema/issues/90"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/90"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -6239,10 +6239,10 @@
       "id": "G86",
       "plan_card_revision": 3,
       "title": "Owned Rust QLoRA training profile",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 91,
-        "url": "https://github.com/eylema-dev/eylema/issues/91"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/91"
       },
       "status": "planned",
       "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
@@ -6313,10 +6313,10 @@
       "id": "G87",
       "plan_card_revision": 3,
       "title": "Memory contracts, routing and lifecycle",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 93,
-        "url": "https://github.com/eylema-dev/eylema/issues/93"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/93"
       },
       "status": "accepted",
       "base_sha": "dc0fa9d365d98c2a17651f4fd95c9ca6b9ab3ce0",
@@ -6424,10 +6424,10 @@
       "id": "G88",
       "plan_card_revision": 3,
       "title": "Owned episodic, semantic and knowledge-graph memory",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 94,
-        "url": "https://github.com/eylema-dev/eylema/issues/94"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/94"
       },
       "status": "planned",
       "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
@@ -6498,10 +6498,10 @@
       "id": "G89",
       "plan_card_revision": 3,
       "title": "Owned analytical memory and improvement snapshots",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 95,
-        "url": "https://github.com/eylema-dev/eylema/issues/95"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/95"
       },
       "status": "planned",
       "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
@@ -6537,7 +6537,7 @@
         {
           "id": "G89-H1",
           "requirement": "Bounded learning/usage/evaluation lineage retains unsuccessful attempts and withdrawal; derived snapshots inherit original purpose permissions and unknown cost/effectiveness.",
-          "check": "Source-linked episode\u2192correction\u2192skill/recipe\u2192evaluation timeline; permission/redaction/withdrawal/incomplete-cost checks; graphs do not imply training or semantic quality.",
+          "check": "Source-linked episode→correction→skill/recipe→evaluation timeline; permission/redaction/withdrawal/incomplete-cost checks; graphs do not imply training or semantic quality.",
           "result": "not_run"
         }
       ],
@@ -6572,10 +6572,10 @@
       "id": "G90",
       "plan_card_revision": 2,
       "title": "Memory backend profiles and controlled interchange",
-      "repository": "eylema-dev/eylema",
+      "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 96,
-        "url": "https://github.com/eylema-dev/eylema/issues/96"
+        "url": "https://github.com/eyleme-dev/eyleme/issues/96"
       },
       "status": "planned",
       "base_sha": "04175b3a7a04a414aa6b7746204233b921da03fa",
@@ -6717,7 +6717,7 @@
     "model_evidence": "requested/configured/hidden_serving_identity distinct; unknown not inferred",
     "authority": "actual human decision; registry/model output/CI grants none",
     "current_ci": "structural evidence only; real admission/delivery acceptance remains G42/G43",
-    "initial_profile": "sol61-high-contracts-2026-10-14; actual owner approved limited 14 October\u201313 November 2026 profile; other domains not automatically qualified",
+    "initial_profile": "sol61-high-contracts-2026-10-14; actual owner approved limited 14 October–13 November 2026 profile; other domains not automatically qualified",
     "profile_registry": "records/contribution-model-profiles.json"
   }
 }

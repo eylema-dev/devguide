@@ -1,8 +1,8 @@
-# Contributing to Eylema
+# Contributing to Eyleme
 
 English is canonical. [Türkçe](CONTRIBUTING.tr.md). Contract revision: **0.3.0**.
 
-Eylema currently publishes design contracts and repository tooling. The Rust web platform, GPU runtime and autonomous AI team remain roadmap work. The same contribution process applies to people, Claude, ChatGPT/Codex, MiniMax and other tools; supported provider/model combinations are verified per task, not promised by name.
+Eyleme currently publishes design contracts and repository tooling. The Rust web platform, GPU runtime and autonomous AI team remain roadmap work. The same contribution process applies to people, Claude, ChatGPT/Codex, MiniMax and other tools; supported provider/model combinations are verified per task, not promised by name.
 
 
 ## Qualified change PRs
@@ -11,11 +11,11 @@ Code, document and configuration changes require substantive use of a maintainer
 
 ## Start with a concrete need
 
-Read [AGENTS.md](AGENTS.md), [architecture](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/project-structure.md) and [ROADMAP.md](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/roadmap.md). Use the feature, bug or architecture issue form. Write issue/PR descriptions, code, comments, file names and technical task records in English. Documentation is maintained in English and Turkish; examples may contain non-English test data when required by the tested behavior. For small corrections, an explicit maintainer request linked in the PR is sufficient.
+Read [AGENTS.md](AGENTS.md), [architecture](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/project-structure.md) and [ROADMAP.md](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/roadmap.md). Use the feature, bug or architecture issue form. Write issue/PR descriptions, code, comments, file names and technical task records in English. Documentation is maintained in English and Turkish; examples may contain non-English test data when required by the tested behavior. For small corrections, an explicit maintainer request linked in the PR is sufficient.
 
 Describe the initial state, action, expected result, affected targets, allowed paths and exclusions. Attach measurable acceptance criteria. A maintainer decides priority and authority; a new issue does not authorize a model to run commands or obtain secrets. Large interface, dependency, data/oversight or platform changes need a reviewed architecture proposal before implementation.
 
-The [NeedSpec schema](https://github.com/eylema-dev/eylema/blob/main/ai-team-protocol/request.schema.json) is the machine-readable intake contract. GitHub forms collect inputs for it; no automatic issue-to-NeedSpec converter or AI service has been deployed. The current example remains synthetic.
+The [NeedSpec schema](https://github.com/eyleme-dev/eyleme/blob/main/ai-team-protocol/request.schema.json) is the machine-readable intake contract. GitHub forms collect inputs for it; no automatic issue-to-NeedSpec converter or AI service has been deployed. The current example remains synthetic.
 
 ## One task, one reviewable change
 
@@ -50,11 +50,11 @@ English/Turkish fingerprints detect unrecorded edits; API identifier parity dete
 
 `CODEOWNERS` names the initial maintainer. It does not by itself require approval. This change supplies CI and a review policy; branch rulesets are separately administered and must not be described as enforced unless verified. Changes to CI, policy or schemas need maintainer attention; a PR cannot establish its own approval merely by relaxing checks.
 
-The maintainer selected [Apache-2.0](LICENSE) on 12 October 2026 for first-party Eylema source and documentation. Contributions intentionally submitted for inclusion follow section 5 of that license unless explicitly stated otherwise; separately agreed terms are preserved. No separate CLA or DCO requirement is introduced. Record provenance and retain third-party notices; model/data permissions remain artifact-specific. See the [licensing scope](docs/en/licensing.md). For suspected vulnerabilities, do not put exploitable details or secrets in a public issue; use GitHub's private reporting route if enabled, otherwise request a private channel from the maintainer without publishing the details.
+The maintainer selected [Apache-2.0](LICENSE) on 12 October 2026 for first-party Eyleme source and documentation. Contributions intentionally submitted for inclusion follow section 5 of that license unless explicitly stated otherwise; separately agreed terms are preserved. No separate CLA or DCO requirement is introduced. Record provenance and retain third-party notices; model/data permissions remain artifact-specific. See the [licensing scope](docs/en/licensing.md). For suspected vulnerabilities, do not put exploitable details or secrets in a public issue; use GitHub's private reporting route if enabled, otherwise request a private channel from the maintainer without publishing the details.
 
 ## What is not automated yet
 
-Issue triage, authority validation, model access, independent review, task orchestration, hardware benchmarking, model promotion and merge decisions are not automated by the templates. No workflow sends contributor content to a model provider or trains a model. See the [team design](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/development-and-operations.md) for the planned protocol.
+Issue triage, authority validation, model access, independent review, task orchestration, hardware benchmarking, model promotion and merge decisions are not automated by the templates. No workflow sends contributor content to a model provider or trains a model. See the [team design](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/development-and-operations.md) for the planned protocol.
 
 ## Cross-repository changes
 

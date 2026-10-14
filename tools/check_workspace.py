@@ -1,4 +1,4 @@
-"""Verify a pinned Eylema repository set as data; never execute fetched member code."""
+"""Verify a pinned Eyleme repository set as data; never execute fetched member code."""
 import argparse
 import hashlib
 import json
@@ -9,6 +9,8 @@ from urllib.parse import unquote, urlsplit
 
 from check_repository import (ROOT, ROLES, PRODUCT_DOCS, CheckFailure, load_json,
                               require, repository_files, validate_api, verify_vendor, validate_repository_config)
+
+from github_identity import canonical_repository
 
 MEMBERS = set(ROLES) - {'devguide'}
 
@@ -27,7 +29,7 @@ def validate_set(manifest):
     members = manifest.get('members', {})
     require(set(members) == MEMBERS, 'Repository set must include every managed member exactly once')
     for name, member in members.items():
-        require(member.get('repository') == 'eylema-dev/' + name, 'Repository identity is outside the approved set')
+        require(member.get('repository') == 'eyleme-dev/' + name, 'Repository identity is outside the approved set')
         require(bool(re.fullmatch('[0-9a-f]{40}', member.get('revision', ''))), 'Repository revision must be a full immutable SHA')
     pairs = manifest.get('product_translations', {})
     require(set(pairs) == set(PRODUCT_DOCS), 'Product translation coverage is incomplete')
@@ -41,14 +43,17 @@ def fetch_members(members, cache):
     roots = {}
     cache.mkdir(parents=True, exist_ok=True)
     for name, member in members.items():
-        # All values passed to git were validated against a fixed identity set above.
-        path = cache / ('organization-github' if name == '.github' else name) / member['revision']
+        # Historical evidence keeps its old identity; network reads use the renamed owner.
+        repository = canonical_repository(member['repository'])
+        require(repository == 'eyleme-dev/' + ('eyleme' if name == 'eylema' else name), 'Mismatched repository/cache identity')
+        require(bool(re.fullmatch('[0-9a-f]{40}', member['revision'])), 'Immutable fetch revision required')
+        path = cache / 'eyleme-dev' / ('organization-github' if name == '.github' else name) / member['revision']
         if not path.exists():
             path.mkdir(parents=True)
             git(path, 'init', '--quiet')
-            git(path, 'remote', 'add', 'origin', f'https://github.com/{member["repository"]}.git')
+            git(path, 'remote', 'add', 'origin', f'https://github.com/{repository}.git')
         origin = git(path, 'remote', 'get-url', 'origin')
-        require(origin == f'https://github.com/{member["repository"]}.git', 'Unexpected cached origin')
+        require(origin == f'https://github.com/{repository}.git', 'Unexpected cached origin')
         git(path, 'fetch', '--quiet', '--depth=1', 'origin', member['revision'])
         git(path, 'checkout', '--quiet', '--detach', member['revision'])
         roots[name] = path
@@ -73,11 +78,16 @@ def cross_link_errors(roots, text):
         if parsed.scheme != 'https' or parsed.netloc != 'github.com':
             continue
         parts = unquote(parsed.path).strip('/').split('/')
-        if len(parts) < 5 or parts[0] != 'eylema-dev' or parts[1] not in roots:
+        if len(parts) < 5 or parts[0] not in {'eyleme-dev', 'eylema-dev'} or ('eyleme' if parts[1] == 'eylema' else parts[1]) not in roots:
             continue
         if parts[2] not in {'blob', 'tree'} or parts[3] != 'main':
             continue  # historical commit, PR and issue references are not current-layout targets
-        root = roots[parts[1]].resolve()
+        try:
+            name = canonical_repository('/'.join(parts[:2])).split('/')[1]
+        except ValueError:
+            errors.append(target)
+            continue
+        root = roots[name].resolve()
         path = root.joinpath(*parts[4:]).resolve()
         valid = path.is_file() if parts[2] == 'blob' else path.is_dir()
         if not path.is_relative_to(root) or not valid:
@@ -120,7 +130,7 @@ def validate_migration(roots, inventory):
             require(safe_path(old), 'Invalid migration removal path')
             require(old not in removed, 'Duplicate migration removal')
             removed.add(old)
-            require(not (roots['eylema'] / old).exists(), f'Duplicate original document remains in core: {old}')
+            require(not (roots['eyleme'] / old).exists(), f'Duplicate original document remains in core: {old}')
     require(len(removed) == 21, 'Core removal inventory is incomplete')
     return len(documents)
 

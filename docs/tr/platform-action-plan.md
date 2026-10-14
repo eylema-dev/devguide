@@ -2,7 +2,7 @@
 
 Sürüm **1.3.0**, 14 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
 
-Bakımcı Eylema’yı yerel açık ağırlık modelleri ve isteğe bağlı açıkça yapılandırılmış dış büyük modellerin güçlü yanlarını birleştirerek planlanan işi tamamlayan birleşebilir Rust harness olarak istedi. Yerel inference kendi Rust motorumuzda kalır. Dokuz rol sabit arayüzdür; ses STT/TTS, görsel algı ve alan metin profilleri ayrı kabul edilir. RAG/embedding, özel proje kayıtları ve izinli ekosistem paketleri birinci sınıf iştir. [Mimari ve model örnekleri](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/architecture.md#rust-harness-model-rolleri-ve-alana-göre-seçim) planı bağlar; [güncel kartlar](../../records/platform-goal-plan.json) İngilizce kanoniktir.
+Bakımcı Eyleme’yi yerel açık ağırlık modelleri ve isteğe bağlı açıkça yapılandırılmış dış büyük modellerin güçlü yanlarını birleştirerek planlanan işi tamamlayan birleşebilir Rust harness olarak istedi. Yerel inference kendi Rust motorumuzda kalır. Dokuz rol sabit arayüzdür; ses STT/TTS, görsel algı ve alan metin profilleri ayrı kabul edilir. RAG/embedding, özel proje kayıtları ve izinli ekosistem paketleri birinci sınıf iştir. [Mimari ve model örnekleri](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/architecture.md#rust-harness-model-rolleri-ve-alana-göre-seçim) planı bağlar; [güncel kartlar](../../records/platform-goal-plan.json) İngilizce kanoniktir.
 
 Kabul edilen yirmi dört Goal değişmez kanıtını korur. Kalan yirmi üç özgün kart issue kimliğini ve her özgün zorunlu bağımlılığı tutar; G46–G90 ayrı incelenebilir kırk beş parça ekler. Tarihsel [G00 kartları](../../records/goal-index.json) ve [takip](../../records/goal-tracking.json) tamamlanma diye yeniden yazılmaz. Revizyon runtime/model/performans kanıtı değildir. G06 lisans seçimi kesinleşmiştir, teslimi açıktır. G40 mevcut PR #59’da sıfır yeni süre/onarım/çağrı/gizlilik hakkıyla engelli kalır; bu revizyon provider/host/crash denemesi açmaz.
 
@@ -94,7 +94,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G37** | Model seti ve rollback | G36, G46, G50, G65 | `planned` |
 | **G51** | Yeniden kullanılabilir harness uygulamaları ve model değişimi | G32, G37, G48, G50, G54, G55, G66 | `planned` |
 | **G89** | Kendi analitik belleğimiz ve iyileştirme snapshot’ları | G87, G33, G50 | `planned` |
-| **G82** | Eylema içinde kapasite ve yatırım planlama | G80, G81, G50, G66, G77, G89 | `planned` |
+| **G82** | Eyleme içinde kapasite ve yatırım planlama | G80, G81, G50, G66, G77, G89 | `planned` |
 | **G79** | Bütünleşik iyileştirme ve skill terfi kanıtı | G77, G78, G36, G37, G75, G51, G84, G85, G86, G89 | `planned` |
 | **G06** | Dağıtım ve haklar | G00 | `planned` |
 | **G40** | Codex adaptörü | G39 | `blocked` |

@@ -5,20 +5,20 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "453b949796bea26a6168d714cebef87b23872d9bf4122554f2d1d3e11d69427c",
-      "tr_sha256": "d77587a912f8db967ecceb52f83c84c6f9e9dd2e30d7891fd8bf9987a849d21e"
+      "en_sha256": "76447dfe7bb92e8de5df9cb0ee64505334cb3b71965a644d9df654dc36347e88",
+      "tr_sha256": "6edc6673c836cbfc81cdbe6548265416ec5de1daa7809b1a07c4e554f5a83ba5"
     },
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "b81396d2fafbccb369408c10ef522edf114253ac547082d2eee5dac3f7e866e5",
-      "tr_sha256": "8055f4d41c4fb6ce9730e4f0d29754ae794f1ece50fe7ec5baed504577708c50"
+      "en_sha256": "c4c9b185cd92565719d068b1974c052bdb873bb2eacbe05e075b5e695616b254",
+      "tr_sha256": "abf4bf521f4894b6653b9f292316021d60b6b3f5be28a3c8ac8d5c314b9240ec"
     },
     {
       "en": "docs/en/name-availability.md",
       "tr": "docs/tr/name-availability.md",
-      "en_sha256": "2ef68f4ce57281d231addfab7f4b0c41e10adfdac1dfd9074b9fe7344212cc23",
-      "tr_sha256": "c05af741be2ba9fd4366dd69c3d78e7d6deceaf405df1cbd2bd4f6382f92a0f8"
+      "en_sha256": "195663f7aeef00a100267802344541e54a710fd0c56b1d02175ea77cfa2d36fd",
+      "tr_sha256": "422c983086277b5597d741ccdaf1a5f12cf7c107654d266d25fd7c9490090935"
     },
     {
       "en": "docs/en/quality-gates.md",
@@ -29,32 +29,32 @@
     {
       "en": "docs/en/repository-map.md",
       "tr": "docs/tr/repository-map.md",
-      "en_sha256": "852b5f3cfe4b74890199151dcfae663b5bc24f9464fc4e2808d905304bebfd5c",
-      "tr_sha256": "24e51b92ce1008b21590ca5fc3ed04e41d717d00fc2bdafdc4d3e971e16ca252"
+      "en_sha256": "938a66a401f40990d333851f90d2e2190fc7314bdee1ed2b2bb07193e481f190",
+      "tr_sha256": "e9bae04f4a194fd46d72705bf19bf25bb9155b45ae96c9e0db49670eff012709"
     },
     {
       "en": "docs/en/repository-migration.md",
       "tr": "docs/tr/repository-migration.md",
-      "en_sha256": "95cce51b4e627e01bc9cbba936bc5a61a20def2af58205987a01713ca714d4bd",
-      "tr_sha256": "78c155cfe2a52035b19e1c729eb2041e5ca1ffd5ad7d9b11c8fd428015481ff8"
+      "en_sha256": "0b8e655adde0ddf068d89f18b7c9fb697e2a621e49998d9179fb547a6d2fa1c4",
+      "tr_sha256": "92913009bf44144d3ecd76b5fcc20559b59f7ea54cf9d3d84e93b236a9a52a62"
     },
     {
       "en": "docs/en/repository-setup.md",
       "tr": "docs/tr/repository-setup.md",
-      "en_sha256": "36572653bb503cdc923b0fc0ac9c714b6fe85db96d4176ec050a1e13f5a04981",
-      "tr_sha256": "df948e240fa84272effb44eaf1bebc4f405dfd04caeea522d19e5373f60d9890"
+      "en_sha256": "6fa46937347e653234046c477702dbd84bf26229ea813c8995e694a74ca5dc74",
+      "tr_sha256": "5b830bd5067ec02edfa596b242f7dc1c3b9f67e095dd7172f8d9764604e383ed"
     },
     {
       "en": "docs/en/tooling.md",
       "tr": "docs/tr/tooling.md",
-      "en_sha256": "4e3e4f998a42ac0b7f6f05fa6b1017916cbdf1bebfae8fe40191987e0579f818",
-      "tr_sha256": "652c7868166f86fbdabf13a74cbfe6e2964fdb9b6abfbeb24a3659c2d11ee6ee"
+      "en_sha256": "795a69584901d890a9388565c5148902923e21a57d438f048e18ed3a04b3b565",
+      "tr_sha256": "280e0d183fca531dfb3f62ca89af0801b85bfbcaacfaf6c2e6f879ba8a7a1bce"
     },
     {
       "en": "docs/en/goal-program.md",
       "tr": "docs/tr/goal-program.md",
-      "en_sha256": "d14831db937e53ce7f88f50790ecb4a1d23622020ff5120aff549af1460be07a",
-      "tr_sha256": "7ff68e6702b9bf00bfc4c5d58842f8bfbc0feb285a85bb02534336e87b3ac268"
+      "en_sha256": "81ad3ed1dac70095624137ba01398cf12d3cfbc83a338eb766d6b443d8391c5c",
+      "tr_sha256": "83ead35d184f1be152dc298e58b6db81932b22272a06be730cc7e54cf5300631"
     },
     {
       "en": "docs/en/github-work-management.md",
@@ -65,56 +65,56 @@
     {
       "en": "docs/en/licensing.md",
       "tr": "docs/tr/licensing.md",
-      "en_sha256": "a74e126942b4987d9cd2a83331a4cfcd449f15f900c2c80d8d7d3d254677e6e0",
-      "tr_sha256": "825f67254c37cf6bf25e2bd2abd121456468ce4f12f3ce40aaec495d9ab19f4b"
+      "en_sha256": "75630ebcd6afaf5dfab2d4d899784486cfdb41050b85230072eab866fbc34677",
+      "tr_sha256": "9c768b5dc9ede9c6796630e0c048eb86cc7329c7b4eb6aeae54fba2431b7bdee"
     },
     {
       "en": "docs/en/usage-accounting.md",
       "tr": "docs/tr/usage-accounting.md",
-      "en_sha256": "c4fc5d6562f27956cfcfb97d8a8fbbbb7be7974c4c5e7fc89be43b9addab0f3b",
-      "tr_sha256": "18cee6a260ed2ba7bc725f7e15da71aa261e880253b392327e950ffbc8c62fe3"
+      "en_sha256": "6acec1d749167e1f8b470c4b960a756209cba0aae28bf557c19a28aea6eca72d",
+      "tr_sha256": "e70fa23201f757dd05f15a31ef9bc3520145b9d6acc1e198fa526cc1c92d7223"
     },
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "be04e106ee00993ae4d4bbfd7e118c75c918e2175dd7776b14e050ea9cba323b",
-      "tr_sha256": "905c748be4affa71a0bfa34ceb9d5b1e8ada89660d452e76498ac7126c5d978c"
+      "en_sha256": "a79e9c34adacfada0d66a13020e6cfd359d8e988c84b9fe882815dc93ec72c0f",
+      "tr_sha256": "a894af6ec25fb3f2f7b0f957551372cedeb58efc32ef69374c30c2bb1df9a80b"
     },
     {
       "en": "docs/en/memory-layer.md",
       "tr": "docs/tr/memory-layer.md",
-      "en_sha256": "b4deeb9424d4cd684cee885ce193ae22a87c8b243babda7bb52da65dffbef9d8",
-      "tr_sha256": "c65ec17bf997731b3d5e05da22ba27871602d9e5634533ac62df6c5e1d06c165"
+      "en_sha256": "1ccb8b3b9a61913954c0db250733319621123e3d81ba67948c29024942c5de2a",
+      "tr_sha256": "536fe5b8b8947493e57cfd423956037faf72017590b1f2bf23cf88dec0227cf9"
     },
     {
       "en": "docs/en/contribution-model-policy.md",
       "tr": "docs/tr/contribution-model-policy.md",
-      "en_sha256": "a8b3a14adb3325f11f10af4fba71cfcbea455a202ca29cb39984cb4ff928e029",
-      "tr_sha256": "5e2af5523d97882d8ea995a44342771e1af05fc739f21b2237bd912bd2e753fe"
+      "en_sha256": "c2b8d8e92dc2e75ff68f340c605daa4fee011bfe9f3426344b4dc05c092889e1",
+      "tr_sha256": "64269f869259c88428299d2fb7269b9dcb22162d6d74e80488078909b02198b1"
     },
     {
       "en": "docs/en/model-resource-planning.md",
       "tr": "docs/tr/model-resource-planning.md",
-      "en_sha256": "138d460f36266fb700ad5bcaaeb141b58c6b1f29f87767923b3be133731e1fee",
-      "tr_sha256": "78abe585161c4f5b09c8d3f98773b1a18aedf157d4415a5aa4d7a7645576ab86"
+      "en_sha256": "cedd8a6e417d56b0512e53fd3ebf461fb9de265aaae660442a2d5e1a274e04e3",
+      "tr_sha256": "4edd3722b149f9e4c960f624688d206eb289b365873525f9003803a721a49249"
     },
     {
       "en": "docs/en/ecosystem-experience.md",
       "tr": "docs/tr/ecosystem-experience.md",
-      "en_sha256": "753d4a2201b8cf133f8b060abaffd9144d2e236b16f78008d3ce13380208beda",
-      "tr_sha256": "bb18d199216de1abeffd50f5347dc19bdd4139fef1d8b3059e06ef53cc44d3d2"
+      "en_sha256": "826286c6458576b3535fabf023f2231f3ebbc179c3197ad63e782a5d674910a7",
+      "tr_sha256": "a6070a84842192b1644e2ead0af8081c234b817f145463c5b74ca78ff8d0864f"
     },
     {
       "en": "docs/en/hermes-capabilities.md",
       "tr": "docs/tr/hermes-capabilities.md",
-      "en_sha256": "91fecc0650e785b294005ccff78096bdf0b4e6d6b88ee6bece901af44c0050e7",
-      "tr_sha256": "d5ae83cf4cdf784216e3b8a0cf2b6a2d649a620097f5a6cf1f662d255c6742e9"
+      "en_sha256": "b0c4c412e6de1c2fa0216503c41ac2986bcd77254a211a4a76215bdc9aac648b",
+      "tr_sha256": "2f3e3f09d159e34f9e903b52514ff6e2ee15e55506516afdccff7114a8a54edd"
     },
     {
       "en": "docs/en/unsloth-capabilities.md",
       "tr": "docs/tr/unsloth-capabilities.md",
-      "en_sha256": "4f43a96bebafc5a59752bfd03d4170cd78a905ab7ad86239b7580495e5356451",
-      "tr_sha256": "9e396c314823b5de0ca3ba6e073504104376cbcf5247ec79b1db2de53a63e945"
+      "en_sha256": "c7402657fc80877d4e1b5baee920993acea40aff89aaee047ca92a0ac22fd598",
+      "tr_sha256": "e08f1078af436068eaea65466bd2f7ce76aeb0f8f96fedfc2260cd660ef1d0b8"
     }
   ]
 }

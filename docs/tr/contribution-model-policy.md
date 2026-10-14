@@ -4,7 +4,7 @@
 
 ## Kapsam ve bakımcı kontrolü
 
-Kod, belge, yapılandırma veya başka değişiklik içeren her PR, mimari ya da uygulamada bakımcının kabul ettiği frontier/SOTA LLM profilinin anlamlı kullanımını ve gerçekten ayrı, bakımcının yetkilendirdiği AI incelemesini gerektirir. Tartışma, fikir ve hata bildirimi model şartı olmadan açıktır; bunlardan doğan değişiklik PR'ları bu politikayı izler. İnsan uzmanlığı ve ek incelemeler değerlidir. Eylema geliştirmesi bu yeterliği kabul edilmiş büyük model sürecini kullanır; ürün işleri dış çıkarım gerektirmeden gizlilik odaklı yerel açık ağırlık modelleri birleştirebilir.
+Kod, belge, yapılandırma veya başka değişiklik içeren her PR, mimari ya da uygulamada bakımcının kabul ettiği frontier/SOTA LLM profilinin anlamlı kullanımını ve gerçekten ayrı, bakımcının yetkilendirdiği AI incelemesini gerektirir. Tartışma, fikir ve hata bildirimi model şartı olmadan açıktır; bunlardan doğan değişiklik PR'ları bu politikayı izler. İnsan uzmanlığı ve ek incelemeler değerlidir. Eyleme geliştirmesi bu yeterliği kabul edilmiş büyük model sürecini kullanır; ürün işleri dış çıkarım gerektirmeden gizlilik odaklı yerel açık ağırlık modelleri birleştirebilir.
 
 Profil kabulü, geçerlilik/iptal, görev yetkisi, PR kabulü ve merge bakımcının kontrolündedir. Gerçek insan kararını yazarın ürettiği metinden ayrı kaydedin; JSON onay metni, model çıktısı, başarılı CI veya katalog kaydı yetki vermez. Yayın kimlik bilgileri model/araç worker'larında bulunmaz. Ayrı inceleme son commit'i ve anlamlı kanıtı bağlar; öz inceleme ya da uydurulmuş insan GitHub onayı değildir. Mevcut koşullu merge izni yalnız gerekli kabul, güncel CI ve gerçek ayrı inceleme geçince uygulanır.
 
@@ -22,7 +22,7 @@ Bakımcının kabul ettiği katkı profili kapsamı belirli bir yönetişim kara
 
 Gelecek değişiklik görevi başlamadan güncel uygun profil, insan görev kararı, tam base/dosya kapsamı, sonlu bütçe ve gerçek ayrı inceleme bağlanır. Eksik veya süresi dolmuş yeterlikte uygulama/PR kabulü bekler. Yeni model, effort, sağlayıcı, alan veya politika değişikliği ilan edilmiş kapsamda yeniden değerlendirilir; model kendiliğinden değiştirilmez. G42/G43 ileride gerçek bakımcı kontrollü kabul/teslim ve aşma denemelerinin kabulünü sağlar. Bugünkü şablon ve CI yapıyı ve depo verisini kontrol eder; SOTA kimliğini, insan kararını veya otonom teslimi doğrulamaz. Bu politika geçişi önceden yetkilendirilmiş iş akışını izler ve geçmiş işleri sonradan yeterli ilan etmez.
 
-## Eylema'yı geliştirebilecek deneyim
+## Eyleme'yi geliştirebilecek deneyim
 
 Doğrulanmış görev sonuçlarını, düzeltmeleri, tipli araç sonuçlarını, kaynak/revizyon bağlarını, test kanıtını, sınırlı onarım özetlerini ve ölçülen kaynakları köken bilgisiyle kaydedin. Yeniden kullanılabilir dersler: katı wire tipleri, bağımsız sabitlenmiş ölçülen hash'ler, birleşik boyutlarda taşma denetimi, doğru desteklenmeyen-kabiliyet sınıflaması, bağımlılığa duyarlı testler ve tam incelenen/main eşleşmesi. Bunlar genelleştirilmiş doğrulanmış derslerdir; ham sohbetler, özel muhakeme, kimlik bilgileri ve özel operasyon izleri public kayıtlara aktarılmaz.
 
