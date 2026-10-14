@@ -539,14 +539,14 @@
     },
     {
       "id": "G27",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Model contract",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 3,
         "url": "https://github.com/eylema-dev/eylema-models/issues/3"
       },
-      "status": "verification",
+      "status": "accepted",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
       "dependencies": [
         "G03",
@@ -585,7 +585,8 @@
           "tools/translation-pairs.json",
           "docs/plans/g27-model-contract.md",
           "docs/en/tooling.md",
-          "docs/tr/tooling.md"
+          "docs/tr/tooling.md",
+          "tools/tests/test_platform_plan.py"
         ]
       },
       "objective": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
@@ -594,13 +595,13 @@
           "id": "G27-P1",
           "requirement": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
           "check": "Manifest compatibility, rights, operator, preprocessing, model-versus-role identity and unsupported-profile rejection.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G27-A1",
           "requirement": "Qwen3-0.6B source/artifact/tokenizer/operator hashes, rights and narrow configuration are pinned",
           "check": "Artifact identity/rights/operator audit; selection alone is not runtime support",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -618,15 +619,50 @@
         "actual": null
       },
       "activation": "Actual maintainer approved G27 written design and concrete implementation plan; existing inline method. Current main/dependencies bound; model repository remains documentation-v1, production contracts in core.32768byte manifest/64components/64operators/128profiles; public static discovery20responses/32MiB, no weights/provider/engine/dependency exception.120active minutes/3targetedrepairs/15reviewminutes; standing conditional merge authority. Catalog paired prose uses docs/en,tr paths to preserve unchanged maintained-document coverage.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Current headCI and genuine separate review/accepted-main proofs pending; model execution/large bytes not_run."
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/103",
+          "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+          "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+          "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+          },
+          "main_ci": {
+            "id": 38529816647,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+            "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+          "head": "893a2546f918866696564732ee8f873da05905c0",
+          "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+          "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+            "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+          },
+          "main_ci": {
+            "id": 38529830971,
+            "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+            "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
         "architect": "parent Codex",
         "implementer": "parent Codex inline",
         "verifier": "parent Codex native/Python/Git/gh",
-        "independent_reviewer": "g27_model_review separate context; initial fourP2 repaired, renewed residualQ projection overflow repaired; final-head re-review pending"
+        "independent_reviewer": "Codex reviewer /root/g27_model_review separate source/repair final-head review; accepted proof audit follows"
       },
       "dependency_deliveries": {
         "G03": [
@@ -754,13 +790,15 @@
         "fixture_sha256": "c087a033d4d193acd9912d0f555c99f14f9b968c9f308aca8acb52b07af85af2",
         "role_records": 9,
         "qwen_intended_profiles": 3,
-        "targeted_repairs_used": 2,
+        "targeted_repairs_used": 3,
         "weights_downloaded": false,
         "tokenizer_json_byte_verified": false,
         "environment": "M4Pro24GiB/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
         "limits": "Actual owned Rust declared-metadata validation and exact model/core EYL fixture, no inference/quality/authority from matching. Large file hashes publisher advertised only; no model/tokenizer/GPU/training/provider/G40 execution. ExternalConfigured is explicit unavailable intent, never fallback.",
         "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification.",
-        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim."
+        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
+        "review": "Separate final source review passed at exact core/model heads; all initial fourP2 plus combinedQ projection overflow closed by2source repair passes; third pass fixes the accepted-card regression fixture. Separate review498/900seconds before delivery proof audit. No human GitHub approval claimed.",
+        "repair3": "Accepted G27 makes G23 dependency-complete. Historical-position activation test wrongly expected rejection. Negative activation now explicitly targets G44 with unaccepted dependencies and asserts the exact existing failure reason; production validator unchanged."
       }
     },
     {

@@ -83,7 +83,10 @@ class PlatformPlanTests(unittest.TestCase):
 
     def test_acceptance_or_activation_cannot_be_fabricated(self):
         self.check_bad(lambda p: p['goals'][0].update(status='accepted'))
-        self.check_bad(lambda p: p['goals'][1].update(status='implementing'))
+        blocked_activation = copy.deepcopy(self.plan)
+        next(g for g in blocked_activation['goals'] if g['id'] == 'G44')['status'] = 'implementing'
+        with self.assertRaisesRegex(ValueError, 'Accepted dependencies before activation'):
+            validate_plan(blocked_activation, self.index, self.tracking)
         self.check_bad(lambda p: p['goals'][0]['acceptance'][0].update(result='passed'))
 
     def test_issue_identity_and_model_role_coverage_fail_closed(self):

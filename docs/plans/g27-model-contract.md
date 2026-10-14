@@ -13,3 +13,13 @@ Actual module RED→GREEN and missing fixture/catalog-audit RED→GREEN; fifteen
 Repair1 addresses four P2 findings from the initial genuine separate review: strict integer version/special-token types and native ASCII semantic IDs; measured template hash/4168byte pin; checked generic and Qwen layer/vocabulary/cache extents; complete explicit operator vocabulary and correct missing/unknown classification. All new regressions were observed RED before GREEN; one of three targeted repair passes used. Renewed final-head review is pending; no runtime acceptance added.
 
 Repair2 restores checked token×Q projection activation arithmetic. The semantic combination regression accepts the just-below overflow boundary and rejects the boundary product. Full280Rust/47corePython/42modelsPython passed with one existing Metalignore;2/3repairpasses used,380/900separate-review seconds before final re-review. No resource or model execution acceptance added.
+
+## Accepted core and model catalog deliveries
+
+Separate source review passed at `430e40da66f8715e7d25d709158c9292231d98aa`; [PR](https://github.com/eylema-dev/eylema/pull/103) merged as `bfb1554fd9f18efbb900b8b3685a3e35ff349e17`, identical tree `827d686522e38b9822243bbb1bb0b89071969686`; [main CI](https://github.com/eylema-dev/eylema/actions/runs/38529816647) passed.
+
+Separate source review passed at `893a2546f918866696564732ee8f873da05905c0`; [PR](https://github.com/eylema-dev/eylema-models/pull/13) merged as `8fb10cb16c17ba6462cdd79b6495d6a086db1970`, identical tree `fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5`; [main CI](https://github.com/eylema-dev/eylema-models/actions/runs/38529830971) passed.
+
+Actual280native/47corePython/42modelPython passed,15native contracts/11catalog tests;1existing Metalignore. Two targeted repair passes closed four original findings and residualQ projection overflow with observedRED→GREEN. Source review498/900seconds before final guide proof audit. Current guide proof and final accepted-main audit remain pending. Model/weights/tokenizer/template/GPU/training/provider/G40 execution remains not_run; no authority or precision-support claim added.
+
+Repair3 corrects an actual accepted-guide regression fixture: G23 becomes legitimately dependency-complete after G27 acceptance, so the old goals[1] activation assertion no longer represents forbidden activation. The negative case now explicitly attempts G44 activation with unaccepted dependencies and asserts the unchanged Accepted dependencies before activation error. Production validator is unchanged;83tests pass. All3/3targeted repair passes used, no reset. Exact guide scope additionally includes tools/tests/test_platform_plan.py; final separate acceptedproof audit covers this change.
