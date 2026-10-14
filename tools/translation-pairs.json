@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "a4643629ba45d5a12a8ce802abf2a68e2277388c4deb5db19eb1afd10e75ac82",
-      "tr_sha256": "459ab43375b086e18e0856ebf42274ea95ec8fdc88948e3bc7186e3a3f0d61dc"
+      "en_sha256": "1eda5195941515d1c1cf184a2fa48494cae95e2a2853ac9a60a60cb6569890ce",
+      "tr_sha256": "3dbead1a11b3f0ea170dbdf4710425767c2f0fb36ec25ba5fa300a9570ec1373"
     },
     {
       "en": "docs/en/memory-layer.md",
@@ -109,6 +109,12 @@
       "tr": "docs/tr/hermes-capabilities.md",
       "en_sha256": "91fecc0650e785b294005ccff78096bdf0b4e6d6b88ee6bece901af44c0050e7",
       "tr_sha256": "d5ae83cf4cdf784216e3b8a0cf2b6a2d649a620097f5a6cf1f662d255c6742e9"
+    },
+    {
+      "en": "docs/en/unsloth-capabilities.md",
+      "tr": "docs/tr/unsloth-capabilities.md",
+      "en_sha256": "17ff91dd116bc63b5516f21cc56a5ae0beef4798ff836a44dc4b6bbe0c432056",
+      "tr_sha256": "baab5b95a9e4696ceceaff393d58abcf17e2a71c137a85ba2814fd55907d082c"
     }
   ]
 }
