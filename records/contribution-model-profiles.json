@@ -1,0 +1,80 @@
+{
+  "format_version": 1,
+  "purpose": "Human-reviewed contributor qualification metadata; record text grants no task, data, provider or GitHub authority. Hidden serving identity and global SOTA ranking are not verified.",
+  "profiles": [
+    {
+      "id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "provider": "openai",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "configured_identity_evidence": "Accepted private metadata-only usage collector matched the current maintainer chat and observed configured model/effort; raw session/turn identifiers and messages are not published.",
+      "serving_identity": "unknown_not_exposed",
+      "evaluation_date": "2026-10-14",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "owned_rust_contracts_and_validators",
+        "model_metadata_catalogs",
+        "development_tests",
+        "bilingual_project_documentation"
+      ],
+      "excluded_until_separately_evaluated": [
+        "numerical_kernels",
+        "inference_or_training_performance",
+        "unsupported_domains"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Genuinely separate context and exact reviewed commit required, even when configured model is the same.",
+      "owner_decision": "Actual maintainer approved the prepared limited qualification proposal on 14 October 2026 in the current trusted chat. Admission does not replace task/data/call/spend/merge authority.",
+      "quality_floor": [
+        "required_acceptance_local_checks_latest_ci_pass",
+        "genuine_final_head_separate_review_no_unresolved_P1_P2",
+        "finite_task_repair_resource_bounds_respected",
+        "privacy_rights_authority_checked_unknowns_explicit"
+      ],
+      "evidence": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/103",
+          "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+          "accepted_main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+          "main_ci": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+          "native_tests_passed": 280,
+          "native_tests_ignored": 1,
+          "python_tests_passed": 47
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+          "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+          "accepted_main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+          "main_ci": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+          "python_tests_passed": 42
+        },
+        {
+          "repository": "eylema-dev/devguide",
+          "pr": "https://github.com/eylema-dev/devguide/pull/46",
+          "reviewed_head": "cd577072b2fda3e3b20fdfc896eee642daff4e57",
+          "accepted_main": "23e9b690958a2124bc29930a3a98eccdaa691b93",
+          "main_ci": "https://github.com/eylema-dev/devguide/actions/runs/38531108505",
+          "python_tests_passed": 83
+        }
+      ],
+      "reviewer": "Codex g27_model_review separate source/repair/accepted-proof/final-main contexts",
+      "evaluation_limits": "G27 metadata scope only; 15 native contract/11 catalog tests, three targeted repairs, 85.1 of 120 conservative active minutes, 661 of 900 review seconds. No inference/GPU/training/native numerical acceptance.",
+      "re_evaluate_on": [
+        "expiry",
+        "revocation",
+        "changed_model_effort_provider_or_trust_level",
+        "changed_domain_or_policy",
+        "quality_or_privacy_regression"
+      ],
+      "no_self_authorization": true
+    }
+  ]
+}

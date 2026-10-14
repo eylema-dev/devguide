@@ -1,8 +1,13 @@
 # Contributing to Eylema
 
-English is canonical. [Türkçe](CONTRIBUTING.tr.md). Contract revision: **0.2.0**.
+English is canonical. [Türkçe](CONTRIBUTING.tr.md). Contract revision: **0.3.0**.
 
 Eylema currently publishes design contracts and repository tooling. The Rust web platform, GPU runtime and autonomous AI team remain roadmap work. The same contribution process applies to people, Claude, ChatGPT/Codex, MiniMax and other tools; supported provider/model combinations are verified per task, not promised by name.
+
+
+## Qualified change PRs
+
+Code, document and configuration changes require substantive use of a maintainer-approved dated frontier/SOTA LLM profile and genuine separate owner-approved AI review. Discussion, ideas and bug reports remain open. Follow the [model qualification policy](docs/en/contribution-model-policy.md); a requested name/effort or green CI is not qualification or authority. Future task activation binds the eligible author/reviewer profiles and actual human task decision. The first limited profile has an actual maintainer decision and dated evidence; other domains remain unqualified.
 
 ## Start with a concrete need
 

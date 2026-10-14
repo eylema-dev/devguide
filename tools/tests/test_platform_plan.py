@@ -125,10 +125,15 @@ class PlatformPlanTests(unittest.TestCase):
     def test_original_acceptance_cannot_be_removed_rewritten_or_duplicated(self):
         for gid in ['G44', 'G35']:
             with self.subTest(gid=gid):
-                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'].pop())
-                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1].update(requirement='Weakened evidence'))
-                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1].update(check='Only static check'))
-                self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == gid)['acceptance'].append(copy.deepcopy(next(g for g in p['goals'] if g['id'] == gid)['acceptance'][-1])))
+                original_id = next(g for g in self.index['goals'] if g['id'] == gid)['acceptance'][-1]['id']
+                def items(plan):
+                    return next(g for g in plan['goals'] if g['id'] == gid)['acceptance']
+                def original(plan):
+                    return next(a for a in items(plan) if a['id'] == original_id)
+                self.check_bad(lambda p: items(p).remove(original(p)))
+                self.check_bad(lambda p: original(p).update(requirement='Weakened evidence'))
+                self.check_bad(lambda p: original(p).update(check='Only static check'))
+                self.check_bad(lambda p: items(p).append(copy.deepcopy(original(p))))
 
 
 if __name__ == '__main__':

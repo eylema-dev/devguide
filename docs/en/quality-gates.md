@@ -47,3 +47,9 @@ Historical migration and current validation have separate inputs. [migration-sna
 The pinned repository set is manually updated through linked PRs; it does not automatically track later default-branch changes. Historical public commits are fetched into a separate cache even when current member checkouts are supplied with `--workspace-file`; no fetched code executes. Independent review and a maintainer decision remain pending until actually recorded.
 
 G05 adds separate [Goal tracking and protection requests](github-work-management.md). The proposed ten-repository settings are not activated by this workflow or a JSON authorization reference. Required check names and GitHub Actions app IDs are observed at exact main commits. Real administration writes require separate maintainer authorization and API readback; zero required GitHub approvals does not replace independent AI review.
+
+## Contribution profile and whole-system planning
+
+Apply [qualified LLM contribution](contribution-model-policy.md) to every future change PR: dated scope/quality evidence, observed configuration with unknown serving identity explicit, actual owner eligibility/task authority and genuine independent final-head AI review. Current structural CI does not verify those facts; absent qualification/authority keeps acceptance pending. G42/G43 must demonstrate real owner-controlled admission/delivery and reject unapproved, expired, mismatched or author-forged qualification. Discussion/bug intake stays open.
+
+[Model-independent resource planning](model-resource-planning.md) binds G80/G81/G82 and cooperative selection cards: checked parameter/context/cache/layout/overlap estimates, dated model discovery, accepted own-Rust support, named-device calibration, comparable full-loop quality/ablation and uncertainty. Unsupported types, missing coefficients and stale data cannot be claimed feasible; recommendation is not activation or spending.
