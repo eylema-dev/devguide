@@ -539,14 +539,14 @@
     },
     {
       "id": "G27",
-      "plan_card_revision": 2,
+      "plan_card_revision": 4,
       "title": "Model contract",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 3,
         "url": "https://github.com/eylema-dev/eylema-models/issues/3"
       },
-      "status": "planned",
+      "status": "accepted",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
       "dependencies": [
         "G03",
@@ -555,23 +555,53 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "catalog/",
-        "contracts/"
+        "catalog/qwen3-0.6b.v1.json",
+        "catalog/qwen3-0.6b.v1.eyl",
+        "contracts/role-interfaces.v1.json",
+        "contracts/qwen3-operators.v1.json",
+        "docs/en/model-catalog.md",
+        "docs/tr/model-catalog.md",
+        "tools/model_catalog.py",
+        "tools/tests/test_model_catalog.py",
+        "README.md",
+        "README.tr.md",
+        "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/eylema": [
+          "crates/eylema-contracts/src/model_contract.rs",
+          "crates/eylema-contracts/src/lib.rs",
+          "crates/eylema-contracts/tests/model_contracts.rs",
+          "crates/eylema-contracts/tests/fixtures/qwen3-profile.v1.eyl",
+          "docs/en/model-contract.md",
+          "docs/tr/model-contract.md",
+          "tools/translation-pairs.json"
+        ],
+        "eylema-dev/devguide": [
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json",
+          "docs/plans/g27-model-contract.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "tools/tests/test_platform_plan.py"
+        ]
+      },
       "objective": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
       "acceptance": [
         {
           "id": "G27-P1",
           "requirement": "Extend Qwen baseline metadata to nine role contracts, local owned-Rust support states and explicit external assignments; artifacts never imply acceptance.",
           "check": "Manifest compatibility, rights, operator, preprocessing, model-versus-role identity and unsupported-profile rejection.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G27-A1",
           "requirement": "Qwen3-0.6B source/artifact/tokenizer/operator hashes, rights and narrow configuration are pinned",
           "check": "Artifact identity/rights/operator audit; selection alone is not runtime support",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -588,16 +618,187 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Acceptance not executed; dependencies and activation bindings required."
+      "activation": "Actual maintainer approved G27 written design and concrete implementation plan; existing inline method. Current main/dependencies bound; model repository remains documentation-v1, production contracts in core.32768byte manifest/64components/64operators/128profiles; public static discovery20responses/32MiB, no weights/provider/engine/dependency exception.120active minutes/3targetedrepairs/15reviewminutes; standing conditional merge authority. Catalog paired prose uses docs/en,tr paths to preserve unchanged maintained-document coverage.",
+      "accepted_delivery": [
+        {
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/103",
+          "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+          "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+          "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+          },
+          "main_ci": {
+            "id": 38529816647,
+            "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+            "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eylema-dev/eylema-models",
+          "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+          "head": "893a2546f918866696564732ee8f873da05905c0",
+          "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+          "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+            "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+          },
+          "main_ci": {
+            "id": 38529830971,
+            "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+            "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex inline",
+        "verifier": "parent Codex native/Python/Git/gh",
+        "independent_reviewer": "Codex reviewer /root/g27_model_review separate source/repair final-head review; accepted proof audit follows"
+      },
+      "dependency_deliveries": {
+        "G03": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/6",
+            "head": "25c2209a20417b7398e2e7ddbc3485b75df59b75",
+            "main": "a07f3f6ccf3b564635da70f00bd73aadbb7d6a7f",
+            "tree": "1f4c66a0c5add7ab543aba4789731d9aaf5cc13d",
+            "main_ci": {
+              "id": 38159565181,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38159565181",
+              "head": "a07f3f6ccf3b564635da70f00bd73aadbb7d6a7f",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "25c2209a20417b7398e2e7ddbc3485b75df59b75",
+              "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-docs-en",
+            "pr": "https://github.com/eylema-dev/eylema-docs-en/pull/4",
+            "head": "bb729ff4ec8df3a0b6dfdb1211dfcc763a896a30",
+            "main": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+            "tree": "aecb76b68000f3a04dab03490a7a51c06304f9bd",
+            "main_ci": {
+              "id": 38159546068,
+              "url": "https://github.com/eylema-dev/eylema-docs-en/actions/runs/38159546068",
+              "head": "4e8f91ce6515bb7d0a02aab89c97cfca8e086a4f",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "bb729ff4ec8df3a0b6dfdb1211dfcc763a896a30",
+              "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-docs-tr",
+            "pr": "https://github.com/eylema-dev/eylema-docs-tr/pull/3",
+            "head": "95aa9efd876980838acbf4c7a7ee2f0e70758e99",
+            "main": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+            "tree": "2a6890dc5c91746d1f1e69ed7c6a2f684b1dc95c",
+            "main_ci": {
+              "id": 38159547271,
+              "url": "https://github.com/eylema-dev/eylema-docs-tr/actions/runs/38159547271",
+              "head": "c20dfd8d538431e8576659661651d958cbf2e7c2",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "95aa9efd876980838acbf4c7a7ee2f0e70758e99",
+              "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+            }
+          },
+          {
+            "repository": "eylema-dev/devguide",
+            "pr": "https://github.com/eylema-dev/devguide/pull/8",
+            "head": "4b0279b1dda15ec2dfb37d6df42017d8eb175c2c",
+            "main": "7760167ab4b6fe20ebeab37e0da62a4f7c51bc42",
+            "tree": "2609b3637dbd2ba0f4c7be683f4ff9f624d2fa68",
+            "main_ci": {
+              "id": 38159555419,
+              "url": "https://github.com/eylema-dev/devguide/actions/runs/38159555419",
+              "head": "7760167ab4b6fe20ebeab37e0da62a4f7c51bc42",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "4b0279b1dda15ec2dfb37d6df42017d8eb175c2c",
+              "reviewer": "g03_review separate Codex context; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G18": [
+          {
+            "repository": "eylema-dev/eylema-evals",
+            "pr": "https://github.com/eylema-dev/eylema-evals/pull/7",
+            "head": "7d6fd3e4761fab68f7340333b4da707ef4541f64",
+            "main": "9f2225cbfa150416f776165cf1c65624eca1f260",
+            "tree": "d2affe168b5edc9479524e290598772afb1966ea",
+            "main_ci": {
+              "id": 38265221384,
+              "url": "https://github.com/eylema-dev/eylema-evals/actions/runs/38265221384",
+              "head": "9f2225cbfa150416f776165cf1c65624eca1f260",
+              "status": "passed"
+            },
+            "review": {
+              "status": "passed",
+              "reviewed_head": "7d6fd3e4761fab68f7340333b4da707ef4541f64",
+              "reviewer": "g16_review separate Codex context exact-head review; no actionable findings; no human GitHub approval claimed"
+            }
+          }
+        ],
+        "G46": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/92",
+            "head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+            "main": "04175b3a7a04a414aa6b7746204233b921da03fa",
+            "tree": "1e6120f51d9eacad72f094ad85e86b32fc2b77a9",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+              "reviewer": "Codex reviewer /root/g46_platform_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38459444726,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38459444726",
+              "head": "04175b3a7a04a414aa6b7746204233b921da03fa",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "executed_evidence": {
+        "native_tests_passed": 280,
+        "native_tests_ignored": 1,
+        "core_python_tests_passed": 47,
+        "model_python_tests_passed": 42,
+        "new_native_contract_tests": 15,
+        "new_catalog_python_tests": 11,
+        "fixture_sha256": "c087a033d4d193acd9912d0f555c99f14f9b968c9f308aca8acb52b07af85af2",
+        "role_records": 9,
+        "qwen_intended_profiles": 3,
+        "targeted_repairs_used": 3,
+        "weights_downloaded": false,
+        "tokenizer_json_byte_verified": false,
+        "environment": "M4Pro24GiB/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
+        "limits": "Actual owned Rust declared-metadata validation and exact model/core EYL fixture, no inference/quality/authority from matching. Large file hashes publisher advertised only; no model/tokenizer/GPU/training/provider/G40 execution. ExternalConfigured is explicit unavailable intent, never fallback.",
+        "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification.",
+        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
+        "review": "Separate final source review passed at exact core/model heads; all initial fourP2 plus combinedQ projection overflow closed by2source repair passes; third pass fixes the accepted-card regression fixture. Separate review498/900seconds before delivery proof audit. No human GitHub approval claimed.",
+        "repair3": "Accepted G27 makes G23 dependency-complete. Historical-position activation test wrongly expected rejection. Negative activation now explicitly targets G44 with unaccepted dependencies and asserts the exact existing failure reason; production validator unchanged."
       }
     },
     {
