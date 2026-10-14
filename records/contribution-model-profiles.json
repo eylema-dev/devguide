@@ -155,5 +155,60 @@
       ],
       "no_self_authorization": true
     }
+  ],
+  "task_bindings": [
+    {
+      "id": "sol61-high-contracts-g28-binding-2026-10-14",
+      "goal": "G28",
+      "profile_id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "configured_identity_evidence": "Latest completed current-chat response matched through accepted metadata-only usage ledger; no raw chat/turn/session identities or content published. Active response may appear on next refresh.",
+      "date": "2026-10-14",
+      "valid_through": "2026-11-13",
+      "expires_on": [
+        "G28_delivery",
+        "parent_profile_expiry_or_revocation",
+        "changed_model_effort_provider_scope_or_trust"
+      ],
+      "scope": [
+        "G28_owned_safe_structural_weight_loader_and_validation",
+        "G28_bounded_interface_to_existing_macos_CommonCrypto_SHA256_service",
+        "G28_development_tests_and_bilingual_delivery"
+      ],
+      "excluded": [
+        "authored_cryptographic_or_numerical_algorithms",
+        "weight_precision_conversion_or_model_execution",
+        "inference_training_or_large_artifact_performance",
+        "other_goals_or_universal_architecture_support"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "owner_decision": "Actual human approved the written G28 design and this G28-only profile binding on14October2026 in the trusted maintainer chat. Existing profile scope/quality evidence is unchanged; binding grants no runtime/provider/data/spend authority or plan acceptance.",
+      "scope_assessment": "Read-only mapping: structural validation fits the existing contracts profile; G09 already inventories the native provider. Additional native lifecycle/ABI coverage is a specifically owner-confirmed G28 binding, not established execution evidence.",
+      "evidence": {
+        "source_base": "6605080fcae225e099775f7856349c0aac6aa011",
+        "guide_base": "affbcd456fc467b10155eb3b71b4860042220b30",
+        "owner_reviewed_design": "8f1ae3e87b2e347eef4a19c62557eeca2269f906",
+        "sdk_header_sha256": "83a9705bbc8d44f27ee61801064ee99288496a038d623f152aa30db6819e9ca6",
+        "native_hash_and_weight_loading": "not_run; no execution qualification claimed from read-only assessment"
+      },
+      "quality_floor": [
+        "original120_minutes_3repairs_15review_including_preparation",
+        "unchanged_old_wire_limit_and_owned_dependencies",
+        "independent_frozen_byte_digest_and_failure_regressions",
+        "actual_native_ABI_hash_lifecycle_and_loader_checks",
+        "current_local_CI_and_genuine_separate_final_head_review",
+        "identical_merged_main_tree_and_mainCI"
+      ],
+      "review_independence": "Genuine separate context under this same actual G28 binding; exact source/guide revision required. No reviewer assigned or production accepted by this record.",
+      "no_self_authorization": true
+    }
   ]
 }

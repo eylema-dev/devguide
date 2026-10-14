@@ -106,7 +106,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G45** | Experimental distribution package | G06, G44 | `planned` |
 | **W01** | Website accuracy | G03 | `planned` |
 
-G28 scope/design preparation is approved: register the owned weight-loader crate and design a separate bounded native SHA256 stream without changing the existing wire hash limit. Written design, explicit G28 contribution-profile binding and concrete-plan reviews remain pending; no loading/native-call/implementation or acceptance is activated.
+G28 scope/design preparation is approved: register the owned weight-loader crate and design a separate bounded native SHA256 stream without changing the existing wire hash limit. Written design and explicit G28-only contribution-profile binding are approved; concrete-plan human review remains pending. No loading/native-call/implementation or acceptance is activated.
 
 ## Evidence and data boundaries
 
