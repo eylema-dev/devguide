@@ -11,8 +11,8 @@
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "a4f3fa1ae4347ba03dbf664eff93f720d29e88082f1fbf1492093e92b6805435",
-      "tr_sha256": "f2f2a1d94676a9f53579a0f2342cd526914211b61a13ac04a1e5b02890ca67ee"
+      "en_sha256": "b81396d2fafbccb369408c10ef522edf114253ac547082d2eee5dac3f7e866e5",
+      "tr_sha256": "8055f4d41c4fb6ce9730e4f0d29754ae794f1ece50fe7ec5baed504577708c50"
     },
     {
       "en": "docs/en/name-availability.md",
@@ -23,8 +23,8 @@
     {
       "en": "docs/en/quality-gates.md",
       "tr": "docs/tr/quality-gates.md",
-      "en_sha256": "bb12abc9c1fa4bc4a72a6ed0dc7452c511cc71bef475d78cfb5661a1f34a7c08",
-      "tr_sha256": "a5f7b977d3e641cfc7f29681cf0734f8ac754553e734d11fccafe78e9b7ca67b"
+      "en_sha256": "bd3af0aa39c38cd5f192d1b08cd90e039606cd86455eaf4371a641fe4135478b",
+      "tr_sha256": "a2ac45b672b8aa14ac5fe42b57ac18beed43a1bb5fc0161a64a2fa3868135083"
     },
     {
       "en": "docs/en/repository-map.md",
@@ -77,14 +77,26 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "99ffa662d9db423c67aeb98dd0e70ce0463049e14d24349138cd2ad5f195359c",
-      "tr_sha256": "ca00c209f22ee24d439cbfcdbe9fe8b40339296d36b5fcfd6c9b64c6502e8a9a"
+      "en_sha256": "169038751088e9376f41a4995525ca35d54f2ae019b6b1ddebd0c6248546db62",
+      "tr_sha256": "1d60009cd98c3495d83f08ef7315c2b61cae4cd0bd5fdb78b6ad5ad1ba7d7c8f"
     },
     {
       "en": "docs/en/memory-layer.md",
       "tr": "docs/tr/memory-layer.md",
       "en_sha256": "b4deeb9424d4cd684cee885ce193ae22a87c8b243babda7bb52da65dffbef9d8",
       "tr_sha256": "c65ec17bf997731b3d5e05da22ba27871602d9e5634533ac62df6c5e1d06c165"
+    },
+    {
+      "en": "docs/en/contribution-model-policy.md",
+      "tr": "docs/tr/contribution-model-policy.md",
+      "en_sha256": "a8b3a14adb3325f11f10af4fba71cfcbea455a202ca29cb39984cb4ff928e029",
+      "tr_sha256": "5e2af5523d97882d8ea995a44342771e1af05fc739f21b2237bd912bd2e753fe"
+    },
+    {
+      "en": "docs/en/model-resource-planning.md",
+      "tr": "docs/tr/model-resource-planning.md",
+      "en_sha256": "138d460f36266fb700ad5bcaaeb141b58c6b1f29f87767923b3be133731e1fee",
+      "tr_sha256": "78abe585161c4f5b09c8d3f98773b1a18aedf157d4415a5aa4d7a7645576ab86"
     }
   ]
 }

@@ -1,8 +1,13 @@
 # Eylema'ya katkıda bulunma
 
-[İngilizce](CONTRIBUTING.md) kaynak dildir. Sözleşme sürümü: **0.2.0**.
+[İngilizce](CONTRIBUTING.md) kaynak dildir. Sözleşme sürümü: **0.3.0**.
 
 Eylema şu anda tasarım sözleşmeleri ve depo araçlarını içerir. Rust web platformu, GPU motoru ve otonom AI takımı yol haritasındadır. İnsanlar, Claude, ChatGPT/Codex, MiniMax ve diğer araçlar aynı katkı sürecini kullanır; sağlayıcı/model desteği isimden varsayılmaz, görev sırasında doğrulanır.
+
+
+## Yeterliği kabul edilmiş değişiklik PR'ları
+
+Kod, belge ve yapılandırma değişiklikleri bakımcının tarihli değerlendirmeyle kabul ettiği frontier/SOTA LLM profilinin anlamlı kullanımını ve gerçek ayrı, bakımcının yetkilendirdiği AI incelemesini gerektirir. Tartışma, fikir ve hata bildirimi açık kalır. [Model yeterlik politikasını](docs/tr/contribution-model-policy.md) izleyin; istenen ad/effort veya başarılı CI yeterlik ya da yetki değildir. Gelecek görev aktivasyonu uygun yazar/inceleyen profillerini ve gerçek insan görev kararını bağlar. İlk sınırlı profil gerçek bakımcı kararı ve tarihli kanıta dayanır; diğer alanlar yeterli ilan edilmez.
 
 ## Somut bir ihtiyaçla başlama
 

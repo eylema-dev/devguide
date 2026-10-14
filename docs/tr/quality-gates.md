@@ -47,3 +47,9 @@ Tarihsel taşıma ve güncel doğrulama ayrı girdiler kullanır. [migration-sna
 Sabitlenmiş depo kümesi ilişkili PR’larla elle güncellenir; sonraki varsayılan dal değişikliklerini otomatik izlemez. Güncel üye checkout’ları `--workspace-file` ile verildiğinde de tarihsel public commit’ler ayrı cache’e indirilir; indirilen kod yürütülmez. Bağımsız inceleme ve bakımcı kararı gerçekten kaydedilene kadar beklemededir.
 
 G05 ayrı [Goal takibi ve koruma istekleri](github-work-management.md) ekler. Önerilen on depo ayarı bu workflow veya JSON yetki referansıyla etkinleşmez. Zorunlu kontrol adları ve GitHub Actions app kimlikleri tam main commit’lerinde gözlenir. Gerçek yönetim yazımı ayrıca maintainer izni ve API okuması gerektirir; sıfır zorunlu GitHub onayı bağımsız AI incelemesinin yerine geçmez.
+
+## Katkı profili ve bütün sistem planlama
+
+Gelecek her değişiklik PR'ına [yeterliği kabul edilmiş LLM katkısını](contribution-model-policy.md) uygulayın: tarihli kapsam/kalite kanıtı, bilinmeyen sunucu kimliği açık gözlenen yapılandırma, gerçek bakımcı uygunluk/görev yetkisi ve gerçek bağımsız son-commit AI incelemesi. Güncel yapısal CI bu olguları doğrulamaz; eksik yeterlik/yetkide kabul bekler. G42/G43 gerçek bakımcı kontrollü kabul/teslimi göstermeli; onaysız, eski, uyumsuz veya yazarın uydurduğu yeterliği reddetmelidir. Tartışma/hata girişi açıktır.
+
+[Modelden bağımsız kaynak planlama](model-resource-planning.md), G80/G81/G82 ve işbirlikli seçim kartlarını bağlar: taşma denetimli parametre/context/cache/yerleşim/örtüşme tahmini, tarihli model keşfi, kabul edilmiş kendi Rust desteği, adlandırılmış cihaz kalibrasyonu, karşılaştırılabilir tam döngü kalite/ablation ve belirsizlik. Desteklenmeyen tür, eksik katsayı ve eski veri uygun ilan edilemez; öneri aktivasyon veya harcama değildir.

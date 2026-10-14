@@ -1,8 +1,8 @@
 {
   "format_version": 1,
   "program": "Rust model harness platform",
-  "revision": 2,
-  "date": "2026-10-13",
+  "revision": 3,
+  "date": "2026-10-14",
   "historical_cards_sha256": "6bd95fbabbb605eade23f0d25b5cfbd762294b8e9b1f521f955fec4c2b529c06",
   "legacy_tracking_sha256": "5de8ca6b53bf02e4faaf1364b3c1541b6de9a349940206adaae85c399748fadc",
   "accepted_goal_ids": [
@@ -61,7 +61,9 @@
     "hardware": "primary M4 Pro 24 GB; other devices unaccepted",
     "model_output_is_authority": false,
     "private_reasoning_collection": false,
-    "native_training": "first_party_rust_for_accepted_profiles; Unsloth-like tools are explicit reviewed reference/recipe tooling, not hidden production engines"
+    "native_training": "first_party_rust_for_accepted_profiles; Unsloth-like tools are explicit reviewed reference/recipe tooling, not hidden production engines",
+    "contribution_llm": "required_for_future_change_prs: dated maintainer-approved frontier/SOTA profile and substantive architect/implementer use; genuinely separate owner-approved AI review; discussion/ideas/bug reports open; recorded settings != hidden serving identity; pending is not qualified",
+    "model_discovery": "dated official-source candidates; review freshness/rights/native support/quality before recommendations; no automatic downloads/activation or in-flight substitution"
   },
   "execution_rule": "One implementation Goal at a time. Check exact head, genuine separate review and current CI before maintainer-authorized merge; bind accepted main before the next dependent card. Refresh private usage before and after every Goal.",
   "first_implementation_goal": "G46",
@@ -210,7 +212,7 @@
   "goals": [
     {
       "id": "G06",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Distribution and rights",
       "repository": "eylema-dev/devguide",
       "issue": {
@@ -245,6 +247,12 @@
           "requirement": "Real maintainer license/contribution decisions and third-party provenance are recorded",
           "check": "Maintainer decision review, rights/provenance inventory and model/training record checks",
           "result": "not_run"
+        },
+        {
+          "id": "G06-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -261,7 +269,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -271,11 +279,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G23",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "CPU tensor reference",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -309,6 +318,12 @@
           "requirement": "Selected operators match independent vectors and reject invalid shape/overflow/NaN cases",
           "check": "Independent numerical reference and shape/dtype/nonfinite failure tests",
           "result": "not_run"
+        },
+        {
+          "id": "G23-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -325,7 +340,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -335,11 +350,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G24",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Metal tensor operations",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -374,6 +390,12 @@
           "requirement": "Actual M4 kernels agree with CPU within predeclared tolerances",
           "check": "Real CPU/Metal operator parity and failure tests before changing tolerance",
           "result": "not_run"
+        },
+        {
+          "id": "G24-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -390,7 +412,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -400,11 +422,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G25",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Placement task",
       "repository": "eylema-dev/eylema-examples",
       "issue": {
@@ -439,6 +462,12 @@
           "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
+        },
+        {
+          "id": "G25-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -455,7 +484,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -465,11 +494,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G26",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Small learned models",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -509,6 +539,12 @@
           "requirement": "Held-out policy/dynamics closed-loop success, multistep errors and constraints are compared with baseline",
           "check": "Pinned training/eval runs; publish unsuccessful candidates; acceptance needs actual improvement/quality floors",
           "result": "not_run"
+        },
+        {
+          "id": "G26-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -525,7 +561,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -535,7 +571,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G27",
@@ -803,7 +840,7 @@
     },
     {
       "id": "G28",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Weight loader",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -837,6 +874,12 @@
           "requirement": "Selected safetensors/conversion subset rejects bad offsets/dtype/shape/missing/changed tensors",
           "check": "Malformed and changed-artifact fixtures plus reference load comparison",
           "result": "not_run"
+        },
+        {
+          "id": "G28-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -853,7 +896,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -863,11 +906,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G29",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Tokenizer and template",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -900,6 +944,12 @@
           "requirement": "EN/TR/Unicode examples match reference token IDs including special tokens/template",
           "check": "Pinned independent tokenizer vectors and special-token/template regression tests",
           "result": "not_run"
+        },
+        {
+          "id": "G29-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -916,7 +966,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -926,11 +976,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G30",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "CPU model execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -966,6 +1017,12 @@
           "requirement": "Transformer/attention/KV/logits agree with reference; context and stop bounds work",
           "check": "Layer/logit vectors and actual bounded CPU generation/cancellation tests",
           "result": "not_run"
+        },
+        {
+          "id": "G30-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -982,7 +1039,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -992,11 +1049,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G31",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Metal model execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1031,6 +1089,12 @@
           "requirement": "The same pinned model really runs/streams/stops on M4 with numerical and resource bounds",
           "check": "Actual CPU/Metal numerical/generation comparison, streaming/stop/memory checks",
           "result": "not_run"
+        },
+        {
+          "id": "G31-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1047,7 +1111,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1057,11 +1121,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G32",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Language-driven tasks",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1106,6 +1171,12 @@
           "requirement": "EN/TR goals become typed authorized proposals under combined LLM/policy/3D load; no hidden cloud fallback",
           "check": "Actual combined user journeys, invalid/denied-proposal tests and locality audit",
           "result": "not_run"
+        },
+        {
+          "id": "G32-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1122,7 +1193,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1132,11 +1203,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G33",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Episodes and corrections",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1173,6 +1245,18 @@
           "requirement": "Training admission rejects content without consent; observations and teacher suggestions remain distinct",
           "check": "Consent/provenance/correction admission and redaction tests",
           "result": "not_run"
+        },
+        {
+          "id": "G33-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G33-R1",
+          "requirement": "Capture permitted development and in-product outcomes/corrections/test/resource lessons with typed lineage for scoped memory and improvement.",
+          "check": "Reject raw conversations/private reasoning/credentials; generalized lessons require verified outcome/provenance and separate collect/train/disclose/export rights.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1189,7 +1273,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1199,11 +1283,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G34",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Dataset revision",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -1236,6 +1321,18 @@
           "requirement": "Episode derivatives never leak between train/holdout and every sample has permitted lineage",
           "check": "Deterministic dedup/split/provenance/rights negative tests",
           "result": "not_run"
+        },
+        {
+          "id": "G34-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G34-R1",
+          "requirement": "Curate permitted development/product evidence into role-specific RAG/training data while project-private information stays private.",
+          "check": "Rights/lineage/withdrawal and train-holdout grouping follow every derived summary/embedding/adapter; no automatic ecosystem admission.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1252,7 +1349,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1262,11 +1359,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G35",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Local Unsloth recipe",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -1301,6 +1399,12 @@
           "requirement": "A bounded pinned LoRA run completes on this M4 with checkpoint and resource evidence",
           "check": "One small smoke run followed by actual local training; installed tools alone do not pass",
           "result": "not_run"
+        },
+        {
+          "id": "G35-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1317,7 +1421,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1327,11 +1431,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G36",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Export and reacceptance",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -1368,6 +1473,12 @@
           "requirement": "Exported candidate matches tokenizer/numerical/task contracts in owned Rust and held-out comparisons",
           "check": "Actual export and Rust candidate/current evaluation on independent tasks",
           "result": "not_run"
+        },
+        {
+          "id": "G36-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1384,7 +1495,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1394,11 +1505,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G37",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Model set and rollback",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -1434,6 +1546,18 @@
           "requirement": "Approval/canary/active/rollback and measured same-device workload assignment pin in-flight versions",
           "check": "Actual failed-canary rollback and workload-change/version-binding tests",
           "result": "not_run"
+        },
+        {
+          "id": "G37-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G37-R1",
+          "requirement": "Model/context/parameter/backend/scheduling changes use dated reviewed candidates and preserve in-flight artifact/profile/quality/resource versions.",
+          "check": "Actual replacement/canary/rollback rejects unaccepted type, stale catalog/estimate and quality-floor regression; latestness alone cannot activate or reset a job.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1450,7 +1574,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1460,7 +1584,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G40",
@@ -1527,7 +1652,7 @@
     },
     {
       "id": "G41",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Second adapter",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1560,6 +1685,12 @@
           "requirement": "Claude passes the same contract with actual access and recorded provider revision",
           "check": "Live second-provider contract smoke and matching failure tests",
           "result": "not_run"
+        },
+        {
+          "id": "G41-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1576,7 +1707,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1586,11 +1717,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G42",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "GitHub delivery",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1627,6 +1759,18 @@
           "requirement": "Task/revision retries find the same branch/draft PR after unknown responses; task code lacks write token",
           "check": "Unknown-result reconciliation, idempotency and credential-isolation tests plus real draft PR",
           "result": "not_run"
+        },
+        {
+          "id": "G42-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G42-R1",
+          "requirement": "Owner-controlled contribution admission rejects missing/unapproved/expired/domain-effort-provider-mismatched or author-forged SOTA qualification before GitHub delivery; actual task/merge authority is separate.",
+          "check": "Real bounded admission/reconciliation cases with genuine final-head AI review, model-setting witness and actual owner decision; workers cannot access publication credentials or self-approve.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1643,7 +1787,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1653,11 +1797,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G43",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Real development acceptance",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1694,6 +1839,18 @@
           "requirement": "Both providers complete bounded real need/code/tests/separate-review/PR chains with time/repair/intervention records",
           "check": "Two live same-contract tasks and exact-head independent review/CI evidence",
           "result": "not_run"
+        },
+        {
+          "id": "G43-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G43-R1",
+          "requirement": "Real development acceptance binds qualified author and separate reviewer profiles, dated task-quality evidence and actual owner-controlled PR acceptance.",
+          "check": "Both accepted adapters prove substantive model use, expired/mismatched/unknown-profile rejection and actual permitted delivery; manual authorship/CI metadata is not autonomous contribution proof.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1710,7 +1867,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1720,11 +1877,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G44",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Complete macOS acceptance",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1844,6 +2002,12 @@
           "requirement": "All twelve full macOS acceptance steps pass on one clean profile at the same candidate revision",
           "check": "Clean-profile task/recovery/GPU/LLM/consent/training/export/promotion/rollback/two-provider PR replay",
           "result": "not_run"
+        },
+        {
+          "id": "G44-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1860,7 +2024,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1870,11 +2034,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G45",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Experimental distribution package",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1913,6 +2078,12 @@
           "requirement": "ARM64 binary/web assets/install/rollback have hashes, rights, dependencies and clean reinstall evidence",
           "check": "Reproducible package/hash inventory and clean install/rollback; publishing requires separate authority",
           "result": "not_run"
+        },
+        {
+          "id": "G45-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1929,7 +2100,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -1939,11 +2110,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "W01",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Website accuracy",
       "repository": "eylema-dev/eylemadotdev",
       "issue": {
@@ -1980,6 +2152,12 @@
           "requirement": "EN/TR claims and quickstart match accepted product; DNS/TLS checked separately; publication binds Git/Actions/live SHA",
           "check": "Website build/browser/language checks and independent DNS/TLS/release-SHA checks if publishing is authorized",
           "result": "not_run"
+        },
+        {
+          "id": "W01-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1996,7 +2174,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances.",
+      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Acceptance not executed; dependencies and activation bindings required."
@@ -2006,7 +2184,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G46",
@@ -2132,7 +2311,7 @@
     },
     {
       "id": "G47",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "XState orchestration inventory and profile",
       "repository": "eylema-dev/devguide",
       "issue": {
@@ -2159,6 +2338,12 @@
           "requirement": "Pin XState and host/build runtime, rights and process bounds; review the explicit orchestration-only dependency/profile decision under existing policy before any production integration. Owned Rust inference is unchanged.",
           "check": "Inventory/provenance audit, bounded profile proposal, negative dependency/profile tests and separate policy review; publishing a record grants no permission.",
           "result": "not_run"
+        },
+        {
+          "id": "G47-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2175,7 +2360,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2185,11 +2370,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G48",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Bounded workflow and Rust reconciliation",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2222,6 +2408,12 @@
           "requirement": "Compose, start, inspect, stop and reopen a bounded loop; workflow restart reconciles Rust execution IDs before retries, and native stop bypasses the coordinator. XState owns no authority.",
           "check": "Actual local coordinator tests for duplicate delivery, crash/replay, unknown effects, browser closure, budget expiry, direct stop and rejection of stale state; EN/TR browser flow.",
           "result": "not_run"
+        },
+        {
+          "id": "G48-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2238,7 +2430,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2248,11 +2440,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G49",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Perception model artifact and operator profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -2278,6 +2471,12 @@
           "requirement": "Select one feasible MiniCPM perception profile with exact weights/tokenizer/preprocessing/operator/rights hashes and M4 resource ceiling; vision and optional audio profiles stay distinct.",
           "check": "Static artifact/operator audit plus development-reference vectors; no remote custom code execution, engine adoption or download implied by model selection.",
           "result": "not_run"
+        },
+        {
+          "id": "G49-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2294,7 +2493,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2304,7 +2503,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G50",
@@ -2425,7 +2625,7 @@
     },
     {
       "id": "G51",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Reusable harness applications and model replacement",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2460,6 +2660,12 @@
           "requirement": "Placement and document-evidence jobs run on the same harness; two compatible accepted local assignments swap at step boundaries without platform rewrites, preserve in-flight identity and complete bounded planned work.",
           "check": "Real end-to-end two-application tests, failed swap/canary rollback, output/side-effect verification and deterministic/full-loop/role-ablation comparison at frozen quality/resource thresholds.",
           "result": "not_run"
+        },
+        {
+          "id": "G51-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2476,7 +2682,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2486,11 +2692,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G52",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU perception execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2522,6 +2729,12 @@
           "requirement": "Implement the selected perception encoder/projector and required multimodal operator path in owned Rust; malformed input and unsupported profiles fail before inference.",
           "check": "Independent CPU reference vectors, preprocessing/token/shape parity, actual pinned-artifact local inference, bounded input/context/cancel and peak-memory measurements.",
           "result": "not_run"
+        },
+        {
+          "id": "G52-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2538,7 +2751,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2548,11 +2761,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G53",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust Metal perception execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2583,6 +2797,12 @@
           "requirement": "The same accepted perception profile executes on M4 Metal with CPU parity and combined policy/planner/view resource bounds; no hidden inference engine.",
           "check": "Real M4 readback, frozen numerical tolerances, cold/warm/combined latency and memory distributions, resource exhaustion, model stop and device/worker failure tests.",
           "result": "not_run"
+        },
+        {
+          "id": "G53-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2599,7 +2819,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2609,7 +2829,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G54",
@@ -2732,7 +2953,7 @@
     },
     {
       "id": "G55",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Explicit external-model role adapter",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2764,6 +2985,12 @@
           "requirement": "Users register explicit external model capabilities and map normalized role outputs through the same contracts; local-only profiles never send data or silently fall back. External data/call/spend permissions are separate.",
           "check": "Controlled local protocol fixture exercises version, malformed/partial output, timeout, unavailable model, scope and cost/call bounds; real provider compatibility requires a separately bound authorized profile and actual smoke evidence.",
           "result": "not_run"
+        },
+        {
+          "id": "G55-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2780,7 +3007,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2790,11 +3017,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G56",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Open-weight structured-decision model profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -2820,6 +3048,12 @@
           "requirement": "Choose a feasible open-weight decision/router/scoring candidate instead of fixing a closed Jev dependency; pin exact artifact, tokenizer, heads, operators, choice/yes-no/score semantics and calibration metadata.",
           "check": "Candidate comparison and rights/operator audit; independent frozen reference vectors for multi-question outputs; reject unsupported architecture/preprocessing. Selection is not native support.",
           "result": "not_run"
+        },
+        {
+          "id": "G56-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2836,7 +3070,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2846,11 +3080,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G57",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU structured-decision execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2882,6 +3117,12 @@
           "requirement": "Run the accepted structured-decision candidate in owned Rust and normalize choice/yes-no/score outputs with finite bounds; scores never authorize effects or prove calibration.",
           "check": "Actual pinned-artifact CPU run and independent logits/probability/head reference; malformed questions, output schema, multi-question batching, context, memory and stop tests.",
           "result": "not_run"
+        },
+        {
+          "id": "G57-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2898,7 +3139,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2908,11 +3149,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G58",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust Metal structured-decision execution",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2943,6 +3185,12 @@
           "requirement": "Run the same decision profile on M4 Metal and measure fast routing/scoring under planner/policy/world/perception contention while retaining quality and cancellation limits.",
           "check": "Real CPU/Metal head parity and frozen task-quality thresholds; cold/warm/combined p95/p99, throughput, memory, queue/stop and unavailable/device-failure tests.",
           "result": "not_run"
+        },
+        {
+          "id": "G58-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2959,7 +3207,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -2969,11 +3217,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G59",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Separate STT and TTS artifact/operator profiles",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -2999,6 +3248,12 @@
           "requirement": "Pin separate speech-to-text and text-to-speech candidates, audio format/rate/chunk/timestamp/language/voice rights and required operators. TTS is production, not audio perception.",
           "check": "Independent waveform/text/reference audit, Turkish/English quality fixtures, voice/data rights and unsupported-format/profile rejection; no support from selection alone.",
           "result": "not_run"
+        },
+        {
+          "id": "G59-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3015,7 +3270,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3025,11 +3280,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G60",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU speech-to-text",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3060,6 +3316,12 @@
           "requirement": "Run one accepted STT profile in owned Rust with bounded audio segmentation, timing, transcription and interruption; no hidden transcription service.",
           "check": "Actual local artifact/reference run; frozen EN/TR WER/CER, resampling/token/timestamp tests, noisy/empty/truncated audio, latency/memory and effective-stop evidence.",
           "result": "not_run"
+        },
+        {
+          "id": "G60-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3076,7 +3338,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3086,11 +3348,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G61",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU text-to-speech",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3121,6 +3384,12 @@
           "requirement": "Run one accepted TTS acoustic/vocoder profile in owned Rust with separate text/voice/language/sample-rate and bounded chunk output contracts.",
           "check": "Actual local synthesis/reference evidence, frozen intelligibility/pronunciation checks, voice isolation, bounded duration, malformed text, chunk cancellation and latency/memory.",
           "result": "not_run"
+        },
+        {
+          "id": "G61-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3137,7 +3406,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3147,11 +3416,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G62",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust Metal audio and combined streaming",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3183,6 +3453,12 @@
           "requirement": "Accepted STT/TTS profiles use owned Metal paths where supported and combine with visual/text/decision work without unbounded audio buffering or stale speech.",
           "check": "Real CPU/Metal parity, first-transcript/first-audio and realtime-factor limits, queue/buffer/memory peaks, overload and end-to-end interruption under combined load.",
           "result": "not_run"
+        },
+        {
+          "id": "G62-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3199,7 +3475,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3209,7 +3485,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G63",
@@ -3336,7 +3613,7 @@
     },
     {
       "id": "G64",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Shareable ecosystem package builder",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -3365,6 +3642,12 @@
           "requirement": "Select permitted records/datasets/models/evaluations into bounded portable share candidates with explicit terms, provenance, redactions and derivative consent; private stays private.",
           "check": "Synthetic package export/lineage and rights tests reject private fields, local paths, secrets and disallowed derivatives. A candidate file is not publication; actual publication needs its own authority.",
           "result": "not_run"
+        },
+        {
+          "id": "G64-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3381,7 +3664,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3391,11 +3674,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G65",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Ecosystem catalogue and compatible imports",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -3422,6 +3706,18 @@
           "requirement": "Version shareable model/data/evaluation packages and validate imports against role/artifact/rights contracts; imported metadata never grants project access or model activation.",
           "check": "Offline synthetic import checks for changed hashes, incompatible profiles, revoked permissions, restricted data and missing lineage; no automatic execution/download/activation.",
           "result": "not_run"
+        },
+        {
+          "id": "G65-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G65-R1",
+          "requirement": "Record new-type/current-model discovery freshness from official sources, immutable operator/tokenizer/artifact/rights/evaluation/native-support identities and reviewable updates.",
+          "check": "Stale/mismatched/revoked/unknown-type imports stay ineligible; freshness/import metadata never authorizes download/execution or mutates in-flight assignments.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3438,7 +3734,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3448,11 +3744,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G66",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Composable subflows and domain model selection",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3485,6 +3782,18 @@
           "requirement": "Users compose nested bounded workflows and role subprofiles, choosing among accepted domain models by task quality/resources; child scopes/budgets cannot exceed parents.",
           "check": "Actual nested-loop jobs, unsupported domain/subprofile, parent/child budget and authority containment, quality-based selection, disagreement/replanning and direct stop tests.",
           "result": "not_run"
+        },
+        {
+          "id": "G66-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G66-R1",
+          "requirement": "Compose cooperating role portfolios selected by task outcome and local parameter/context/precision/overlap budgets, preserving stable interfaces as models change.",
+          "check": "Compare bounded cooperative loops and role ablation at comparable resources; shared-role model residency not duplicated, unsupported/quality-floor failures explicit, children retain scope/budget/stop containment.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3501,7 +3810,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3511,11 +3820,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G67",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Embedding artifact and retrieval behavior profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -3541,6 +3851,12 @@
           "requirement": "Select a feasible text embedding profile with exact tokenizer/pooling/normalization/dimensions/query-document prefixes, EN/TR coverage, artifact rights and operator references.",
           "check": "Pinned independent vectors and retrieval fixtures; reject dimension, pooling, prefix and normalization mismatches. Popularity does not prove Turkish quality or Rust support.",
           "result": "not_run"
+        },
+        {
+          "id": "G67-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3557,7 +3873,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3567,11 +3883,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G68",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU embeddings",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3602,6 +3919,12 @@
           "requirement": "Produce bounded document/query embeddings in owned Rust for the accepted profile and exact model revision; preprocessing and pooling are part of the contract.",
           "check": "Actual pinned-artifact CPU/reference vectors, cosine/ranking tolerances, Unicode/EN/TR/empty/oversized input and bounded batching/memory/cancellation tests.",
           "result": "not_run"
+        },
+        {
+          "id": "G68-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3618,7 +3941,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3628,11 +3951,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G69",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust Metal embeddings",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3663,6 +3987,12 @@
           "requirement": "Accepted embeddings execute on M4 Metal with CPU parity and combined harness resource accounting; no hidden embedding provider.",
           "check": "Actual M4 vector/ranking parity, throughput, cold/warm p95/p99, batching/memory and effective stop under language/perception/audio contention.",
           "result": "not_run"
+        },
+        {
+          "id": "G69-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3679,7 +4009,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3689,11 +4019,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G70",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Project-scoped owned Rust retrieval index",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3724,6 +4055,12 @@
           "requirement": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
           "check": "Actual synthetic indexing/reopen/search, recall and ranking fixtures; cross-project leakage, stale/deleted documents, incompatible vectors, corrupt index, size and retention boundaries fail.",
           "result": "not_run"
+        },
+        {
+          "id": "G70-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3740,7 +4077,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3750,11 +4087,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G71",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "RAG subflow and grounded job acceptance",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3788,6 +4126,12 @@
           "requirement": "Compose retrieval, optional reranking, reasoning/planning and source-bound answers as a reusable harness subflow; source content cannot authorize tools or external disclosure.",
           "check": "Real EN/TR grounded jobs with citation verification, no-source/contradiction/hostile-document tests, dataset/permission isolation and retrieval/full-loop/role-ablation comparison.",
           "result": "not_run"
+        },
+        {
+          "id": "G71-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3804,7 +4148,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3814,11 +4158,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G72",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Early end-to-end local text/RAG job proof",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -3856,6 +4201,12 @@
           "requirement": "Complete a project-private source-bound report job using owned Rust embeddings/planning/decision, typed tools, verified output, bounded repair and durable reopen. Vision/audio/world/3D are not required for this first text proof.",
           "check": "Actual M4 job with fixed EN/TR documents, verified citations/output, denied/unsupported/no-evidence cases, failed-step repair ceiling, effective user stop, restart and private data/cost lineage.",
           "result": "not_run"
+        },
+        {
+          "id": "G72-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3872,7 +4223,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3882,7 +4233,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G73",
@@ -4174,7 +4526,7 @@
     },
     {
       "id": "G74",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Decision router and RAG/skill dispatch",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4209,6 +4561,18 @@
           "requirement": "Route retrieval-grounded jobs to RAG, code/document work to accepted specialists and typed skills, with explicit choice/score semantics, uncertainty and domain/resource limits.",
           "check": "Real routing outcomes and fixed route fixtures; absent/stale/contradictory sources, unsupported skills and low-confidence decisions cannot bypass permission or be mislabeled completed.",
           "result": "not_run"
+        },
+        {
+          "id": "G74-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G74-R1",
+          "requirement": "Router uses accepted resource/context/parameter/quality/privacy profiles to select cooperating RAG/model/skill routes with uncertainty.",
+          "check": "Actual route decisions reject stale capacity/catalogs, unknown model type, oversized context and infeasible overlap; routing never grants permission or marks an unsupported job completed.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4225,7 +4589,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4235,7 +4599,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G75",
@@ -4358,7 +4723,7 @@
     },
     {
       "id": "G76",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Per-model fine-tune and LoRA/QLoRA profiles",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -4386,6 +4751,18 @@
           "requirement": "Declare training support per exact model profile: adapter targets/rank/alpha, tokenizer/template, base precision/quantization, trainable heads and data/rights requirements. LoRA/QLoRA and unsupported methods are explicit.",
           "check": "Model-specific recipe/reference audit and negative target/shape/base/tokenizer/quantization/permission fixtures; native accepted training executes in owned Rust; reviewed external tools supply explicit development reference vectors/recipes only. Additional model families need their own accepted operator/profile dependencies.",
           "result": "not_run"
+        },
+        {
+          "id": "G76-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G76-R1",
+          "requirement": "Map reviewed Unsloth-style fine-tune options to exact owned-Rust supported model/operator/backend recipes and unsupported outcomes.",
+          "check": "Model-specific LoRA/QLoRA/targets/quantization/context/resource recipe matrix; no universal native parity, hidden engine or dependency exception from an option name.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4402,7 +4779,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4412,11 +4789,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G77",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "In-product bounded improvement jobs",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4450,6 +4828,12 @@
           "requirement": "Eylema selects permitted project data and a supported model recipe, starts/observes/stops an isolated training job, records checkpoint/resources and compares a candidate without automatic activation.",
           "check": "Controlled local training-job fixture covers permission, frozen dataset/holdout, finite candidate/time/repair limits, interruption, partial checkpoint, private storage and unsupported-backend outcomes.",
           "result": "not_run"
+        },
+        {
+          "id": "G77-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4466,7 +4850,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4476,11 +4860,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G78",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust adapter load and merge parity",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4511,6 +4896,12 @@
           "requirement": "Load or explicitly merge accepted LoRA/QLoRA-derived adapters against exact base/tokenizer/operator/quantization profiles in owned Rust; pin active adapter versions and state-reset semantics.",
           "check": "Independent numerical adapter/reference vectors and actual supported local base execution; wrong base/targets/rank/shape/precision and unsupported quantization fail, with in-flight identity preserved.",
           "result": "not_run"
+        },
+        {
+          "id": "G78-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4527,7 +4918,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4537,11 +4928,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G79",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Integrated improvement and skill promotion proof",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4580,6 +4972,18 @@
           "requirement": "Complete Eylema data-to-adapter-to-held-out-evaluation-to-approved-canary/rollback and, when applicable, package the accepted behavior as a versioned skill inside the product. Reuse the exact already accepted native-training candidate/checkpoint; this integration card trains no new candidate and does not reset search allowance.",
           "check": "Reuse the exact candidate and checkpoint already accepted by native training gates; no new training candidate; independent outcome/quality/resource comparison including regressions, effective stop, failed promotion, rights/lineage inheritance and reusable skill validation.",
           "result": "not_run"
+        },
+        {
+          "id": "G79-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G79-R1",
+          "requirement": "Use verified permitted ecosystem recipes/model choices/data and scoped lessons in the accepted improvement loop without bypassing holdout/promotion/rollback.",
+          "check": "Exact already accepted candidate/checkpoint and rights/resource lineage; eligible experience/skill packaging verified, zero new training candidates and no private automatic sharing.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4596,7 +5000,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4606,11 +5010,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G80",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Checked resource requirement estimator",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4642,6 +5047,18 @@
           "requirement": "Estimate per-profile weights, KV/recurrent state, workspace, concurrent reservations, RAG index/storage and adapter-training states using checked units and explicit assumptions/intervals; unknowns stay unknown.",
           "check": "Independent sizing fixtures for dense/MoE/quantized/context/batch/retrieval/training cases, overflow, missing coefficients and unified-versus-discrete memory; no claimed performance from formulas alone.",
           "result": "not_run"
+        },
+        {
+          "id": "G80-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G80-R1",
+          "requirement": "Model-independent local setup estimates architecture/layout/precision, resident versus active MoE parameters, requested context/KV/recurrent/modal buffers and simultaneous cooperating portfolios, with explicit uncertainty.",
+          "check": "Independent dense/MoE/quantized/new-type/context/batch/RAG/training/shared-role/time-overlap fixtures; reject overflow/missing coefficients/stale profile and unified-pool double counting. Formula does not prove runtime/performance.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4658,7 +5075,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4668,11 +5085,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G81",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Measured hardware calibration and capacity profiles",
       "repository": "eylema-dev/eylema-evals",
       "issue": {
@@ -4701,6 +5119,18 @@
           "requirement": "Calibrate supported estimates with actual named-device cold/warm/combined inference measurements; training coefficients remain unknown until separately accepted native training runs provide measurements. Retain intervals, missing values and environmental/model revisions.",
           "check": "Actual M4 baseline, prediction-versus-observation error and stale/profile-mismatch rejection; other devices remain unaccepted until measured. Reservation peaks are not physical allocation.",
           "result": "not_run"
+        },
+        {
+          "id": "G81-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G81-R1",
+          "requirement": "Measure architecture/profile/context/precision and cooperative physical working-set overlap on the named device; retain prediction error and stale-catalog/changed-hardware bounds.",
+          "check": "Actual supported cold/warm/combined portfolio measurements versus estimates, reservation-versus-physical distinction and role-ablation quality/latency/resource comparison; unknown devices/training remain unknown.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4717,7 +5147,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4727,11 +5157,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G82",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Capacity and investment planning inside Eylema",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4765,6 +5196,18 @@
           "requirement": "Compare current-hardware model/context/precision/scheduling options and, when needed, additional hardware or explicitly permitted external serving using dated price/currency/terms snapshots and transparent uncertainty.",
           "check": "Traceable sizing/cost scenarios with unknown prices, stale quotes, privacy-ineligible external options and quality-floor rejection; recommendations are reviewable proposals, never automatic procurement or spend.",
           "result": "not_run"
+        },
+        {
+          "id": "G82-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G82-R1",
+          "requirement": "Guide local system/model/type selection from actual inventory and dated current candidates, task context/parameter/quality/privacy needs, cooperative scheduling and uncertainty.",
+          "check": "Traceable feasible/unsupported/unknown portfolio choices; reject newest-only/parameter-only fit, stale quotes/catalogs, quality/privacy failures, unaccepted native profiles and automatic spending/download/activation.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4781,7 +5224,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4791,11 +5234,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G83",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust gradients and training operators",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4824,6 +5268,12 @@
           "requirement": "Implement bounded owned backward/gradient/optimizer operations for the first accepted policy/adapter profiles; supported training operators are independent of inference support.",
           "check": "Independent analytical/finite-difference and loss/optimizer reference vectors; shape/nonfinite/overflow, frozen-base and gradient-boundary rejection with no external training runtime hidden in production.",
           "result": "not_run"
+        },
+        {
+          "id": "G83-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4840,7 +5290,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4850,11 +5300,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G84",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust CPU LoRA training",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4887,6 +5338,12 @@
           "requirement": "Train one permitted model-specific low-rank adapter in owned Rust CPU under Eylema improvement-job control, keeping the declared base frozen and checkpoint lineage private by default.",
           "check": "Actual bounded M4 CPU candidate, independent update/loss reference, held-out outcome, adapter targets/rank/alpha, stop/partial-checkpoint recovery and resource evidence.",
           "result": "not_run"
+        },
+        {
+          "id": "G84-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4903,7 +5360,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4913,11 +5370,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G85",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust Metal LoRA training",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4948,6 +5406,12 @@
           "requirement": "The same fixed supported LoRA candidate configuration trains in owned M4 Metal with CPU update/loss parity and measured combined resource bounds.",
           "check": "Actual M4 training/readback, predeclared tolerance, frozen base, gradient/optimizer memory peaks, throughput and effective interruption; parity repeats are not candidate search.",
           "result": "not_run"
+        },
+        {
+          "id": "G85-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4964,7 +5428,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4974,11 +5438,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G86",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned Rust QLoRA training profile",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5009,6 +5474,12 @@
           "requirement": "Add one explicitly supported quantized frozen-base adapter training profile in owned Rust; quantization/dequantization and optimizer states are versioned, not universally inferred from four-bit weights.",
           "check": "One bounded supported candidate with independent quantization/update/reference and held-out comparison; wrong quantization/base/target layouts, nonfinite values, resource exhaustion and checkpoint failures reject.",
           "result": "not_run"
+        },
+        {
+          "id": "G86-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5025,7 +5496,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -5035,7 +5506,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G87",
@@ -5150,7 +5622,7 @@
     },
     {
       "id": "G88",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned episodic, semantic and knowledge-graph memory",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5181,6 +5653,12 @@
           "requirement": "Implement bounded first-party Rust episode/fact/entity/relation storage and hybrid source-linked recall. Preserve contradictory claims, observed versus estimated/predicted status and validity intervals; only independently verified or explicitly reviewed material becomes reusable knowledge.",
           "check": "Actual native synchronize/reopen plus held-out EN/TR memory-assisted document jobs. Check graph/vector/lexical recall, join/filter scope before ranking, citation/source revisions, contradictions and temporal validity; revoke/delete source and prove affected cached/index/graph recall unavailable. Compare flat RAG and memory-enabled outcomes under fixed bounds.",
           "result": "not_run"
+        },
+        {
+          "id": "G88-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5197,7 +5675,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; memory/backend proofs remain not_run."
@@ -5207,11 +5685,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G89",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Owned analytical memory and improvement snapshots",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5242,6 +5721,12 @@
           "requirement": "Own bounded immutable column-oriented evaluation/resource/episode summary snapshots and aggregate queries for model routing, curation and resource planning; analytics is derived data with inherited permissions.",
           "check": "Known-answer aggregate/selection tests, snapshot version and lineage, source withdrawal, bounded disk/memory/latency and restart tests. Analytics proposals never automatically train, alter policy or spend; raw private reasoning/secrets excluded from analytic export schema.",
           "result": "not_run"
+        },
+        {
+          "id": "G89-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5258,7 +5743,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; memory/backend proofs remain not_run."
@@ -5268,11 +5753,12 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
     {
       "id": "G90",
-      "plan_card_revision": 1,
+      "plan_card_revision": 2,
       "title": "Memory backend profiles and controlled interchange",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5302,6 +5788,12 @@
           "requirement": "Versioned backend capability registry selects owned transactional, graph/vector or analytical stores for the workload. SQLite-shaped transaction and DuckDB-shaped analytics profiles are reference/interop candidates; any actual external engine needs its own reviewed inventory and authorization. No silent substitution.",
           "check": "Two owned store profiles through the same interface, missing/unsupported profile failure, exact schema/units/index revision, preserved IDs/lineage/retention and bounded import/export with purpose gates. Test portable fixtures; do not claim SQLite/DuckDB native-file compatibility or executed engine support without a pinned accepted reference run.",
           "result": "not_run"
+        },
+        {
+          "id": "G90-CP1",
+          "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
+          "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5318,7 +5810,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; memory/backend proofs remain not_run."
@@ -5328,7 +5820,8 @@
         "implementer": "record at activation",
         "verifier": "record at activation",
         "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
-      }
+      },
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     }
   ],
   "evidence_boundary": "Historical accepted evidence is preserved. Current cards revise future work only; all new runtime/model/performance/training acceptance is not_run. G40 gains no time, repair, call, privacy or host allowance.",
@@ -5368,7 +5861,7 @@
     "controlled_promotion",
     "versioned_skill_packaging"
   ],
-  "capacity_planning": "checked per-model/workflow estimates with measured calibration, uncertainty and dated price assumptions; no automatic investment/spend",
+  "capacity_planning": "checked per-model/workflow estimates with measured calibration, uncertainty and dated price assumptions; no automatic investment/spend Model-independent local setup considers total-resident/active-MoE parameters, context/KV/recurrent/modality/precision/layout/workspace and cooperating role portfolios; calibrate physical overlap and whole-loop quality before feasible recommendations; dated model freshness and accepted own-Rust profile gates.",
   "memory_policy": {
     "kinds": [
       "working",
@@ -5391,5 +5884,28 @@
       "G89",
       "G90"
     ]
+  },
+  "contribution_policy": {
+    "version": 1,
+    "effective": "future_change_prs_after_maintainer_approved_policy_merge",
+    "required_for": [
+      "code",
+      "documentation",
+      "configuration",
+      "other_change_prs"
+    ],
+    "open_intake": [
+      "discussion",
+      "ideas",
+      "bug_reports"
+    ],
+    "qualification": "dated domain/task evaluation plus actual maintainer admission/expiry/revocation; names or CI alone insufficient",
+    "author": "substantive qualified architect_or_implementer use",
+    "reviewer": "qualified owner-approved genuinely separate context; final-head report",
+    "model_evidence": "requested/configured/hidden_serving_identity distinct; unknown not inferred",
+    "authority": "actual human decision; registry/model output/CI grants none",
+    "current_ci": "structural evidence only; real admission/delivery acceptance remains G42/G43",
+    "initial_profile": "sol61-high-contracts-2026-10-14; actual owner approved limited 14 October–13 November 2026 profile; other domains not automatically qualified",
+    "profile_registry": "records/contribution-model-profiles.json"
   }
 }
