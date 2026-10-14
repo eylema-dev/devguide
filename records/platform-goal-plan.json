@@ -3022,25 +3022,53 @@
     },
     {
       "id": "G56",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Open-weight structured-decision model profile",
       "repository": "eylema-dev/eylema-models",
       "issue": {
         "number": 9,
         "url": "https://github.com/eylema-dev/eylema-models/issues/9"
       },
-      "status": "planned",
-      "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
+      "status": "verification",
+      "base_sha": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
       "dependencies": [
         "G27",
         "G46"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "catalog/",
-        "contracts/"
+        "catalog/qwen3-reranker-0.6b.v1.json",
+        "catalog/qwen3-reranker-0.6b.v1.eyl",
+        "contracts/decision-score.v1.json",
+        "contracts/qwen3-reranker-operators.v1.json",
+        "contracts/decision-score-reference.v1.json",
+        "tools/decision_catalog.py",
+        "tools/tests/test_decision_catalog.py",
+        "docs/en/decision-score-profile.md",
+        "docs/tr/decision-score-profile.md",
+        "README.md",
+        "README.tr.md",
+        "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/eylema": [
+          "crates/eylema-contracts/tests/decision_model_contracts.rs",
+          "crates/eylema-contracts/tests/fixtures/qwen3-reranker-profile.v1.eyl",
+          "docs/en/decision-model-profile.md",
+          "docs/tr/decision-model-profile.md",
+          "tools/translation-pairs.json"
+        ],
+        "eylema-dev/devguide": [
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/plans/g56-decision-profile.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Choose a feasible open-weight decision/router/scoring candidate instead of fixing a closed Jev dependency; pin exact artifact, tokenizer, heads, operators, choice/yes-no/score semantics and calibration metadata.",
       "acceptance": [
         {
@@ -3068,20 +3096,101 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": null,
+        "configured_evidence": "Accepted metadata-only usage collector matches current root thread: openai/gpt-6.1-sol/high; hidden serving identity unknown.",
+        "qualification": "sol61-high-contracts-2026-10-14; actual maintainer-approved scoped contribution profile, valid through2026-11-13"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Actual maintainer approved bounded Qwen3-Reranker score-profile design; conditional standing merge authority after checks/currentCI/genuine separate review. Limited contribution profile also actually approved. 120 active minutes/3 repairs/15 separate-review minutes. Static public discovery at most12 responses/8MiB; no weights/tokenizer execution/model/provider calls. Batch1/context4096/max_new_tokens1 reserved, scoring does not generate; 4questions x4options, uncalibrated score-micros. Existing inline method, owned Rust fixture tests only; production model contract unchanged.",
       "accepted_delivery": null,
       "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+        "Current PR CI, genuine separate whole-branch review and accepted-main proof pending. Native model execution remains deferred to G57."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex qualified gpt-6.1-sol/high",
+        "implementer": "parent Codex inline, qualified gpt-6.1-sol/high",
+        "verifier": "parent Codex native Rust/Python/Git/gh",
+        "independent_reviewer": "pending genuine separate final-head reviewer /root/g27_model_review"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ],
+        "G46": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/92",
+            "head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+            "main": "04175b3a7a04a414aa6b7746204233b921da03fa",
+            "tree": "1e6120f51d9eacad72f094ad85e86b32fc2b77a9",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2250d46e3b2ba060f05c9b9a9f9cbff8fb64cbd7",
+              "reviewer": "Codex reviewer /root/g46_platform_review (separate context)"
+            },
+            "main_ci": {
+              "id": 38459444726,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38459444726",
+              "head": "04175b3a7a04a414aa6b7746204233b921da03fa",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "execution_evidence": {
+        "core_head": "3d25c35a5bf602e60eb06871ef812a995bfef614",
+        "models_head": "13882c9cf1ba9e27aa4e9f93a7e5b5de1863f547",
+        "local": "286 Rust passed/1 existing Metal ignored;47 core Python and50 model Python passed;6 actual native fixture tests and8 new catalog/reference tests. 83 guide Python/repository/PR-body/whitespace checks and pinned9-repository workspace/current68-card live audit passed.",
+        "source": "Pinned Qwen e61197ed45024b0ed8a2d74b80b4d909f1255473; measured config/README/tokenizer_config/vocab; weights and tokenizer.json hashes publisher-advertised only. README Apache-2.0 declaration; no LICENSE file.",
+        "reference": "6 frozen synthetic cases/7 question results independently authored with Decimal80 arithmetic. Source-reported deltas are arithmetic inputs only; no model run or prompt-quality claim.",
+        "support": "CPU/Metal local assignment returns UnsupportedLocal(Operators), LocalOnly never routes externally. Strict role/units/reset/source/rights/unknown-field failures are exercised.",
+        "not_run": [
+          "weights",
+          "model inference",
+          "tokenizer/template execution",
+          "GPU execution",
+          "training",
+          "performance calibration",
+          "application provider calls"
+        ],
+        "repairs_used": 0,
+        "qualified_profile": "sol61-high-contracts-2026-10-14"
+      }
     },
     {
       "id": "G57",
