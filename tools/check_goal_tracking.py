@@ -6,6 +6,8 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+from github_identity import canonical_endpoint, canonical_repository, canonical_url
+
 ROOT = Path(__file__).resolve().parents[1]
 STATES = {'backlog', 'ready', 'implementing', 'verification', 'review', 'ready_for_maintainer', 'accepted'}
 RUST_REPOS = {'eylema-dev/eylema', 'eylema-dev/eylema-examples', 'eylema-dev/eylema-evals'}
@@ -84,13 +86,14 @@ def validate_tracking(index, tracking, management, proposal):
 
 def api(endpoint):
     """GET only; never accept credentials, arbitrary host or mutation arguments."""
-    require(endpoint.startswith('repos/eylema-dev/'), 'Canonical read-only API')
+    endpoint = canonical_endpoint(endpoint)
     result = subprocess.run(['gh', 'api', '--method', 'GET', endpoint], capture_output=True, text=True, timeout=120, check=False)
     require(result.returncode == 0, 'GitHub read failed: ' + endpoint)
     return json.loads(result.stdout)
 
 
 def protection(repo):
+    repo = canonical_repository(repo)
     result = subprocess.run(['gh', 'api', '--method', 'GET', 'repos/' + repo + '/branches/main/protection'], capture_output=True, text=True, timeout=120, check=False)
     if result.returncode == 0:
         return json.loads(result.stdout)
@@ -101,7 +104,7 @@ def protection(repo):
 def audit_goal(goal):
     repo = goal['repository']
     issue = api(f"repos/{repo}/issues/{goal['issue']['number']}")
-    require('pull_request' not in issue and issue['html_url'] == goal['issue']['url'] and ('<!-- eylema-goal:' + goal['id'] + ':v1 -->') in (issue['body'] or ''), 'Actual Goal issue identity')
+    require('pull_request' not in issue and canonical_url(issue['html_url']) == canonical_url(goal['issue']['url']) and ('<!-- eylema-goal:' + goal['id'] + ':v1 -->') in (issue['body'] or ''), 'Actual Goal issue identity')
     require(issue['state'] == ('closed' if goal['status'] == 'accepted' else 'open'), 'Issue state differs from snapshot: ' + goal['id'])
     actual = {label['name'] for label in issue['labels']}
     require(set(goal['labels']) <= actual and {label for label in actual if label.startswith('status:')} == {'status:' + goal['status']}, 'Issue labels differ: ' + goal['id'])
@@ -113,7 +116,7 @@ def audit_goal(goal):
         for revision in ('head','main'):
             require(api(prefix + '/commits/' + proof[revision])['commit']['tree']['sha'] == proof['tree'], 'Reviewed/main trees differ')
         run = api(prefix + '/actions/runs/' + str(proof['main_ci']['id']))
-        require(run['head_sha'] == proof['main'] and run['status'] == 'completed' and run['conclusion'] == 'success' and run['html_url'] == proof['main_ci']['url'], 'Actual accepted-main CI differs')
+        require(run['head_sha'] == proof['main'] and run['status'] == 'completed' and run['conclusion'] == 'success' and canonical_url(run['html_url']) == canonical_url(proof['main_ci']['url']), 'Actual accepted-main CI differs')
     return goal['id']
 
 
@@ -132,7 +135,7 @@ def main():
                 require(api('repos/' + repo + '/rules/branches/main') == observed['applied_rules'] and api('repos/' + repo + '/rulesets') == observed['rulesets'], 'Rules differ from observed snapshot: ' + repo)
                 runs = api('repos/' + repo + '/commits/' + observed['main'] + '/check-runs?per_page=100')['check_runs']
                 for source in proposal['repositories'][repo]['required_check_sources']:
-                    require(any(c['name'] == source['name'] and c['head_sha'] == source['head'] and c['html_url'] == source['url'] and c['status'] == 'completed' and c['conclusion'] == 'success' and c['app']['id'] == source['app_id'] and c['app']['slug'] == source['app_slug'] for c in runs), 'Observed check source differs')
+                    require(any(c['name'] == source['name'] and c['head_sha'] == source['head'] and canonical_url(c['html_url']) == canonical_url(source['url']) and c['status'] == 'completed' and c['conclusion'] == 'success' and c['app']['id'] == source['app_id'] and c['app']['slug'] == source['app_slug'] for c in runs), 'Observed check source differs')
             print('PASS: read-only GitHub issue/milestone/labels, accepted merged trees/CI and exact-main Actions sources')
         print('PASS: 47 versioned Goal mappings and 10 prepared protection requests; separate administration authority and live readback still required')
         print('Scope: planning/metadata only; separate AI review truth, permissions, runtime/GPU/model/training are not established by this checker')

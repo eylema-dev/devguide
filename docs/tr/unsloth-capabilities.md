@@ -1,4 +1,4 @@
-# Unsloth kabiliyetleri ve kabul edilen Eylema planlama yönü
+# Unsloth kabiliyetleri ve kabul edilen Eyleme planlama yönü
 
 Tarih: 14 Ekim 2026. İnsan, bu yazılı uyarlamayı ve dokuz planned kart ekini onayladı. İngilizce kanoniktir; [English](../en/unsloth-capabilities.md). Bu bir plan revizyonudur; runtime, eğitim ve performans kabulü `not_run` durumundadır.
 
@@ -10,7 +10,7 @@ Güncel [Studio sayfası](https://unsloth.ai/docs/new/studio) Mac çalışmasın
 
 ## Kabiliyet–Goal eşlemesi
 
-| Resmi kabiliyet | Kendi Rust bileşenlerimizde Eylema uyarlaması | Planned kabul |
+| Resmi kabiliyet | Kendi Rust bileşenlerimizde Eyleme uyarlaması | Planned kabul |
 | --- | --- | --- |
 | [Model özelinde fine-tune](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide) | Tam model/base/tokenizer/template/operatör ve yöntem matrisi; metin, embedding/reranker, görüntü, STT, TTS ve tercih/RL profilleri ayrı kalır | G76-U1: ilk desteklenen profil; diğer yöntemler açık unsupported/keşif |
 | [LoRA seçenekleri](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide) | Rank, alpha/scaling, hedef, precision, dropout, loss, optimizer/schedule, seed ve trainable/frozen durumunu sabitleme | G76/G83/G86; rsLoRA/LoftQ ayrı sayısal kabul ister |
@@ -38,7 +38,7 @@ Unsloth davranış/referans kaynağıdır. Üretim kendi Rust kodumuzda kalır; 
 
 LoRA tek bit genişliğini zorunlu kılmaz. QLoRA açık quant/dequant layout, base/adapter/gradient/optimizer precision ve tam base kimliği ister; herhangi bir dört-bit dosya yetmez. Yeni rsLoRA/LoftQ, full fine-tune, continued pretraining, RL, diffusion/world-model eğitimi, FP8/NVFP4 ve çoklu GPU işleri ayrı tasarım/kabul gelene kadar keşif/unsupported kalır. Yöntem listesi motor, donanım veya çalıştırma desteği vermez.
 
-Upstream hız/bellek yüzdeleri Eylema garantisi değildir. Aynı model/veri/context/precision ve kalite sınırlarında adı belli donanımda ölçüm yapılır. Kabul edilmiş G80 bildirilen bileşenleri tahmin eder; yeni workload katsayısı veya ölçülmüş eğitim performansı sağlamaz. G81/G82 kalibrasyon ve yatırım kapılarını korur. Eksik destek/katsayı bilinmeyen kalır; öneri harcama yetkisi vermez.
+Upstream hız/bellek yüzdeleri Eyleme garantisi değildir. Aynı model/veri/context/precision ve kalite sınırlarında adı belli donanımda ölçüm yapılır. Kabul edilmiş G80 bildirilen bileşenleri tahmin eder; yeni workload katsayısı veya ölçülmüş eğitim performansı sağlamaz. G81/G82 kalibrasyon ve yatırım kapılarını korur. Eksik destek/katsayı bilinmeyen kalır; öneri harcama yetkisi vermez.
 
 ## Kart revizyonu ve uygulama yolu
 

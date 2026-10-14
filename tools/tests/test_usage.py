@@ -81,6 +81,14 @@ class UsageTests(unittest.TestCase):
         subprocess.run(['git', '-C', str(other), 'remote', 'set-url', 'origin',
                         'https://github.com/eylema-dev/eylema-evil.git'], check=True)
         self.assertFalse(usage.project_cwd(str(other), [], {}))
+        for origin, expected in [('https://github.com/eyleme-dev/eylema.git', True),
+                                 ('https://github.com/eyleme-dev/eyleme.git', True),
+                                 ('https://github.com/eylema-dev/eyleme.git', False),
+                                 ('git@github.com:eyleme-dev/eylemadotdev.git', True),
+                                 ('https://github.com/eyleme-dev-evil/eylema.git', False),
+                                 ('https://github.com/eyleme-dev/eylema-evil.git', False)]:
+            subprocess.run(['git', '-C', str(other), 'remote', 'set-url', 'origin', origin], check=True)
+            self.assertEqual(usage.project_cwd(str(other), [], {}), expected)
 
     def test_cache_and_reasoning_are_subsets_not_extra_tokens(self):
         self.session(items=[response(amount=counters(writes=5))])

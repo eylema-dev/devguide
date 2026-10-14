@@ -26,6 +26,12 @@ class PlatformPlanTests(unittest.TestCase):
     def test_current_plan_and_complete_original_coverage(self):
         validate_plan(self.plan, self.index, self.tracking)
 
+    def test_org_migration_preserves_original_issue_number_and_rejects_old_current_owner(self):
+        original = next(g for g in self.plan['goals'] if g['id'] in {h['id'] for h in self.index['goals']})
+        self.assertTrue(original['repository'].startswith('eyleme-dev/'))
+        self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == original['id'])['issue'].update(number=999999))
+        self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == original['id']).update(repository=original['repository'].replace('eyleme-dev/', 'eylema-dev/')))
+
     def test_history_cannot_be_rewritten(self):
         tracking = copy.deepcopy(self.tracking)
         tracking['goals'][0]['accepted_delivery'][0]['main'] = 'a' * 40

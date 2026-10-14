@@ -49,7 +49,7 @@ Retention, withdrawal and deletion invalidate subsequent source and derivative r
 
 ## Storage/query profiles and external examples
 
-| Workload profile | Eylema implementation direction | Reference or optional interchange candidate |
+| Workload profile | Eyleme implementation direction | Reference or optional interchange candidate |
 |---|---|---|
 | Small frequent state/episode writes, key lookup and restart | Owned Rust canonical journal and bounded transactional indexes; G13 recovery is reused within its accepted scope | SQLite's device-local embedded storage pattern; writer concurrency is an explicit profile limit |
 | Entity/claim/relation and source traversal | Owned Rust graph indexes with temporal validity, provenance and bounded traversal, alongside RAG vectors | Knowledge graph pattern intended by the maintainer; no particular CortexDB dependency |

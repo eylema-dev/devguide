@@ -8,7 +8,7 @@ The unmodified [Apache License, Version 2.0](../../LICENSE) applies to first-par
 
 Contributions intentionally submitted for inclusion follow section 5 unless the contributor explicitly states otherwise; existing separately agreed terms remain effective. No separate CLA, DCO or signature workflow is introduced. Maintainers must resolve incompatible or unclear terms before accepting a contribution, rather than treating a label or AI-generated code as proof of rights.
 
-Retain authorship, copyright, patent, attribution and other required notices. Record the source/revision and terms of copied material and dependencies. NOTICE attributes first-party Eylema work; it does not claim an exhaustive third-party audit or invent a contributor agreement. License selection does not permit new production dependencies or waive the first-party Rust policy.
+Retain authorship, copyright, patent, attribution and other required notices. Record the source/revision and terms of copied material and dependencies. NOTICE attributes first-party Eyleme work; it does not claim an exhaustive third-party audit or invent a contributor agreement. License selection does not permit new production dependencies or waive the first-party Rust policy.
 
 ## Models, data and assets
 

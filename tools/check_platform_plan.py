@@ -7,6 +7,8 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path, PurePosixPath
 
+from github_identity import canonical_endpoint, canonical_repository, canonical_url
+
 ROOT = Path(__file__).resolve().parents[1]
 ROLES = {'perception', 'reasoning', 'planning', 'decision', 'policy',
          'world_model', 'specialist', 'critic', 'representation'}
@@ -115,7 +117,7 @@ def validate_plan(plan, index, tracking):
     for card in goals:
         gid = card['id']
         repo = card['repository']
-        require(repo in {g['repository'] for g in historical.values()} and sha(card['base_sha']), 'Owner and immutable base')
+        require(repo in {canonical_repository(g['repository']) for g in historical.values()} and sha(card['base_sha']), 'Owner and immutable base')
         require(type(card['plan_card_revision']) is int and card['plan_card_revision'] > 0
                 and card['title'] and card['objective'] and card['activation'], 'Card identity and activation binding')
         dependencies = card['dependencies']
@@ -123,10 +125,11 @@ def validate_plan(plan, index, tracking):
         require(len(dependencies) == len(set(dependencies)) and set(dependencies) <= ids and gid not in dependencies, 'Dependency identity')
         require(all(isinstance(group, list) and set(group) <= ids and gid not in group for group in conditional.values()), 'Conditional dependency identity')
         if gid in historical:
-            require(repo == historical[gid]['repository']
+            require(repo == canonical_repository(historical[gid]['repository'])
                     and set(historical[gid]['dependencies']) <= set(dependencies)
                     and historical[gid]['conditional_dependencies'] == conditional, 'No waived original required gate')
-            require(card['issue'] == legacy[gid]['issue'], 'Preserved original issue identity')
+            require(card['issue']['number'] == legacy[gid]['issue']['number']
+                    and card['issue']['url'] == canonical_url(legacy[gid]['issue']['url']), 'Preserved original issue identity')
             original_acceptance = {(a['id'], a['requirement'], a['check']) for a in historical[gid]['acceptance']}
             current_acceptance = {(a['id'], a['requirement'], a['check']) for a in card['acceptance']}
             require(original_acceptance <= current_acceptance, 'Original required acceptance preserved')
@@ -160,9 +163,9 @@ def validate_plan(plan, index, tracking):
         if card['status'] == 'accepted':
             require(issue is not None and all(a['result'] == 'passed' for a in card['acceptance']), 'Executed required acceptance')
             require(isinstance(card['accepted_delivery'], list) and card['accepted_delivery'], 'Accepted proof required')
-            require(repo in {p['repository'] for p in card['accepted_delivery']}, 'Accepted primary delivery')
-            require(len(card['accepted_delivery']) == len({p['repository'] for p in card['accepted_delivery']})
-                    and all(p['repository'] in {h['repository'] for h in historical.values()} for p in card['accepted_delivery']), 'Unique canonical accepted repositories')
+            require(repo in {canonical_repository(p['repository']) for p in card['accepted_delivery']}, 'Accepted primary delivery')
+            require(len(card['accepted_delivery']) == len({canonical_repository(p['repository']) for p in card['accepted_delivery']})
+                    and all(canonical_repository(p['repository']) in {canonical_repository(h['repository']) for h in historical.values()} for p in card['accepted_delivery']), 'Unique canonical accepted repositories')
             for proof in card['accepted_delivery']:
                 validate_proof(proof, proof['repository'])
         else:
@@ -192,7 +195,7 @@ def validate_plan(plan, index, tracking):
 
 
 def api(endpoint):
-    require(endpoint.startswith('repos/eylema-dev/'), 'Canonical read-only API')
+    endpoint = canonical_endpoint(endpoint)
     result = subprocess.run(['gh', 'api', '--method', 'GET', endpoint], capture_output=True, text=True, timeout=60, check=False)
     require(result.returncode == 0, 'GitHub metadata unavailable: ' + endpoint)
     return json.loads(result.stdout)
@@ -203,7 +206,7 @@ def audit_card(card):
     require(issue is not None, 'Current issue not materialized: ' + card['id'])
     remote = api(f"repos/{card['repository']}/issues/{issue['number']}")
     marker = f"<!-- eylema-platform-goal:{card['id']}:r{card['plan_card_revision']} -->"
-    require('pull_request' not in remote and remote['html_url'] == issue['url']
+    require('pull_request' not in remote and canonical_url(remote['html_url']) == canonical_url(issue['url'])
             and marker in (remote['body'] or ''), 'Actual current issue/card binding')
     require(remote['state'] == ('closed' if card['status'] == 'accepted' else 'open'), 'Current issue state')
     for proof in card['accepted_delivery'] or []:

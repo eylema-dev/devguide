@@ -1,11 +1,11 @@
-# Eylema contributor contract
+# Eyleme contributor contract
 
 Applies to humans and every AI coding provider. Code, comments, file names, API/schema identifiers, contribution templates and task records use English. Documentation is bilingual: English is canonical and Turkish is its synchronized companion. Non-English test data is allowed when required by the behavior under test. Provider adapters must point here instead of inventing another policy.
 
 ## Read before changing files
 
-1. [Project status](https://github.com/eylema-dev/eylema/blob/main/README.md) and [contribution workflow](CONTRIBUTING.md).
-2. [Architecture](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/project-structure.md), the relevant API/protocol and [roadmap](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/roadmap.md).
+1. [Project status](https://github.com/eyleme-dev/eyleme/blob/main/README.md) and [contribution workflow](CONTRIBUTING.md).
+2. [Architecture](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/project-structure.md), the relevant API/protocol and [roadmap](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/roadmap.md).
 3. [Quality gates](docs/en/quality-gates.md) and the accepted task, scope and acceptance criteria.
 
 ## Work contract

@@ -14,8 +14,14 @@
 
 Update English and Turkish in linked PRs. Each language repo records its reviewed local bytes. Devguide pins both revisions and the hash of every paired product document; its integration gate compares API identifiers, operation order and roadmap milestone/backlog IDs. A green local check does not prove that the other language is current. Review meaning before updating fingerprints.
 
-After member branches are pushed, run `.venv/bin/python tools/check_workspace.py --fetch` in devguide. Fetching reads only the fixed public eylema-dev repositories and full commit IDs; no member code runs. To check existing clean local clones instead, provide `--workspace-file` with a JSON mapping of repository short names to local checkout paths; keep this machine-specific file out of Git. The head of each checkout must match its pin.
+After member branches are pushed, run `.venv/bin/python tools/check_workspace.py --fetch` in devguide. Fetching reads only the fixed public eyleme-dev repositories and full commit IDs; no member code runs. To check existing clean local clones instead, provide `--workspace-file` with a JSON mapping of repository short names to local checkout paths; keep this machine-specific file out of Git. The head of each checkout must match its pin.
 
 The integration manifest is an accepted snapshot candidate, not a monitor of latest main. Every later member change needs a companion manifest PR; there is no webhook, scheduled monitor or server-side cross-repository merge enforcement in this setup. Re-run integration after final member revisions and before maintainer acceptance.
 
 Do not rewrite `records/document-migration.json` or `records/migration-snapshot.json` for ordinary document updates. They preserve the original split's source and destination bytes at immutable commits. Current documents may evolve after review; local fingerprints and current integration pins are the inputs for their new revision. The migration gate checks current layout/removals separately from historical byte evidence. Its historical cache only fetches validated public identities/full commits and reads Git blobs; member code is never executed.
+
+## GitHub identity migration — 14 October 2026
+
+The canonical organization is `eyleme-dev` and the core repository is `eyleme-dev/eyleme`. Auxiliary repository basenames stay unchanged. Current repository identities, CI scope, member pins and example dependency sources must use the canonical names.
+
+Historical migration/Goal evidence keeps its original repository names, URLs, hashes and commits. Read-only history checks map only the managed repositories from `eylema-dev` to `eyleme-dev`, and the two known former core identities (`eylema-dev/eylema`, `eyleme-dev/eylema`) to `eyleme-dev/eyleme`. Git fetches and GitHub API reads use the canonical destination; immutable source bytes, exact revisions and repository ownership checks still apply. The alias mapping grants no authority and accepts no lookalike owner or repository.

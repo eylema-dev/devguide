@@ -14,8 +14,14 @@
 
 İngilizce ve Türkçeyi ilişkili PR'larda güncelleyin. Her dil deposu incelenen yerel baytları kaydeder. Devguide iki revizyonu ve her eşleşen ürün belgesinin özetini sabitler; entegrasyon kapısı API tanımlayıcılarını, işlem sırasını ve yol haritası kilometre taşı/görev kimliklerini karşılaştırır. Yerel kontrolün yeşil olması diğer dilin güncelliğini kanıtlamaz. Parmak izlerinden önce anlamı inceleyin.
 
-Üye dallar yayımlandıktan sonra devguide içinde `.venv/bin/python tools/check_workspace.py --fetch` çalıştırın. İndirme yalnızca sabit açık eylema-dev depolarını ve tam commit kimliklerini okur; üye kodu yürütülmez. Temiz yerel kopyaları kontrol etmek için kısa depo isimlerini yerel dizinlere eşleyen JSON dosyasını `--workspace-file` ile verin; makineye özel bu dosyayı Git'e eklemeyin. Her dizinin baş revizyonu sabitlenen SHA ile aynı olmalıdır.
+Üye dallar yayımlandıktan sonra devguide içinde `.venv/bin/python tools/check_workspace.py --fetch` çalıştırın. İndirme yalnızca sabit açık eyleme-dev depolarını ve tam commit kimliklerini okur; üye kodu yürütülmez. Temiz yerel kopyaları kontrol etmek için kısa depo isimlerini yerel dizinlere eşleyen JSON dosyasını `--workspace-file` ile verin; makineye özel bu dosyayı Git'e eklemeyin. Her dizinin baş revizyonu sabitlenen SHA ile aynı olmalıdır.
 
 Entegrasyon manifesti bir kabul anlık görüntüsü adayıdır; en güncel main'i izlemez. Sonraki her üye değişikliği eşlik eden manifest PR'ı gerektirir; bu kurulumda webhook, zamanlanmış izleyici veya sunucuda zorlanan depolar arası birleştirme kontrolü yoktur. Son üye revizyonlarından sonra ve bakımcı kabulünden önce entegrasyonu yeniden çalıştırın.
 
 Sıradan belge değişiklikleri için `records/document-migration.json` veya `records/migration-snapshot.json` dosyalarını yeniden yazmayın. Bunlar ilk taşımanın kaynak/hedef baytlarını değişmez commit’lerde korur. Güncel belgeler inceleme sonrasında gelişebilir; yeni revizyonun girdileri yerel parmak izleri ve güncel entegrasyon pinleridir. Taşıma kapısı güncel yerleşim/kaldırmaları tarihsel bayt kanıtından ayrı kontrol eder. Tarihsel cache yalnız doğrulanmış public kimlik/tam commit’leri indirip Git blob’larını okur; üye kodu yürütülmez.
+
+## GitHub kimlik geçişi — 14 Ekim 2026
+
+Kanonik organizasyon `eyleme-dev`, çekirdek depo `eyleme-dev/eyleme` oldu. Yardımcı depoların kısa adları aynı kaldı. Güncel depo kimlikleri, CI kapsamı, üye sabitlemeleri ve örnek bağımlılık kaynakları kanonik adları kullanmalıdır.
+
+Tarihsel taşıma/Goal kanıtları özgün depo adlarını, bağlantılarını, özetlerini ve commit'lerini korur. Salt okunur geçmiş kontrolleri yalnız yönetilen depoları `eylema-dev` organizasyonundan `eyleme-dev` organizasyonuna; çekirdeğin bilinen iki önceki kimliğini (`eylema-dev/eylema`, `eyleme-dev/eylema`) ise `eyleme-dev/eyleme` kimliğine eşler. Git fetch ve GitHub API okumaları kanonik hedefi kullanır; değişmez kaynak baytları, kesin revizyonlar ve depo sahipliği kontrolleri geçerliliğini korur. Bu eşleme yetki vermez ve benzer görünümlü sahip veya depo adlarını kabul etmez.

@@ -2,7 +2,7 @@
 
 English is canonical. [Türkçe](../tr/model-resource-planning.md). This is the acceptance design for G80/G81/G82 and connected model/loop cards; the advisor and model execution are not implemented by this document.
 
-Eylema should guide a new local system from its task/quality/privacy constraints and actual local resource inventory. Stable role and capability interfaces allow model families and versions to change. A fresh candidate catalog, architecture-specific checked estimates and named-device measurements select cooperative model portfolios; newest or largest alone is not a selection criterion.
+Eyleme should guide a new local system from its task/quality/privacy constraints and actual local resource inventory. Stable role and capability interfaces allow model families and versions to change. A fresh candidate catalog, architecture-specific checked estimates and named-device measurements select cooperative model portfolios; newest or largest alone is not a selection criterion.
 
 ## Required planning inputs
 

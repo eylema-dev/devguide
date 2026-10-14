@@ -49,7 +49,7 @@ Saklama süresi, geri çekme ve silme sonraki kaynak/türev okumalarını, cache
 
 ## Depolama/sorgu profilleri ve dış örnekler
 
-| İş yükü profili | Eylema uygulama yönü | Referans veya isteğe bağlı veri alışverişi adayı |
+| İş yükü profili | Eyleme uygulama yönü | Referans veya isteğe bağlı veri alışverişi adayı |
 |---|---|---|
 | Küçük sık durum/deneyim yazımları, anahtar erişimi ve yeniden başlatma | Kendi Rust canonical journal’ımız ve sınırlı transactional index; G13 kurtarması kabul edilmiş kapsamında kullanılır | SQLite’ın cihazda yerel gömülü depolama örüntüsü; yazıcı eşzamanlılığı açık profil sınırıdır |
 | Varlık/iddia/ilişki ve kaynak dolaşımı | RAG vektörleriyle birlikte zaman geçerliliği, kaynak ve sınırlı dolaşım taşıyan kendi Rust graph index’imiz | Bakımcının kastettiği knowledge graph örüntüsü; belirli CortexDB bağımlılığı yok |

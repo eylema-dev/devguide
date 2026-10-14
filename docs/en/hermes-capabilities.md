@@ -8,7 +8,7 @@ Reviewed official [NousResearch/Hermes Agent](https://github.com/NousResearch/he
 
 ## Capability-to-Goal map
 
-| Hermes capability and primary source | Eylema adaptation | Existing foundation / remaining Goal | Required proof before acceptance |
+| Hermes capability and primary source | Eyleme adaptation | Existing foundation / remaining Goal | Required proof before acceptance |
 | --- | --- | --- | --- |
 | [Skills and gradual loading](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | Load catalog metadata, selected skill, then only needed references; source/representation/permission and serialized context budget checked on every load | Accepted G75 versionedskills/G54 typedtools/G87 context; extend planned G74 | Missing/revoked/stale skill, denied reference or budget overflow fails; loading a schema never grants tool execution |
 | [Tool search](https://hermes-agent.nousresearch.com/docs/user-guide/features/tool-search) | Deferred typed tool catalog with search→describe→authorized call; preserve registry identities and rejection semantics | Accepted G54; planned G74/G51 | Same permissions and argument validation before/after discovery; zero match is distinct from unavailable capability |

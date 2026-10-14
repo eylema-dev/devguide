@@ -8,7 +8,7 @@ Resmi [NousResearch/Hermes Agent](https://github.com/NousResearch/hermes-agent/t
 
 ## Kabiliyet–Goal eşlemesi
 
-| Hermes kabiliyeti ve birincil kaynak | Eylema uyarlaması | Mevcut temel / kalan Goal | Kabulden önce gereken kanıt |
+| Hermes kabiliyeti ve birincil kaynak | Eyleme uyarlaması | Mevcut temel / kalan Goal | Kabulden önce gereken kanıt |
 | --- | --- | --- | --- |
 | [Skill ve kademeli yükleme](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | Katalog metaverisi, seçilen skill, ardından yalnız gereken referans yüklenir; her yüklemede kaynak/representation/izin ve serileştirilmiş context bütçesi denetlenir | Kabul edilmişG75 versionedskills/G54 typedtools/G87 context; planned G74 genişler | Eksik/iptal/eski skill, yasak referans veya bütçe aşımı reddedilir; schema yüklemek çalıştırma yetkisi vermez |
 | [Araç arama](https://hermes-agent.nousresearch.com/docs/user-guide/features/tool-search) | Ertelenmiş tipli araç kataloğunda arama→tanımlama→yetkili çağrı; registry kimlikleri ve ret anlamı korunur | Kabul edilmişG54; planned G74/G51 | Keşif öncesi/sonrası aynı izin ve argüman denetimi; eşleşme bulunmaması kabiliyetin unavailable olmasından ayrıdır |

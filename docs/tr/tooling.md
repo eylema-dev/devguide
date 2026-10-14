@@ -11,7 +11,7 @@ Sürüm **0.3.0**. [İngilizce](../en/tooling.md).
 | GitHub checkout | actions/checkout v7.0.1, `3d3c42e5aac5ba805825da76410c181273ba90b1` | Resmî GitHub eylemi; erişim bilgileri kalıcı tutulmaz |
 | Python sağlama | actions/setup-python v7.0.0, `5fda3b95a4ea91299a34e894583c3862153e4b97` | Resmî GitHub eylemi; minor 3.14, patch sürümü CI'da yazdırılır |
 | Barındırılan ortam | GitHub `ubuntu-24.04`, Git | Uygulama işi hosted ARM64 macos-26 kullanır; yerel M4 kabulü ayrıdır. İmaj revizyonu değişebilir; yeniden üretimde runner/runtime sürümlerini kaydedin |
-| Yalnız mevcut marka dosyalarını yeniden üretme | Node.js ve sharp | [Marka kılavuzu](https://github.com/eylema-dev/eylema/blob/main/assets/eylema-logo/README.tr.md) ilk üretimde sharp 0.35.5 kullanıldığını kaydeder. Main'den devralınan isteğe bağlı çizim aracı; CI tarafından kurulmaz, uygulamada kullanılmaz. Bu katkı değişikliği yeniden üretim bağımlılık kilidi sağlamaz |
+| Yalnız mevcut marka dosyalarını yeniden üretme | Node.js ve sharp | [Marka kılavuzu](https://github.com/eyleme-dev/eyleme/blob/main/assets/eylema-logo/README.tr.md) ilk üretimde sharp 0.35.5 kullanıldığını kaydeder. Main'den devralınan isteğe bağlı çizim aracı; CI tarafından kurulmaz, uygulamada kullanılmaz. Bu katkı değişikliği yeniden üretim bağımlılık kilidi sağlamaz |
 | İncelenmiş uygulama kapısı | Rust/Cargo 1.99.0, rustfmt, clippy, wasm32-unknown-unknown; birinci taraf tools/check_rust.py | Yalnız uygulama profilinde hosted ortamın hazır rustup aracıyla kurulur. Belge profili kapısı kendi başına Rust yürütümünü atlar |
 | Planlanan eğitim ortamı | Unsloth ve Python/hızlandırıcı bağımlılıkları | M6'da ayrı sabit imaj/tarif; depo CI'ında kurulmaz veya kullanılmaz |
 

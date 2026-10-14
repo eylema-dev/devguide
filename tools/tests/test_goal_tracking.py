@@ -84,7 +84,7 @@ class GoalTrackingTests(unittest.TestCase):
         response=subprocess.CompletedProcess([],0,'{"ok":true}','')
         with patch('check_goal_tracking.subprocess.run',return_value=response) as run:
             self.assertEqual(api('repos/eylema-dev/devguide/issues/10'),{'ok':True})
-            self.assertEqual(run.call_args.args[0][:5],['gh','api','--method','GET','repos/eylema-dev/devguide/issues/10'])
+            self.assertEqual(run.call_args.args[0][:5],['gh','api','--method','GET','repos/eyleme-dev/devguide/issues/10'])
         with patch('check_goal_tracking.subprocess.run') as run,self.assertRaises(ValueError):api('https://outside/permissions')
         run.assert_not_called()
         for status,error in [(1,'HTTP 403'),(1,'offline'),(1,'HTTP 500')]:

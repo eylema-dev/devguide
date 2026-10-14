@@ -1,6 +1,6 @@
 # Özel öğrenme ve paylaşılabilir ekosistem deneyimi
 
-Eylema, ekosistemi olan bir eylemci platformudur: değiştirilebilir yerel açık ağırlık uzman modelleri, kendi Rust motorlarımız, sabit rol arayüzleri ve harness araçları üzerinden işbirliği yapar. Tamamlanan işin kalitesi, kaynak verimliliği, gizlilik sınırları ve tekrarlanabilir gelişim birlikte ölçülür. Eylema kaynak kodunun kontrollü geliştirilmesi, sahibin görev/merge yetkisi altında uygunluğu onaylanan güçlü dil modeli katkısı ve gerçek ayrı AI incelemesi kullanır. Tartışma, fikir ve hata bildirimi açık kalır. Yerel ürün kullanımı dışarıdaki büyük bir modeli zorunlu kılmaz; açıkça yapılandırılmış dış roller kendi veri/çağrı yetkisini gerektirir.
+Eyleme, ekosistemi olan bir eylemci platformudur: değiştirilebilir yerel açık ağırlık uzman modelleri, kendi Rust motorlarımız, sabit rol arayüzleri ve harness araçları üzerinden işbirliği yapar. Tamamlanan işin kalitesi, kaynak verimliliği, gizlilik sınırları ve tekrarlanabilir gelişim birlikte ölçülür. Eyleme kaynak kodunun kontrollü geliştirilmesi, sahibin görev/merge yetkisi altında uygunluğu onaylanan güçlü dil modeli katkısı ve gerçek ayrı AI incelemesi kullanır. Tartışma, fikir ve hata bildirimi açık kalır. Yerel ürün kullanımı dışarıdaki büyük bir modeli zorunlu kılmaz; açıkça yapılandırılmış dış roller kendi veri/çağrı yetkisini gerektirir.
 
 Bu belge hedef tasarım ve kabul sözleşmesidir; bütün çıkarım, modele özel eğitim, RAG veya kurum kurulumu bileşenlerinin çalıştığını iddia etmez. [Güncel aksiyon planı](platform-action-plan.md), [kaynak danışmanı](model-resource-planning.md) ve [katkı politikası](contribution-model-policy.md) uygulama kapılarını bağlar.
 
@@ -11,7 +11,7 @@ Bu belge hedef tasarım ve kabul sözleşmesidir; bütün çıkarım, modele öz
 | Özel proje veya kurum | Proje kapsamındaki memory/RAG/fine-tune için izinli gözlem, düzeltme, bilgi, değerlendirme ve öğrenme türevleri | Varsayılan özel; proje/kurum/amaç erişimi, saklama ve toplama/okuma/erişim/eğitim izinleri uygulanır; ekosistem dışa aktarımı doğmaz |
 | İncelenen ekosistem adayı | Genelleştirilmiş, anonimlik incelemesinden geçmiş dersler, reçeteler, model/profil seçimleri, sentetik veya açıkça paylaşılabilir diğer veriler, değerlendirme ve kaynak ölçümleri | Depoya kabul öncesi ayrı açıklama/dışa aktarma/yayın yetkisi, kaynak ve türev hakları, köken ve yeniden kimliklendirme incelemesi |
 
-Bir kayıt sonsuza kadar özel kalabilir ve sahibinin yerel sistemini yine geliştirebilir. Açık model ağırlıkları görev verisini, RAG kaynaklarını, promptları, düzeltmeleri, embeddingleri, adaptörleri veya eğitim türevlerini kamuya açmaz. Eylema kaynak kodunu yayımlamak kullanıcı kayıtlarını yayımlama yetkisi vermez. Paket adayı yayın değildir; paket içe almak yürütme veya proje erişimi değildir.
+Bir kayıt sonsuza kadar özel kalabilir ve sahibinin yerel sistemini yine geliştirebilir. Açık model ağırlıkları görev verisini, RAG kaynaklarını, promptları, düzeltmeleri, embeddingleri, adaptörleri veya eğitim türevlerini kamuya açmaz. Eyleme kaynak kodunu yayımlamak kullanıcı kayıtlarını yayımlama yetkisi vermez. Paket adayı yayın değildir; paket içe almak yürütme veya proje erişimi değildir.
 
 ## Gelişim döngüsü
 

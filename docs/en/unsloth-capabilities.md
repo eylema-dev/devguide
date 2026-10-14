@@ -1,4 +1,4 @@
-# Unsloth capabilities and accepted Eylema planning direction
+# Unsloth capabilities and accepted Eyleme planning direction
 
 Date: 14 October 2026. The maintainer approved this written adaptation and nine planned-card additions. English canonical; [Turkish](../tr/unsloth-capabilities.md). This is a planning revision; runtime, training and performance acceptance remain `not_run`.
 
@@ -10,7 +10,7 @@ The current [Studio page](https://unsloth.ai/docs/new/studio) describes Mac oper
 
 ## Capability-to-Goal map
 
-| Official capability | Eylema adaptation in owned Rust | Planned acceptance |
+| Official capability | Eyleme adaptation in owned Rust | Planned acceptance |
 | --- | --- | --- |
 | [Model-specific fine-tuning](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide) | Exact model/base/tokenizer/template/operator and method matrix; text, embedding/reranker, vision, STT, TTS and preference/RL profiles remain distinct | G76-U1: first supported profile; other methods explicitly unsupported/discovery |
 | [LoRA options](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide) | Freeze rank, alpha/scaling, targets, precision, dropout, loss, optimizer/schedule, seed and trainable/frozen state | G76/G83/G86; rsLoRA/LoftQ need separate numerical acceptance |
@@ -38,7 +38,7 @@ Unsloth is a behavior/reference source. Production retains owned Rust, with no U
 
 LoRA does not inherently require one bit width. QLoRA needs explicit quant/dequant layout plus base/adapter/gradient/optimizer precision and exact base identity; any four-bit file is insufficient. New rsLoRA/LoftQ, full fine-tuning, continued pretraining, RL, diffusion/world-model training, FP8/NVFP4 and multi-GPU work remain discovery/unsupported until separately designed and accepted. Listing a method grants no engine, hardware or execution support.
 
-Upstream speed/memory percentages are not Eylema guarantees. Measure the same model/data/context/precision and quality limits on named hardware. Accepted G80 estimates declared components; it does not supply new workload coefficients or measured training performance. G81/G82 retain calibration and investment gates. Missing support/coefficient stays unknown; recommendation does not authorize spending.
+Upstream speed/memory percentages are not Eyleme guarantees. Measure the same model/data/context/precision and quality limits on named hardware. Accepted G80 estimates declared components; it does not supply new workload coefficients or measured training performance. G81/G82 retain calibration and investment gates. Missing support/coefficient stays unknown; recommendation does not authorize spending.
 
 ## Card revision and implementation path
 

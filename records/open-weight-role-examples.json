@@ -347,7 +347,7 @@
       "library_name": "chatterbox"
     }
   ],
-  "selection_policy": "Role/task quality, EN/TR/domain coverage, rights, owned Rust operator/profile support and combined resource limits precede popularity. No example is accepted Eylema support, downloaded weights or installed inference dependency.",
+  "selection_policy": "Role/task quality, EN/TR/domain coverage, rights, owned Rust operator/profile support and combined resource limits precede popularity. No example is accepted Eyleme support, downloaded weights or installed inference dependency.",
   "family_notes": [
     {
       "source": "https://github.com/resemble-ai/chatterbox",

@@ -18,7 +18,7 @@ from check_workspace import (MEMBERS, cross_link_errors, validate_migration,
 
 def repository_set():
     return {'format_version': 1,
-            'members': {n: {'repository': 'eylema-dev/' + n, 'revision': 'a' * 40} for n in MEMBERS},
+            'members': {n: {'repository': 'eyleme-dev/' + n, 'revision': 'a' * 40} for n in MEMBERS},
             'product_translations': {n: {'en_sha256': 'b' * 64, 'tr_sha256': 'c' * 64} for n in PRODUCT_DOCS}}
 
 
@@ -28,9 +28,9 @@ class WorkspaceTests(unittest.TestCase):
         validate_set(manifest)
         for mode in ('missing', 'branch', 'foreign', 'missing-translation'):
             bad = copy.deepcopy(manifest)
-            if mode == 'missing': del bad['members']['eylema']
-            if mode == 'branch': bad['members']['eylema']['revision'] = 'main'
-            if mode == 'foreign': bad['members']['eylema']['repository'] = 'other/repo'
+            if mode == 'missing': del bad['members']['eyleme']
+            if mode == 'branch': bad['members']['eyleme']['revision'] = 'main'
+            if mode == 'foreign': bad['members']['eyleme']['repository'] = 'other/repo'
             if mode == 'missing-translation': del bad['product_translations']['architecture']
             with self.subTest(mode=mode):
                 with self.assertRaises(CheckFailure): validate_set(bad)
@@ -82,7 +82,7 @@ class WorkspaceTests(unittest.TestCase):
             core = root / 'core'
             dest = root / 'dest'
             core.mkdir(); dest.mkdir()
-            roots = {'eylema': core, 'devguide': dest}
+            roots = {'eyleme': core, 'devguide': dest}
             inventory = {'documents': []}
             for i in range(26):
                 path = dest / f'{i}.md'

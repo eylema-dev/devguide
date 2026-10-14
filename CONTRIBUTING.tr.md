@@ -1,8 +1,8 @@
-# Eylema'ya katkıda bulunma
+# Eyleme'ye katkıda bulunma
 
 [İngilizce](CONTRIBUTING.md) kaynak dildir. Sözleşme sürümü: **0.3.0**.
 
-Eylema şu anda tasarım sözleşmeleri ve depo araçlarını içerir. Rust web platformu, GPU motoru ve otonom AI takımı yol haritasındadır. İnsanlar, Claude, ChatGPT/Codex, MiniMax ve diğer araçlar aynı katkı sürecini kullanır; sağlayıcı/model desteği isimden varsayılmaz, görev sırasında doğrulanır.
+Eyleme şu anda tasarım sözleşmeleri ve depo araçlarını içerir. Rust web platformu, GPU motoru ve otonom AI takımı yol haritasındadır. İnsanlar, Claude, ChatGPT/Codex, MiniMax ve diğer araçlar aynı katkı sürecini kullanır; sağlayıcı/model desteği isimden varsayılmaz, görev sırasında doğrulanır.
 
 
 ## Yeterliği kabul edilmiş değişiklik PR'ları
@@ -11,11 +11,11 @@ Kod, belge ve yapılandırma değişiklikleri bakımcının tarihli değerlendir
 
 ## Somut bir ihtiyaçla başlama
 
-[AGENTS.md](AGENTS.md), [mimari](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/architecture.md), [proje yapısı](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/project-structure.md) ve [yol haritasını](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/roadmap.md) okuyun. Özellik, hata veya mimari issue formunu kullanın. Issue/PR açıklamalarını, kodu, yorumları, dosya adlarını ve teknik görev kayıtlarını İngilizce yazın. Dokümantasyon İngilizce ve Türkçe tutulur; sınanan davranış gerektiriyorsa örnekler İngilizce dışı test verisi içerebilir. Küçük düzeltmelerde PR'a bağlanan açık bir bakımcı talebi yeterlidir.
+[AGENTS.md](AGENTS.md), [mimari](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/architecture.md), [proje yapısı](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/project-structure.md) ve [yol haritasını](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/roadmap.md) okuyun. Özellik, hata veya mimari issue formunu kullanın. Issue/PR açıklamalarını, kodu, yorumları, dosya adlarını ve teknik görev kayıtlarını İngilizce yazın. Dokümantasyon İngilizce ve Türkçe tutulur; sınanan davranış gerektiriyorsa örnekler İngilizce dışı test verisi içerebilir. Küçük düzeltmelerde PR'a bağlanan açık bir bakımcı talebi yeterlidir.
 
 Başlangıç durumunu, eylemi, beklenen sonucu, hedef ortamları, izinli dosyaları ve kapsam dışını yazın. Ölçülebilir kabul koşulları ekleyin. Öncelik ve yetkiyi bakımcı belirler; issue açılması bir modele komut çalıştırma veya sır edinme yetkisi vermez. Büyük arayüz, bağımlılık, veri/denetim veya platform değişiklikleri uygulamadan önce incelenmiş mimari öneri gerektirir.
 
-[NeedSpec şeması](https://github.com/eylema-dev/eylema/blob/main/ai-team-protocol/request.schema.json) makinece okunabilir girdi sözleşmesidir. GitHub formları bunun girdilerini toplar; otomatik issue–NeedSpec dönüştürücüsü veya AI hizmeti kurulmuş değildir. Mevcut örnek sentetiktir.
+[NeedSpec şeması](https://github.com/eyleme-dev/eyleme/blob/main/ai-team-protocol/request.schema.json) makinece okunabilir girdi sözleşmesidir. GitHub formları bunun girdilerini toplar; otomatik issue–NeedSpec dönüştürücüsü veya AI hizmeti kurulmuş değildir. Mevcut örnek sentetiktir.
 
 ## Tek görev, incelenebilir değişiklik
 
@@ -50,11 +50,11 @@ EN/TR parmak izleri kayda geçirilmemiş düzenlemeleri, API kimliği eşliği s
 
 `CODEOWNERS` ilk bakımcıyı belirtir; tek başına onayı zorunlu kılmaz. Bu değişiklik CI ve inceleme politikasını sağlar; dal kuralları ayrı yönetilir ve doğrulanmadan uygulanıyor denmez. CI, politika veya şema değişiklikleri bakımcı incelemesi ister; PR kontrolleri gevşeterek kendi onayını oluşturamaz.
 
-Bakımcı 12 Ekim 2026 tarihinde kendi Eylema kaynak kodu ve belgeleri için [Apache-2.0](LICENSE) seçti. Projeye dahil edilmek üzere bilerek sunulan katkılar, aksi açıkça belirtilmedikçe lisansın 5. maddesine tabidir; ayrıca anlaşılmış koşullar korunur. Ayrı CLA veya DCO zorunluluğu getirilmez. Kökeni kaydedin ve üçüncü taraf bildirimlerini koruyun; model/veri izinleri varlığa özgüdür. [Lisans kapsamına](docs/tr/licensing.md) bakın. Şüpheli açıkların sömürü ayrıntılarını veya sırları public issue'ya koymayın; GitHub özel bildirim kanalı açıksa kullanın, değilse ayrıntıları yayımlamadan bakımcıdan özel kanal isteyin.
+Bakımcı 12 Ekim 2026 tarihinde kendi Eyleme kaynak kodu ve belgeleri için [Apache-2.0](LICENSE) seçti. Projeye dahil edilmek üzere bilerek sunulan katkılar, aksi açıkça belirtilmedikçe lisansın 5. maddesine tabidir; ayrıca anlaşılmış koşullar korunur. Ayrı CLA veya DCO zorunluluğu getirilmez. Kökeni kaydedin ve üçüncü taraf bildirimlerini koruyun; model/veri izinleri varlığa özgüdür. [Lisans kapsamına](docs/tr/licensing.md) bakın. Şüpheli açıkların sömürü ayrıntılarını veya sırları public issue'ya koymayın; GitHub özel bildirim kanalı açıksa kullanın, değilse ayrıntıları yayımlamadan bakımcıdan özel kanal isteyin.
 
 ## Henüz otomatik olmayanlar
 
-Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, görev yönetimi, donanım kıyasları, model yükseltme ve merge kararları şablonlarla otomatikleşmez. Hiçbir iş akışı katkı içeriğini model sağlayıcısına göndermez veya model eğitmez. Planlanan protokol [takım tasarımındadır](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/development-and-operations.md).
+Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, görev yönetimi, donanım kıyasları, model yükseltme ve merge kararları şablonlarla otomatikleşmez. Hiçbir iş akışı katkı içeriğini model sağlayıcısına göndermez veya model eğitmez. Planlanan protokol [takım tasarımındadır](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/development-and-operations.md).
 
 ## Depolar arası değişiklikler
 

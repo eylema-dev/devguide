@@ -1,6 +1,6 @@
 # Private learning and eligible ecosystem experience
 
-Eylema is an ecosystem-backed agent platform: interchangeable local open-weight specialists cooperate through owned Rust engines, stable role interfaces and harness tools. Completed-job quality, resource efficiency, privacy boundaries and repeatable improvement are measured together. Controlled development of Eylema itself uses maintainer-qualified powerful LLM contribution and genuine separate AI review under owner task/merge authority. Discussion, ideas and bug reports remain open. Local product use does not require an external large model; explicitly configured external roles need their own data/call authority.
+Eyleme is an ecosystem-backed agent platform: interchangeable local open-weight specialists cooperate through owned Rust engines, stable role interfaces and harness tools. Completed-job quality, resource efficiency, privacy boundaries and repeatable improvement are measured together. Controlled development of Eyleme itself uses maintainer-qualified powerful LLM contribution and genuine separate AI review under owner task/merge authority. Discussion, ideas and bug reports remain open. Local product use does not require an external large model; explicitly configured external roles need their own data/call authority.
 
 This is the target design and acceptance contract, not a claim that all inference, model-specific training, RAG or institutional deployment is implemented. [Current action plan](platform-action-plan.md), [resource advisor](model-resource-planning.md) and [contribution policy](contribution-model-policy.md) bind the implementation gates.
 
@@ -11,7 +11,7 @@ This is the target design and acceptance contract, not a claim that all inferenc
 | Private project or institution | Permitted observations, corrections, knowledge, evaluation and learning derivatives for scoped memory/RAG/fine-tune | Private by default; project/organization/purpose access, retention and collect/read/retrieve/train permissions enforced; no ecosystem export implied |
 | Reviewed ecosystem candidate | Generalized, anonymization-reviewed lessons, recipes, model/profile selections, synthetic or otherwise expressly shareable data, evaluations and resource measurements | Separate disclosure/export/publication authority, source and derivative rights, provenance and re-identification review before repository admission |
 
-A record may remain private forever and still help the owner's local system improve. Open model weights do not make task data, RAG sources, prompts, corrections, embeddings, adapters or trained derivatives public. Publishing Eylema source does not authorize publication of its users' records. A package candidate is not publication, and package import is not execution or project access.
+A record may remain private forever and still help the owner's local system improve. Open model weights do not make task data, RAG sources, prompts, corrections, embeddings, adapters or trained derivatives public. Publishing Eyleme source does not authorize publication of its users' records. A package candidate is not publication, and package import is not execution or project access.
 
 ## Improvement loop
 

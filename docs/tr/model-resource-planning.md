@@ -2,7 +2,7 @@
 
 [İngilizce](../en/model-resource-planning.md) kaynak dildir. Bu belge G80/G81/G82 ve bağlı model/döngü kartlarının kabul tasarımıdır; yönlendirme aracı ve model yürütmesi belgeyle uygulanmış olmaz.
 
-Eylema yeni bir yerel sistemi görev/kalite/gizlilik şartları ve gerçek yerel kaynak envanterinden hareketle yönlendirmelidir. Sabit rol ve kabiliyet arayüzleri model ailesi ve sürümünün değişmesine izin verir. Güncel aday kataloğu, mimari özelinde taşma denetimli tahmin ve adlandırılmış cihaz ölçümü işbirliği yapan model gruplarını seçer; yalnız en yeni veya en büyük olmak seçim ölçütü değildir.
+Eyleme yeni bir yerel sistemi görev/kalite/gizlilik şartları ve gerçek yerel kaynak envanterinden hareketle yönlendirmelidir. Sabit rol ve kabiliyet arayüzleri model ailesi ve sürümünün değişmesine izin verir. Güncel aday kataloğu, mimari özelinde taşma denetimli tahmin ve adlandırılmış cihaz ölçümü işbirliği yapan model gruplarını seçer; yalnız en yeni veya en büyük olmak seçim ölçütü değildir.
 
 ## Gerekli planlama girdileri
 
