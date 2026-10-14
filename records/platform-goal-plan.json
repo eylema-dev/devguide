@@ -3814,15 +3814,15 @@
     },
     {
       "id": "G75",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Versioned skill contracts and reusable packages",
       "repository": "eylema-dev/eylema",
       "issue": {
         "number": 82,
         "url": "https://github.com/eylema-dev/eylema/issues/82"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "verification",
+      "base_sha": "b9f43bb1417a34ab6717ae4748168035a9f263ca",
       "dependencies": [
         "G46",
         "G54",
@@ -3832,15 +3832,29 @@
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
-        "crates/eylema-contracts/",
-        "crates/eylema-runtime/",
-        "crates/eylema-host/",
-        "skills/",
-        "docs/en/",
-        "docs/tr/",
+        "crates/eylema-contracts/src/skill.rs",
+        "crates/eylema-contracts/src/lib.rs",
+        "crates/eylema-contracts/tests/skill_contracts.rs",
+        "crates/eylema-host/src/skill.rs",
+        "crates/eylema-host/src/tool.rs",
+        "crates/eylema-host/src/lib.rs",
+        "crates/eylema-host/tests/tools.rs",
+        "docs/en/versioned-skills.md",
+        "docs/tr/versioned-skills.md",
+        "docs/en/typed-tools.md",
+        "docs/tr/typed-tools.md",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "devguide": [
+          "records/platform-goal-plan.json",
+          "docs/plans/g75-versioned-skills.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Package a bounded subflow/tool/model assignment as a reusable skill with typed inputs/outputs, model/artifact dependencies, project permissions, budgets and acceptance evidence.",
       "acceptance": [
         {
@@ -3864,16 +3878,14 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation.",
+      "activation": "AcceptedG46/G54/G50/G63/G87 mainCI checked. Closed skill/v1 leaf artifacts over own read/add handlers, flat1–8call/iteration loop with expanded≤8,8control sources/4096byte artifacts/128retainedexecutions. Actualtwo-package/two-loop native reuse; mandatory real scoped intervention and live retained control/argument/ancestor/session checks. Models/otheradapters/nestedprograms unavailable; transient lineage, no new model/provider/G40/physicalprocess/training/engine/dependency/spending trial.",
       "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
-      ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex",
+        "implementer": "parent Codex",
+        "verifier": "parent Codex",
+        "independent_reviewer": "unassigned; genuine separate final-head context required"
       }
     },
     {
