@@ -4082,7 +4082,7 @@
         "architect": "parent Codex qualified configured gpt-6.1-sol/high",
         "implementer": "parent Codex inline same qualified settings",
         "verifier": "parent Codex Rust/Python/Git/gh, no model engine",
-        "independent_reviewer": "pending genuine separate final-head reviewer /root/g27_model_review"
+        "independent_reviewer": "pending genuine separate fresh-context reviewer /root/g67_embedding_review, configured requested gpt-6.1-sol/high"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
       "dependency_deliveries": {
