@@ -1,6 +1,6 @@
 # Rust model harness aksiyon planı
 
-Sürüm **1.2.0**, 14 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
+Sürüm **1.3.0**, 14 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
 
 Bakımcı Eylema’yı yerel açık ağırlık modelleri ve isteğe bağlı açıkça yapılandırılmış dış büyük modellerin güçlü yanlarını birleştirerek planlanan işi tamamlayan birleşebilir Rust harness olarak istedi. Yerel inference kendi Rust motorumuzda kalır. Dokuz rol sabit arayüzdür; ses STT/TTS, görsel algı ve alan metin profilleri ayrı kabul edilir. RAG/embedding, özel proje kayıtları ve izinli ekosistem paketleri birinci sınıf iştir. [Mimari ve model örnekleri](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/architecture.md#rust-harness-model-rolleri-ve-alana-göre-seçim) planı bağlar; [güncel kartlar](../../records/platform-goal-plan.json) İngilizce kanoniktir.
 
@@ -131,3 +131,7 @@ Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/
 ## Hermes kabiliyet uyarlaması
 
 İnsan tarafından onaylanan [Hermes kabiliyet incelemesi](hermes-capabilities.md), kalanG51/G64/G65/G74/G77/G79/G88/G89kartlarına H1kriteri ekler: kademeli skill/araç yükleme, kapsama bağlı recall/soy bağı, kalıcı işbirliği ve incelenmiş deneyimden skill/reçete/taşınabilir aday akışları. Asıl bağımlılık, kriter, bütçe ve kabul edilmiş/geçmiş/G40kanıtları korunur. Kartlar planned/not_run kalır; Hermes motoru veya yeni runtime kurulmaz. G80kabul edilmiş boyutlandırmadır; deneysel model/eğitim desteği değildir.
+
+## Unsloth eğitim kabiliyeti uyarlaması
+
+İnsan tarafından onaylanan [Unsloth kabiliyet incelemesi](unsloth-capabilities.md), planned G34/G35/G76/G77/G78/G79/G83/G85/G86 kartlarına U1 kriteri ekler: sürümlü veri/eğitim reçeteleri, açık model-özel hedef/yöntemler, doğru gradient accumulation, açılan bellek optimizasyonlarının bağımsız doğrulanması ve soy bağına bağlı adapter teslimi/promotion. G35, Owned local training recipe olarak netleştirilir; özgün kriterler kalır. Hermes H1, bağımlılıklar, bütçeler, aday hakları, kabul edilmiş geçmiş ve G40 korunur. Yeni modalite/RL/precision/backend seçenekleri ayrı gerçek kabul gelene kadar unsupported/keşif kalır. Dış motor, ağırlık/provider/eğitim koşusu veya benchmark garantisi eklenmez.

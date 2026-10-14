@@ -1,6 +1,6 @@
 # Rust model harness action plan
 
-Revision **1.2.0**, 14 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
+Revision **1.3.0**, 14 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
 
 The maintainer requests Eylema as a composable Rust harness that completes planned work by combining local open-weight models and optionally explicitly configured external frontier models. Local inference remains owned Rust. Nine roles are stable interfaces; audio STT/TTS, visual perception and domain text profiles are independently accepted. RAG/embeddings, private project records and permitted ecosystem packages are first-class work. [Architecture and model examples](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/architecture.md#rust-harness-model-roles-and-domain-selection) bind this plan; [current cards](../../records/platform-goal-plan.json) are English canonical.
 
@@ -131,3 +131,7 @@ The maintainer's clarified target is an ecosystem-backed agent platform that com
 ## Hermes capability adaptation
 
 The maintainer-approved [Hermes capability review](hermes-capabilities.md) adds H1criteria to remainingG51/G64/G65/G74/G77/G79/G88/G89: gradual skill/tool loading, scoped recall/lineage, durable cooperation and reviewed experience-to-skill/recipe/portable-candidate flows. Preserve original dependencies, criteria, budgets and accepted/history/G40 receipts. These cards remain planned/not_run; no Hermes engine or new runtime is installed. G80is accepted sizing, not empirical model/training support.
+
+## Unsloth training capability adaptation
+
+The maintainer-approved [Unsloth capability review](unsloth-capabilities.md) adds U1 criteria to planned G34/G35/G76/G77/G78/G79/G83/G85/G86: versioned data/training recipes, explicit model-specific targets/methods, correct gradient accumulation, independently verified enabled memory optimizations and lineage-bound adapter delivery/promotion. G35 is clarified as Owned local training recipe; original criteria remain. Preserve Hermes H1, dependencies, budgets, candidate allowances, accepted history and G40. New modalities/RL/precision/backends remain unsupported/discovery until separate actual acceptance. No external engine, weight/provider/training run or benchmark guarantee is introduced.
