@@ -1,6 +1,6 @@
 # Rust model harness aksiyon planı
 
-Sürüm **1.1.0**, 13 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
+Sürüm **1.2.0**, 14 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
 
 Bakımcı Eylema’yı yerel açık ağırlık modelleri ve isteğe bağlı açıkça yapılandırılmış dış büyük modellerin güçlü yanlarını birleştirerek planlanan işi tamamlayan birleşebilir Rust harness olarak istedi. Yerel inference kendi Rust motorumuzda kalır. Dokuz rol sabit arayüzdür; ses STT/TTS, görsel algı ve alan metin profilleri ayrı kabul edilir. RAG/embedding, özel proje kayıtları ve izinli ekosistem paketleri birinci sınıf iştir. [Mimari ve model örnekleri](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/architecture.md#rust-harness-model-rolleri-ve-alana-göre-seçim) planı bağlar; [güncel kartlar](../../records/platform-goal-plan.json) İngilizce kanoniktir.
 
