@@ -75,6 +75,70 @@
         "quality_or_privacy_regression"
       ],
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-g23-cpu-reference-2026-10-14",
+      "status": "owner_approved",
+      "provider": "openai",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "configured_identity_evidence": "Accepted private metadata ledger matched current maintainer chat configured model/effort; no raw session/response identities published. Separate trial reviewer explicitly configured the same model/effort.",
+      "serving_identity": "unknown_not_exposed",
+      "evaluation_date": "2026-10-14",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G23_only_owned_safe_bounded_F32_CPU_reference_primitives"
+      ],
+      "excluded_until_separately_evaluated": [
+        "full_model_or_tokenizer_execution",
+        "GPU_or_Wasm_target_execution",
+        "BF16_FP16_quantized_operators",
+        "training_or_inference_performance",
+        "universal_architecture_support",
+        "other_numerical_goals_without_evaluation"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Separate context and exact source revision required; evaluation review does not accept future production.",
+      "owner_decision": "Actual maintainer accepted the concrete G23-only numerical contribution profile after the one-candidate13-test evaluation and genuine separate Decimal80 reference review on14October2026; plan/merge authority remain separate.",
+      "quality_floor": [
+        "all_frozen_literal_and_failure_checks_pass",
+        "finite_extents_work_and_results_preserved",
+        "no_weakened_tolerance_or_expected_values",
+        "current_local_full_checks_CI_separate_exact_revision_review_for_actual_future_production_delivery",
+        "original120_minutes_3repairs_15review_with_Task0_consumption_preserved",
+        "privacy_and_owned_Rust_no_hidden_engine"
+      ],
+      "evidence": [
+        {
+          "type": "private_development_only_trial",
+          "source_sha256": "88c3f811fcc0917ac966e17898965227d5bffad711c06338a5c8eb880cc61c9e",
+          "tests_sha256": "99a188f425ba7534787903b29f00b95a28b2cf97204415d3e346ca18f5b30a13",
+          "binary_sha256": "7d6984be3050d142f9296787f70d8cc32f6e9907cac20735a8a67797a6312d12",
+          "passed_tests": 13,
+          "failed_tests": 0,
+          "compile_runs": 1,
+          "candidate_runs": 1,
+          "repairs": 0,
+          "reference_review_sha256": "3b3a59d345b51c53ef87eadfe311e9382725abfb8206dc88c5c78d155291f7ac",
+          "reference_review": "g23_trial_review separate context; independent Decimal80 numbers and hash/results audit passed no P1/P2. No candidate recompile/rerun.",
+          "environment": "Rust1.99.0 aarch64-apple-darwin; local AppleM4Pro/macOS27.0.1"
+        }
+      ],
+      "reviewer": "Codex g23_trial_review separate evaluation context; production final-head reviewer still required",
+      "evaluation_limits": "Three narrow groups: projection, masked softmax and width4 split-half RoPE;13checks. Not all16 production operators, full model/GPU/training/performance. Private source/log evidence retained; metadata alone does not independently attest historical single-run exclusivity.",
+      "re_evaluate_on": [
+        "G23_delivery",
+        "revocation",
+        "expiry",
+        "changed_model_effort_provider_domain",
+        "quality_or_privacy_regression"
+      ],
+      "no_self_authorization": true
     }
   ]
 }
