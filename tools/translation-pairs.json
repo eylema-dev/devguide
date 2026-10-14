@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "d3b1e5e09f5136fd0d170e8f3ae74406cc527b7572c563fc7bdcb75b8e0355a0",
-      "tr_sha256": "63591e4a2208d6dc74725eff41dd2b5e1ec33233ec7bf241e2765cfecc3e494f"
+      "en_sha256": "fa43a10e7a10d296a372c8da3e2c76c80c40f0da41943bef08cfe7600271f4b8",
+      "tr_sha256": "3caf8cbd8aad5b31617de9bd87ab0a5c3eabefe4d350c8e6f1a1ed971302b0aa"
     },
     {
       "en": "docs/en/memory-layer.md",
@@ -97,6 +97,12 @@
       "tr": "docs/tr/model-resource-planning.md",
       "en_sha256": "138d460f36266fb700ad5bcaaeb141b58c6b1f29f87767923b3be133731e1fee",
       "tr_sha256": "78abe585161c4f5b09c8d3f98773b1a18aedf157d4415a5aa4d7a7645576ab86"
+    },
+    {
+      "en": "docs/en/ecosystem-experience.md",
+      "tr": "docs/tr/ecosystem-experience.md",
+      "en_sha256": "753d4a2201b8cf133f8b060abaffd9144d2e236b16f78008d3ce13380208beda",
+      "tr_sha256": "bb18d199216de1abeffd50f5347dc19bdd4139fef1d8b3059e06ef53cc44d3d2"
     }
   ]
 }

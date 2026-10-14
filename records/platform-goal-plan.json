@@ -1208,7 +1208,7 @@
     },
     {
       "id": "G33",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Episodes and corrections",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -1257,6 +1257,12 @@
           "requirement": "Capture permitted development and in-product outcomes/corrections/test/resource lessons with typed lineage for scoped memory and improvement.",
           "check": "Reject raw conversations/private reasoning/credentials; generalized lessons require verified outcome/provenance and separate collect/train/disclose/export rights.",
           "result": "not_run"
+        },
+        {
+          "id": "G33-E1",
+          "requirement": "Accumulate permitted source-development and local-product experience with observed/suggested/corrected status and private institutional scope; collection is not sharing.",
+          "check": "Synthetic failures for collect/retrieve/train/disclose/export purpose rights, withdrawal and derivative provenance; never raw chat/private reasoning/credentials in ecosystem candidates.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1288,7 +1294,7 @@
     },
     {
       "id": "G34",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Dataset revision",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -1332,6 +1338,12 @@
           "id": "G34-R1",
           "requirement": "Curate permitted development/product evidence into role-specific RAG/training data while project-private information stays private.",
           "check": "Rights/lineage/withdrawal and train-holdout grouping follow every derived summary/embedding/adapter; no automatic ecosystem admission.",
+          "result": "not_run"
+        },
+        {
+          "id": "G34-E1",
+          "requirement": "Support private institutional RAG/fine-tune datasets and expressly eligible shared derivatives without converting private records by default.",
+          "check": "Inherited source/derivative/purpose rights and withdrawals across summary/embedding/adapter lineage; related episode train/holdout isolation and denied public conversion.",
           "result": "not_run"
         }
       ],
@@ -3759,7 +3771,7 @@
     },
     {
       "id": "G64",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Shareable ecosystem package builder",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -3794,6 +3806,12 @@
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
           "result": "not_run"
+        },
+        {
+          "id": "G64-E1",
+          "requirement": "Build generalized anonymity-reviewed ecosystem candidates only with separate eligible disclosure/export/publication rights; anonymization alone grants no authority.",
+          "check": "Synthetic direct/indirect identifier, rare-event/linkage and unresolved-risk rejection; exact bounded candidate/rights/lineage review, honest public-copy withdrawal limits; candidate is not publication.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3825,7 +3843,7 @@
     },
     {
       "id": "G65",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Ecosystem catalogue and compatible imports",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -3863,6 +3881,12 @@
           "id": "G65-R1",
           "requirement": "Record new-type/current-model discovery freshness from official sources, immutable operator/tokenizer/artifact/rights/evaluation/native-support identities and reviewable updates.",
           "check": "Stale/mismatched/revoked/unknown-type imports stay ineligible; freshness/import metadata never authorizes download/execution or mutates in-flight assignments.",
+          "result": "not_run"
+        },
+        {
+          "id": "G65-E1",
+          "requirement": "Admit reviewed eligible ecosystem experience/model/data/recipe packages without granting private project access, training or execution.",
+          "check": "Reject mismatched exact package/hash/terms/lineage/compatibility and revoked/expired/restricted rights; import inert, no automatic download/execution/train/activation; preserve institutional scope.",
           "result": "not_run"
         }
       ],
