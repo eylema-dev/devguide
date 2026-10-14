@@ -626,7 +626,7 @@
         "architect": "parent Codex",
         "implementer": "parent Codex inline",
         "verifier": "parent Codex native/Python/Git/gh",
-        "independent_reviewer": "g27_model_review separate Codex context: initial four P2, renewed final-head review pending"
+        "independent_reviewer": "g27_model_review separate context; initial fourP2 repaired, renewed residualQ projection overflow repaired; final-head re-review pending"
       },
       "dependency_deliveries": {
         "G03": [
@@ -745,21 +745,22 @@
         ]
       },
       "executed_evidence": {
-        "native_tests_passed": 279,
+        "native_tests_passed": 280,
         "native_tests_ignored": 1,
         "core_python_tests_passed": 47,
         "model_python_tests_passed": 42,
-        "new_native_contract_tests": 14,
+        "new_native_contract_tests": 15,
         "new_catalog_python_tests": 11,
         "fixture_sha256": "c087a033d4d193acd9912d0f555c99f14f9b968c9f308aca8acb52b07af85af2",
         "role_records": 9,
         "qwen_intended_profiles": 3,
-        "targeted_repairs_used": 1,
+        "targeted_repairs_used": 2,
         "weights_downloaded": false,
         "tokenizer_json_byte_verified": false,
         "environment": "M4Pro24GiB/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
         "limits": "Actual owned Rust declared-metadata validation and exact model/core EYL fixture, no inference/quality/authority from matching. Large file hashes publisher advertised only; no model/tokenizer/GPU/training/provider/G40 execution. ExternalConfigured is explicit unavailable intent, never fallback.",
-        "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification."
+        "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification.",
+        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim."
       }
     },
     {
