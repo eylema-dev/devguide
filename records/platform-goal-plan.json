@@ -1159,7 +1159,7 @@
     },
     {
       "id": "G29",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Tokenizer and template",
       "repository": "eyleme-dev/eyleme",
       "issue": {
@@ -1167,9 +1167,10 @@
         "url": "https://github.com/eyleme-dev/eyleme/issues/26"
       },
       "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "base_sha": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
       "dependencies": [
-        "G27"
+        "G27",
+        "G28"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -1178,7 +1179,19 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eylema-dev/devguide": [
+          "docs/plans/g29-tokenizer.md",
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "records/contribution-model-profiles.json",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Pin tokenizer/template and preprocessing per profile; compatible role interfaces do not imply interchangeable tokenization.",
       "acceptance": [
         {
@@ -1212,20 +1225,99 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high confirmed in last completed current-chat metadata18:05:55UTC14October2026; serving identityunknown; active response not yet stored"
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Actual owner approved G29/r4 scope, added acceptedG28 stream dependency and written-design preparation only. Source d0dcc39/guide45541cb; preserve originalG27,criteria120/3/900 including preparation. Written-spec and G29-only symbolic frontend profile decisions plus concrete plan precede production; no qualification or runtime acceptance from this record. Current local/latestCI/genuine separate final-head review/identicalmain/mainCI required before standing-authorized merge.",
       "accepted_delivery": null,
       "blockers": [
-        "Acceptance not executed; dependencies and activation bindings required."
+        "Actual human written-spec and G29-only contribution-profile binding remain pending; concrete plan/runtime/reference/currentCI/separate-review/main proof not_run."
       ],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent Codex configuredgpt-6.1-sol/high, actual owner-approved scope/written-design preparation",
+        "implementer": "not activated; actual written-spec/profile/plan gates required",
+        "verifier": "parent read-only actual Unicode16data audit, tokenizer65536byte metadata probe and static docs checks; native tokenizer not_run",
+        "independent_reviewer": "unassigned; genuine separate qualified final-head context required before delivery"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ],
+        "G28": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/108",
+            "head": "2675f14054e6c044abc31792d82457344283fa7a",
+            "main": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+            "tree": "9613bc8942e206f5cee9c551db48e8deb716bb1f",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2675f14054e6c044abc31792d82457344283fa7a",
+              "reviewer": "g28_repaired_review genuine fresh configuredgpt-6.1-sol/high context under owner-admitted G28 binding; initial Important prefix-bound defect independently resolved; no remaining findings"
+            },
+            "main_ci": {
+              "id": 38607296855,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38607296855",
+              "head": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "preparation_binding": {
+        "design_source_commit": "2a690b352ebfc0032a9e8033469e873f230e04c3",
+        "design_paths": [
+          "docs/en/g29-tokenizer-design.md",
+          "docs/tr/g29-tokenizer-design.md"
+        ],
+        "owner_decision": "Actual human approved ownRust approach1,scope/dependency/contribution-domain assessment and EN/TR written-design preparation; no product code or fulltokenizer/referenceengine/model/weight/provider/training call.",
+        "written_spec_status": "awaiting_actual_owner_review",
+        "contribution_profile_candidate": "sol61-high-contracts-2026-10-14",
+        "profile_scope_status": "assessment prepared; actualG29-only owner decision pending; G28binding not transferable",
+        "unicode_version": "16.0.0",
+        "unicode_data_sha256": "3627a624f63370f0e726dde726f42934c8ca898c5e18fb69abdeee5a27ff00d8",
+        "unicode_composition_sha256": "e83834fdad296e46779fb702e11dd9b8686409a6346461d02fe3a22afaf26dd4",
+        "actual_probe_bytes": 65536,
+        "tokenizer_full_artifact_verified": false,
+        "production_started": false,
+        "reference_engine_executed": false,
+        "limits": "16MiBtokenizer/64KiBconfig/128MiBlogicalresident/8KiBtext/8messages32KiB/4096tokens;128MiBadmission work/2Mtextwork; no capacity/model/performance proof"
+      }
     },
     {
       "id": "G30",
