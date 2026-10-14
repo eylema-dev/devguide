@@ -2637,7 +2637,7 @@
     },
     {
       "id": "G51",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Reusable harness applications and model replacement",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -2678,6 +2678,12 @@
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
           "result": "not_run"
+        },
+        {
+          "id": "G51-H1",
+          "requirement": "Durable ownership-fenced jobs/profiles and bounded specialist collaboration retain accepted model/data authority, separate budgets and explicit completion contracts.",
+          "check": "Crash/reclaim, stale run completion, duplicate/late delivery, retry circuit breaker, cancel/timeout, dependency cycle and per-scope context tests; accepted role binding and exact delivery evidence remain mandatory.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -2694,7 +2700,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3771,7 +3777,7 @@
     },
     {
       "id": "G64",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Shareable ecosystem package builder",
       "repository": "eylema-dev/eylema-training",
       "issue": {
@@ -3812,6 +3818,12 @@
           "requirement": "Build generalized anonymity-reviewed ecosystem candidates only with separate eligible disclosure/export/publication rights; anonymization alone grants no authority.",
           "check": "Synthetic direct/indirect identifier, rare-event/linkage and unresolved-risk rejection; exact bounded candidate/rights/lineage review, honest public-copy withdrawal limits; candidate is not publication.",
           "result": "not_run"
+        },
+        {
+          "id": "G64-H1",
+          "requirement": "Purpose/rights/source-pinned share candidates distinguish scoped experiences from reusable procedures; learned imports cannot widen source or derivative permission.",
+          "check": "Reject private/withdrawn source derivatives, reidentifiable metadata and executable/authority escalation; reviewed candidate packaging does not itself authorize public sharing.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3828,7 +3840,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -3843,7 +3855,7 @@
     },
     {
       "id": "G65",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Ecosystem catalogue and compatible imports",
       "repository": "eylema-dev/eylema-models",
       "issue": {
@@ -3888,6 +3900,12 @@
           "requirement": "Admit reviewed eligible ecosystem experience/model/data/recipe packages without granting private project access, training or execution.",
           "check": "Reject mismatched exact package/hash/terms/lineage/compatibility and revoked/expired/restricted rights; import inert, no automatic download/execution/train/activation; preserve institutional scope.",
           "result": "not_run"
+        },
+        {
+          "id": "G65-H1",
+          "requirement": "Imported skill/recipe/reference manifests remain untrusted metadata until source, rights, applicability and local acceptance pass; no automatic execution or model substitution.",
+          "check": "Unknown/stale/source-mismatched imports quarantine/reject; valid metadata never gains tool/data authority or launches scripts; approved updates preserve local revisions and explicit selection.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -3904,7 +3922,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -4848,7 +4866,7 @@
     },
     {
       "id": "G74",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Decision router and RAG/skill dispatch",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -4895,6 +4913,12 @@
           "requirement": "Router uses accepted resource/context/parameter/quality/privacy profiles to select cooperating RAG/model/skill routes with uncertainty.",
           "check": "Actual route decisions reject stale capacity/catalogs, unknown model type, oversized context and infeasible overlap; routing never grants permission or marks an unsupported job completed.",
           "result": "not_run"
+        },
+        {
+          "id": "G74-H1",
+          "requirement": "Gradual skill/reference and deferred typed-tool discovery preserve immutable version, purpose authority and context budgets; discovery never grants execution.",
+          "check": "Catalog→describe→authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -4911,7 +4935,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -5116,7 +5140,7 @@
     },
     {
       "id": "G77",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "In-product bounded improvement jobs",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5156,6 +5180,12 @@
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
           "result": "not_run"
+        },
+        {
+          "id": "G77-H1",
+          "requirement": "Permitted experience produces staged memory/skill/recipe proposals with finite per-candidate budgets and reviewed applicability; automatic learning does not activate candidates.",
+          "check": "A proposed write must remain pending until applicable review; unsupported recipe or missing source rights rejects. No unsolicited training/publication/allowance reset; existing finite candidate bound retained.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5172,7 +5202,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -5255,7 +5285,7 @@
     },
     {
       "id": "G79",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Integrated improvement and skill promotion proof",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -5306,6 +5336,12 @@
           "requirement": "Use verified permitted ecosystem recipes/model choices/data and scoped lessons in the accepted improvement loop without bypassing holdout/promotion/rollback.",
           "check": "Exact already accepted candidate/checkpoint and rights/resource lineage; eligible experience/skill packaging verified, zero new training candidates and no private automatic sharing.",
           "result": "not_run"
+        },
+        {
+          "id": "G79-H1",
+          "requirement": "Reviewed tested skill/recipe promotion and rollback preserve original held-out/canary gates, source consent and immutable version identity.",
+          "check": "Unreviewed/failed/stale candidate cannot enter active routing; approved reversible promotion carries actual held-out outcome; rollback does not claim reversal of external effects.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -5322,7 +5358,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; required local/model/runtime proofs remain not_run."
@@ -6084,7 +6120,7 @@
     },
     {
       "id": "G88",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Owned episodic, semantic and knowledge-graph memory",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -6121,6 +6157,12 @@
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
           "result": "not_run"
+        },
+        {
+          "id": "G88-H1",
+          "requirement": "Per-scope durable fact/episode recall has explicit write/review outcomes and revision conflict handling; no model save acknowledgement substitutes for persisted data.",
+          "check": "Actual write/restart/recall and contradiction fixtures; revoked source, TTL, stale writer and cross-project access reject; scoped reviewed knowledge promotion retains source identity.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -6137,7 +6179,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; memory/backend proofs remain not_run."
@@ -6152,7 +6194,7 @@
     },
     {
       "id": "G89",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Owned analytical memory and improvement snapshots",
       "repository": "eylema-dev/eylema",
       "issue": {
@@ -6189,6 +6231,12 @@
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
           "result": "not_run"
+        },
+        {
+          "id": "G89-H1",
+          "requirement": "Bounded learning/usage/evaluation lineage retains unsuccessful attempts and withdrawal; derived snapshots inherit original purpose permissions and unknown cost/effectiveness.",
+          "check": "Source-linked episode→correction→skill/recipe→evaluation timeline; permission/redaction/withdrawal/incomplete-cost checks; graphs do not imply training or semantic quality.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -6205,7 +6253,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
       "accepted_delivery": null,
       "blockers": [
         "Not implemented or accepted; memory/backend proofs remain not_run."

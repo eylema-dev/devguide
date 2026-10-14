@@ -1,6 +1,6 @@
 # Rust model harness action plan
 
-Revision **1.1.0**, 13 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
+Revision **1.2.0**, 14 October 2026. English is canonical; [Türkçe](../tr/platform-action-plan.md).
 
 The maintainer requests Eylema as a composable Rust harness that completes planned work by combining local open-weight models and optionally explicitly configured external frontier models. Local inference remains owned Rust. Nine roles are stable interfaces; audio STT/TTS, visual perception and domain text profiles are independently accepted. RAG/embeddings, private project records and permitted ecosystem packages are first-class work. [Architecture and model examples](https://github.com/eylema-dev/eylema-docs-en/blob/main/docs/architecture.md#rust-harness-model-roles-and-domain-selection) bind this plan; [current cards](../../records/platform-goal-plan.json) are English canonical.
 
@@ -127,3 +127,7 @@ The [resource advisor design](model-resource-planning.md) extends G80/G81/G82, G
 ## Private learning and ecosystem accumulation
 
 The maintainer's clarified target is an ecosystem-backed agent platform that combines local specialist cooperation, performance/efficiency/privacy and controlled source development with qualified powerful LLMs. [Experience boundaries](ecosystem-experience.md) distinguish private institutional memory/RAG/fine-tune from generalized anonymization-reviewed ecosystem candidates. Rights/lineage/re-identification/export/publication review applies to every derivative; no automatic collection or sharing. G33/G34/G64/G65 gain explicit acceptance checks while all existing dependencies/budgets/history and G40 remain unchanged. These capabilities remain planned.
+
+## Hermes capability adaptation
+
+The maintainer-approved [Hermes capability review](hermes-capabilities.md) adds H1criteria to remainingG51/G64/G65/G74/G77/G79/G88/G89: gradual skill/tool loading, scoped recall/lineage, durable cooperation and reviewed experience-to-skill/recipe/portable-candidate flows. Preserve original dependencies, criteria, budgets and accepted/history/G40 receipts. These cards remain planned/not_run; no Hermes engine or new runtime is installed. G80is accepted sizing, not empirical model/training support.

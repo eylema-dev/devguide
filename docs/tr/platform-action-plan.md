@@ -127,3 +127,7 @@ Değişiklik PR'ları bakımcının tarihli frontier/SOTA katkı profilini ve ge
 ## Özel öğrenme ve ekosistem birikimi
 
 Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/gizliliği ve uygunluğu onaylanmış güçlü dil modelleriyle kontrollü kaynak geliştirmesini birleştiren, ekosistemi olan eylemci platformudur. [Deneyim sınırları](ecosystem-experience.md), özel kurum memory/RAG/fine-tune yollarını genelleştirilmiş anonimlik incelemesinden geçen ekosistem adaylarından ayırır. Her türev hak/köken/yeniden kimliklendirme/dışa aktarma/yayın incelemesine bağlıdır; otomatik toplama veya paylaşım yoktur. G33/G34/G64/G65 açık kabul kontrolleri kazanırken mevcut bağımlılıklar/bütçeler/geçmiş ve G40 korunur. Bu kabiliyetler planlı kalır.
+
+## Hermes kabiliyet uyarlaması
+
+İnsan tarafından onaylanan [Hermes kabiliyet incelemesi](hermes-capabilities.md), kalanG51/G64/G65/G74/G77/G79/G88/G89kartlarına H1kriteri ekler: kademeli skill/araç yükleme, kapsamlı recall/soy bağı, kalıcı işbirliği ve incelenmiş deneyimden skill/reçete/taşınabilir aday akışları. Asıl bağımlılık, kriter, bütçe ve kabul edilmiş/geçmiş/G40kanıtları korunur. Kartlar planned/not_run kalır; Hermes motoru veya yeni runtime kurulmaz. G80kabul edilmiş boyutlandırmadır; deneysel model/eğitim desteği değildir.
