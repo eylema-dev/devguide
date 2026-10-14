@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "0b252e208b64276529304da62ceadef6ec770246a3a8de14e8a32029234d17d3",
-      "tr_sha256": "023964a6484457e026237cc3eb7843a9f3dd7f435abca51a4590be52d4d707b5"
+      "en_sha256": "a4643629ba45d5a12a8ce802abf2a68e2277388c4deb5db19eb1afd10e75ac82",
+      "tr_sha256": "459ab43375b086e18e0856ebf42274ea95ec8fdc88948e3bc7186e3a3f0d61dc"
     },
     {
       "en": "docs/en/memory-layer.md",
@@ -103,6 +103,12 @@
       "tr": "docs/tr/ecosystem-experience.md",
       "en_sha256": "753d4a2201b8cf133f8b060abaffd9144d2e236b16f78008d3ce13380208beda",
       "tr_sha256": "bb18d199216de1abeffd50f5347dc19bdd4139fef1d8b3059e06ef53cc44d3d2"
+    },
+    {
+      "en": "docs/en/hermes-capabilities.md",
+      "tr": "docs/tr/hermes-capabilities.md",
+      "en_sha256": "91fecc0650e785b294005ccff78096bdf0b4e6d6b88ee6bece901af44c0050e7",
+      "tr_sha256": "d5ae83cf4cdf784216e3b8a0cf2b6a2d649a620097f5a6cf1f662d255c6742e9"
     }
   ]
 }

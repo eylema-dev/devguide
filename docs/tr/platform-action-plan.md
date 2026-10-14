@@ -1,6 +1,6 @@
 # Rust model harness aksiyon planı
 
-Sürüm **1.1.0**, 13 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
+Sürüm **1.2.0**, 14 Ekim 2026. İngilizce kanoniktir; [English](../en/platform-action-plan.md).
 
 Bakımcı Eylema’yı yerel açık ağırlık modelleri ve isteğe bağlı açıkça yapılandırılmış dış büyük modellerin güçlü yanlarını birleştirerek planlanan işi tamamlayan birleşebilir Rust harness olarak istedi. Yerel inference kendi Rust motorumuzda kalır. Dokuz rol sabit arayüzdür; ses STT/TTS, görsel algı ve alan metin profilleri ayrı kabul edilir. RAG/embedding, özel proje kayıtları ve izinli ekosistem paketleri birinci sınıf iştir. [Mimari ve model örnekleri](https://github.com/eylema-dev/eylema-docs-tr/blob/main/docs/architecture.md#rust-harness-model-rolleri-ve-alana-göre-seçim) planı bağlar; [güncel kartlar](../../records/platform-goal-plan.json) İngilizce kanoniktir.
 
@@ -127,3 +127,7 @@ Değişiklik PR'ları bakımcının tarihli frontier/SOTA katkı profilini ve ge
 ## Özel öğrenme ve ekosistem birikimi
 
 Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/gizliliği ve uygunluğu onaylanmış güçlü dil modelleriyle kontrollü kaynak geliştirmesini birleştiren, ekosistemi olan eylemci platformudur. [Deneyim sınırları](ecosystem-experience.md), özel kurum memory/RAG/fine-tune yollarını genelleştirilmiş anonimlik incelemesinden geçen ekosistem adaylarından ayırır. Her türev hak/köken/yeniden kimliklendirme/dışa aktarma/yayın incelemesine bağlıdır; otomatik toplama veya paylaşım yoktur. G33/G34/G64/G65 açık kabul kontrolleri kazanırken mevcut bağımlılıklar/bütçeler/geçmiş ve G40 korunur. Bu kabiliyetler planlı kalır.
+
+## Hermes kabiliyet uyarlaması
+
+İnsan tarafından onaylanan [Hermes kabiliyet incelemesi](hermes-capabilities.md), kalanG51/G64/G65/G74/G77/G79/G88/G89kartlarına H1kriteri ekler: kademeli skill/araç yükleme, kapsama bağlı recall/soy bağı, kalıcı işbirliği ve incelenmiş deneyimden skill/reçete/taşınabilir aday akışları. Asıl bağımlılık, kriter, bütçe ve kabul edilmiş/geçmiş/G40kanıtları korunur. Kartlar planned/not_run kalır; Hermes motoru veya yeni runtime kurulmaz. G80kabul edilmiş boyutlandırmadır; deneysel model/eğitim desteği değildir.
