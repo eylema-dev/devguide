@@ -6,7 +6,7 @@
 
 **Tech stack:** existing Rust/Cargo 1.99 toolchain and owned workspace; existing Python 3.14 development gates only. No third-party production/dev crate, unsafe code, build script, inference engine or new package.
 
-**Approved spec:** core `docs/en/g23-cpu-reference-design.md` and Turkish companion at local design commit `e17e7583575444a0e15ffec542992c399ab536b5`. Actual human approved written design on 14 October 2026. This concrete plan and supervised numerical trial admission require their own human decision before implementation. Existing inline execution method and standing conditional merge authority are retained.
+**Approved spec:** core `docs/en/g23-cpu-reference-design.md` and Turkish companion at local design commit `e17e7583575444a0e15ffec542992c399ab536b5`. Actual human approved written design on 14 October 2026. Actual human subsequently approved this concrete plan and admitted the G23-only numerical profile after Task0; those decisions preceded production activation. Existing inline execution method and standing conditional merge authority are retained.
 
 ## Activation, scope and resource contract
 
@@ -137,6 +137,6 @@ Consumes exact primitive implementation and independent fixed fixtures; produces
 
 ## Self-review and pending review
 
-All approved spec groups map to explicit APIs and Tasks1–4; the five Review Focus classes have meaningful asymmetric/literal and defect-specific fixtures. Sixteen IDs are primitive coverage only; BF16/real Qwen dimensions remain unsupported here. Work/extent checks precede allocation and composed arithmetic. Independent expected values/tolerances are fixed; All scalar expectations are concrete independently computed literals; production helpers never generate them. No hidden engine, mutable unchecked tensor, implicit broadcast/model fallback or independent-review claim is supplied by this plan.
+All approved spec groups map to explicit APIs and Tasks1–4; the five Review Focus classes have meaningful asymmetric/literal and defect-specific fixtures. Sixteen IDs are primitive coverage only; BF16/real Qwen dimensions remain unsupported here. Work/extent checks precede allocation and composed arithmetic. Independent expected values/tolerances are fixed; all scalar expectations are concrete independently computed literals; production helpers never generate them. No hidden engine, mutable unchecked tensor, implicit broadcast/model fallback or independent-review claim is supplied by this plan.
 
-Status: human concrete-plan review pending; development-only evaluation precedes actual human numerical profile admission. Production remains pending until that admission exists. Production code, crate scaffolding, numerical trial checks and PR qualification have not started. Inline method already selected; merge permission already exists and is not requested again.
+Status: actual concrete-plan review and G23-only numerical admission completed after Task0; original allowances include evaluation consumption. Source implementation and final production verification/review/CI delivery are tracked separately; no pending gate is treated as passed. Inline method already selected; merge permission already exists and is not requested again.

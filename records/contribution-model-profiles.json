@@ -127,9 +127,24 @@
           "reference_review_sha256": "3b3a59d345b51c53ef87eadfe311e9382725abfb8206dc88c5c78d155291f7ac",
           "reference_review": "g23_trial_review separate context; independent Decimal80 numbers and hash/results audit passed no P1/P2. No candidate recompile/rerun.",
           "environment": "Rust1.99.0 aarch64-apple-darwin; local AppleM4Pro/macOS27.0.1"
+        },
+        {
+          "type": "G23_bounded_production_delivery",
+          "repository": "eylema-dev/eylema",
+          "pr": "https://github.com/eylema-dev/eylema/pull/107",
+          "reviewed_head": "d42acfd1f54482c33330e92b64283a0cd904dd18",
+          "accepted_main": "6605080fcae225e099775f7856349c0aac6aa011",
+          "tree": "427ed86cb20fb9f797a30c679f1be62d8115d3fc",
+          "main_ci": "https://github.com/eylema-dev/eylema/actions/runs/38592018117",
+          "native_tests_passed": 315,
+          "native_tests_ignored": 1,
+          "new_tensor_tests": 15,
+          "python_tests_passed": 47,
+          "actual_mutants_rejected": 4,
+          "review_report_sha256": "7e777a23b523ce42476dde04d69ef8e2aadbc603ee5471578e56b129ac3e164d"
         }
       ],
-      "reviewer": "Codex g23_trial_review separate evaluation context; production final-head reviewer still required",
+      "reviewer": "g23_trial_review separate qualification evaluation; g23_source_review separate final production review passed, final head bound through unchanged files and bit-identical literal correction",
       "evaluation_limits": "Three narrow groups: projection, masked softmax and width4 split-half RoPE;13checks. Not all16 production operators, full model/GPU/training/performance. Private source/log evidence retained; metadata alone does not independently attest historical single-run exclusivity.",
       "re_evaluate_on": [
         "G23_delivery",

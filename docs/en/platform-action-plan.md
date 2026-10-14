@@ -48,7 +48,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G56** | Open-weight structured-decision model profile | G27, G46 | `accepted` |
 | **G67** | Embedding artifact and retrieval behavior profile | G27, G46 | `accepted` |
 | **G80** | Checked resource requirement estimator | G27, G46, G21, G18 | `accepted` |
-| **G23** | CPU tensor reference | G18, G27 | `planned` |
+| **G23** | CPU tensor reference | G18, G27 | `accepted` |
 | **G28** | Weight loader | G09, G27 | `planned` |
 | **G29** | Tokenizer and template | G27 | `planned` |
 | **G30** | CPU model execution | G23, G28, G29 | `planned` |
