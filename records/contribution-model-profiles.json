@@ -209,6 +209,55 @@
       ],
       "review_independence": "Genuine separate context under this same actual G28 binding; exact source/guide revision required. No reviewer assigned or production accepted by this record.",
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-contracts-g29-binding-2026-10-14",
+      "goal": "G29",
+      "profile_id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "configured_identity_evidence": "Current maintainer chat configured model/effort was matched through accepted metadata-only usage ledger; no private session/response identifiers or contents published. Active response appears in later refresh.",
+      "date": "2026-10-14",
+      "valid_through": "2026-11-13",
+      "expires_on": [
+        "G29_delivery",
+        "parent_profile_expiry_or_revocation",
+        "changed_model_effort_provider_scope_or_trust"
+      ],
+      "scope": [
+        "G29_owned_safe_symbolic_text_validation_and_preprocessing",
+        "G29_immutable_Unicode16_fixed_split_byte_BPE_and_typed_prompt_subset",
+        "G29_development_references_tests_bilingual_delivery_and_separate_exact_head_review"
+      ],
+      "excluded": [
+        "neural_or_numerical_kernels",
+        "model_weights_inference_training_or_performance",
+        "other_goals_universal_tokenizer_architecture_or_Unicode_version_support"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "owner_decision": "Actual maintainer said continue after the presented written G29 design and G29-only contribution-domain binding question; interpreted as accepting those concrete proposals, with original bounds and inline method preserved. Concrete implementation-plan review remains required before production. Registry text itself grants no authority.",
+      "evidence": {
+        "source_base": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+        "guide_base": "45541cb916c5253bb6d3f2832a2dbffab1e9ad9d",
+        "owner_reviewed_design": "2a690b352ebfc0032a9e8033469e873f230e04c3",
+        "native_tokenizer": "not_run; references/full artifacts/production are not accepted by preparation"
+      },
+      "quality_floor": [
+        "original120_minutes_3repairs_900review_including_all_preparation",
+        "independent_frozen_reference_before_candidate_implementation",
+        "identified_full_tokenizer_config_template_Unicode_data",
+        "bounded_native_unicode_BPE_prompt_and_negative_tests",
+        "current_local_CI_genuine_separate_final_head_review_equal_main_tree_mainCI"
+      ],
+      "review_independence": "Genuine separate qualified context with exact final source/guide revision; no reviewer or future production accepted by this record.",
+      "no_self_authorization": true
     }
   ]
 }

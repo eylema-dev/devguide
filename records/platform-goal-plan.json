@@ -1227,14 +1227,14 @@
         "reasoning_effort": "high",
         "actual": "gpt-6.1-sol/high confirmed in last completed current-chat metadata18:05:55UTC14October2026; serving identityunknown; active response not yet stored"
       },
-      "activation": "Actual owner approved G29/r4 scope, added acceptedG28 stream dependency and written-design preparation only. Source d0dcc39/guide45541cb; preserve originalG27,criteria120/3/900 including preparation. Written-spec and G29-only symbolic frontend profile decisions plus concrete plan precede production; no qualification or runtime acceptance from this record. Current local/latestCI/genuine separate final-head review/identicalmain/mainCI required before standing-authorized merge.",
+      "activation": "Actual owner approved scope/preparation, then continued after the concrete written-spec and G29-only symbolic frontend binding question. Original G27/G28 dependencies, criteria and120/3/900 include preparation. Concrete implementation plan is prepared and awaits human review before production; no runtime/reference acceptance from this record. Standing conditional merge authority requires actual acceptance/local/currentCI/genuine separate final-head review/identicalmain/mainCI.",
       "accepted_delivery": null,
       "blockers": [
-        "Actual human written-spec and G29-only contribution-profile binding remain pending; concrete plan/runtime/reference/currentCI/separate-review/main proof not_run."
+        "Concrete implementation-plan human review remains pending; full artifact/reference/native/currentCI/separate-review/main proof not_run."
       ],
       "roles": {
-        "architect": "parent Codex configuredgpt-6.1-sol/high, actual owner-approved scope/written-design preparation",
-        "implementer": "not activated; actual written-spec/profile/plan gates required",
+        "architect": "parent Codex configuredgpt-6.1-sol/high under actual owner-approved G29 design/symbolic frontend binding",
+        "implementer": "not activated until actual concrete-plan review",
         "verifier": "parent read-only actual Unicode16data audit, tokenizer65536byte metadata probe and static docs checks; native tokenizer not_run",
         "independent_reviewer": "unassigned; genuine separate qualified final-head context required before delivery"
       },
@@ -1305,10 +1305,10 @@
           "docs/en/g29-tokenizer-design.md",
           "docs/tr/g29-tokenizer-design.md"
         ],
-        "owner_decision": "Actual human approved ownRust approach1,scope/dependency/contribution-domain assessment and EN/TR written-design preparation; no product code or fulltokenizer/referenceengine/model/weight/provider/training call.",
-        "written_spec_status": "awaiting_actual_owner_review",
+        "owner_decision": "Actual human approved preparation, then said continue after the concrete written-spec/G29-only profile question; same scope/method/bounds, concrete plan review still precedes production.",
+        "written_spec_status": "owner_approved_by_actual_continuation",
         "contribution_profile_candidate": "sol61-high-contracts-2026-10-14",
-        "profile_scope_status": "assessment prepared; actualG29-only owner decision pending; G28binding not transferable",
+        "profile_scope_status": "owner_approved_G29_only_symbolic_frontend_binding; numerical_neural_performance_excluded",
         "unicode_version": "16.0.0",
         "unicode_data_sha256": "3627a624f63370f0e726dde726f42934c8ca898c5e18fb69abdeee5a27ff00d8",
         "unicode_composition_sha256": "e83834fdad296e46779fb702e11dd9b8686409a6346461d02fe3a22afaf26dd4",
@@ -1316,7 +1316,10 @@
         "tokenizer_full_artifact_verified": false,
         "production_started": false,
         "reference_engine_executed": false,
-        "limits": "16MiBtokenizer/64KiBconfig/128MiBlogicalresident/8KiBtext/8messages32KiB/4096tokens;128MiBadmission work/2Mtextwork; no capacity/model/performance proof"
+        "limits": "16MiBtokenizer/64KiBconfig/128MiBlogicalresident/8KiBtext/8messages32KiB/4096tokens;128MiBadmission work/2Mtextwork; no capacity/model/performance proof",
+        "implementation_plan": "docs/plans/g29-tokenizer.md",
+        "implementation_plan_status": "awaiting_actual_human_review",
+        "design_status_commit": "364ce107f9012bfd7cfcef4c8054cfda3412df31"
       }
     },
     {
