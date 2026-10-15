@@ -1361,15 +1361,15 @@
     },
     {
       "id": "G30",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "CPU model execution",
       "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 27,
         "url": "https://github.com/eyleme-dev/eyleme/issues/27"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "f1f815a55ce717e8aa03e2ff6645a1a27050ff88",
       "dependencies": [
         "G23",
         "G28",
@@ -1383,26 +1383,49 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eyleme-dev/devguide": [
+          "docs/plans/g30-cpu-execution.md",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/en/contribution-model-policy.md",
+          "docs/tr/contribution-model-policy.md",
+          "records/platform-goal-plan.json",
+          "records/contribution-model-profiles.json",
+          "records/goal-tracking-index.json",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json",
+          "tools/github_identity.py",
+          "tools/tests/test_github_identity.py"
+        ],
+        "eyleme-dev/eyleme-models": [
+          "catalog/qwen3-0.6b.cpu.v1.json",
+          "catalog/qwen3-0.6b.cpu.v1.eyl",
+          "contracts/qwen3-cpu-roles.v1.json",
+          "docs/en/g30-cpu-profile.md",
+          "docs/tr/g30-cpu-profile.md",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Run Qwen reasoning/planning/specialist/critic profiles on the owned CPU path; a shared model may fill several roles but outputs remain distinct.",
       "acceptance": [
         {
           "id": "G30-P1",
           "requirement": "Run Qwen reasoning/planning/specialist/critic profiles on the owned CPU path; a shared model may fill several roles but outputs remain distinct.",
           "check": "Reference attention/KV/logits, actual bounded local execution and role-output validation.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G30-A1",
           "requirement": "Transformer/attention/KV/logits agree with reference; context and stop bounds work",
           "check": "Layer/logit vectors and actual bounded CPU generation/cancellation tests",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G30-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -1417,20 +1440,159 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "Maintainer-selected configuredgpt-6.1-sol/high; completed response metadata in private usage ledger; serving identity unknown, no globalSOTA attestation"
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Acceptance not executed; dependencies and activation bindings required."
+      "activation": "Actual maintainer approved G30 written design, G30-specific numerical qualification, concrete implementation plan and its single pinned-public-weight/one-reference/six-local-CPU-job allowance on15October2026. Current accepted child-repository rename/main bindings are coref1f815a55ce717e8aa03e2ff6645a1a27050ff88/catalog1a263978a96bfc75ccc5beba4b9bb8569693c12c/guide4eca675ebca6337a3098c60860e7df2ab82eb3c1. Original120/3/900 retained; actual owner extensions total270active/9targeted-repairs/900review, no reset. Preparation/repair/review consumption remains counted. No generic capability promotion or provider/training/spend authority. Actual human later authorized only6additional local Rust jobs (lifetime12), retaining270active/9repair/900review totals and original one-download/one-reference/no-provider/no-training bounds. Corrected-source actual six-job acceptance passed at93bed57; final source0095ffd is code-identical, cataloge25b11a is separately reviewed. Core and catalog exact reviewed/main trees and successful mainCI were verified. This guide revision still requires its own genuinely separate final review/currentCI/maintainer merge/main verification. Actual human subsequently approved one additional targeted identity-only delivery repair (total10) and its exact helper/test paths, W01repository/issueURL normalization and narrow structural-profile binding; no active/review/model allowance increase.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/113",
+          "head": "0095ffd0142354631c50ecaf1b2083f2e17d65aa",
+          "main": "da75bea4f22055b8954d6defbe3b0a2bc0c7f085",
+          "tree": "3a3b616706221d3000ba6472ca24b768236e9fe6",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "0095ffd0142354631c50ecaf1b2083f2e17d65aa",
+            "reviewer": "g30_source_final_review genuine separate admittedgpt-6.1-sol/high whole-source review, repair93bed57, actual93bed57/evidence0095ffd rebind; no unresolved findings"
+          },
+          "main_ci": {
+            "id": 38759915502,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38759915502",
+            "head": "da75bea4f22055b8954d6defbe3b0a2bc0c7f085",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eyleme-dev/eyleme-models",
+          "pr": "https://github.com/eyleme-dev/eyleme-models/pull/19",
+          "head": "e25b11aadf518142c70c2ac8800b69cb3ef4f3bb",
+          "main": "90ab95915e97e53be8b2752b9863be3447fb1144",
+          "tree": "7ddb6790adc559bd3db4d099f5efd54978109b0f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "e25b11aadf518142c70c2ac8800b69cb3ef4f3bb",
+            "reviewer": "g30_catalog_final_review genuine separate gpt-6.1-sol/high whole-range + final evidence rebind; no findings"
+          },
+          "main_ci": {
+            "id": 38758978840,
+            "url": "https://github.com/eyleme-dev/eyleme-models/actions/runs/38758978840",
+            "head": "90ab95915e97e53be8b2752b9863be3447fb1144",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "Current maintainer-selected gpt-6.1-sol/high context under actual G30-only qualification; hidden serving identity unknown",
+        "implementer": "Same inline context; no separate implementation actor fabricated",
+        "verifier": "Parent AppleM4Pro/macOSARM64/Rust1.99.0/CPython3.14.8:372native,48tooling,5dev,16CPU included, original4compiled mutants, four scalar-limitRED/GREEN tests, corrected6actual jobs; historical6jobs retained separately",
+        "independent_reviewer": "g30_source_final_review genuine separate configuredgpt-6.1-sol/high whole-range, repaired93bed57 and code-identical0095ffd evidence rebind; g30_catalog_final_review separate whole catalog and finale25b11a rebind; guide final review pending"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "contribution_profile_id": "sol61-high-g30-cpu-2026-10-15",
+      "verification": {
+        "environment": "AppleM4Pro/macOSARM64/24GiB/Rust1.99.0; pinnedCPython3.14.8 development/CI only",
+        "native_tests": 372,
+        "native_ignored": 4,
+        "python_tests": 48,
+        "development_tests": 5,
+        "cpu_tests_included_in_native": 16,
+        "artifact": {
+          "bytes": 1503300328,
+          "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+          "downloads": 1
+        },
+        "actual_runtime_source": "93bed57af6cbc8a33e619475e1bcedc88a06a0bd",
+        "reference_jobs": 1,
+        "rust_jobs_lifetime": 12,
+        "corrected_campaign_jobs": 6,
+        "comparisons": 180608,
+        "frozen_per_value_tolerance": "absolute_error<=0.001+0.0002*abs(reference); original tinyDecimal80 tolerance unchanged",
+        "greedy_token": 21806,
+        "corrected_aggregate_work": 222298299141,
+        "aggregate_work_limit": 320000000000,
+        "perjob_work_limit": 80000000000,
+        "peak_logical_bytes": 1658000646,
+        "sampled_native_rss_bytes_range": [
+          1206648832,
+          1538965504
+        ],
+        "numerical_role_stop_status": "passed actual corrected-source run; four unchanged/distinct typed role output digests, numerical-progress cancellation returns no proposal and cache reuse rejects",
+        "historical_accounting": "Original6jobs at7bd5deb passed numerics/roles/stop but work undercounted; immutable receipts/logs preserved. Do not use historical totals as repaired-source proof.",
+        "repair_evidence": "IndependentP2 scalar finite/sqrt/division omissions fixed in repair9; four actual-kernel exact/one-below tests failed oldcode and passed repairedcode; independent targeted16CPU rerun passed",
+        "mutations": "Four actual-source GQA/RoPE/stale-KV/cancel mutants compiled and were behaviorally rejected; original source restored and12then-currentCPUtests passed",
+        "limits": "Fixed batch1/context<=64/new<=8/F32CPU/Qwen only; private arrays/rawoutputs/weights remain outsideGit. No role usefulness/calibration, upstreamBF16equivalence, full4096context, global scheduler, universal physical memory/throughput, GPU/training/Wasm runtime acceptance.",
+        "human_extension": "Actual owner approved6additional Rustjobs only; lifetime12, no new download/reference/time/repair/review/provider/training/spending allowance; original270/9/900 totals retained Later actual human approved only repair10/helper-test scope/W01twoidentityfields; active270/review900/model12/download1/reference1 unchanged.",
+        "review_seconds_before_guide": 641,
+        "review_allocation_note": "Source final evidence report43s exceeded40s slice; actual43s charged, aggregate900s human budget unexhausted; no review result or elapsed fabricated.",
+        "source_ci": "Final exactheadCI38758832445 and exactmainCI38759915502 passed; source reviewed/main tree equality verified",
+        "catalog_ci": "Final exactheadCI38758839552 and exactmainCI38758978840 passed; reviewed/main tree equality verified; expected metadata-roleRustskip is not runtime evidence",
+        "identity_repair": "Actual GitHub repositoryeyleme-dev/eylemedotdev/issue4 verified. Separate exact website rename map preserves runtime-child/pinned-member dictionary; historical aliases normalize, foreign/lookalike/unapproved owner-name combinations reject. Two real alias/live-card regressions failed old helper and passed correction; W01status/revision/acceptance/dependencies/budget unchanged.",
+        "other_cards": "All66other cards unchanged; W01only canonical repository andissueURL changed under actual human exception; no W01acceptance or website publication",
+        "guide_tests": 96
+      },
+      "dependency_deliveries": {
+        "G23": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/107",
+            "head": "d42acfd1f54482c33330e92b64283a0cd904dd18",
+            "main": "6605080fcae225e099775f7856349c0aac6aa011",
+            "tree": "427ed86cb20fb9f797a30c679f1be62d8115d3fc",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "d42acfd1f54482c33330e92b64283a0cd904dd18",
+              "reviewer": "g23_source_review genuinely separate configuredgpt-6.1-sol/high context;15tensor tests on preceding1ecb59c plus final full-file/f64-bit equivalence audit, independent Decimal80 and actual zero-score mutant rejection; no remaining findings"
+            },
+            "main_ci": {
+              "id": 38592018117,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38592018117",
+              "head": "6605080fcae225e099775f7856349c0aac6aa011",
+              "status": "passed"
+            }
+          }
+        ],
+        "G28": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/108",
+            "head": "2675f14054e6c044abc31792d82457344283fa7a",
+            "main": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+            "tree": "9613bc8942e206f5cee9c551db48e8deb716bb1f",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2675f14054e6c044abc31792d82457344283fa7a",
+              "reviewer": "g28_repaired_review genuine fresh configuredgpt-6.1-sol/high context under owner-admitted G28 binding; initial Important prefix-bound defect independently resolved; no remaining findings"
+            },
+            "main_ci": {
+              "id": 38607296855,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38607296855",
+              "head": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+              "status": "passed"
+            }
+          }
+        ],
+        "G29": [
+          {
+            "repository": "eyleme-dev/eyleme",
+            "pr": "https://github.com/eyleme-dev/eyleme/pull/110",
+            "head": "6024087e15bd7a508dac091a2abc36ebf7619baf",
+            "main": "2699f260434e7d266990452b5d81257b407c483a",
+            "tree": "7f5c27a80ee4a44822028f9787f74fe067a58bdf",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "6024087e15bd7a508dac091a2abc36ebf7619baf",
+              "reviewer": "g29_r5_source_review genuine fresh configuredgpt-6.1-sol/high G29-only symbolic context; independent native13text/14prompt and512full-render histories; no findings"
+            },
+            "main_ci": {
+              "id": 38691024836,
+              "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38691024836",
+              "head": "2699f260434e7d266990452b5d81257b407c483a",
+              "status": "passed"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "G31",
@@ -2533,10 +2695,10 @@
       "id": "W01",
       "plan_card_revision": 3,
       "title": "Website accuracy",
-      "repository": "eyleme-dev/eylemadotdev",
+      "repository": "eyleme-dev/eylemedotdev",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eyleme-dev/eylemadotdev/issues/4"
+        "url": "https://github.com/eyleme-dev/eylemedotdev/issues/4"
       },
       "status": "planned",
       "base_sha": "e379050263f00f0160845a8395f142489f3cc11d",

@@ -15,6 +15,41 @@ from check_workspace import MEMBERS
 
 
 class GitHubIdentityTests(unittest.TestCase):
+    def test_verified_website_aliases_preserve_scope_and_suffixes(self):
+        canonical = 'eyleme-dev/eylemedotdev'
+        for identity in ('eylema-dev/eylemadotdev', 'eyleme-dev/eylemadotdev', canonical):
+            with self.subTest(identity=identity):
+                self.assertEqual(canonical_repository(identity), canonical)
+                self.assertEqual(canonical_url('https://github.com/' + identity + '/issues/4'),
+                                 'https://github.com/' + canonical + '/issues/4')
+                self.assertEqual(canonical_endpoint('repos/' + identity + '/issues/4?per_page=100'),
+                                 'repos/' + canonical + '/issues/4?per_page=100')
+        for identity in ('other/eylemedotdev', 'eyleme-dev-evil/eylemedotdev',
+                         'eyleme-dev/eylemedotdev-evil', 'eylema-dev/eylemedotdev'):
+            with self.subTest(identity=identity), self.assertRaises(ValueError):
+                canonical_repository(identity)
+        # An approved website URL does not make it a pinned execution/doc member.
+        self.assertNotIn('eylemedotdev', MEMBERS)
+        self.assertNotIn('eylemadotdev', RENAMED_REPOSITORIES)
+
+    def test_observed_website_live_card_keeps_state_owner_and_marker_checks(self):
+        from check_platform_plan import audit_card
+        canonical = 'eyleme-dev/eylemedotdev'
+        url = 'https://github.com/' + canonical + '/issues/4'
+        card = {'id': 'W01', 'plan_card_revision': 3, 'repository': canonical,
+                'issue': {'number': 4, 'url': url}, 'status': 'planned',
+                'accepted_delivery': None}
+        remote = {'html_url': url, 'state': 'open',
+                  'body': '<!-- eylema-platform-goal:W01:r3 -->'}
+        with patch('check_platform_plan.api', return_value=remote) as read:
+            audit_card(card)
+            read.assert_called_once_with('repos/' + canonical + '/issues/4')
+        for change in ({'html_url': 'https://github.com/other/eylemedotdev/issues/4'},
+                       {'state': 'closed'}, {'body': ''}, {'pull_request': {}}):
+            with self.subTest(change=change), patch('check_platform_plan.api', return_value=remote | change):
+                with self.assertRaises(ValueError):
+                    audit_card(card)
+
     def test_six_child_renames_preserve_exact_historical_aliases_and_suffixes(self):
         for old, current in RENAMED_REPOSITORIES.items():
             if old == 'eylema':

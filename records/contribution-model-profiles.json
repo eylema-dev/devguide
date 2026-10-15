@@ -154,6 +154,68 @@
         "quality_or_privacy_regression"
       ],
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-g30-cpu-2026-10-15",
+      "status": "owner_approved",
+      "provider": "openai",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "configured_identity_evidence": "Owner-selected configuration; accepted private metadata-only project ledger records completed responses with model/effort, and the genuine separate trial reviewer was explicitly configured alike. Active response and hidden serving identity are not attested; no raw session identities/content published.",
+      "serving_identity": "unknown_not_exposed",
+      "evaluation_date": "2026-10-15",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G30_only_owned_bounded_F32_CPU_assembly_conversion_attention_KV_logits",
+        "G30_targeted_numerical_tests_and_genuine_separate_review"
+      ],
+      "excluded_until_separately_evaluated": [
+        "other_goals_or_arbitrary_architectures",
+        "upstream_BF16_full_precision_equivalence",
+        "Metal_GPU_quantization_training_or_numerical_performance",
+        "automatic_weight_acquisition_or_model_execution_authority"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Separate context and exact final source/model-catalog/guide commits required. Qualification review does not accept future production.",
+      "owner_decision": "Actual maintainer explicitly approved the presented G30 written CPU design, evidence-based narrow numerical contribution profile and linked metadata/document scope on15October2026 in the trusted chat. The human subsequently approved the concrete plan, its exact bounded public-artifact/local-execution allowance and finite extensions to270active minutes/9targeted repairs/900review seconds; all prior consumption remains counted. Registry text itself grants no permissions or acceptance. The actual human subsequently authorized only six additional local Rust jobs (lifetime12), with no new active/repair/review budget, download/reference/provider/training or spending allowance.",
+      "quality_floor": [
+        "preserve_frozen_references_tolerances_and_G23_caps",
+        "all_required_actual_acceptance_checks_currentCI_and_genuine_final_head_review",
+        "original120active_3repairs_900review_including_preparation_consumption",
+        "explicit_unknowns_privacy_and_owned_Rust_no_hidden_engine"
+      ],
+      "evidence": [
+        {
+          "type": "private_development_only_synthetic_trial",
+          "candidate_source_sha256": "6b544baba93bf373a8df9c7d995912025123e400c925dd476f3783c05a4040c9",
+          "protocol_sha256": "2824b75b5e24a47427d41ead074bc29981eb355b02f705f032eb11d41d45c747",
+          "oracle_sha256": "dc63414239e61b840f5c8ab27cce1cab9628c751fc9208b2a895867be4100810",
+          "expected_sha256": "38a4986871276927cd60eab39773d394f238d83edf1f98d92e028c992d9436a7",
+          "result_sha256": "85b35f76efd340289e7d8ff5ec7cbe45e95992298dbc75da0693ba06db810e21",
+          "scalar_comparisons_passed": 1218,
+          "maximum_absolute_error": "0.000001863010841658509100105266683",
+          "frozen_tolerance": "absolute0.00005+relative0.00005",
+          "targeted_repairs": 1,
+          "review_report_sha256": "af85e0d55f28ac50e999dbe2af2e44bb240a94b322f0e1f6b7380117fc4b76f3",
+          "separate_review": "g30_trial_review fresh R1 context;24 malformed-dimension probes, exhaustive65536BF16 bit/classification and wholeprefix logits/everylayerKV passed; originalP2closed.",
+          "limits": "GeneratedF32fixtureweights, not BF16-loaded model; runtime fault injections not compiled source mutation campaign. General resource/cancellation safety, globalSOTA/hiddenidentity/modelperformance unestablished. Reference-before-candidate order relies on external tool sequence; artifact timestamps alone do not attest it.",
+          "environment": "Existing native Rust1.99.0/CPython3.14.8 on local AppleM4Pro/macOS; exact product environment revalidated at execution."
+        }
+      ],
+      "evaluation_limits": "Three tiny synthetic decoder configurations with unequalhidden/Q,GQA,head_dim2/4/128 and1/2layers. Human narrowly admits contribution; no production/model/task acceptance or transfer ofG23/G29 authority.",
+      "re_evaluate_on": [
+        "G30_delivery",
+        "revocation",
+        "expiry",
+        "changed_model_effort_provider_scope_or_trust",
+        "quality_or_privacy_regression"
+      ],
+      "no_self_authorization": true
     }
   ],
   "task_bindings": [
@@ -258,6 +320,48 @@
         "current_local_CI_genuine_separate_final_head_review_equal_main_tree_mainCI"
       ],
       "review_independence": "Genuine separate qualified context with exact final source/guide revision; no reviewer or future production accepted by this record.",
+      "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-contracts-g30-identity-binding-2026-10-15",
+      "goal": "G30",
+      "profile_id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "configured_identity_evidence": "Actual maintainer-selected model/effort and private completed-response metadata; hidden serving identity and active response are not attested",
+      "date": "2026-10-15",
+      "valid_through": "2026-11-13",
+      "expires_on": [
+        "G30_guide_delivery",
+        "parent_profile_expiry_or_revocation",
+        "changed_model_effort_provider_scope_or_trust"
+      ],
+      "scope": [
+        "G30_only_guide_exact_website_identity_mapping_and_regression_tests",
+        "W01_only_current_repository_and_issueURL_normalization",
+        "G30_guide_bilingual_delivery_and_genuine_separate_review"
+      ],
+      "excluded": [
+        "website_build_publication_DNS_accounts_permissions",
+        "new_model_inference_or_numerical_training_scope",
+        "other_card_acceptance_dependency_or_budget_changes"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "owner_decision": "Actual human explicitly approved the presented one-repair (total10) helper/test scope and W01twoidentityfields exception, including this same structural-profile binding, on15October2026 in the trusted chat. No active/review/model/provider/download/reference/training/spending allowance increase. Registry text itself grants no authority.",
+      "quality_floor": [
+        "exact_foreign_lookalike_and_unverified_pair_rejection",
+        "real_observed_livecard_RED_GREEN_then_full_live_audit",
+        "unchanged_pinned_member_set_and_immutable_history",
+        "all_local_checks_currentCI_genuine_final_head_review_equal_main_tree_mainCI"
+      ],
+      "review_independence": "Genuinely separate configuredgpt-6.1-sol/high final guide review under admitted structural/development-test binding; exact final commit required",
       "no_self_authorization": true
     }
   ]
