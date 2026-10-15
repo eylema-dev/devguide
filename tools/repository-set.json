@@ -3,7 +3,7 @@
   "members": {
     "eyleme": {
       "repository": "eyleme-dev/eyleme",
-      "revision": "da75bea4f22055b8954d6defbe3b0a2bc0c7f085"
+      "revision": "98e8be6f1f0e623a6b7547c337c53740c64a1354"
     },
     "eyleme-docs-en": {
       "repository": "eyleme-dev/eyleme-docs-en",
@@ -27,7 +27,7 @@
     },
     "eyleme-models": {
       "repository": "eyleme-dev/eyleme-models",
-      "revision": "90ab95915e97e53be8b2752b9863be3447fb1144"
+      "revision": "b39d4722f5e8798e082721e8b8bcba22b19eac69"
     },
     "eyleme-training": {
       "repository": "eyleme-dev/eyleme-training",

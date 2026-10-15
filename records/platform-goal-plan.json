@@ -3815,15 +3815,15 @@
     },
     {
       "id": "G57",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Owned Rust CPU structured-decision execution",
       "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 68,
         "url": "https://github.com/eyleme-dev/eyleme/issues/68"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "da75bea4f22055b8954d6defbe3b0a2bc0c7f085",
       "dependencies": [
         "G56",
         "G23",
@@ -3839,20 +3839,40 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eyleme-dev/eyleme-models": [
+          "catalog/qwen3-reranker-0.6b.cpu.v1.json",
+          "catalog/qwen3-reranker-0.6b.cpu.v1.eyl",
+          "contracts/qwen3-reranker-cpu.v1.json",
+          "docs/en/g57-cpu-profile.md",
+          "docs/tr/g57-cpu-profile.md",
+          "tools/translation-pairs.json"
+        ],
+        "eyleme-dev/devguide": [
+          "docs/plans/g57-cpu-decision.md",
+          "records/platform-goal-plan.json",
+          "records/contribution-model-profiles.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Run the accepted structured-decision candidate in owned Rust and normalize choice/yes-no/score outputs with finite bounds; scores never authorize effects or prove calibration.",
       "acceptance": [
         {
           "id": "G57-A1",
           "requirement": "Run the accepted structured-decision candidate in owned Rust and normalize choice/yes-no/score outputs with finite bounds; scores never authorize effects or prove calibration.",
           "check": "Actual pinned-artifact CPU run and independent logits/probability/head reference; malformed questions, output schema, multi-question batching, context, memory and stop tests.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G57-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -3867,18 +3887,53 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high configured; hidden serving identity unknown"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Actual human approved written spec64f2355, G57-only sol61-high-g57-cpu-decision-2026-10-15 and concrete plan7bee3c1 including exact finite artifact/reference/six-candidate allowance. After the initial real-reference timeout, the owner explicitly approved 30 additional active minutes and one additional real acceptance invocation; no new weight download or source-repair allowance was included. The first invocation timed out at 605.53s during its F64 reference, before candidate jobs. After Rust1.99.0 -C opt-level=3 synthetic and Decimal80 self-tests passed, the single authorized follow-up invocation completed in 487.46s with a 128.54s reference and bounded candidate jobs. The same artifact/source/inputs and frozen caps were retained; no candidate work from the first invocation was carried forward. Source/catalog acceptance passed and exact-main CI is recorded below; the devguide card/action-plan update has a distinct exact-head review, CI, merge and main-verification gate. G68 follows coordinated completion. Inline method/conditional merge preserved; no consumption or repair budget is reset. Fixed smoke only; no calibrated quality, broad Turkish quality, universal capacity or performance claim.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/114",
+          "head": "b53d4ff8ed141719e5ffd7590b95bac6e67904b3",
+          "main": "98e8be6f1f0e623a6b7547c337c53740c64a1354",
+          "tree": "6fa46af94e56eba850abec2a755196def20fb5df",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "b53d4ff8ed141719e5ffd7590b95bac6e67904b3",
+            "reviewer": "g57_source_review, genuine separate exact-final-head AI review; no findings; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38804354823,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38804354823",
+            "head": "98e8be6f1f0e623a6b7547c337c53740c64a1354",
+            "status": "passed"
+          }
+        },
+        {
+          "repository": "eyleme-dev/eyleme-models",
+          "pr": "https://github.com/eyleme-dev/eyleme-models/pull/20",
+          "head": "8fe06d8aecd29f3a5c3309817ce53dd181155655",
+          "main": "b39d4722f5e8798e082721e8b8bcba22b19eac69",
+          "tree": "2d63a2e11eb3340de205c4086b137d1c7d355914",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "8fe06d8aecd29f3a5c3309817ce53dd181155655",
+            "reviewer": "g30_catalog_final_review, fresh genuine separate exact-final-head AI review; no findings; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38804605376,
+            "url": "https://github.com/eyleme-dev/eyleme-models/actions/runs/38804605376",
+            "head": "b39d4722f5e8798e082721e8b8bcba22b19eac69",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "Configuredgpt-6.1-sol/high, owner-admitted G57-only profile; hidden serving identity unknown",
+        "implementer": "Same configured author, inline; finite original allowance",
+        "verifier": "Author exact native/static/actual evidence; limits distinguished",
+        "independent_reviewer": "g57_source_review genuine separate final-head source report at b53d4ff; g30_catalog_final_review fresh final catalog report at 8fe06d8. The devguide PR review is a separate exact-head delivery gate, tracked at that PR head. Hidden serving identity not exposed."
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
