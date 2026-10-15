@@ -3,61 +3,61 @@
   "members": {
     "eyleme": {
       "repository": "eyleme-dev/eyleme",
-      "revision": "2699f260434e7d266990452b5d81257b407c483a"
+      "revision": "83edbf6af2f6ab1187cd753991a83ce12d2d1730"
     },
-    "eylema-docs-en": {
-      "repository": "eyleme-dev/eylema-docs-en",
-      "revision": "bf9d5e7ff8caa110f7ae74891f520c9c806341c0"
+    "eyleme-docs-en": {
+      "repository": "eyleme-dev/eyleme-docs-en",
+      "revision": "24277ffaeb475d9e86f607e3b8707ba5e3d9f1e3"
     },
-    "eylema-docs-tr": {
-      "repository": "eyleme-dev/eylema-docs-tr",
-      "revision": "6903039c6cd09d567ac5baf93bbdf9ddab273fe3"
+    "eyleme-docs-tr": {
+      "repository": "eyleme-dev/eyleme-docs-tr",
+      "revision": "3c4c2227c89117700d650e5b227f96220f2172d3"
     },
     ".github": {
       "repository": "eyleme-dev/.github",
-      "revision": "88f1d25ff60e02fb1cb0f3ee89ee3c8e38b892b5"
+      "revision": "20592e5fff47e56ff1e3a1a8207a134b03624964"
     },
-    "eylema-examples": {
-      "repository": "eyleme-dev/eylema-examples",
-      "revision": "6328bed51fee6ca4d54a22e7e85d09b8f0b4fbbc"
+    "eyleme-examples": {
+      "repository": "eyleme-dev/eyleme-examples",
+      "revision": "114feb4cdfa14979d0efdc9b2a75ec0841161e05"
     },
-    "eylema-evals": {
-      "repository": "eyleme-dev/eylema-evals",
-      "revision": "517a99283ac7b744cc2ea0b03a4806b87d7c51d2"
+    "eyleme-evals": {
+      "repository": "eyleme-dev/eyleme-evals",
+      "revision": "7b161a0a4c6b243784d9bdf57346341661314ea0"
     },
-    "eylema-models": {
-      "repository": "eyleme-dev/eylema-models",
-      "revision": "46a5ecda74f4048a17b00cd2c8620a90dcc7626a"
+    "eyleme-models": {
+      "repository": "eyleme-dev/eyleme-models",
+      "revision": "39692f44761d37dcdd4748bcb10dd4e68c7bf6b8"
     },
-    "eylema-training": {
-      "repository": "eyleme-dev/eylema-training",
-      "revision": "d9ca2416a9d1530fe40d22fa015fe12bb8904abc"
+    "eyleme-training": {
+      "repository": "eyleme-dev/eyleme-training",
+      "revision": "7fdc6251eb3a789d67ea6c3aea6e60074e4257d4"
     }
   },
   "product_translations": {
     "api-reference": {
-      "en_sha256": "1fa3f438564c8388b3bcac73f642fdaa210963fd262c9441eca39da19a773ae1",
-      "tr_sha256": "4525816474bf75e269900672575c5cee5a6d70d510b1a7f3ea810be31d5f2e53"
+      "en_sha256": "201d75867e19f0330a53317a416b03f71a238ba9bd8974a341ec47b0e77b6008",
+      "tr_sha256": "1296a2ee7134745f11f1fe947a990f623830c2307ffe576c9e30d0243da5f87b"
     },
     "architecture": {
-      "en_sha256": "5c771466468e0f7e94553a1fc099dcd81be6be1ae1b5f196b0e9b6ce980296fd",
-      "tr_sha256": "8fed0a6ff63b96455d2d91a2bec48c0356bf9f15fdc40412c1d07afcfa851cb1"
+      "en_sha256": "1d2ea3cbacdea10d03628ec5bbd312fbe5775d674d02029695c20d27779edd49",
+      "tr_sha256": "8d8ef0aa2e419aedc1a2995e566464e1a15248848a5432e3f302e16db0fade1f"
     },
     "development-and-operations": {
-      "en_sha256": "2abf6b3fd0a70fcab9b639407422b862a03a9e109823d3048f4b5c246dcd6af3",
-      "tr_sha256": "fcdde938773ba37404cef09995ed23f4f0b0c8244c2dcda60fec946e3f32a12d"
+      "en_sha256": "7e7f29d0b71c77f0a01e3144f14bba1d1c23b503ffeb44267f25bfc8159e6133",
+      "tr_sha256": "afae967fb23d26343603a0f67360871b62527fb10364b6d02243ea6b93f2d4d6"
     },
     "learning-and-training": {
-      "en_sha256": "e9e419625fb76a180f85f3a2ebdb3aaaa18ff7fd4430a97135fa1b406ed60cc7",
-      "tr_sha256": "94cc74a1bfdddf8ab2d397b492b234f5932f454f8b5bf433c139221542f7e25d"
+      "en_sha256": "79c637f954f07f8ec90bfb3488f6f0513dfc2a289ef58aa06b65f2c71cda166b",
+      "tr_sha256": "60d9080c33db095cc02280d3d5f0d48ba2ec25e38d278222a32bab04bee9dcb5"
     },
     "project-structure": {
-      "en_sha256": "984d411bf28cdbc333e0f819f433ab787854eb03afa3547ee8016a5ee78c13ce",
-      "tr_sha256": "8c75872c27f1bed6504337f41aef4c6cb24072af93e1fbdb6234efdb1a2c70a7"
+      "en_sha256": "b9af91538d18eb26384fd3eb02f22d9a1efcd345e9a6522ed8a4ec8caa838bd3",
+      "tr_sha256": "660b01e74905aebda93f9003d6ca0f187cdea5efe546b7d13c528b92e1e8b00f"
     },
     "roadmap": {
-      "en_sha256": "bb09aa8d225e462c8083c73d5612410c73c835fb20fa126a635b02003c860f66",
-      "tr_sha256": "8c14fcf3b9840b1da8e052e5a41963617daef2683cd01622c3f677e0a6d73409"
+      "en_sha256": "c26d417207964a7be73b4b302a6babef8ade8866aafaabfa31d93241ee74790f",
+      "tr_sha256": "650734e19beb37935c36761cfe590f90110a523ce26f5ced0aa18d6cc20e5560"
     }
   }
 }

@@ -22,6 +22,6 @@ Sıradan belge değişiklikleri için `records/document-migration.json` veya `re
 
 ## GitHub kimlik geçişi — 14 Ekim 2026
 
-Kanonik organizasyon `eyleme-dev`, çekirdek depo `eyleme-dev/eyleme` oldu. Yardımcı depoların kısa adları aynı kaldı. Güncel depo kimlikleri, CI kapsamı, üye sabitlemeleri ve örnek bağımlılık kaynakları kanonik adları kullanmalıdır.
+Kanonik organizasyon `eyleme-dev`, çekirdek depo `eyleme-dev/eyleme` oldu. 15 Ekim 2026 tarihinde altı doküman, örnek, değerlendirme, model ve eğitim deposu `eylema-*` yerine `eyleme-*` adlarına geçti. Güncel depo kimlikleri, CI kapsamı, üye sabitlemeleri ve örnek bağımlılık kaynakları kanonik adları kullanmalıdır.
 
 Tarihsel taşıma/Goal kanıtları özgün depo adlarını, bağlantılarını, özetlerini ve commit'lerini korur. Salt okunur geçmiş kontrolleri yalnız yönetilen depoları `eylema-dev` organizasyonundan `eyleme-dev` organizasyonuna; çekirdeğin bilinen iki önceki kimliğini (`eylema-dev/eylema`, `eyleme-dev/eylema`) ise `eyleme-dev/eyleme` kimliğine eşler. Git fetch ve GitHub API okumaları kanonik hedefi kullanır; değişmez kaynak baytları, kesin revizyonlar ve depo sahipliği kontrolleri geçerliliğini korur. Bu eşleme yetki vermez ve benzer görünümlü sahip veya depo adlarını kabul etmez.

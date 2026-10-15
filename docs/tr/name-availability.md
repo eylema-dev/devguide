@@ -1,8 +1,8 @@
 # Eylema — İsim ve uygunluk kaydı
 
-**Ad güncellemesi — 14 Ekim 2026:** Ürünün adı **Eyleme** (önceki adı Eylema), tamamlayıcı ürünün adı **Derleme** (önceki adı Derlema) oldu; **Onama** aynı kaldı. Depoların kısa adları, alan adları, komutlar, crate/paket adları, ortam değişkenleri, veri yolları ve protokol/şema tanımlayıcıları uyumluluk için mevcut yazımlarını korur. Tarihsel kanıtlar korunur.
+**Ad güncellemesi — 14 Ekim 2026:** Ürünün adı **Eyleme** (önceki adı Eylema), tamamlayıcı ürünün adı **Derleme** (önceki adı Derlema) oldu; **Onama** aynı kaldı. Alan adları, komutlar, crate/paket adları, ortam değişkenleri, veri yolları ve protokol/şema tanımlayıcıları uyumluluk için mevcut yazımlarını korur. Tarihsel kanıtlar korunur.
 
-**GitHub organizasyon güncellemesi — 14 Ekim 2026:** Bakımcı organizasyonun adını [eyleme-dev](https://github.com/eyleme-dev) olarak değiştirdi. Ana depo [eyleme-dev/eyleme](https://github.com/eyleme-dev/eyleme) olarak yeniden adlandırıldı; yardımcı depoların kısa adları aynı kaldı. Aşağıdaki tarihsel gözlemler özgün ad ve bağlantıları korur.
+**GitHub organizasyon güncellemesi — 14 Ekim 2026:** Bakımcı organizasyonun adını [eyleme-dev](https://github.com/eyleme-dev) olarak değiştirdi. Ana depo [eyleme-dev/eyleme](https://github.com/eyleme-dev/eyleme) olarak yeniden adlandırıldı; altı `eylema-*` alt deposu da 15 Ekim 2026 tarihinde `eyleme-*` olarak yeniden adlandırıldı. Aşağıdaki tarihsel gözlemler özgün ad ve bağlantıları korur.
 
 Aşağıdaki kayıt 11 Ekim 2026 tarihindeki ad ve uygunluk gözlemlerini korur.
 

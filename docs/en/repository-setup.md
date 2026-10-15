@@ -22,6 +22,6 @@ Do not rewrite `records/document-migration.json` or `records/migration-snapshot.
 
 ## GitHub identity migration — 14 October 2026
 
-The canonical organization is `eyleme-dev` and the core repository is `eyleme-dev/eyleme`. Auxiliary repository basenames stay unchanged. Current repository identities, CI scope, member pins and example dependency sources must use the canonical names.
+The canonical organization is `eyleme-dev` and the core repository is `eyleme-dev/eyleme`. On 15 October 2026 the six docs, examples, evals, models and training repositories changed from `eylema-*` to `eyleme-*`. Current repository identities, CI scope, member pins and example dependency sources must use the canonical names.
 
 Historical migration/Goal evidence keeps its original repository names, URLs, hashes and commits. Read-only history checks map only the managed repositories from `eylema-dev` to `eyleme-dev`, and the two known former core identities (`eylema-dev/eylema`, `eyleme-dev/eylema`) to `eyleme-dev/eyleme`. Git fetches and GitHub API reads use the canonical destination; immutable source bytes, exact revisions and repository ownership checks still apply. The alias mapping grants no authority and accepts no lookalike owner or repository.

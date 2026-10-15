@@ -5,20 +5,20 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "76447dfe7bb92e8de5df9cb0ee64505334cb3b71965a644d9df654dc36347e88",
-      "tr_sha256": "6edc6673c836cbfc81cdbe6548265416ec5de1daa7809b1a07c4e554f5a83ba5"
+      "en_sha256": "51b55b41f3d29fe36baf65623139d909143176b3acfe73543ed16992494b84d0",
+      "tr_sha256": "3e1096a35907516f26588ee41f5eadba694134ced126fe7dd2d1e54933be6559"
     },
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "c4c9b185cd92565719d068b1974c052bdb873bb2eacbe05e075b5e695616b254",
-      "tr_sha256": "abf4bf521f4894b6653b9f292316021d60b6b3f5be28a3c8ac8d5c314b9240ec"
+      "en_sha256": "402da6a0a106c2c787b4b672ad2dd42d2578fba2ac2a5aa597f6c245cbdbcc29",
+      "tr_sha256": "da9d7fe61a38572f082f84566684e708cce6ec46a7d622d802389d4b1ea0b451"
     },
     {
       "en": "docs/en/name-availability.md",
       "tr": "docs/tr/name-availability.md",
-      "en_sha256": "195663f7aeef00a100267802344541e54a710fd0c56b1d02175ea77cfa2d36fd",
-      "tr_sha256": "422c983086277b5597d741ccdaf1a5f12cf7c107654d266d25fd7c9490090935"
+      "en_sha256": "c6f3e5bba9d77872d8755e2b0b38e84d5dac1ae85da0347cd57bff23b1543e70",
+      "tr_sha256": "191cb6fae46c649fe9334438fed505f26bfc9810231c3119f74747ee73d11cba"
     },
     {
       "en": "docs/en/quality-gates.md",
@@ -29,20 +29,20 @@
     {
       "en": "docs/en/repository-map.md",
       "tr": "docs/tr/repository-map.md",
-      "en_sha256": "938a66a401f40990d333851f90d2e2190fc7314bdee1ed2b2bb07193e481f190",
-      "tr_sha256": "e9bae04f4a194fd46d72705bf19bf25bb9155b45ae96c9e0db49670eff012709"
+      "en_sha256": "6ff69a5cfc6bb1298bb9f3b1388a301233d954f6ba2b09c1d298ca3037b3f896",
+      "tr_sha256": "7ab527e50081d11530d53afda4c0e28b634ff5735c0dc8f75cc62ba799c8d03b"
     },
     {
       "en": "docs/en/repository-migration.md",
       "tr": "docs/tr/repository-migration.md",
-      "en_sha256": "0b8e655adde0ddf068d89f18b7c9fb697e2a621e49998d9179fb547a6d2fa1c4",
-      "tr_sha256": "92913009bf44144d3ecd76b5fcc20559b59f7ea54cf9d3d84e93b236a9a52a62"
+      "en_sha256": "06933536d4fbb0523cea152314f8518ed1d754000b8719ea982817feffa3b8c1",
+      "tr_sha256": "418db89b6f651a27999c879f98ecb95db746a7c73118afc2f9f55c6ff5e98ed2"
     },
     {
       "en": "docs/en/repository-setup.md",
       "tr": "docs/tr/repository-setup.md",
-      "en_sha256": "6fa46937347e653234046c477702dbd84bf26229ea813c8995e694a74ca5dc74",
-      "tr_sha256": "5b830bd5067ec02edfa596b242f7dc1c3b9f67e095dd7172f8d9764604e383ed"
+      "en_sha256": "c4b8440a5ff7c252a8c9f3e9fcd2d8130d6facbfb7426e3a86c182d2bd9ebc7b",
+      "tr_sha256": "196c8ff478bff5137807d445dd9bd8990afe660cb4fd062a3d67e9ef8442a279"
     },
     {
       "en": "docs/en/tooling.md",
@@ -53,8 +53,8 @@
     {
       "en": "docs/en/goal-program.md",
       "tr": "docs/tr/goal-program.md",
-      "en_sha256": "81ad3ed1dac70095624137ba01398cf12d3cfbc83a338eb766d6b443d8391c5c",
-      "tr_sha256": "83ead35d184f1be152dc298e58b6db81932b22272a06be730cc7e54cf5300631"
+      "en_sha256": "315bff44e1c6f395bb2b69b23c01a0136125f006fa3cee38885b1bb0885ee6f4",
+      "tr_sha256": "7ecaed1ec083d1a02b1307dcaacf0fd22cb3e6e5e351b473cb5690ea53fbd66a"
     },
     {
       "en": "docs/en/github-work-management.md",
@@ -65,8 +65,8 @@
     {
       "en": "docs/en/licensing.md",
       "tr": "docs/tr/licensing.md",
-      "en_sha256": "75630ebcd6afaf5dfab2d4d899784486cfdb41050b85230072eab866fbc34677",
-      "tr_sha256": "9c768b5dc9ede9c6796630e0c048eb86cc7329c7b4eb6aeae54fba2431b7bdee"
+      "en_sha256": "5ef4773165584be56ba9c1aeea951f3cf91f38cce41681c2260fbbb4aa66716a",
+      "tr_sha256": "8c215058b39075a7e8095a500115ee90ea742d44841c317345a755029eca6a9b"
     },
     {
       "en": "docs/en/usage-accounting.md",
@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "24a48040d9f5f8990612dd3b0c3c272738740fd31fe72362d3159442a1cc830a",
-      "tr_sha256": "7140df8d5e8ce049018e42934a013445007601f21fe73906f401eae235b72769"
+      "en_sha256": "0397163aa7edbf8cb0aece037d1cf525411843ca4305e009448840b45a991c2e",
+      "tr_sha256": "e5a9efe0513f87cc2b33f3d2a5f2ae7a612fcf060a8cad7507af55d5d8083265"
     },
     {
       "en": "docs/en/memory-layer.md",

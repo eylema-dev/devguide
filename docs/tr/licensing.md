@@ -2,7 +2,7 @@
 
 Karar tarihi: **12 Ekim 2026**. [English](../en/licensing.md). Bakımcı, kabul edilen proje kararları talebinde açıkça Apache 2.0 seçti. Bu, EYL-001/G06 içindeki lisans seçimi kararını kapatır; PR incelemesi, varlık kökeni ve sürüm kabulü ayrıdır.
 
-Değiştirilmemiş [Apache License, Version 2.0](../../LICENSE), eşgüdümlü depolardaki kendi kaynak kodumuza ve belgelerimize uygulanır: eylema, eylema-docs-en, eylema-docs-tr, devguide, .github, eylema-examples, eylema-evals, eylema-models ve eylema-training. Her depoya ayrı LICENSE ve NOTICE eklenir. Kaynak [resmî metindir](https://www.apache.org/licenses/LICENSE-2.0.txt); Türkçe açıklama yol göstericidir, lisansın yerine geçen çeviri değildir. Bağımsız yönetilen web sitesi bu değişikliğin dışındadır.
+Değiştirilmemiş [Apache License, Version 2.0](../../LICENSE), eşgüdümlü depolardaki kendi kaynak kodumuza ve belgelerimize uygulanır: eylema, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models ve eyleme-training. Her depoya ayrı LICENSE ve NOTICE eklenir. Kaynak [resmî metindir](https://www.apache.org/licenses/LICENSE-2.0.txt); Türkçe açıklama yol göstericidir, lisansın yerine geçen çeviri değildir. Bağımsız yönetilen web sitesi bu değişikliğin dışındadır.
 
 ## Katkı ve köken
 

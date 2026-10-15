@@ -10,8 +10,8 @@ Bakımcı üç belge/geliştirici deposunu istedi, ardından projeye özel ek de
 
 | İçerik | Hedef |
 |---|---|
-| Güncel mimari, API, geliştirme/işletim, öğrenme, proje yapısı ve yol haritası | eylema-docs-en ve eylema-docs-tr içinde eşleşen `docs/` dosyaları |
-| Eski Türkçe mimari/API taslakları | eylema-docs-tr/archive |
+| Güncel mimari, API, geliştirme/işletim, öğrenme, proje yapısı ve yol haritası | eyleme-docs-en ve eyleme-docs-tr içinde eşleşen `docs/` dosyaları |
+| Eski Türkçe mimari/API taslakları | eyleme-docs-tr/archive |
 | Katkı sözleşmesi ve tam katkı rehberleri | devguide kökü; diğer köklerde yalnızca yönlendirmeler |
 | Kalite kapıları, araçlar ve isim kararı metinleri | devguide/docs/en ve devguide/docs/tr |
 | Tarihsel müsaitlik ve doğrulama JSON kayıtları | Açıkça tarihsel etiketli devguide/records |

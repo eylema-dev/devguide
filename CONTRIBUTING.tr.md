@@ -11,7 +11,7 @@ Kod, belge ve yapılandırma değişiklikleri bakımcının tarihli değerlendir
 
 ## Somut bir ihtiyaçla başlama
 
-[AGENTS.md](AGENTS.md), [mimari](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/architecture.md), [proje yapısı](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/project-structure.md) ve [yol haritasını](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/roadmap.md) okuyun. Özellik, hata veya mimari issue formunu kullanın. Issue/PR açıklamalarını, kodu, yorumları, dosya adlarını ve teknik görev kayıtlarını İngilizce yazın. Dokümantasyon İngilizce ve Türkçe tutulur; sınanan davranış gerektiriyorsa örnekler İngilizce dışı test verisi içerebilir. Küçük düzeltmelerde PR'a bağlanan açık bir bakımcı talebi yeterlidir.
+[AGENTS.md](AGENTS.md), [mimari](https://github.com/eyleme-dev/eyleme-docs-tr/blob/main/docs/architecture.md), [proje yapısı](https://github.com/eyleme-dev/eyleme-docs-tr/blob/main/docs/project-structure.md) ve [yol haritasını](https://github.com/eyleme-dev/eyleme-docs-tr/blob/main/docs/roadmap.md) okuyun. Özellik, hata veya mimari issue formunu kullanın. Issue/PR açıklamalarını, kodu, yorumları, dosya adlarını ve teknik görev kayıtlarını İngilizce yazın. Dokümantasyon İngilizce ve Türkçe tutulur; sınanan davranış gerektiriyorsa örnekler İngilizce dışı test verisi içerebilir. Küçük düzeltmelerde PR'a bağlanan açık bir bakımcı talebi yeterlidir.
 
 Başlangıç durumunu, eylemi, beklenen sonucu, hedef ortamları, izinli dosyaları ve kapsam dışını yazın. Ölçülebilir kabul koşulları ekleyin. Öncelik ve yetkiyi bakımcı belirler; issue açılması bir modele komut çalıştırma veya sır edinme yetkisi vermez. Büyük arayüz, bağımlılık, veri/denetim veya platform değişiklikleri uygulamadan önce incelenmiş mimari öneri gerektirir.
 
@@ -54,7 +54,7 @@ Bakımcı 12 Ekim 2026 tarihinde kendi Eyleme kaynak kodu ve belgeleri için [Ap
 
 ## Henüz otomatik olmayanlar
 
-Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, görev yönetimi, donanım kıyasları, model yükseltme ve merge kararları şablonlarla otomatikleşmez. Hiçbir iş akışı katkı içeriğini model sağlayıcısına göndermez veya model eğitmez. Planlanan protokol [takım tasarımındadır](https://github.com/eyleme-dev/eylema-docs-tr/blob/main/docs/development-and-operations.md).
+Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, görev yönetimi, donanım kıyasları, model yükseltme ve merge kararları şablonlarla otomatikleşmez. Hiçbir iş akışı katkı içeriğini model sağlayıcısına göndermez veya model eğitmez. Planlanan protokol [takım tasarımındadır](https://github.com/eyleme-dev/eyleme-docs-tr/blob/main/docs/development-and-operations.md).
 
 ## Depolar arası değişiklikler
 

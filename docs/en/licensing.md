@@ -2,7 +2,7 @@
 
 Decision date: **12 October 2026**. [Türkçe](../tr/licensing.md). The maintainer explicitly selected Apache 2.0 in the accepted project-decisions request. This closes the license-selection decision in EYL-001/G06; PR review, artifact provenance and release acceptance remain separate.
 
-The unmodified [Apache License, Version 2.0](../../LICENSE) applies to first-party source and documentation in the coordinated repositories: eylema, eylema-docs-en, eylema-docs-tr, devguide, .github, eylema-examples, eylema-evals, eylema-models and eylema-training. Each receives its own LICENSE and NOTICE. The [official text](https://www.apache.org/licenses/LICENSE-2.0.txt) is the source; the Turkish explanation is guidance, not a translated replacement license. The independently managed website is outside this change.
+The unmodified [Apache License, Version 2.0](../../LICENSE) applies to first-party source and documentation in the coordinated repositories: eylema, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models and eyleme-training. Each receives its own LICENSE and NOTICE. The [official text](https://www.apache.org/licenses/LICENSE-2.0.txt) is the source; the Turkish explanation is guidance, not a translated replacement license. The independently managed website is outside this change.
 
 ## Contributions and provenance
 

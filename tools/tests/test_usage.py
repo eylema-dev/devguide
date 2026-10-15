@@ -83,6 +83,11 @@ class UsageTests(unittest.TestCase):
         self.assertFalse(usage.project_cwd(str(other), [], {}))
         for origin, expected in [('https://github.com/eyleme-dev/eylema.git', True),
                                  ('https://github.com/eyleme-dev/eyleme.git', True),
+                                 ('https://github.com/eyleme-dev/eyleme-docs-en.git', True),
+                                 ('git@github.com:eyleme-dev/eyleme-examples.git', True),
+                                 ('https://github.com/eyleme-dev/eyleme-training.git', True),
+                                 ('https://github.com/eylema-dev/eyleme-models.git', False),
+                                 ('https://github.com/eyleme-dev/eyleme-evals-evil.git', False),
                                  ('https://github.com/eylema-dev/eyleme.git', False),
                                  ('git@github.com:eyleme-dev/eylemadotdev.git', True),
                                  ('https://github.com/eyleme-dev-evil/eylema.git', False),
