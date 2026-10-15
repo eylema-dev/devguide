@@ -2,7 +2,7 @@
 
 English is canonical. [Türkçe](CONTRIBUTING.tr.md). Contract revision: **0.3.0**.
 
-Eyleme currently publishes design contracts and repository tooling. The Rust web platform, GPU runtime and autonomous AI team remain roadmap work. The same contribution process applies to people, Claude, ChatGPT/Codex, MiniMax and other tools; supported provider/model combinations are verified per task, not promised by name.
+Eyleme is a public open-source project; the [core status and acceptance evidence](https://github.com/eyleme-dev/eyleme/blob/main/README.md) describe the capabilities currently implemented. The same contribution process applies to people, Claude, ChatGPT/Codex, MiniMax and other tools; supported provider/model combinations are verified per task, not promised by name.
 
 
 ## Qualified change PRs
@@ -61,3 +61,7 @@ Issue triage, authority validation, model access, independent review, task orche
 Follow the [repository setup and translation workflow](docs/en/repository-setup.md). Policy lives here; product docs live in their language repositories and schemas stay in core. Submit linked changes and refresh the pinned repository set after final member commits. The integration snapshot is not a continuously enforced cross-repository merge rule.
 
 For every new task/Goal, refresh the private [project token and cost ledger](docs/en/usage-accounting.md) before and after work, including repairs and separate reviews. Record the cutoff and usage delta locally; register new project roots/provider metadata before starting. Unknown usage/prices stay unknown, and private session records must not be published.
+
+## Public community scope
+
+This repository belongs to the public Eyleme community at [eyleme.dev](https://eyleme.dev/). Contributions to its first-party code and documentation remain Apache-2.0. Private-source Eyleme Derleme and Eyleme Onama subscriptions are optional and do not gate community participation or independent Eyleme use. Keep basic access controls in the open-source core; additional commercial policy or data capabilities must not remove that baseline. Public examples, issue reports and onboarding must work without access to private repositories. Use the [public family overview](https://github.com/eyleme-dev/eyleme/blob/main/docs/en/product-family.md) for product boundaries, and never submit customer data, private commercial source or credentials to public issues or PRs.

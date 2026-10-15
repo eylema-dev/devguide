@@ -1,6 +1,6 @@
 # Organization repository map
 
-Revision **0.2.0**, 11 October 2026. [Türkçe](../tr/repository-map.md). Repository creation is not implementation acceptance.
+Revision **0.3.0**, 15 October 2026. [Türkçe](../tr/repository-map.md). Repository creation is not implementation acceptance.
 
 | Repository | Responsibility |
 |---|---|
@@ -13,7 +13,13 @@ Revision **0.2.0**, 11 October 2026. [Türkçe](../tr/repository-map.md). Reposi
 | [eyleme-evals](https://github.com/eyleme-dev/eyleme-evals) | Synthetic fixtures, evaluation harnesses and reproducible results |
 | [eyleme-models](https://github.com/eyleme-dev/eyleme-models) | Catalog metadata, compatibility and model-set manifests; no weights |
 | [eyleme-training](https://github.com/eyleme-dev/eyleme-training) | Training recipes, environment locks and permitted data preparation |
-| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | Existing promotional website; managed independently of this split |
+| [eylemedotdev](https://github.com/eyleme-dev/eylemedotdev) | Public Eyleme community and product home at eyleme.dev |
+
+## Public community and optional commercial products
+
+These repositories support the public, independently usable Eyleme project under one **Eyleme** brand. [eyleme.dev](https://eyleme.dev/) connects getting started, documentation, examples, contribution and product information. **Eyleme Derleme** and **Eyleme Onama** are optional private-source products following a paid subscription model; commercial services and terms are in development, with pricing and availability unpublished. Their private repositories are not onboarding dependencies or members of the public read-only repository-set snapshot. Use the [public family overview](https://github.com/eyleme-dev/eyleme/blob/main/docs/en/product-family.md) for their interfaces and product boundaries.
+
+The presentation order is **Derleme → Onama → Eyleme**. It does not impose a mandatory subscription pipeline: public Eyleme retains basic local access and safety controls. Shared branding grants neither implicit permissions nor access to private sources or customer records. [Licensing scope](licensing.md) distinguishes public community code, private first-party products and independently licensed artifacts.
 
 ## Ownership and boundaries
 
