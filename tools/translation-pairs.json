@@ -77,8 +77,8 @@
     {
       "en": "docs/en/platform-action-plan.md",
       "tr": "docs/tr/platform-action-plan.md",
-      "en_sha256": "90c3ec3c7167750c885609cc04ec4630d6cb9b6bdfc82a8204b2f5fb18ad6d59",
-      "tr_sha256": "496a33294767bf9b4f30e9eb1e2421fdc580e82be9cbffc988ff035f0a59108f"
+      "en_sha256": "24a48040d9f5f8990612dd3b0c3c272738740fd31fe72362d3159442a1cc830a",
+      "tr_sha256": "7140df8d5e8ce049018e42934a013445007601f21fe73906f401eae235b72769"
     },
     {
       "en": "docs/en/memory-layer.md",
@@ -115,6 +115,12 @@
       "tr": "docs/tr/unsloth-capabilities.md",
       "en_sha256": "c7402657fc80877d4e1b5baee920993acea40aff89aaee047ca92a0ac22fd598",
       "tr_sha256": "e08f1078af436068eaea65466bd2f7ce76aeb0f8f96fedfc2260cd660ef1d0b8"
+    },
+    {
+      "en": "docs/en/tinker-capability-review.md",
+      "tr": "docs/tr/tinker-capability-review.md",
+      "en_sha256": "3f8cd29d23378844f4af395d334856a3b4d7edb2049c6c40afa5a79ccd62f97d",
+      "tr_sha256": "5e8a2ac1b6b5e59e2f9d6b76c971c05c4b77959a9c7900a5b475cf43143fadf1"
     }
   ]
 }
