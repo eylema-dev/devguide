@@ -51,7 +51,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G23** | CPU tensor reference | G18, G27 | `accepted` |
 | **G28** | Weight loader | G09, G27 | `accepted` |
 | **G29** | Tokenizer and template | G27, G28 | `accepted` |
-| **G30** | CPU model execution | G23, G28, G29 | `planned` |
+| **G30** | CPU model execution | G23, G28, G29 | `accepted` |
 | **G57** | Owned Rust CPU structured-decision execution | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `planned` |
 | **G70** | Project-scoped owned Rust retrieval index | G68, G63, G13 | `planned` |
@@ -145,3 +145,6 @@ G29 source[PR110](https://github.com/eyleme-dev/eyleme/pull/110) passed actual n
 ## Tinker optimizer planning adaptation
 
 The maintainer-approved [Tinker review](tinker-capability-review.md) adds T1 only to planned G35/G36/G76/G81/G83/G84: typed optimizer profiles/steps, full-state resume versus inference artifacts, reproducible recipes and measured optimizer memory. Preserve original criteria/dependencies/budgets/candidate limits, Hermes H1, Unsloth U1, all accepted/history receipts and G40. No Tinker service, hidden engine, algorithm implementation, training/provider call or additional search is enabled. Dimuon remains discovery until complete lawful numerical and own-Rust/native acceptance.
+
+
+G30 source[PR113](https://github.com/eyleme-dev/eyleme/pull/113) and catalog[PR19](https://github.com/eyleme-dev/eyleme-models/pull/19) passed corrected-source actual CPU acceptance, independent final-head review, currentCI and exact-mainCI/tree verification. One downloaded1503300328byte Qwen artifact and one F64reference served12total Rust jobs; the owner explicitly authorized six additional jobs after the scalar-work repair. The corrected six-job run passed180608frozen-bound comparisons, four distinct unverified role proposals and effective stop/cache poisoning, totaling222298299141work units below320billion. Historical undercounts remain historical;372native/48tooling/5dev tests,16includedCPU tests and four real scalar-limitRED/GREEN regressions passed. The [executed plan](../plans/g30-cpu-execution.md) retains original consumption and270active/9repair/900review totals; no provider/training/GPU/quality/universalcapacity claims. This guide revision has its own separate delivery gates; G57 is next. An actual human-approved identity-only exception maps W01 to its verified renamed website repository/issue URL; W01acceptance/dependencies/budget and all66othercards/G40 remain unchanged. Repair10 is authorized without adding active/review/model allowance.

@@ -3,7 +3,9 @@ import re
 
 CURRENT_ORGANIZATION = 'eyleme-dev'
 HISTORICAL_ORGANIZATION = 'eylema-dev'
-REPOSITORIES = {'devguide', '.github', 'eylemadotdev'}
+REPOSITORIES = {'devguide', '.github'}
+# Website identity is outside the pinned runtime/document member set.
+WEBSITE_RENAMES = {'eylemadotdev': 'eylemedotdev'}
 RENAMED_REPOSITORIES = {
     'eylema': 'eyleme',
     'eylema-docs-en': 'eyleme-docs-en',
@@ -16,7 +18,7 @@ RENAMED_REPOSITORIES = {
 ALIASES = {organization + '/' + name: CURRENT_ORGANIZATION + '/' + name
            for organization in (CURRENT_ORGANIZATION, HISTORICAL_ORGANIZATION)
            for name in REPOSITORIES}
-for old, current in RENAMED_REPOSITORIES.items():
+for old, current in (RENAMED_REPOSITORIES | WEBSITE_RENAMES).items():
     for organization in (CURRENT_ORGANIZATION, HISTORICAL_ORGANIZATION):
         ALIASES[organization + '/' + old] = CURRENT_ORGANIZATION + '/' + current
     ALIASES[CURRENT_ORGANIZATION + '/' + current] = CURRENT_ORGANIZATION + '/' + current

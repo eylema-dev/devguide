@@ -51,7 +51,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G23** | CPU tensor referansı | G18, G27 | `accepted` |
 | **G28** | Ağırlık yükleyici | G09, G27 | `accepted` |
 | **G29** | Tokenizer ve şablon | G27, G28 | `accepted` |
-| **G30** | CPU model yürütümü | G23, G28, G29 | `planned` |
+| **G30** | CPU model yürütümü | G23, G28, G29 | `accepted` |
 | **G57** | Kendi Rust CPU yapılandırılmış karar yürütmemiz | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Kendi Rust CPU embedding yürütmemiz | G67, G23, G28, G29 | `planned` |
 | **G70** | Projeye bağlı kendi Rust erişim indeksimiz | G68, G63, G13 | `planned` |
@@ -145,3 +145,6 @@ G29 kaynak[PR110](https://github.com/eyleme-dev/eyleme/pull/110), gerçek native
 ## Tinker optimizer plan uyarlaması
 
 İnsan tarafından onaylanan [Tinker incelemesi](tinker-capability-review.md), yalnız planned G35/G36/G76/G81/G83/G84 kartlarına T1 ekler: tipli optimizer profili/adımı, tam durumla devam ile çıkarım artifact’lerinin ayrılması, tekrarlanabilir reçete ve ölçülen optimizer belleği. Özgün kriter/bağımlılık/bütçe/aday sınırları, Hermes H1, Unsloth U1, tüm kabul edilmiş/geçmiş kanıtlar ve G40 korunur. Tinker servisi, gizli motor, algoritma uygulaması, eğitim/provider çağrısı veya ek arama etkinleşmez. Dimuon tam hukuken uygun sayısal tanım ve kendi Rust/native kabulüne kadar keşif kalır.
+
+
+G30 kaynak[PR113](https://github.com/eyleme-dev/eyleme/pull/113) ve katalog[PR19](https://github.com/eyleme-dev/eyleme-models/pull/19), düzeltilmiş kaynakta gerçek CPU kabulünü, ayrı son-head incelemesini, güncelCI ve kesinmainCI/ağaç eşitliğini geçti. Tek indirilen1503300328bayt Qwen artifact ve tek F64referans toplam12Rust işinde kullanıldı; insan skaler iş sayımı onarımından sonra altı ek işi açıkça onayladı. Düzeltilmiş altı iş180608donmuş-sınır karşılaştırmasını, dört ayrı doğrulanmamış rol teklifini ve etkili durdurma/cache reddini geçti;222298299141iş birimi320milyarın altında kaldı. Geçmiş eksik sayım geçmiş olarak korundu;372native/48tooling/5dev testi, native’e dahil16CPU testi ve dört gerçek skaler-sınırRED/GREEN regresyonu geçti. [Uygulanan plan](../plans/g30-cpu-execution.md), önceki tüketimi ve270aktif/9onarım/900inceleme toplamlarını korur; provider/eğitim/GPU/kalite/genelkapasite iddiası vermez. Bu rehber revizyonunun teslim kapıları ayrıdır; sıradakiG57’dir. Gerçek insan onaylı yalnız-kimlik istisnası W01’i doğrulanmış yeni website deposu/issueURL’sine eşler; W01kabulü/bağımlılığı/bütçesi ve diğer66kart/G40 değişmez. Aktif/inceleme/model hakkı eklenmeden onarım10onaylanmıştır.
