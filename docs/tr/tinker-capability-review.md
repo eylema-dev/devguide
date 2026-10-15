@@ -21,7 +21,7 @@ SDK, optimizer motoru, ağırlık, hesap veya dış eğitim servisi kurulmadı y
 | Tam durumla CPU LoRA devamı | G84-T1 | Kesilip sürdürülmüş ve kesintisiz güncelleme, moment ve cursor karşılaştırması; beyan edilmiş taze durumlu warm start ayrımı |
 | Tekrarlanabilir eğitim reçetesi | G35-T1 | Her varsayılanı, schedule/adım/token sayısını ve checkpoint amacını sabitlemek; kaynaklı hipotezler aday aramasını genişletmez |
 | Amaca göre artifact teslimi | G36-T1 | Devam checkpoint’i, çıkarım adapteri ve birleştirilmiş model farklı kimlikler taşır; gerçek biçim/base/scaling/hak kontrolü ve kendi runtime’ımızda yeniden kabul |
-| Ölçülen optimizer durum kapasitesi | G81-T1 | Kapsamlı donanımda adapter/gradient/optimizer/activation/checkpoint tepe belleği; eksik katsayı bilinmiyor kalır |
+| Ölçülen optimizer durum kapasitesi | G81-T1 | Kapsama alınmış donanımda adapter/gradient/optimizer/activation/checkpoint tepe belleği; eksik katsayı bilinmiyor kalır |
 
 Kesin gereksinimler ve kontroller [güncel kartlardadır](../../records/platform-goal-plan.json). Hermes H1 ve Unsloth U1 korunur. G85 Metal eşitliği ve G86 QLoRA precision/durum koşulları özgün kapsamını korur; onlara yinelenen kriter veya yeni aday eklenmez. Kabul edilmiş G80 tahminleri ve G29 tokenizer kanıtları değişmez.
 
