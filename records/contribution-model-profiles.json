@@ -216,6 +216,64 @@
         "quality_or_privacy_regression"
       ],
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-g57-cpu-decision-2026-10-15",
+      "status": "owner_approved",
+      "provider": "openai",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "configured_identity_evidence": "Actual owner-selected configured settings and accepted metadata-only usage ledger; hidden serving identity not exposed.",
+      "serving_identity": "unknown_not_exposed",
+      "evaluation_date": "2026-10-15",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G57_only_owned_bounded_F32_CPU_decoder_head_cache_and_budgets",
+        "G57_F64_scalar_normalization_and_independent_development_reference",
+        "G57_targeted_tests_and_genuine_separate_final_head_review"
+      ],
+      "excluded_until_separately_evaluated": [
+        "other_Goals_or_architectures",
+        "global_SOTA_hidden_serving_identity",
+        "GPU_quantization_training_or_performance",
+        "general_decision_EN_TR_quality_or_calibration"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Genuinely separate context and exact source/catalog/guide heads plus actual receipts; predecessor reviews do not accept new production.",
+      "owner_decision": "Actual human approved written spec64f2355 and presented G57-only contribution recommendation, then concrete plan7bee3c1 and its bounded public-artifact/reference/six-local-job allowance on15October2026. Existing120active/3repairs/900review includes36.1preparation minutes at implementation start. Registry text itself grants no authority.",
+      "quality_floor": [
+        "preserve_G23_G29_G30_caps_and_G56_semantics",
+        "fixed_reference_inputs_tolerances_and_no_cherry_picking",
+        "actual_native_acceptance_currentCI_and_independent_final_head_review",
+        "original_finite_budget_prior_consumption_preserved"
+      ],
+      "evidence": [
+        {
+          "type": "owner_reviewed_predecessor_evidence_mapping",
+          "source_main": "da75bea4f22055b8954d6defbe3b0a2bc0c7f085",
+          "catalog_main": "90ab95915e97e53be8b2752b9863be3447fb1144",
+          "prior_CPU_scalar_comparisons": 180608,
+          "prior_corrected_work_units": 222298299141,
+          "prior_G30_trial_scalars": 1218,
+          "prior_G56_scalar_rows": 13,
+          "fresh_existing_decision_tests": 8,
+          "new_G57_model_execution": "passed_limited_fixed_smoke_at_source_b53d4ff",
+          "limitation": "One exact pinned-artifact/fixed-input Rust CPU smoke acceptance and the independently implemented F64 reference passed after the authorized optimized rebuild. This is not calibrated relevance quality, broad Turkish quality, general capacity/performance, GPU/training qualification or authority; no automatic G30 transfer."
+        }
+      ],
+      "re_evaluate_on": [
+        "G57_delivery",
+        "expiry",
+        "revocation",
+        "changed_model_effort_provider_scope_or_trust",
+        "quality_or_privacy_regression"
+      ],
+      "no_self_authorization": true
     }
   ],
   "task_bindings": [
