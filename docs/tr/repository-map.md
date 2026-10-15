@@ -13,7 +13,7 @@ Revizyon **0.3.0**, 15 Ekim 2026. [English](../en/repository-map.md). Depo oluş
 | [eyleme-evals](https://github.com/eyleme-dev/eyleme-evals) | Sentetik örnekler, değerlendirme araçları ve tekrarlanabilir sonuçlar |
 | [eyleme-models](https://github.com/eyleme-dev/eyleme-models) | Katalog üstverisi, uyumluluk ve model kümesi manifestleri; ağırlık içermez |
 | [eyleme-training](https://github.com/eyleme-dev/eyleme-training) | Eğitim tarifleri, ortam kilitleri ve izinli veri hazırlama |
-| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | eyleme.dev üzerindeki açık Eyleme topluluk ve ürün merkezi |
+| [eylemedotdev](https://github.com/eyleme-dev/eylemedotdev) | eyleme.dev üzerindeki açık Eyleme topluluk ve ürün merkezi |
 
 ## Açık topluluk ve isteğe bağlı ticari ürünler
 

@@ -3,35 +3,35 @@
   "members": {
     "eyleme": {
       "repository": "eyleme-dev/eyleme",
-      "revision": "83edbf6af2f6ab1187cd753991a83ce12d2d1730"
+      "revision": "f1f815a55ce717e8aa03e2ff6645a1a27050ff88"
     },
     "eyleme-docs-en": {
       "repository": "eyleme-dev/eyleme-docs-en",
-      "revision": "24277ffaeb475d9e86f607e3b8707ba5e3d9f1e3"
+      "revision": "6aafd952729adbca0f67e9d21020131c39c7d9a4"
     },
     "eyleme-docs-tr": {
       "repository": "eyleme-dev/eyleme-docs-tr",
-      "revision": "3c4c2227c89117700d650e5b227f96220f2172d3"
+      "revision": "ea2dd9016dc5c0d9b00c97cc1aa3c02fcd796f55"
     },
     ".github": {
       "repository": "eyleme-dev/.github",
-      "revision": "20592e5fff47e56ff1e3a1a8207a134b03624964"
+      "revision": "86582cf51cd09025f67c2d75d0b2e184b9cb44ab"
     },
     "eyleme-examples": {
       "repository": "eyleme-dev/eyleme-examples",
-      "revision": "114feb4cdfa14979d0efdc9b2a75ec0841161e05"
+      "revision": "89e329b46b8a3a014f7019b4c31389c2fd5d1618"
     },
     "eyleme-evals": {
       "repository": "eyleme-dev/eyleme-evals",
-      "revision": "7b161a0a4c6b243784d9bdf57346341661314ea0"
+      "revision": "0ce3351d177bbe570da1f58609fd94869b71e26e"
     },
     "eyleme-models": {
       "repository": "eyleme-dev/eyleme-models",
-      "revision": "39692f44761d37dcdd4748bcb10dd4e68c7bf6b8"
+      "revision": "1a263978a96bfc75ccc5beba4b9bb8569693c12c"
     },
     "eyleme-training": {
       "repository": "eyleme-dev/eyleme-training",
-      "revision": "7fdc6251eb3a789d67ea6c3aea6e60074e4257d4"
+      "revision": "6b5fcf7844ac3d4f6f5f2edb7b6c443f8dd654cd"
     }
   },
   "product_translations": {
@@ -40,8 +40,8 @@
       "tr_sha256": "1296a2ee7134745f11f1fe947a990f623830c2307ffe576c9e30d0243da5f87b"
     },
     "architecture": {
-      "en_sha256": "1d2ea3cbacdea10d03628ec5bbd312fbe5775d674d02029695c20d27779edd49",
-      "tr_sha256": "8d8ef0aa2e419aedc1a2995e566464e1a15248848a5432e3f302e16db0fade1f"
+      "en_sha256": "fe4d879f1faa04e74d380720c2ff2446f61355aa924fdacf0329bc2659482132",
+      "tr_sha256": "00023a39dbe9c0ded348ee68c53b665aa0994661f860e669c2e7581d11aae805"
     },
     "development-and-operations": {
       "en_sha256": "7e7f29d0b71c77f0a01e3144f14bba1d1c23b503ffeb44267f25bfc8159e6133",
@@ -52,8 +52,8 @@
       "tr_sha256": "60d9080c33db095cc02280d3d5f0d48ba2ec25e38d278222a32bab04bee9dcb5"
     },
     "project-structure": {
-      "en_sha256": "b9af91538d18eb26384fd3eb02f22d9a1efcd345e9a6522ed8a4ec8caa838bd3",
-      "tr_sha256": "660b01e74905aebda93f9003d6ca0f187cdea5efe546b7d13c528b92e1e8b00f"
+      "en_sha256": "b2e5bf085d4661078466103f88ea8e378cdbc63c7c30371b1bd69951fa89994f",
+      "tr_sha256": "2ef95bfaec3cc096b52275fd9cbb7ead30eaa88f6f47568b336bed24e92413f2"
     },
     "roadmap": {
       "en_sha256": "c26d417207964a7be73b4b302a6babef8ade8866aafaabfa31d93241ee74790f",

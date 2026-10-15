@@ -13,7 +13,7 @@ Revision **0.3.0**, 15 October 2026. [Türkçe](../tr/repository-map.md). Reposi
 | [eyleme-evals](https://github.com/eyleme-dev/eyleme-evals) | Synthetic fixtures, evaluation harnesses and reproducible results |
 | [eyleme-models](https://github.com/eyleme-dev/eyleme-models) | Catalog metadata, compatibility and model-set manifests; no weights |
 | [eyleme-training](https://github.com/eyleme-dev/eyleme-training) | Training recipes, environment locks and permitted data preparation |
-| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | Public Eyleme community and product home at eyleme.dev |
+| [eylemedotdev](https://github.com/eyleme-dev/eylemedotdev) | Public Eyleme community and product home at eyleme.dev |
 
 ## Public community and optional commercial products
 

@@ -29,8 +29,8 @@
     {
       "en": "docs/en/repository-map.md",
       "tr": "docs/tr/repository-map.md",
-      "en_sha256": "046043c74d82f847ef25ad90518a8c2454ed1707f43acf7020484ce8163b7ed7",
-      "tr_sha256": "e4f8b0a51069bfeb633d081ee81167bf7e2487ee4295de462bd544146f1eaccb"
+      "en_sha256": "4c598b2ea077ea5d34e9f12fae52a885776086842d630ea5bb4cf5c711693c78",
+      "tr_sha256": "d37dc1e3a100287ce78c64c55334c58f0393453c0b0e8056416fef6b57aaf8b3"
     },
     {
       "en": "docs/en/repository-migration.md",
