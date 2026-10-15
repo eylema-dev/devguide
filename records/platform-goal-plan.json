@@ -1159,17 +1159,18 @@
     },
     {
       "id": "G29",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Tokenizer and template",
       "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 26,
         "url": "https://github.com/eyleme-dev/eyleme/issues/26"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "460e4aecc7a47a10abb62b501185ede7d963186b",
       "dependencies": [
-        "G27"
+        "G27",
+        "G28"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -1178,26 +1179,38 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eyleme-dev/devguide": [
+          "docs/plans/g29-tokenizer.md",
+          "records/platform-goal-plan.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "docs/en/tooling.md",
+          "docs/tr/tooling.md",
+          "records/contribution-model-profiles.json",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Pin tokenizer/template and preprocessing per profile; compatible role interfaces do not imply interchangeable tokenization.",
       "acceptance": [
         {
           "id": "G29-P1",
           "requirement": "Pin tokenizer/template and preprocessing per profile; compatible role interfaces do not imply interchangeable tokenization.",
           "check": "Independent EN/TR/Unicode/special-token vectors and profile mismatch tests.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G29-A1",
           "requirement": "EN/TR/Unicode examples match reference token IDs including special tokens/template",
           "check": "Pinned independent tokenizer vectors and special-token/template regression tests",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G29-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -1212,20 +1225,139 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high confirmed in last completed current-chat metadata18:05:55UTC14October2026; serving identityunknown; active response not yet stored"
       },
-      "activation": "Refresh main/policy and bind accepted dependency SHAs, exact paths, thresholds, actual roles and resource limits before activation; this plan does not reset existing execution allowances. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Acceptance not executed; dependencies and activation bindings required."
+      "activation": "Actual owner approved written design/G29-only symbolic binding, concrete inline implementation plan, then narrow repair extension30active minutes/two repairs/ten review minutes. Original120/3/900 consumption retained; total150/5/1500. Native tokenization with contiguous ordinary header/content BPE, local checks, currentCI and genuine separate repaired-head source review passed; exact reviewed/main tree and mainCI verified. This guide revision still needs its own genuine separate review/currentCI/maintainer merge/main verification.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/110",
+          "head": "6024087e15bd7a508dac091a2abc36ebf7619baf",
+          "main": "2699f260434e7d266990452b5d81257b407c483a",
+          "tree": "7f5c27a80ee4a44822028f9787f74fe067a58bdf",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "6024087e15bd7a508dac091a2abc36ebf7619baf",
+            "reviewer": "g29_r5_source_review genuine fresh configuredgpt-6.1-sol/high G29-only symbolic context; independent native13text/14prompt and512full-render histories; no findings"
+          },
+          "main_ci": {
+            "id": 38691024836,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38691024836",
+            "head": "2699f260434e7d266990452b5d81257b407c483a",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "parent configuredgpt-6.1-sol/high under actual G29-only symbolic frontend binding",
+        "implementer": "parent inline own Rust frontend and one owner-approved additional budget preflight repair",
+        "verifier": "parent354native/47Python, actual13text/14prompt native tokenizer, four original compiled mutants plus removed-preflight and re-fragmentation mutants/restoredGREEN",
+        "independent_reviewer": "g29_r5_source_review genuine fresh configuredgpt-6.1-sol/high, exact 6024087e15bd7a508dac091a2abc36ebf7619baf; guide independent review remains a separate delivery gate"
       },
-      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
+      "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation",
+      "dependency_deliveries": {
+        "G27": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/103",
+            "head": "430e40da66f8715e7d25d709158c9292231d98aa",
+            "main": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+            "tree": "827d686522e38b9822243bbb1bb0b89071969686",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "430e40da66f8715e7d25d709158c9292231d98aa",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529816647,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38529816647",
+              "head": "bfb1554fd9f18efbb900b8b3685a3e35ff349e17",
+              "status": "passed"
+            }
+          },
+          {
+            "repository": "eylema-dev/eylema-models",
+            "pr": "https://github.com/eylema-dev/eylema-models/pull/13",
+            "head": "893a2546f918866696564732ee8f873da05905c0",
+            "main": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+            "tree": "fd9b93d9af55d63dbbeb1e5f6d05c2c3a0c823e5",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "893a2546f918866696564732ee8f873da05905c0",
+              "reviewer": "Codex reviewer /root/g27_model_review separate whole-branch context; final source and both repair regressions reviewed"
+            },
+            "main_ci": {
+              "id": 38529830971,
+              "url": "https://github.com/eylema-dev/eylema-models/actions/runs/38529830971",
+              "head": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
+              "status": "passed"
+            }
+          }
+        ],
+        "G28": [
+          {
+            "repository": "eylema-dev/eylema",
+            "pr": "https://github.com/eylema-dev/eylema/pull/108",
+            "head": "2675f14054e6c044abc31792d82457344283fa7a",
+            "main": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+            "tree": "9613bc8942e206f5cee9c551db48e8deb716bb1f",
+            "review": {
+              "status": "passed",
+              "reviewed_head": "2675f14054e6c044abc31792d82457344283fa7a",
+              "reviewer": "g28_repaired_review genuine fresh configuredgpt-6.1-sol/high context under owner-admitted G28 binding; initial Important prefix-bound defect independently resolved; no remaining findings"
+            },
+            "main_ci": {
+              "id": 38607296855,
+              "url": "https://github.com/eylema-dev/eylema/actions/runs/38607296855",
+              "head": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      "preparation_binding": {
+        "design_source_commit": "2a690b352ebfc0032a9e8033469e873f230e04c3",
+        "design_paths": [
+          "docs/en/g29-tokenizer-design.md",
+          "docs/tr/g29-tokenizer-design.md"
+        ],
+        "owner_decision": "Actual maintainer approved written design/G29-only binding and concrete plan, then30extraactive/twoextra repairs/tenextra review minutes on15October2026; no budget reset, scope or criteria weakening.",
+        "written_spec_status": "owner_approved_by_actual_continuation",
+        "contribution_profile_candidate": "sol61-high-contracts-2026-10-14",
+        "profile_scope_status": "owner_approved_G29_only_symbolic_frontend_binding; numerical_neural_performance_excluded",
+        "unicode_version": "16.0.0",
+        "unicode_data_sha256": "3627a624f63370f0e726dde726f42934c8ca898c5e18fb69abdeee5a27ff00d8",
+        "unicode_composition_sha256": "e83834fdad296e46779fb702e11dd9b8686409a6346461d02fe3a22afaf26dd4",
+        "actual_probe_bytes": 65536,
+        "tokenizer_full_artifact_verified": true,
+        "production_started": true,
+        "reference_engine_executed": false,
+        "limits": "16MiBtokenizer/64KiBconfig/128MiBlogicalresident/8KiBtext/8messages32KiB/4096tokens;128MiBadmission work/2Mtextwork; no capacity/model/performance proof",
+        "implementation_plan": "docs/plans/g29-tokenizer.md",
+        "implementation_plan_status": "actual_owner_approved_and_executed",
+        "design_status_commit": "364ce107f9012bfd7cfcef4c8054cfda3412df31",
+        "owned_development_reference_executed": true
+      },
+      "verification": {
+        "environment": "AppleM4Pro/macOS ARM64/Rust1.99; Python CI tooling",
+        "native_tests": 354,
+        "python_tests": 47,
+        "native_ignored": 3,
+        "reference": "Independent authored stdlib reference frozen before Rust; original13text/fourprompt records unchanged, ten boundary prompts added before R5 (13text/14prompt); separate reviewer512additional full-render histories passed. Tokenizer11422654bytes/config9732bytes fully identified; no third-party reference engine.",
+        "mutants": "Four original compiled NFC/split/rank/sentinel mutants caught; removed-preflight compiled mutant caught and restoredGREEN. Setup failures excluded.",
+        "repair_history": "R1 fixed repeated admission work;R2 fixed CRLF test transport without changing referenceIDs;R3 strict surrogate/aggregate NFCscratch;R4 owner-approved necessary known input-work and shared read/EOF preflight, public zero-reader RED/GREEN;R5 owner-approved contiguous header/content BPE with ten independent prompt-boundary vectors and re-fragmentation mutant. Five total repairs used.",
+        "limits": "Only fixed Qwen/Unicode16 text frontend; UnsupportedLocal assignment unchanged; model/weights/inference/GPU/training/RSS/throughput/universal/other-target execution not_run. Blocking reader deadlines remain caller owned.",
+        "source_ci": "Current repaired-head CI and exact-main CI passed; identifiers in accepted_delivery.",
+        "execution_extension": {
+          "actual_owner_approved": true,
+          "additional_active_minutes": 30,
+          "additional_targeted_repairs": 2,
+          "additional_review_minutes": 10,
+          "original_budget_preserved": true
+        },
+        "guide_tests": 89
+      }
     },
     {
       "id": "G30",

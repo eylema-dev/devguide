@@ -50,7 +50,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G80** | Kontrollü kaynak ihtiyacı tahmini | G27, G46, G21, G18 | `accepted` |
 | **G23** | CPU tensor referansı | G18, G27 | `accepted` |
 | **G28** | Ağırlık yükleyici | G09, G27 | `accepted` |
-| **G29** | Tokenizer ve şablon | G27 | `planned` |
+| **G29** | Tokenizer ve şablon | G27, G28 | `accepted` |
 | **G30** | CPU model yürütümü | G23, G28, G29 | `planned` |
 | **G57** | Kendi Rust CPU yapılandırılmış karar yürütmemiz | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Kendi Rust CPU embedding yürütmemiz | G67, G23, G28, G29 | `planned` |
@@ -139,3 +139,5 @@ Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/
 İnsan tarafından onaylanan [Unsloth kabiliyet incelemesi](unsloth-capabilities.md), planned G34/G35/G76/G77/G78/G79/G83/G85/G86 kartlarına U1 kriteri ekler: sürümlü veri/eğitim reçeteleri, açık model-özel hedef/yöntemler, doğru gradient accumulation, açılan bellek optimizasyonlarının bağımsız doğrulanması ve soy bağına bağlı adapter teslimi/promotion. G35, Owned local training recipe olarak netleştirilir; özgün kriterler kalır. Hermes H1, bağımlılıklar, bütçeler, aday hakları, kabul edilmiş geçmiş ve G40 korunur. Yeni modalite/RL/precision/backend seçenekleri ayrı gerçek kabul gelene kadar unsupported/keşif kalır. Dış motor, ağırlık/provider/eğitim koşusu veya benchmark garantisi eklenmez.
 
 G28 kaynak kabulü PR108 ile tamamlandı:335native/47Python testi, sınırlı sentetik bayt/hash/layout kontrolleri ve dört derlenmiş mutasyon denemesi; okumadan önce önek sınırı onarımı yeni ayrı inceleme ve tam commit/mainCI’dan geçti. Kendi opak BF16/F32 snapshot ve native akışımız yalnız bu yapısal profil için kabul edildi; gerçek ağırlık,2GiB kapasite, model/tokenizer/GPU/eğitim/throughput kanıtlanmadı.
+
+G29 kaynak[PR110](https://github.com/eyleme-dev/eyleme/pull/110), gerçek native tokenizer kabulünü (13metin/14prompt),354Rust/47Python, güncelCI ve düzeltilmiş commit için gerçek ayrı incelemeyi geçti. Bilinen yetersiz girdi-işlem/okuma bütçeleri iki okuyucu çağrılmadan reddedilir; incelenen/main ağacı eşitliği ve mainCI doğrulandı. İnsanın onayladığı30aktif dakika/ikionarım/oninceleme dakikası uzatması önceki tüketimi korur. [Uygulanan plan](../plans/g29-tokenizer.md), sabit Qwen/Unicode16 sınırları ve UnsupportedLocal model sınırı korunur; bu rehber tesliminin ayrı inceleme/CI/merge kapıları vardır. Diğer67kart ve G40 değişmedi.

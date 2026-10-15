@@ -50,7 +50,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G80** | Checked resource requirement estimator | G27, G46, G21, G18 | `accepted` |
 | **G23** | CPU tensor reference | G18, G27 | `accepted` |
 | **G28** | Weight loader | G09, G27 | `accepted` |
-| **G29** | Tokenizer and template | G27 | `planned` |
+| **G29** | Tokenizer and template | G27, G28 | `accepted` |
 | **G30** | CPU model execution | G23, G28, G29 | `planned` |
 | **G57** | Owned Rust CPU structured-decision execution | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `planned` |
@@ -139,3 +139,5 @@ The maintainer-approved [Hermes capability review](hermes-capabilities.md) adds 
 The maintainer-approved [Unsloth capability review](unsloth-capabilities.md) adds U1 criteria to planned G34/G35/G76/G77/G78/G79/G83/G85/G86: versioned data/training recipes, explicit model-specific targets/methods, correct gradient accumulation, independently verified enabled memory optimizations and lineage-bound adapter delivery/promotion. G35 is clarified as Owned local training recipe; original criteria remain. Preserve Hermes H1, dependencies, budgets, candidate allowances, accepted history and G40. New modalities/RL/precision/backends remain unsupported/discovery until separate actual acceptance. No external engine, weight/provider/training run or benchmark guarantee is introduced.
 
 G28 source accepted through PR108:335native/47Python tests, bounded synthetic byte/hash/layout checks and four compiled mutation trials; one pre-read prefix-bound repair passed fresh separate review and exact-head/mainCI. Owned opaque BF16/F32 snapshots and native stream are accepted only for this structural profile; real weights,2GiB capacity, model/tokenizer/GPU/training/throughput remain unproved.
+
+G29 source[PR110](https://github.com/eyleme-dev/eyleme/pull/110) passed actual native tokenizer acceptance (13text/14prompt),354Rust/47Python, currentCI and genuine separate repaired-head review. Known insufficient input-work/read budgets reject before either reader; exact reviewed/main tree and mainCI verified. The owner-approved30active/two-repair/ten-review extension preserves original consumption. The [executed plan](../plans/g29-tokenizer.md), fixed Qwen/Unicode16 limits and UnsupportedLocal model boundary remain; this guide delivery has separate review/CI/merge gates. Other67cards and G40 are unchanged.
