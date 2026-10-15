@@ -1762,7 +1762,7 @@
     },
     {
       "id": "G35",
-      "plan_card_revision": 4,
+      "plan_card_revision": 5,
       "title": "Owned local training recipe",
       "repository": "eyleme-dev/eylema-training",
       "issue": {
@@ -1809,6 +1809,12 @@
           "requirement": "The owned local training recipe freezes model/base/tokenizer/template/method/data split/seed/runtime identities and binds preflight, checkpoint and evaluation evidence for the existing single candidate.",
           "check": "Actual already scoped M4 run uses the accepted owned Rust training path; record valid targets, loss/update, elapsed and memory, frozen-base and adapter-change evidence; unknown support or external hidden training engines reject. Installed tools or recipe metadata do not pass; original candidate allowance is unchanged.",
           "result": "not_run"
+        },
+        {
+          "id": "G35-T1",
+          "requirement": "The owned training recipe freezes optimizer/version and every numerical default, schedule/step/token counts and checkpoint purpose alongside existing model/data/base/tokenizer/renderer identities.",
+          "check": "The same scoped candidate records reproducible full-state resume and explicit warm-start decisions, lineage, permissions and bounded retained checkpoints. Proposed rank/batch/LR heuristics are source-labelled hypotheses validated on held-out data; they never authorize additional candidate sweeps, training calls or resources.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -1840,7 +1846,7 @@
     },
     {
       "id": "G36",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Export and reacceptance",
       "repository": "eyleme-dev/eylema-training",
       "issue": {
@@ -1882,6 +1888,12 @@
           "id": "G36-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G36-T1",
+          "requirement": "Artifact delivery distinguishes train-resumable checkpoint, adapter-only/inference artifact and merged-model output with exact base/target/quantization/scaling/format identities.",
+          "check": "Adapter conversion/remapping and owned-runtime reacceptance verify shapes/digests/config/dtypes and inherited rights; a sampler/adapter export cannot pass optimizer-state resume. Unknown formats/base or mismatched scaling reject. Existing external-reference and owned native reacceptance gates remain; no external training service is activated.",
           "result": "not_run"
         }
       ],
@@ -5461,7 +5473,7 @@
     },
     {
       "id": "G76",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Per-model fine-tune and LoRA/QLoRA profiles",
       "repository": "eyleme-dev/eylema-training",
       "issue": {
@@ -5506,6 +5518,12 @@
           "id": "G76-U1",
           "requirement": "Per-exact-model training capability matrix binds loss/target masks, rank/alpha/scaling/targets, precision/quantization, optimizer/schedule and frozen/trainable state; text, embedding/reranker, vision, STT, TTS and preference/RL are separate methods.",
           "check": "First accepted profile has independent recipe/mask/target/scaling fixtures; unsupported methods/options/backend pairs reject. Advanced rsLoRA/LoftQ, full fine-tune, RL, new modalities and formats remain unsupported/discovery until their own design, numerical and local acceptance; a method name grants no training authority.",
+          "result": "not_run"
+        },
+        {
+          "id": "G76-T1",
+          "requirement": "Per-model training profile binds an accepted optimizer algorithm/version, immutable state schema/dtypes and matching per-step parameter schema; discovered optimizer metadata never implies native support.",
+          "check": "Independent closed-schema fixtures reject unknown family/version, wrong AdamW/non-Adam parameters, nonfinite/domain-invalid values and model/target/state mismatch; dynamic learning-rate fields are explicitly allowed and all defaults are recorded. Dimuon stays discovery-only until a complete lawful algorithm/reference and own Rust numerical/native acceptance.",
           "result": "not_run"
         }
       ],
@@ -6004,7 +6022,7 @@
     },
     {
       "id": "G81",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Measured hardware calibration and capacity profiles",
       "repository": "eyleme-dev/eylema-evals",
       "issue": {
@@ -6044,6 +6062,12 @@
           "id": "G81-R1",
           "requirement": "Measure architecture/profile/context/precision and cooperative physical working-set overlap on the named device; retain prediction error and stale-catalog/changed-hardware bounds.",
           "check": "Actual supported cold/warm/combined portfolio measurements versus estimates, reservation-versus-physical distinction and role-ablation quality/latency/resource comparison; unknown devices/training remain unknown.",
+          "result": "not_run"
+        },
+        {
+          "id": "G81-T1",
+          "requirement": "Measured training capacity binds per-exact-profile optimizer-state tensors/precision and checkpoint/workspace overhead to adapter rank/targets, batch and target context.",
+          "check": "Compare declared versus measured optimizer/adapter/gradient/activation/checkpoint peak memory on the already scoped hardware/candidate; count shared physical pools once. Unknown state layout/coefficients yield unknown capacity, not fits; no upstream speed/memory guarantee or extra candidate/hardware/spending allowance.",
           "result": "not_run"
         }
       ],
@@ -6153,7 +6177,7 @@
     },
     {
       "id": "G83",
-      "plan_card_revision": 3,
+      "plan_card_revision": 4,
       "title": "Owned Rust gradients and training operators",
       "repository": "eyleme-dev/eyleme",
       "issue": {
@@ -6194,6 +6218,12 @@
           "requirement": "The first supported owned Rust training operator profile includes bounded gradient accumulation with an explicit reduction convention and finite target-token normalization; recomputation choices are versioned and independently accepted or rejected.",
           "check": "Independent analytical/finite-difference and unequal-length target-count fixtures compare accumulated versus reference batch updates; deliberately wrong microbatch normalization, all-masked/zero-target input, overflow/nonfinite and frozen-base mutation reject. No assumed floating-point bitwise or universal backend equivalence.",
           "result": "not_run"
+        },
+        {
+          "id": "G83-T1",
+          "requirement": "Owned training steps bind completed gradient generation, target-token/reduction convention, optimizer family, step index and finite hyperparameters before mutating owned parameter/state buffers.",
+          "check": "Independent two-step accepted-optimizer references and mismatched/stale/incomplete/nonfinite step fixtures verify rejection before updates; schedule/step and moment-state transitions match declared tolerances. Existing accumulation/normalization tests and candidate/budget limits remain; no hidden server/optimizer engine.",
+          "result": "not_run"
         }
       ],
       "budget": {
@@ -6225,7 +6255,7 @@
     },
     {
       "id": "G84",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Owned Rust CPU LoRA training",
       "repository": "eyleme-dev/eyleme",
       "issue": {
@@ -6263,6 +6293,12 @@
           "id": "G84-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
+          "result": "not_run"
+        },
+        {
+          "id": "G84-T1",
+          "requirement": "The existing bounded CPU LoRA candidate proves an explicitly declared full-state resume separately from a weights-only warm start.",
+          "check": "Interrupted/resumed versus uninterrupted declared CPU steps compare adapter/loss and optimizer moments, step/schedule and data/RNG cursor under fixed tolerances. Wrong base/target/state schema or inference-only artifact cannot resume; a changed optimizer creates an explicit fresh-state run, never a silent continuation. Existing candidate count is unchanged.",
           "result": "not_run"
         }
       ],
