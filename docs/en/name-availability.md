@@ -1,8 +1,8 @@
 # Eylema — Name and availability record
 
-**Name update — 14 October 2026:** The product is **Eyleme** (formerly Eylema); the companion product is **Derleme** (formerly Derlema), and **Onama** keeps its name. Repository basenames, domains, commands, crate/package names, environment variables, data paths and protocol/schema identifiers retain their current spelling for compatibility. Historical evidence is preserved.
+**Name update — 14 October 2026:** The product is **Eyleme** (formerly Eylema); the companion product is **Derleme** (formerly Derlema), and **Onama** keeps its name. Domains, commands, crate/package names, environment variables, data paths and protocol/schema identifiers retain their current spelling for compatibility. Historical evidence is preserved.
 
-**GitHub organization update — 14 October 2026:** The maintainer renamed the organization to [eyleme-dev](https://github.com/eyleme-dev). The main repository was renamed to [eyleme-dev/eyleme](https://github.com/eyleme-dev/eyleme); auxiliary repository basenames stay unchanged. The historical observations below retain their original names and URLs.
+**GitHub organization update — 14 October 2026:** The maintainer renamed the organization to [eyleme-dev](https://github.com/eyleme-dev). The main repository was renamed to [eyleme-dev/eyleme](https://github.com/eyleme-dev/eyleme); the six `eylema-*` child repositories were also renamed to `eyleme-*` on 15 October 2026. The historical observations below retain their original names and URLs.
 
 The following record preserves the name and availability observations from 11 October 2026.
 

@@ -5,7 +5,7 @@ Applies to humans and every AI coding provider. Code, comments, file names, API/
 ## Read before changing files
 
 1. [Project status](https://github.com/eyleme-dev/eyleme/blob/main/README.md) and [contribution workflow](CONTRIBUTING.md).
-2. [Architecture](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/project-structure.md), the relevant API/protocol and [roadmap](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/roadmap.md).
+2. [Architecture](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/project-structure.md), the relevant API/protocol and [roadmap](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/roadmap.md).
 3. [Quality gates](docs/en/quality-gates.md) and the accepted task, scope and acceptance criteria.
 
 ## Work contract

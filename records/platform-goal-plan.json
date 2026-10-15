@@ -231,8 +231,8 @@
         "records/"
       ],
       "linked_scope": {
-        "eylema-models": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme-models": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-training": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Finish accepted Apache-2.0 delivery and artifact rights evidence; keep chosen license settled.",
       "acceptance": [
@@ -539,10 +539,10 @@
       "id": "G25",
       "plan_card_revision": 3,
       "title": "Placement task",
-      "repository": "eyleme-dev/eylema-examples",
+      "repository": "eyleme-dev/eyleme-examples",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eyleme-dev/eylema-examples/issues/4"
+        "url": "https://github.com/eyleme-dev/eyleme-examples/issues/4"
       },
       "status": "planned",
       "base_sha": "cbfda4f13f9805c158132aca59ebe6bb9b8af7dc",
@@ -557,7 +557,7 @@
         "placement/"
       ],
       "linked_scope": {
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Placement is a reusable loop definition with typed observations, actions and an owned deterministic tool baseline.",
       "acceptance": [
@@ -633,8 +633,8 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {
-        "eylema-training": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme-training": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Separate policy and world/dynamics roles produce typed actions and next-state predictions in owned Rust.",
       "acceptance": [
@@ -688,10 +688,10 @@
       "id": "G27",
       "plan_card_revision": 4,
       "title": "Model contract",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 3,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/3"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/3"
       },
       "status": "accepted",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -1535,8 +1535,8 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {
-        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Natural-language jobs use the cooperative role loop to produce authorized typed tool actions and verify real completion.",
       "acceptance": [
@@ -1676,10 +1676,10 @@
       "id": "G34",
       "plan_card_revision": 5,
       "title": "Dataset revision",
-      "repository": "eyleme-dev/eylema-training",
+      "repository": "eyleme-dev/eyleme-training",
       "issue": {
         "number": 3,
-        "url": "https://github.com/eyleme-dev/eylema-training/issues/3"
+        "url": "https://github.com/eyleme-dev/eyleme-training/issues/3"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1764,10 +1764,10 @@
       "id": "G35",
       "plan_card_revision": 5,
       "title": "Owned local training recipe",
-      "repository": "eyleme-dev/eylema-training",
+      "repository": "eyleme-dev/eyleme-training",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eyleme-dev/eylema-training/issues/4"
+        "url": "https://github.com/eyleme-dev/eyleme-training/issues/4"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1848,10 +1848,10 @@
       "id": "G36",
       "plan_card_revision": 4,
       "title": "Export and reacceptance",
-      "repository": "eyleme-dev/eylema-training",
+      "repository": "eyleme-dev/eyleme-training",
       "issue": {
         "number": 5,
-        "url": "https://github.com/eyleme-dev/eylema-training/issues/5"
+        "url": "https://github.com/eyleme-dev/eyleme-training/issues/5"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -1867,8 +1867,8 @@
         "results/"
       ],
       "linked_scope": {
-        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Reaccept the trained candidate in its owned Rust role profile before promotion.",
       "acceptance": [
@@ -1928,10 +1928,10 @@
       "id": "G37",
       "plan_card_revision": 3,
       "title": "Model set and rollback",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 4,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/4"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/4"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -1947,7 +1947,7 @@
         "assignments/"
       ],
       "linked_scope": {
-        "eylema": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Version role assignments independently of loop definitions and preserve in-flight versions through activation/rollback.",
       "acceptance": [
@@ -2240,7 +2240,7 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Both accepted provider adapters complete bounded real development jobs through code/checks/separate review/PR.",
       "acceptance": [
@@ -2400,10 +2400,10 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {
-        "eylema-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-evals": "role-owned artifacts; enumerate exact paths in the execution revision",
-        "eylema-docs-en": "docs/",
-        "eylema-docs-tr": "docs/"
+        "eyleme-examples": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-evals": "role-owned artifacts; enumerate exact paths in the execution revision",
+        "eyleme-docs-en": "docs/",
+        "eyleme-docs-tr": "docs/"
       },
       "objective": "Full M4 acceptance includes all original capabilities plus reusable harness, nine roles, owned local decision/perception execution, evidence, model replacement and permitted data loop.",
       "acceptance": [
@@ -2477,8 +2477,8 @@
         "tools/translation-pairs.json"
       ],
       "linked_scope": {
-        "eylema-docs-en": "docs/",
-        "eylema-docs-tr": "docs/",
+        "eyleme-docs-en": "docs/",
+        "eyleme-docs-tr": "docs/",
         "devguide": "role-owned artifacts; enumerate exact paths in the execution revision"
       },
       "objective": "Package only accepted owned-Rust harness assets with model/backend boundaries, rights and reproducible installation/rollback.",
@@ -2863,10 +2863,10 @@
       "id": "G49",
       "plan_card_revision": 2,
       "title": "Perception model artifact and operator profile",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 8,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/8"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/8"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -3446,10 +3446,10 @@
       "id": "G56",
       "plan_card_revision": 4,
       "title": "Open-weight structured-decision model profile",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 9,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/9"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/9"
       },
       "status": "accepted",
       "base_sha": "8fb10cb16c17ba6462cdd79b6495d6a086db1970",
@@ -3792,10 +3792,10 @@
       "id": "G59",
       "plan_card_revision": 2,
       "title": "Separate STT and TTS artifact/operator profiles",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/10"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/10"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -4183,10 +4183,10 @@
       "id": "G64",
       "plan_card_revision": 4,
       "title": "Shareable ecosystem package builder",
-      "repository": "eyleme-dev/eylema-training",
+      "repository": "eyleme-dev/eyleme-training",
       "issue": {
         "number": 9,
-        "url": "https://github.com/eyleme-dev/eylema-training/issues/9"
+        "url": "https://github.com/eyleme-dev/eyleme-training/issues/9"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -4261,10 +4261,10 @@
       "id": "G65",
       "plan_card_revision": 4,
       "title": "Ecosystem catalogue and compatible imports",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 11,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/11"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/11"
       },
       "status": "planned",
       "base_sha": "c3c1947c45b27fa5dc50757b52c90ce11dc3bfd7",
@@ -4419,10 +4419,10 @@
       "id": "G67",
       "plan_card_revision": 4,
       "title": "Embedding artifact and retrieval behavior profile",
-      "repository": "eyleme-dev/eylema-models",
+      "repository": "eyleme-dev/eyleme-models",
       "issue": {
         "number": 12,
-        "url": "https://github.com/eyleme-dev/eylema-models/issues/12"
+        "url": "https://github.com/eyleme-dev/eyleme-models/issues/12"
       },
       "status": "accepted",
       "base_sha": "680db8a0b3a5bd08f8d20c47419a82c72b3217e3",
@@ -5475,10 +5475,10 @@
       "id": "G76",
       "plan_card_revision": 4,
       "title": "Per-model fine-tune and LoRA/QLoRA profiles",
-      "repository": "eyleme-dev/eylema-training",
+      "repository": "eyleme-dev/eyleme-training",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eyleme-dev/eylema-training/issues/10"
+        "url": "https://github.com/eyleme-dev/eyleme-training/issues/10"
       },
       "status": "planned",
       "base_sha": "537be9c0d4b355706ab51892a4067f055fadc2da",
@@ -6024,10 +6024,10 @@
       "id": "G81",
       "plan_card_revision": 3,
       "title": "Measured hardware calibration and capacity profiles",
-      "repository": "eyleme-dev/eylema-evals",
+      "repository": "eyleme-dev/eyleme-evals",
       "issue": {
         "number": 10,
-        "url": "https://github.com/eyleme-dev/eylema-evals/issues/10"
+        "url": "https://github.com/eyleme-dev/eyleme-evals/issues/10"
       },
       "status": "planned",
       "base_sha": "358aa619883ee930c8cf4d6476edec432ed4f560",

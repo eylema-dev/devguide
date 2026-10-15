@@ -32,6 +32,13 @@ class PlatformPlanTests(unittest.TestCase):
         self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == original['id'])['issue'].update(number=999999))
         self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == original['id']).update(repository=original['repository'].replace('eyleme-dev/', 'eylema-dev/')))
 
+    def test_current_child_cards_cannot_revert_to_historical_slugs(self):
+        for original in self.plan['goals']:
+            if not original['repository'].startswith('eyleme-dev/eyleme-'):
+                continue
+            self.check_bad(lambda p: next(g for g in p['goals'] if g['id'] == original['id']).update(
+                repository=original['repository'].replace('/eyleme-', '/eylema-')))
+
     def test_history_cannot_be_rewritten(self):
         tracking = copy.deepcopy(self.tracking)
         tracking['goals'][0]['accepted_delivery'][0]['main'] = 'a' * 40

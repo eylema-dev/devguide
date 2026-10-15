@@ -1,17 +1,25 @@
-"""Resolve the maintainer-approved organization rename without rewriting evidence."""
+"""Resolve approved organization/repository renames without rewriting evidence."""
 import re
 
 CURRENT_ORGANIZATION = 'eyleme-dev'
 HISTORICAL_ORGANIZATION = 'eylema-dev'
-REPOSITORIES = {'devguide', '.github', 'eylema-docs-en', 'eylema-docs-tr',
-                'eylema-examples', 'eylema-evals', 'eylema-models', 'eylema-training',
-                'eylemadotdev'}
+REPOSITORIES = {'devguide', '.github', 'eylemadotdev'}
+RENAMED_REPOSITORIES = {
+    'eylema': 'eyleme',
+    'eylema-docs-en': 'eyleme-docs-en',
+    'eylema-docs-tr': 'eyleme-docs-tr',
+    'eylema-examples': 'eyleme-examples',
+    'eylema-evals': 'eyleme-evals',
+    'eylema-models': 'eyleme-models',
+    'eylema-training': 'eyleme-training',
+}
 ALIASES = {organization + '/' + name: CURRENT_ORGANIZATION + '/' + name
            for organization in (CURRENT_ORGANIZATION, HISTORICAL_ORGANIZATION)
            for name in REPOSITORIES}
-ALIASES.update({'eylema-dev/eylema': 'eyleme-dev/eyleme',
-                'eyleme-dev/eylema': 'eyleme-dev/eyleme',
-                'eyleme-dev/eyleme': 'eyleme-dev/eyleme'})
+for old, current in RENAMED_REPOSITORIES.items():
+    for organization in (CURRENT_ORGANIZATION, HISTORICAL_ORGANIZATION):
+        ALIASES[organization + '/' + old] = CURRENT_ORGANIZATION + '/' + current
+    ALIASES[CURRENT_ORGANIZATION + '/' + current] = CURRENT_ORGANIZATION + '/' + current
 
 
 def canonical_repository(value):

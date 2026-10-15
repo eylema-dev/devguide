@@ -11,7 +11,7 @@ Code, document and configuration changes require substantive use of a maintainer
 
 ## Start with a concrete need
 
-Read [AGENTS.md](AGENTS.md), [architecture](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/project-structure.md) and [ROADMAP.md](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/roadmap.md). Use the feature, bug or architecture issue form. Write issue/PR descriptions, code, comments, file names and technical task records in English. Documentation is maintained in English and Turkish; examples may contain non-English test data when required by the tested behavior. For small corrections, an explicit maintainer request linked in the PR is sufficient.
+Read [AGENTS.md](AGENTS.md), [architecture](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/architecture.md), [project structure](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/project-structure.md) and [ROADMAP.md](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/roadmap.md). Use the feature, bug or architecture issue form. Write issue/PR descriptions, code, comments, file names and technical task records in English. Documentation is maintained in English and Turkish; examples may contain non-English test data when required by the tested behavior. For small corrections, an explicit maintainer request linked in the PR is sufficient.
 
 Describe the initial state, action, expected result, affected targets, allowed paths and exclusions. Attach measurable acceptance criteria. A maintainer decides priority and authority; a new issue does not authorize a model to run commands or obtain secrets. Large interface, dependency, data/oversight or platform changes need a reviewed architecture proposal before implementation.
 
@@ -54,7 +54,7 @@ The maintainer selected [Apache-2.0](LICENSE) on 12 October 2026 for first-party
 
 ## What is not automated yet
 
-Issue triage, authority validation, model access, independent review, task orchestration, hardware benchmarking, model promotion and merge decisions are not automated by the templates. No workflow sends contributor content to a model provider or trains a model. See the [team design](https://github.com/eyleme-dev/eylema-docs-en/blob/main/docs/development-and-operations.md) for the planned protocol.
+Issue triage, authority validation, model access, independent review, task orchestration, hardware benchmarking, model promotion and merge decisions are not automated by the templates. No workflow sends contributor content to a model provider or trains a model. See the [team design](https://github.com/eyleme-dev/eyleme-docs-en/blob/main/docs/development-and-operations.md) for the planned protocol.
 
 ## Cross-repository changes
 

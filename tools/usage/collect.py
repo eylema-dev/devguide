@@ -19,7 +19,9 @@ FIELDS = ('input_tokens', 'cached_input_tokens', 'cache_write_input_tokens',
           'output_tokens', 'reasoning_output_tokens', 'total_tokens')
 REPOSITORIES = {'eylema', 'eyleme', 'devguide', 'eylema-docs-en', 'eylema-docs-tr',
                 'eylema-evals', 'eylema-examples', 'eylema-models',
-                'eylema-training', 'eylemadotdev', '.github'}
+                'eylema-training', 'eylemadotdev', '.github',
+                'eyleme-docs-en', 'eyleme-docs-tr', 'eyleme-evals',
+                'eyleme-examples', 'eyleme-models', 'eyleme-training'}
 SAFE_LABEL = re.compile(r'[A-Za-z0-9_.:/-]{1,160}\Z')
 
 
@@ -97,7 +99,7 @@ def project_cwd(cwd, roots, cache):
             remote = proc.stdout.strip()
             match = re.fullmatch(r'(?:https://github\.com/|git@github\.com:)(eyleme-dev|eylema-dev)/([^/]+?)(?:\.git)?', remote)
             selected = (proc.returncode == 0 and bool(match) and match.group(2) in REPOSITORIES
-                        and not (match.group(1) == 'eylema-dev' and match.group(2) == 'eyleme'))
+                        and not (match.group(1) == 'eylema-dev' and match.group(2).startswith('eyleme')))
         except (OSError, subprocess.TimeoutExpired):
             selected = False
     cache[cwd] = selected

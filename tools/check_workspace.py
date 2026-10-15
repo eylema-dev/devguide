@@ -10,7 +10,7 @@ from urllib.parse import unquote, urlsplit
 from check_repository import (ROOT, ROLES, PRODUCT_DOCS, CheckFailure, load_json,
                               require, repository_files, validate_api, verify_vendor, validate_repository_config)
 
-from github_identity import canonical_repository
+from github_identity import canonical_repository, RENAMED_REPOSITORIES
 
 MEMBERS = set(ROLES) - {'devguide'}
 
@@ -43,11 +43,12 @@ def fetch_members(members, cache):
     roots = {}
     cache.mkdir(parents=True, exist_ok=True)
     for name, member in members.items():
-        # Historical evidence keeps its old identity; network reads use the renamed owner.
+        # Historical evidence keeps its old identity; fetch/cache use the canonical slug.
         repository = canonical_repository(member['repository'])
-        require(repository == 'eyleme-dev/' + ('eyleme' if name == 'eylema' else name), 'Mismatched repository/cache identity')
+        current_name = RENAMED_REPOSITORIES.get(name, name)
+        require(repository == 'eyleme-dev/' + current_name, 'Mismatched repository/cache identity')
         require(bool(re.fullmatch('[0-9a-f]{40}', member['revision'])), 'Immutable fetch revision required')
-        path = cache / 'eyleme-dev' / ('organization-github' if name == '.github' else name) / member['revision']
+        path = cache / 'eyleme-dev' / ('organization-github' if current_name == '.github' else current_name) / member['revision']
         if not path.exists():
             path.mkdir(parents=True)
             git(path, 'init', '--quiet')
@@ -78,7 +79,7 @@ def cross_link_errors(roots, text):
         if parsed.scheme != 'https' or parsed.netloc != 'github.com':
             continue
         parts = unquote(parsed.path).strip('/').split('/')
-        if len(parts) < 5 or parts[0] not in {'eyleme-dev', 'eylema-dev'} or ('eyleme' if parts[1] == 'eylema' else parts[1]) not in roots:
+        if len(parts) < 5 or parts[0] not in {'eyleme-dev', 'eylema-dev'}:
             continue
         if parts[2] not in {'blob', 'tree'} or parts[3] != 'main':
             continue  # historical commit, PR and issue references are not current-layout targets
@@ -87,6 +88,8 @@ def cross_link_errors(roots, text):
         except ValueError:
             errors.append(target)
             continue
+        if name not in roots:
+            continue  # approved repository outside this pinned document set
         root = roots[name].resolve()
         path = root.joinpath(*parts[4:]).resolve()
         valid = path.is_file() if parts[2] == 'blob' else path.is_dir()
@@ -98,12 +101,12 @@ def cross_link_errors(roots, text):
 def validate_product_pairs(roots, manifest):
     for name in PRODUCT_DOCS:
         for lang in ('en', 'tr'):
-            path = roots[f'eylema-docs-{lang}'] / f'docs/{name}.md'
+            path = roots[f'eyleme-docs-{lang}'] / f'docs/{name}.md'
             require(path.is_file(), f'Missing product translation: {lang}/{name}')
             require(digest(path) == manifest['product_translations'][name][lang + '_sha256'],
                     f'Product translation fingerprint is stale: {lang}/{name}')
-    en = roots['eylema-docs-en'] / 'docs'
-    tr = roots['eylema-docs-tr'] / 'docs'
+    en = roots['eyleme-docs-en'] / 'docs'
+    tr = roots['eyleme-docs-tr'] / 'docs'
     operations = validate_api((en / 'api-reference.md').read_text(), (tr / 'api-reference.md').read_text())
     ids = lambda path: re.findall(r'^\| (M\d+|EYL-\d+) \|', path.read_text(), re.M)
     require(bool(ids(en / 'roadmap.md')) and ids(en / 'roadmap.md') == ids(tr / 'roadmap.md'), 'Cross-repository roadmap ID mismatch')
@@ -117,7 +120,7 @@ def validate_migration(roots, inventory):
     seen = set()
     removed = set()
     for row in documents:
-        repo = row['destination_repository'].removeprefix('eylema-dev/')
+        repo = canonical_repository(row['destination_repository']).split('/')[1]
         require(repo in roots, 'Unknown migration destination')
         key = (repo, row['destination_path'])
         require(key not in seen, 'Duplicate migration destination')

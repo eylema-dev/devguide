@@ -10,8 +10,8 @@ The maintainer requested the three documentation/developer repositories, then au
 
 | Material | Destination |
 |---|---|
-| Current architecture, API, development/operations, learning, project structure and roadmap | Matching `docs/` files in eylema-docs-en and eylema-docs-tr |
-| Earlier Turkish architecture/API outlines | eylema-docs-tr/archive |
+| Current architecture, API, development/operations, learning, project structure and roadmap | Matching `docs/` files in eyleme-docs-en and eyleme-docs-tr |
+| Earlier Turkish architecture/API outlines | eyleme-docs-tr/archive |
 | Contributor contract and full contribution guides | devguide root; other roots contain adapters only |
 | Quality gates, tooling and name-decision prose | devguide/docs/en and devguide/docs/tr |
 | Historical availability and validation JSON | devguide/records, explicitly historical |

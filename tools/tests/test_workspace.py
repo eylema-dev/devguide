@@ -40,8 +40,8 @@ class WorkspaceTests(unittest.TestCase):
             root = Path(temp)
             (root / 'docs').mkdir()
             (root / 'docs/guide.md').write_text('Guide')
-            roots = {'eylema-docs-en': root}
-            prefix = 'https://github.com/eylema-dev/eylema-docs-en/blob/main/'
+            roots = {'eyleme-docs-en': root}
+            prefix = 'https://github.com/eyleme-dev/eyleme-docs-en/blob/main/'
             self.assertEqual(cross_link_errors(roots, f'[ok]({prefix}docs/guide.md)'), [])
             for target in ('missing.md', '../outside.md', '%2e%2e/outside.md'):
                 with self.subTest(target=target):
@@ -49,10 +49,10 @@ class WorkspaceTests(unittest.TestCase):
 
     def test_product_hash_api_and_roadmap_drift_each_fail(self):
         with tempfile.TemporaryDirectory() as temp:
-            roots = {f'eylema-docs-{lang}': Path(temp) / lang for lang in ('en', 'tr')}
+            roots = {f'eyleme-docs-{lang}': Path(temp) / lang for lang in ('en', 'tr')}
             manifest = repository_set()
             for lang in ('en', 'tr'):
-                docs = roots[f'eylema-docs-{lang}'] / 'docs'
+                docs = roots[f'eyleme-docs-{lang}'] / 'docs'
                 docs.mkdir(parents=True)
                 for name in PRODUCT_DOCS:
                     content = 'Reviewed document'
@@ -64,7 +64,7 @@ class WorkspaceTests(unittest.TestCase):
             for name, change, refresh in [('architecture', lambda s: s + ' edit', False),
                                           ('api-reference', lambda s: s.replace('GET', 'POST'), True),
                                           ('roadmap', lambda s: s.replace('M0', 'M9'), True)]:
-                path = roots['eylema-docs-tr'] / f'docs/{name}.md'
+                path = roots['eyleme-docs-tr'] / f'docs/{name}.md'
                 original = path.read_text()
                 path.write_text(change(original))
                 bad = copy.deepcopy(manifest)
@@ -82,7 +82,7 @@ class WorkspaceTests(unittest.TestCase):
             core = root / 'core'
             dest = root / 'dest'
             core.mkdir(); dest.mkdir()
-            roots = {'eyleme': core, 'devguide': dest}
+            roots = {'eyleme': core, 'devguide': dest, 'eyleme-docs-en': dest}
             inventory = {'documents': []}
             for i in range(26):
                 path = dest / f'{i}.md'
@@ -91,7 +91,11 @@ class WorkspaceTests(unittest.TestCase):
                        'destination_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
                 if i < 21: row['previous_main_path'] = f'old-{i}.md'
                 inventory['documents'].append(row)
+            inventory['documents'][0]['destination_repository'] = 'eylema-dev/eylema-docs-en'
             self.assertEqual(validate_migration(roots, inventory), 26)
+            duplicate = copy.deepcopy(inventory)
+            duplicate['documents'][1].update(destination_repository='eyleme-dev/eyleme-docs-en', destination_path='0.md')
+            with self.assertRaises(CheckFailure): validate_migration(roots, duplicate)
             (core / 'old-0.md').write_text('duplicate')
             with self.assertRaises(CheckFailure): validate_migration(roots, inventory)
             (core / 'old-0.md').unlink()
