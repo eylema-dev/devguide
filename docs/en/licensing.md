@@ -2,7 +2,15 @@
 
 Decision date: **12 October 2026**. [Türkçe](../tr/licensing.md). The maintainer explicitly selected Apache 2.0 in the accepted project-decisions request. This closes the license-selection decision in EYL-001/G06; PR review, artifact provenance and release acceptance remain separate.
 
-The unmodified [Apache License, Version 2.0](../../LICENSE) applies to first-party source and documentation in the coordinated repositories: eylema, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models and eyleme-training. Each receives its own LICENSE and NOTICE. The [official text](https://www.apache.org/licenses/LICENSE-2.0.txt) is the source; the Turkish explanation is guidance, not a translated replacement license. The independently managed website is outside this change.
+The unmodified [Apache License, Version 2.0](../../LICENSE) applies to first-party source and documentation in the coordinated repositories: eyleme, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models and eyleme-training. Each receives its own LICENSE and NOTICE. The [official text](https://www.apache.org/licenses/LICENSE-2.0.txt) is the source; the Turkish explanation is guidance, not a translated replacement license. The independently managed website is outside this change.
+
+## One brand, separate source and subscription terms
+
+On 15 October 2026 the maintainer selected **Eyleme** as the shared brand and [eyleme.dev](https://eyleme.dev/) as its community and product home. Public Eyleme first-party code and documentation remain Apache-2.0. **Eyleme Derleme** and **Eyleme Onama** follow a private-source, paid subscription model; their first-party code is not included in the public community license merely because the products share a brand. Commercial services and terms are in development; pricing and availability are unpublished. See the [public product-family overview](https://github.com/eyleme-dev/eyleme/blob/main/docs/en/product-family.md).
+
+The open-source Eyleme product remains independently usable with its own basic authentication, authorization and safety controls. A commercial subscription is optional and does not grant implicit access to source, credentials, data or model artifacts. Public community contributions remain governed by the repository license and contribution terms; private product work follows its separately applicable agreement. No subscription agreement, price, hosted service or payment flow is supplied by this guide.
+
+Existing Apache-2.0 rights and required dependency notices survive a repository visibility or commercial-positioning change. A private first-party notice must not restrict separately licensed Eyleme dependencies or previously published contributions. Preserve their license, copyright and attribution notices and review each distributed artifact under its own terms.
 
 ## Contributions and provenance
 

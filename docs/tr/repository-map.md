@@ -1,6 +1,6 @@
 # Organizasyon depo haritası
 
-Revizyon **0.2.0**, 11 Ekim 2026. [English](../en/repository-map.md). Depo oluşturmak, uygulamanın kabul edildiği anlamına gelmez.
+Revizyon **0.3.0**, 15 Ekim 2026. [English](../en/repository-map.md). Depo oluşturmak, uygulamanın kabul edildiği anlamına gelmez.
 
 | Depo | Sorumluluk |
 |---|---|
@@ -13,7 +13,13 @@ Revizyon **0.2.0**, 11 Ekim 2026. [English](../en/repository-map.md). Depo oluş
 | [eyleme-evals](https://github.com/eyleme-dev/eyleme-evals) | Sentetik örnekler, değerlendirme araçları ve tekrarlanabilir sonuçlar |
 | [eyleme-models](https://github.com/eyleme-dev/eyleme-models) | Katalog üstverisi, uyumluluk ve model kümesi manifestleri; ağırlık içermez |
 | [eyleme-training](https://github.com/eyleme-dev/eyleme-training) | Eğitim tarifleri, ortam kilitleri ve izinli veri hazırlama |
-| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | Mevcut tanıtım sitesi; bu bölünmeden bağımsız yönetilir |
+| [eylemadotdev](https://github.com/eyleme-dev/eylemadotdev) | eyleme.dev üzerindeki açık Eyleme topluluk ve ürün merkezi |
+
+## Açık topluluk ve isteğe bağlı ticari ürünler
+
+Bu depolar, tek **Eyleme** markası altında public ve bağımsız kullanılabilen Eyleme projesini destekler. [eyleme.dev](https://eyleme.dev/tr/), başlangıç adımlarını, belgeleri, örnekleri, katkı yollarını ve ürün bilgisini birleştirir. **Eyleme Derleme** ve **Eyleme Onama**, ücretli abonelik modelini izleyen private kaynak kodlu isteğe bağlı ürünlerdir; ticari hizmetler ve koşullar geliştirme aşamasındadır, fiyatlar ve kullanıma sunulma durumu yayımlanmamıştır. Private depoları başlangıç adımlarının bağımlılığı veya public salt okunur depo kümesi anlık görüntüsünün üyesi değildir. Arayüzleri ve ürün sınırları için [public ürün ailesi açıklamasını](https://github.com/eyleme-dev/eyleme/blob/main/docs/tr/product-family.md) kullanın.
+
+Anlatım sırası **Derleme → Onama → Eyleme** şeklindedir. Bu sıra zorunlu bir abonelik hattı oluşturmaz: public Eyleme temel yerel erişim ve güvenlik kontrollerini korur. Ortak marka örtük yetki veya private kaynak koduna ve müşteri kayıtlarına erişim sağlamaz. [Lisans kapsamı](licensing.md), public topluluk kodunu, private birinci taraf ürünleri ve bağımsız lisanslı varlıkları ayırır.
 
 ## Sahiplik ve sınırlar
 

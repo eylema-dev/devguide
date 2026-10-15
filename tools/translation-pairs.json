@@ -5,14 +5,14 @@
     {
       "en": "README.md",
       "tr": "README.tr.md",
-      "en_sha256": "51b55b41f3d29fe36baf65623139d909143176b3acfe73543ed16992494b84d0",
-      "tr_sha256": "3e1096a35907516f26588ee41f5eadba694134ced126fe7dd2d1e54933be6559"
+      "en_sha256": "377b2b6eb020fea48631d0ccd0bea354665c7aaf30c9123376cdab25b23ed369",
+      "tr_sha256": "df0c2d1b8c0c257d2ef5245e656ceacf82d732a8d551ab027b3c15cbd2d0dbd0"
     },
     {
       "en": "CONTRIBUTING.md",
       "tr": "CONTRIBUTING.tr.md",
-      "en_sha256": "402da6a0a106c2c787b4b672ad2dd42d2578fba2ac2a5aa597f6c245cbdbcc29",
-      "tr_sha256": "da9d7fe61a38572f082f84566684e708cce6ec46a7d622d802389d4b1ea0b451"
+      "en_sha256": "e9acfce84927490441f2e42407f4f333a01b516ddabee4794d7dea1d5da7bd9a",
+      "tr_sha256": "08e3f3af01fba1a82056e1d4bda4f8c4e81c241d0df15b5112126bb4f54d925a"
     },
     {
       "en": "docs/en/name-availability.md",
@@ -29,8 +29,8 @@
     {
       "en": "docs/en/repository-map.md",
       "tr": "docs/tr/repository-map.md",
-      "en_sha256": "6ff69a5cfc6bb1298bb9f3b1388a301233d954f6ba2b09c1d298ca3037b3f896",
-      "tr_sha256": "7ab527e50081d11530d53afda4c0e28b634ff5735c0dc8f75cc62ba799c8d03b"
+      "en_sha256": "046043c74d82f847ef25ad90518a8c2454ed1707f43acf7020484ce8163b7ed7",
+      "tr_sha256": "e4f8b0a51069bfeb633d081ee81167bf7e2487ee4295de462bd544146f1eaccb"
     },
     {
       "en": "docs/en/repository-migration.md",
@@ -65,8 +65,8 @@
     {
       "en": "docs/en/licensing.md",
       "tr": "docs/tr/licensing.md",
-      "en_sha256": "5ef4773165584be56ba9c1aeea951f3cf91f38cce41681c2260fbbb4aa66716a",
-      "tr_sha256": "8c215058b39075a7e8095a500115ee90ea742d44841c317345a755029eca6a9b"
+      "en_sha256": "92508eee9e9c8f14e6b8932d304435445b5b77660ac46b875b0dbab62ebf5b46",
+      "tr_sha256": "cb978d6b9c330e72968362d41df6166cc879f66e26e915a77cff9f1875ff1103"
     },
     {
       "en": "docs/en/usage-accounting.md",

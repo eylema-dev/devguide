@@ -2,7 +2,7 @@
 
 [İngilizce](CONTRIBUTING.md) kaynak dildir. Sözleşme sürümü: **0.3.0**.
 
-Eyleme şu anda tasarım sözleşmeleri ve depo araçlarını içerir. Rust web platformu, GPU motoru ve otonom AI takımı yol haritasındadır. İnsanlar, Claude, ChatGPT/Codex, MiniMax ve diğer araçlar aynı katkı sürecini kullanır; sağlayıcı/model desteği isimden varsayılmaz, görev sırasında doğrulanır.
+Eyleme public ve açık kaynak bir projedir; [çekirdek durum ve kabul kanıtları](https://github.com/eyleme-dev/eyleme/blob/main/README.md) şu anda uygulanmış yetenekleri açıklar. İnsanlar, Claude, ChatGPT/Codex, MiniMax ve diğer araçlar aynı katkı sürecini kullanır; sağlayıcı/model desteği isimden varsayılmaz, görev sırasında doğrulanır.
 
 
 ## Yeterliği kabul edilmiş değişiklik PR'ları
@@ -61,3 +61,7 @@ Issue sınıflandırma, yetki doğrulama, model erişimi, bağımsız inceleme, 
 [Depo kurulum ve çeviri akışını](docs/tr/repository-setup.md) izleyin. Politika burada; ürün belgeleri dil depolarında, şemalar çekirdektedir. İlişkili değişiklikleri sunun ve son üye commit'lerinden sonra sabitlenmiş depo kümesini yenileyin. Entegrasyon anlık görüntüsü sürekli zorlanan depolar arası birleştirme kuralı değildir.
 
 Her yeni görev/Goal öncesi ve sonrasında, onarımlar ve ayrı incelemeler dahil özel [proje token ve maliyet defterini](docs/tr/usage-accounting.md) güncelleyin. Kesim zamanını ve tüketim artışını yerel kanıta kaydedin; yeni proje köklerini/provider metaverisini işe başlamadan kaydedin. Bilinmeyen tüketim/fiyat bilinmiyor olarak kalır; özel oturum kayıtları yayımlanmaz.
+
+## Açık topluluk kapsamı
+
+Bu depo, [eyleme.dev](https://eyleme.dev/tr/) üzerindeki public Eyleme topluluğuna aittir. Kendi kaynak kodumuza ve belgelerimize yapılan katkılar Apache-2.0 kapsamında kalır. Private kaynak kodlu Eyleme Derleme ve Eyleme Onama abonelikleri isteğe bağlıdır; topluluğa katılmanın veya Eyleme'yi bağımsız kullanmanın koşulu değildir. Temel erişim kontrolleri açık kaynak çekirdekte kalır; ek ticari politika veya veri yetenekleri bu temeli ortadan kaldırmamalıdır. Açık örnekler, hata bildirimleri ve başlangıç adımları private depolara erişim gerektirmemelidir. Ürün sınırları için [public ürün ailesi açıklamasını](https://github.com/eyleme-dev/eyleme/blob/main/docs/tr/product-family.md) kullanın; müşteri verilerini, özel ticari kaynak kodunu veya kimlik bilgilerini public issue veya PR'lara göndermeyin.

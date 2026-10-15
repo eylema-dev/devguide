@@ -2,7 +2,15 @@
 
 Karar tarihi: **12 Ekim 2026**. [English](../en/licensing.md). Bakımcı, kabul edilen proje kararları talebinde açıkça Apache 2.0 seçti. Bu, EYL-001/G06 içindeki lisans seçimi kararını kapatır; PR incelemesi, varlık kökeni ve sürüm kabulü ayrıdır.
 
-Değiştirilmemiş [Apache License, Version 2.0](../../LICENSE), eşgüdümlü depolardaki kendi kaynak kodumuza ve belgelerimize uygulanır: eylema, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models ve eyleme-training. Her depoya ayrı LICENSE ve NOTICE eklenir. Kaynak [resmî metindir](https://www.apache.org/licenses/LICENSE-2.0.txt); Türkçe açıklama yol göstericidir, lisansın yerine geçen çeviri değildir. Bağımsız yönetilen web sitesi bu değişikliğin dışındadır.
+Değiştirilmemiş [Apache License, Version 2.0](../../LICENSE), eşgüdümlü depolardaki kendi kaynak kodumuza ve belgelerimize uygulanır: eyleme, eyleme-docs-en, eyleme-docs-tr, devguide, .github, eyleme-examples, eyleme-evals, eyleme-models ve eyleme-training. Her depoya ayrı LICENSE ve NOTICE eklenir. Kaynak [resmî metindir](https://www.apache.org/licenses/LICENSE-2.0.txt); Türkçe açıklama yol göstericidir, lisansın yerine geçen çeviri değildir. Bağımsız yönetilen web sitesi bu değişikliğin dışındadır.
+
+## Tek marka, ayrı kaynak kodu ve abonelik koşulları
+
+Bakımcı 15 Ekim 2026 tarihinde ortak marka olarak **Eyleme**'yi, topluluk ve ürün merkezi olarak [eyleme.dev](https://eyleme.dev/tr/) adresini seçti. Public Eyleme'nin kendi kaynak kodu ve belgeleri Apache-2.0 kapsamında kalır. **Eyleme Derleme** ve **Eyleme Onama**, private kaynak kodlu ücretli abonelik modelini izler; ortak marka kullanmaları kendi kodlarını public topluluk lisansına dahil etmez. Ticari hizmetler ve koşullar geliştirme aşamasındadır; fiyatlar ve kullanıma sunulma durumu yayımlanmamıştır. [Public ürün ailesi açıklamasına](https://github.com/eyleme-dev/eyleme/blob/main/docs/tr/product-family.md) bakın.
+
+Açık kaynak Eyleme ürünü kendi temel kimlik doğrulama, yetkilendirme ve güvenlik kontrolleriyle bağımsız kullanılabilir kalır. Ticari abonelik isteğe bağlıdır; kaynak kodu, kimlik bilgileri, veri veya model varlıklarına örtük erişim yetkisi vermez. Public topluluk katkıları depo lisansı ve katkı koşullarıyla yönetilmeye devam eder; private ürün çalışmaları kendileri için geçerli ayrı anlaşmayı izler. Bu rehber abonelik sözleşmesi, fiyat, barındırılan hizmet veya ödeme akışı sunmaz.
+
+Mevcut Apache-2.0 hakları ve zorunlu bağımlılık bildirimleri, depo görünürlüğü veya ticari konumlandırma değiştiğinde korunur. Private birinci taraf bildirimi, ayrı lisanslı Eyleme bağımlılıklarını veya daha önce yayımlanmış katkıları kısıtlamamalıdır. Bunların lisans, telif ve atıf bildirimlerini koruyun; dağıtılan her varlığı kendi koşullarına göre inceleyin.
 
 ## Katkı ve köken
 
