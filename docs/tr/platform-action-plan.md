@@ -50,7 +50,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G80** | Kontrollü kaynak ihtiyacı tahmini | G27, G46, G21, G18 | `accepted` |
 | **G23** | CPU tensor referansı | G18, G27 | `accepted` |
 | **G28** | Ağırlık yükleyici | G09, G27 | `accepted` |
-| **G29** | Tokenizer ve şablon | G27, G28 | `planned` |
+| **G29** | Tokenizer ve şablon | G27, G28 | `accepted` |
 | **G30** | CPU model yürütümü | G23, G28, G29 | `planned` |
 | **G57** | Kendi Rust CPU yapılandırılmış karar yürütmemiz | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Kendi Rust CPU embedding yürütmemiz | G67, G23, G28, G29 | `planned` |
@@ -140,4 +140,4 @@ Sahibin netleştirdiği hedef, yerel uzman işbirliğini, performans/verimlilik/
 
 G28 kaynak kabulü PR108 ile tamamlandı:335native/47Python testi, sınırlı sentetik bayt/hash/layout kontrolleri ve dört derlenmiş mutasyon denemesi; okumadan önce önek sınırı onarımı yeni ayrı inceleme ve tam commit/mainCI’dan geçti. Kendi opak BF16/F32 snapshot ve native akışımız yalnız bu yapısal profil için kabul edildi; gerçek ağırlık,2GiB kapasite, model/tokenizer/GPU/eğitim/throughput kanıtlanmadı.
 
-G29 yazılı şartname2a690b3 ve G29’a özel sembolik metin ön ucu katkı bağı insanın devam talimatıyla kabul edildi. [Somut uygulama planı](../plans/g29-tokenizer.md) üretimden önce insan incelemesini bekliyor. Kendi Rust Unicode16 NFC/sabit bölme/byte-BPE/tipli sohbet ve kabul edilmişG28 hash akışı; özgün kriter/bütçe/G27, diğer67kart ve G40 korunur. Tam artifact/referans/native/model/performance kabulü yoktur.
+G29 kaynak[PR110](https://github.com/eyleme-dev/eyleme/pull/110), gerçek native tokenizer kabulünü (13metin/14prompt),354Rust/47Python, güncelCI ve düzeltilmiş commit için gerçek ayrı incelemeyi geçti. Bilinen yetersiz girdi-işlem/okuma bütçeleri iki okuyucu çağrılmadan reddedilir; incelenen/main ağacı eşitliği ve mainCI doğrulandı. İnsanın onayladığı30aktif dakika/ikionarım/oninceleme dakikası uzatması önceki tüketimi korur. [Uygulanan plan](../plans/g29-tokenizer.md), sabit Qwen/Unicode16 sınırları ve UnsupportedLocal model sınırı korunur; bu rehber tesliminin ayrı inceleme/CI/merge kapıları vardır. Diğer67kart ve G40 değişmedi.

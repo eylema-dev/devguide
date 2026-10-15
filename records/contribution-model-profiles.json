@@ -242,12 +242,13 @@
         "verifier",
         "independent_reviewer"
       ],
-      "owner_decision": "Actual maintainer said continue after the presented written G29 design and G29-only contribution-domain binding question; interpreted as accepting those concrete proposals, with original bounds and inline method preserved. Concrete implementation-plan review remains required before production. Registry text itself grants no authority.",
+      "owner_decision": "Actual maintainer said continue after the presented written G29 design and G29-only contribution-domain binding question; interpreted as accepting those concrete proposals, with original bounds and inline method preserved. Concrete implementation-plan review remains required before production. Registry text itself grants no authority. Actual human subsequently approved the concrete implementation plan and, on15October2026, the narrow30minute/two-repair/ten-review-minute extensions; original consumption preserved. No inference/numerical scope added.",
       "evidence": {
         "source_base": "d0dcc39c65c8229cc8d54f1c8a831adaecf66d80",
         "guide_base": "45541cb916c5253bb6d3f2832a2dbffab1e9ad9d",
         "owner_reviewed_design": "2a690b352ebfc0032a9e8033469e873f230e04c3",
-        "native_tokenizer": "not_run; references/full artifacts/production are not accepted by preparation"
+        "native_tokenizer": "SourcePR110 6024087e15bd7a508dac091a2abc36ebf7619baf; native354/47Python, identified13text/14prompt, genuine separate repaired-head review and exact-main CI passed. Guide delivery remains separately gated.",
+        "source_base_current": "460e4aecc7a47a10abb62b501185ede7d963186b"
       },
       "quality_floor": [
         "original120_minutes_3repairs_900review_including_all_preparation",

@@ -50,7 +50,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G80** | Checked resource requirement estimator | G27, G46, G21, G18 | `accepted` |
 | **G23** | CPU tensor reference | G18, G27 | `accepted` |
 | **G28** | Weight loader | G09, G27 | `accepted` |
-| **G29** | Tokenizer and template | G27, G28 | `planned` |
+| **G29** | Tokenizer and template | G27, G28 | `accepted` |
 | **G30** | CPU model execution | G23, G28, G29 | `planned` |
 | **G57** | Owned Rust CPU structured-decision execution | G56, G23, G28, G29, G30 | `planned` |
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `planned` |
@@ -140,4 +140,4 @@ The maintainer-approved [Unsloth capability review](unsloth-capabilities.md) add
 
 G28 source accepted through PR108:335native/47Python tests, bounded synthetic byte/hash/layout checks and four compiled mutation trials; one pre-read prefix-bound repair passed fresh separate review and exact-head/mainCI. Owned opaque BF16/F32 snapshots and native stream are accepted only for this structural profile; real weights,2GiB capacity, model/tokenizer/GPU/training/throughput remain unproved.
 
-G29 written spec2a690b3 and G29-only symbolic frontend contribution binding were accepted by the actual maintainer continuation. The [concrete implementation plan](../plans/g29-tokenizer.md) awaits human review before production. Own Rust Unicode16 NFC/fixed splitting/byte-BPE/typed chat and acceptedG28 hash stream remain; original criteria/budgets/G27, other67cards and G40 unchanged. No full artifact/reference/native/model/performance acceptance.
+G29 source[PR110](https://github.com/eyleme-dev/eyleme/pull/110) passed actual native tokenizer acceptance (13text/14prompt),354Rust/47Python, currentCI and genuine separate repaired-head review. Known insufficient input-work/read budgets reject before either reader; exact reviewed/main tree and mainCI verified. The owner-approved30active/two-repair/ten-review extension preserves original consumption. The [executed plan](../plans/g29-tokenizer.md), fixed Qwen/Unicode16 limits and UnsupportedLocal model boundary remain; this guide delivery has separate review/CI/merge gates. Other67cards and G40 are unchanged.
