@@ -5533,15 +5533,15 @@
     },
     {
       "id": "G74",
-      "plan_card_revision": 4,
+      "plan_card_revision": 5,
       "title": "Decision router and RAG/skill dispatch",
       "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 81,
         "url": "https://github.com/eyleme-dev/eyleme/issues/81"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "3eda9aec2bde346930cb36c74358082b325ba0a3",
       "dependencies": [
         "G57",
         "G54",
@@ -5549,7 +5549,8 @@
         "G70",
         "G75",
         "G63",
-        "G87"
+        "G87",
+        "G80"
       ],
       "conditional_dependencies": {},
       "allowed_paths": [
@@ -5560,32 +5561,42 @@
         "docs/tr/",
         "tools/translation-pairs.json"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eyleme-dev/devguide": [
+          "docs/plans/g74-routing.md",
+          "records/platform-goal-plan.json",
+          "records/contribution-model-profiles.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Route retrieval-grounded jobs to RAG, code/document work to accepted specialists and typed skills, with explicit choice/score semantics, uncertainty and domain/resource limits.",
       "acceptance": [
         {
           "id": "G74-A1",
           "requirement": "Route retrieval-grounded jobs to RAG, code/document work to accepted specialists and typed skills, with explicit choice/score semantics, uncertainty and domain/resource limits.",
           "check": "Real routing outcomes and fixed route fixtures; absent/stale/contradictory sources, unsupported skills and low-confidence decisions cannot bypass permission or be mislabeled completed.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G74-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G74-R1",
           "requirement": "Router uses accepted resource/context/parameter/quality/privacy profiles to select cooperating RAG/model/skill routes with uncertainty.",
           "check": "Actual route decisions reject stale capacity/catalogs, unknown model type, oversized context and infeasible overlap; routing never grants permission or marks an unsupported job completed.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G74-H1",
           "requirement": "Gradual skill/reference and deferred typed-tool discovery preserve immutable version, purpose authority and context budgets; discovery never grants execution.",
           "check": "Catalog\u2192describe\u2192authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -5600,18 +5611,35 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high; configured metadata, hidden serving identity unknown"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient. Actual maintainer approved Hermes behavior adaptation on14October2026: independently accept the appended H1 consuming flow under owned Rust/source rights/context/authority/budget gates. No engine import, automatic activation or original allowance reset; accepted prerequisite receipts remain unchanged. Actual human approved G74/r5 preparation, written spec b0b1339 and G74-only structural binding, then concrete plan be11672 on16October2026. Current scope and budgets are fixed in that plan; original consumption retained. Production starts only under that actual decision; all runtime acceptance remains not_run until observed. No new model/provider/training/download/spend allowance. Actual human later authorized1additional targeted repair(total4) without active/review/call increase. Repaired source25e3c16 passed475Rust/48Python,30routing tests, full local native/selectedWasm gates, currentCI38907437595 and genuinely separate repaired-head review; PR117 merged at a3b06ab with identical reviewed/main tree and successful exactmainCI38907693902. Extent preflight rejects borrowed129byte/8MiB IDs before comparison, all ceilings preserved. A1/R1/H1 are bounded synthetic structural/native retrieval/skill proofs; model specialists remain unavailable, scores uncalibrated, no new model/provider/training/GPU/performance/physicalfile/person claim. Original structured budget is historical and prior consumption retained. This G74-only guide delivery still requires its own exact-head independent review/currentCI/merge/equalmain/mainCI before dependent activation.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/117",
+          "head": "25e3c169a2cfe688a6dae12ba2429796fa086127",
+          "main": "a3b06ab698d338b893714b1cfcad850f4dfaa35f",
+          "tree": "a0b9829af2c1a49a52d324ac69eab389f954b69f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "25e3c169a2cfe688a6dae12ba2429796fa086127",
+            "reviewer": "g74_source_repair_review; genuine separate configuredgpt-6.1-sol/high exact-head source review; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38907693902,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38907693902",
+            "head": "a3b06ab698d338b893714b1cfcad850f4dfaa35f",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "configuredgpt-6.1-sol/high",
+        "implementer": "configuredgpt-6.1-sol/high inline",
+        "verifier": "owned local tools; configuredgpt-6.1-sol/high",
+        "independent_reviewer": "g74_source_repair_review; genuine separate configuredgpt-6.1-sol/high exact25e3c169a2cfe688a6dae12ba2429796fa086127 source review; serving identity unknown"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },

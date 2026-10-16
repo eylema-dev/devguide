@@ -55,7 +55,7 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **G57** | Owned Rust CPU structured-decision execution | G56, G23, G28, G29, G30 | `accepted` |
 | **G68** | Owned Rust CPU embeddings | G67, G23, G28, G29 | `accepted` |
 | **G70** | Project-scoped owned Rust retrieval index | G68, G63, G13 | `accepted` |
-| **G74** | Decision router and RAG/skill dispatch | G57, G54, G50, G70, G75, G63, G87 | `planned` |
+| **G74** | Decision router and RAG/skill dispatch | G57, G54, G50, G70, G75, G63, G87, G80 | `accepted` |
 | **G88** | Owned episodic, semantic and knowledge-graph memory | G87, G70, G50 | `planned` |
 | **G72** | Early end-to-end local text/RAG job proof | G30, G57, G68, G70, G54, G50, G63, G73, G88 | `planned` |
 | **G24** | Metal tensor operations | G19, G23 | `planned` |
@@ -107,6 +107,8 @@ The table is a dependency-valid order, not a completion claim or date promise. E
 | **W01** | Website accuracy | G03 | `planned` |
 
 G28 scope/design preparation is approved: register the owned weight-loader crate and design a separate bounded native SHA256 stream without changing the existing wire hash limit. Written design, G28-only contribution-profile binding and concrete inline plan are approved. Bounded source implementation passed final separate review/currentCI/identical accepted-main proof; coordinated guide review/currentCI remains required.
+
+G74 bounded routing source acceptance passed at core main a3b06ab (PR117): actual G70 retrieval/G75 skill flows, integer/resource admission and gradual source-authorized discovery. Four acceptance items passed within the documented synthetic/cooperative scope; model-executing specialists remain unavailable and scores uncalibrated. Full475Rust/48Python, current source CI, genuine separate exact-head review, equal main tree and mainCI passed. The owner allowed one extra targeted repair(total4), preserving active/review ceilings and preparation. This G74-only guide receipt/pin delivery retains its own review/CI/merge/main gates before G88 activation.
 
 ## Evidence and data boundaries
 

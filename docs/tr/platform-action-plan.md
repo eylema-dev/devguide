@@ -55,7 +55,7 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **G57** | Kendi Rust CPU yapılandırılmış karar yürütmemiz | G56, G23, G28, G29, G30 | `accepted` |
 | **G68** | Kendi Rust CPU embedding yürütmemiz | G67, G23, G28, G29 | `accepted` |
 | **G70** | Projeye bağlı kendi Rust erişim indeksimiz | G68, G63, G13 | `accepted` |
-| **G74** | Karar router’ı ve RAG/skill yönlendirmesi | G57, G54, G50, G70, G75, G63, G87 | `planned` |
+| **G74** | Karar router’ı ve RAG/skill yönlendirmesi | G57, G54, G50, G70, G75, G63, G87, G80 | `accepted` |
 | **G88** | Kendi episodik, semantik ve knowledge graph belleğimiz | G87, G70, G50 | `planned` |
 | **G72** | Erken uçtan uca yerel metin/RAG iş kanıtı | G30, G57, G68, G70, G54, G50, G63, G73, G88 | `planned` |
 | **G24** | Metal tensor işlemleri | G19, G23 | `planned` |
@@ -107,6 +107,8 @@ Tablo bağımlılığa uygun sıradır; tamamlanma veya tarih sözü değildir. 
 | **W01** | Website doğruluğu | G03 | `planned` |
 
 G28 kapsam/tasarım hazırlığı onaylandı: kendi ağırlık yükleyici crate’imizi kaydet ve mevcut wire hash sınırını değiştirmeyen ayrı sınırlı native SHA256 akışı tasarla. Yazılı tasarım, G28’e özel katkı profil bağı ve somut sohbet içi plan onaylandı. Sınırlı kaynak uygulaması son ayrı inceleme/güncel CI/aynı kabul edilmiş main kanıtından geçti; koordineli devguide incelemesi ve güncel CI hâlâ gerekir.
+
+G74 sınırlı yönlendirme kaynak kabulü core main a3b06ab üzerinde geçti (PR117): gerçek G70erişim/G75skill akışları, tamsayı/kaynak kabulü ve aşamalı kaynak izinli keşif. Dört kabul maddesi belgelenen sentetik/işbirlikçi kapsamda geçti; model çalıştıran uzmanlar kullanılamaz, puanlar kalibre edilmemiştir. Tam475Rust/48Python, güncel kaynak CI, gerçekten ayrı kesin sürüm incelemesi, eşit main ağacı ve main CI geçti. Bakımcı bir ek hedefli onarıma(toplam4)izin verdi; aktif/inceleme tavanları ve hazırlık tüketimi korundu. Yalnız G74 rehber makbuzu/pini teslimi, G88etkinleşmeden önce kendi inceleme/CI/merge/main kapılarını korur.
 
 ## Kanıt ve veri sınırları
 
