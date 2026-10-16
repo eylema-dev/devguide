@@ -274,6 +274,55 @@
         "quality_or_privacy_regression"
       ],
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-g70-retrieval-2026-10-16",
+      "status": "owner_approved",
+      "provider": "openai",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "configured_identity_evidence": "Actual owner-selected settings and accepted metadata-only local usage ledger; hidden serving identity not exposed.",
+      "evaluation_date": "2026-10-16",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G70_only_bounded_scalar_vector_half_even_Jaccard_hybrid_ranking",
+        "G70_snapshot_host_validator_and_native_adapter",
+        "G70_tests_bilingual_delivery_and_genuine_separate_final_head_review"
+      ],
+      "excluded_until_separately_evaluated": [
+        "ANN_optimized_kernels_GPU_model_training_performance",
+        "general_relevance_or_other_Goals"
+      ],
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Genuine separate context and exact final source/guide heads; predecessor review does not accept G70.",
+      "owner_decision": "Actual human approved written design8e09cc7 and presented G70-only qualification, then concrete plan5ac9803 on16October2026. Original120active/3repairs/900review includes all preparation; no model/provider/download/training/spending. Record itself grants no authority.",
+      "quality_floor": [
+        "frozen_independent_literals_and_failure_tests",
+        "actual_native_file_acceptance_currentCI_separate_final_head_review",
+        "original_finite_budgets_preserved"
+      ],
+      "evidence": [
+        {
+          "type": "owner_reviewed_predecessor_mapping",
+          "source_main": "9324207e68782de8b6c892a36a175fb1701c41a9",
+          "G70_acceptance": "not_run",
+          "limitation": "G68 numerical and G63/G87 authority evidence informs narrow qualification; no automatic runtime/quality acceptance."
+        }
+      ],
+      "re_evaluate_on": [
+        "G70_delivery",
+        "expiry",
+        "revocation",
+        "changed_model_effort_provider_scope_or_trust",
+        "quality_or_privacy_regression"
+      ],
+      "no_self_authorization": true
     }
   ],
   "task_bindings": [
