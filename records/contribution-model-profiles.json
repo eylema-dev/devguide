@@ -540,14 +540,14 @@
         "global_SOTA_or_hidden_serving_identity",
         "other_Goals_or_permission_expansion"
       ],
-      "owner_decision": "Actual human approved written spec e5bb1ed and narrow G88 profile/scope, then concrete plan a8e9dbb on16October2026 in trusted chat. Original120active/3repairs/900review includes all preparation; record grants no authority. No new model/provider/training/download/dependency/spending permission.",
+      "owner_decision": "Actual human approved written spec e5bb1ed and narrow G88 profile/scope, then concrete plan a8e9dbb on16October2026 in trusted chat. Original120active/3repairs/900review includes all preparation; record grants no authority. No new model/provider/training/download/dependency/spending permission. Actual human subsequently approved2additional targeted passes(total5), then one pass(total6) solely for SingleValue graph-path conflict and replay control categories; original active/review/native/model limits unchanged.",
       "roles": [
         "architect",
         "implementer",
         "verifier",
         "independent_reviewer"
       ],
-      "review_independence": "Unassigned; genuine separate exact final source and guide heads required before acceptance.",
+      "review_independence": "g88_source_review; genuinely separate configuredgpt-6.1-sol/high exact source2e4ab497f86238a82c8ca71330a788fdf2e2861b reviewed after two-finding repair and actual two-child acceptance; serving identity not exposed. Guide final-head review remains required.",
       "quality_floor": [
         "frozen_independent_corpus_and_failure_tests",
         "actual_native_sync_restart_eight_briefs",
