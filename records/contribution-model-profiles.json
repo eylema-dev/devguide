@@ -519,6 +519,46 @@
         "changed_model_effort_provider_scope_or_trust"
       ],
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-contracts-g88-binding-2026-10-16",
+      "goal": "G88",
+      "profile_id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "date": "2026-10-16",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G88_only_structural_memory_graph_journal_validation",
+        "G88_source_authority_composition_native_tests_bilingual_delivery",
+        "G88_genuinely_separate_exact_head_review"
+      ],
+      "excluded": [
+        "numerical_kernels_model_inference_training_or_performance",
+        "global_SOTA_or_hidden_serving_identity",
+        "other_Goals_or_permission_expansion"
+      ],
+      "owner_decision": "Actual human approved written spec e5bb1ed and narrow G88 profile/scope, then concrete plan a8e9dbb on16October2026 in trusted chat. Original120active/3repairs/900review includes all preparation; record grants no authority. No new model/provider/training/download/dependency/spending permission.",
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "Unassigned; genuine separate exact final source and guide heads required before acceptance.",
+      "quality_floor": [
+        "frozen_independent_corpus_and_failure_tests",
+        "actual_native_sync_restart_eight_briefs",
+        "current_local_CI_genuine_final_head_review_equal_main_tree_mainCI"
+      ],
+      "expires_on": [
+        "G88_delivery",
+        "parent_profile_expiry_or_revocation",
+        "changed_model_effort_provider_scope_or_trust"
+      ],
+      "no_self_authorization": true
     }
   ]
 }
