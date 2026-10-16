@@ -479,6 +479,46 @@
       ],
       "review_independence": "Genuinely separate configuredgpt-6.1-sol/high final guide review under admitted structural/development-test binding; exact final commit required",
       "no_self_authorization": true
+    },
+    {
+      "id": "sol61-high-contracts-g74-binding-2026-10-16",
+      "goal": "G74",
+      "profile_id": "sol61-high-contracts-2026-10-14",
+      "status": "owner_approved",
+      "configured_model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "serving_identity": "unknown_not_exposed",
+      "date": "2026-10-16",
+      "valid_through": "2026-11-13",
+      "scope": [
+        "G74_only_deterministic_integer_routing_and_structural_resource_profile_validation",
+        "G74_current_host_authority_discovery_dispatch_tests_bilingual_delivery",
+        "G74_genuinely_separate_exact_head_review"
+      ],
+      "excluded": [
+        "numerical_kernels_model_inference_training_or_performance",
+        "global_SOTA_or_hidden_serving_identity",
+        "other_Goals_or_permission_expansion"
+      ],
+      "owner_decision": "Actual human approved written spec b0b1339 and presented G74-only binding, then concrete plan be11672 on16October2026 in trusted chat. Original120active/3repairs/900review includes preparation. Record grants no authority by itself. Actual human approved1extra targeted repair(total4), unchanged active/review allowance, on16October2026; original consumption retained.",
+      "roles": [
+        "architect",
+        "implementer",
+        "verifier",
+        "independent_reviewer"
+      ],
+      "review_independence": "g74_source_repair_review; genuine separate configuredgpt-6.1-sol/high accepted exact25e3c169a2cfe688a6dae12ba2429796fa086127 after independent30routing tests; predecessor rejected and repaired. Source merged at a3b06ab698d338b893714b1cfcad850f4dfaa35f with equal tree/mainCI38907693902. This guide snapshot requires its own genuine separate exact-final-head review and CI before merge; record does not grant authority.",
+      "quality_floor": [
+        "frozen_literal_routes_and_failure_tests",
+        "actual_existing_host_dispatch_and_G80_checks",
+        "current_local_CI_genuine_final_head_review_equal_main_tree_mainCI"
+      ],
+      "expires_on": [
+        "G74_delivery",
+        "parent_profile_expiry_or_revocation",
+        "changed_model_effort_provider_scope_or_trust"
+      ],
+      "no_self_authorization": true
     }
   ]
 }
