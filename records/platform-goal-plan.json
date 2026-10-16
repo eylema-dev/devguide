@@ -569,7 +569,7 @@
         },
         {
           "id": "G25-A1",
-          "requirement": "8×8 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
+          "requirement": "8\u00d78 states/actions/cost/termination and deterministic baseline reproduce fixed seeds",
           "check": "Fixed-seed baseline/invalid-action tests and matching eval fixtures",
           "result": "not_run"
         },
@@ -943,7 +943,7 @@
         "environment": "M4Pro24GiB/macOS27.0.1ARM64/Rust1.99; Python3.15local/3.14CI",
         "limits": "Actual owned Rust declared-metadata validation and exact model/core EYL fixture, no inference/quality/authority from matching. Large file hashes publisher advertised only; no model/tokenizer/GPU/training/provider/G40 execution. ExternalConfigured is explicit unavailable intent, never fallback.",
         "repair1": "Initial separate review found four P2; native/Python regressions failed before the repair and pass after strict types/semantic IDs, immutable measured template pins, checked shape/workload extents and complete operator-set classification.",
-        "repair2": "Renewed review found combined token×Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
+        "repair2": "Renewed review found combined token\u00d7Q projection activation overflow; just-below/at-overflow boundary regression observed RED then GREEN. No runtime or memory-estimate claim.",
         "review": "Separate final source review passed at exact core/model heads; all initial fourP2 plus combinedQ projection overflow closed by2source repair passes; third pass fixes the accepted-card regression fixture. Separate review498/900seconds before delivery proof audit. No human GitHub approval claimed.",
         "repair3": "Accepted G27 makes G23 dependency-complete. Historical-position activation test wrongly expected rejection. Negative activation now explicitly targets G44 with unaccepted dependencies and asserts the exact existing failure reason; production validator unchanged."
       }
@@ -5002,15 +5002,15 @@
     },
     {
       "id": "G70",
-      "plan_card_revision": 2,
+      "plan_card_revision": 3,
       "title": "Project-scoped owned Rust retrieval index",
       "repository": "eyleme-dev/eyleme",
       "issue": {
         "number": 77,
         "url": "https://github.com/eyleme-dev/eyleme/issues/77"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "9324207e68782de8b6c892a36a175fb1701c41a9",
       "dependencies": [
         "G68",
         "G63",
@@ -5023,22 +5023,34 @@
         "apps/eylema/",
         "docs/en/",
         "docs/tr/",
-        "tools/translation-pairs.json"
+        "tools/translation-pairs.json",
+        "Cargo.toml",
+        "Cargo.lock"
       ],
-      "linked_scope": {},
+      "linked_scope": {
+        "eyleme-dev/devguide": [
+          "docs/plans/g70-retrieval.md",
+          "records/platform-goal-plan.json",
+          "records/contribution-model-profiles.json",
+          "docs/en/platform-action-plan.md",
+          "docs/tr/platform-action-plan.md",
+          "tools/repository-set.json",
+          "tools/translation-pairs.json"
+        ]
+      },
       "objective": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
       "acceptance": [
         {
           "id": "G70-A1",
           "requirement": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
           "check": "Actual synthetic indexing/reopen/search, recall and ranking fixtures; cross-project leakage, stale/deleted documents, incompatible vectors, corrupt index, size and retention boundaries fail.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G70-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -5053,18 +5065,35 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high; configured metadata, hidden serving identity unknown"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Actual owner approved spec8e09cc7, task-only profile sol61-high-g70-retrieval-2026-10-16 and concrete plan5ac9803 on16October2026; original consumed preparation preserved. Exact scope/budgets in approved plan; acceptance pending actual native proof, current CI and genuine separate review. Source PR116 accepted:20retrieval/9host/1actual native-file scenario (native target repeats9shared tests),14checksummed mutation variants,24raw-dot scalar references, full445Rust/48Python, currentCI38877156550, genuine separate exact-final-head review, equal main tree and mainCI38877450998 passed. Actual owner later authorized2additional targeted repairs(total5), last test-only with identical production bytes; no active/review/call increase and all preparation preserved. Original structured budget is historical, not reset. This guide card/pin/action-plan delivery has its own review/CI/merge/main gates; only then G74 may prepare. No model/provider/weights/training/GPU/general quality/performance claim.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/116",
+          "head": "fa238888a771966eff852bc5bfa638d0d98b2718",
+          "main": "3eda9aec2bde346930cb36c74358082b325ba0a3",
+          "tree": "3d8e41e1f20f610af6cee4b0309e478b7942733f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "fa238888a771966eff852bc5bfa638d0d98b2718",
+            "reviewer": "g70_source_final_review; genuine separate configuredgpt-6.1-sol/high exact-head full-source review and test-only closure; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38877450998,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38877450998",
+            "head": "3eda9aec2bde346930cb36c74358082b325ba0a3",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "configuredgpt-6.1-sol/high",
+        "implementer": "configuredgpt-6.1-sol/high inline",
+        "verifier": "owned local tools; configuredgpt-6.1-sol/high",
+        "independent_reviewer": "g70_source_final_review; genuine separate configuredgpt-6.1-sol/high full-source review and test-only closure atfa238888a771966eff852bc5bfa638d0d98b2718; serving identity not exposed"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
@@ -5287,7 +5316,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1–300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
+      "activation": "Maintainer approved the concrete device-owner design and existing inline execution. Bound accepted dependencies/current core main, fixed scopes state:cli/state:g73-proof; request120s/proof15s/humanTTL1\u2013300s/16enrollments/128tasks. At most2explicit OS trials60s each;4counter tasks/8steps,1private journal/1own loopback listener/2service lifecycles120s each. No auth UI in CI or impersonated human input.",
       "accepted_delivery": [
         {
           "repository": "eylema-dev/eylema",
@@ -5555,7 +5584,7 @@
         {
           "id": "G74-H1",
           "requirement": "Gradual skill/reference and deferred typed-tool discovery preserve immutable version, purpose authority and context budgets; discovery never grants execution.",
-          "check": "Catalog→describe→authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
+          "check": "Catalog\u2192describe\u2192authorizedcall tests retain identical registry permissions/schema rejection. Denied/revoked/stale/missing/oversized references cannot activate a specialist; zero search match differs from unavailable capability.",
           "result": "not_run"
         }
       ],
@@ -5652,7 +5681,7 @@
         "reasoning_effort": "high",
         "actual": null
       },
-      "activation": "AcceptedG46/G54/G50/G63/G87 mainCI checked. Closed skill/v1 leaf artifacts over own read/add handlers, flat1–8call/iteration loop with expanded≤8,8control sources/4096byte artifacts/128retainedexecutions. Actualtwo-package/two-loop native reuse; mandatory real scoped intervention and live retained control/argument/ancestor/session checks. Models/otheradapters/nestedprograms unavailable; transient lineage, no new model/provider/G40/physicalprocess/training/engine/dependency/spending trial.",
+      "activation": "AcceptedG46/G54/G50/G63/G87 mainCI checked. Closed skill/v1 leaf artifacts over own read/add handlers, flat1\u20138call/iteration loop with expanded\u22648,8control sources/4096byte artifacts/128retainedexecutions. Actualtwo-package/two-loop native reuse; mandatory real scoped intervention and live retained control/argument/ancestor/session checks. Models/otheradapters/nestedprograms unavailable; transient lineage, no new model/provider/G40/physicalprocess/training/engine/dependency/spending trial.",
       "accepted_delivery": [
         {
           "repository": "eylema-dev/eylema",
@@ -6939,7 +6968,7 @@
         {
           "id": "G89-H1",
           "requirement": "Bounded learning/usage/evaluation lineage retains unsuccessful attempts and withdrawal; derived snapshots inherit original purpose permissions and unknown cost/effectiveness.",
-          "check": "Source-linked episode→correction→skill/recipe→evaluation timeline; permission/redaction/withdrawal/incomplete-cost checks; graphs do not imply training or semantic quality.",
+          "check": "Source-linked episode\u2192correction\u2192skill/recipe\u2192evaluation timeline; permission/redaction/withdrawal/incomplete-cost checks; graphs do not imply training or semantic quality.",
           "result": "not_run"
         }
       ],
@@ -7119,7 +7148,7 @@
     "model_evidence": "requested/configured/hidden_serving_identity distinct; unknown not inferred",
     "authority": "actual human decision; registry/model output/CI grants none",
     "current_ci": "structural evidence only; real admission/delivery acceptance remains G42/G43",
-    "initial_profile": "sol61-high-contracts-2026-10-14; actual owner approved limited 14 October–13 November 2026 profile; other domains not automatically qualified",
+    "initial_profile": "sol61-high-contracts-2026-10-14; actual owner approved limited 14 October\u201313 November 2026 profile; other domains not automatically qualified",
     "profile_registry": "records/contribution-model-profiles.json"
   }
 }
