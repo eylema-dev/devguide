@@ -5009,7 +5009,7 @@
         "number": 77,
         "url": "https://github.com/eyleme-dev/eyleme/issues/77"
       },
-      "status": "planned",
+      "status": "accepted",
       "base_sha": "9324207e68782de8b6c892a36a175fb1701c41a9",
       "dependencies": [
         "G68",
@@ -5044,13 +5044,13 @@
           "id": "G70-A1",
           "requirement": "Own bounded ingestion/chunking and vector/hybrid retrieval with project isolation, document/chunk/model lineage and deterministic ranking; changed embedding spaces require explicit reindex.",
           "check": "Actual synthetic indexing/reopen/search, recall and ranking fixtures; cross-project leakage, stale/deleted documents, incompatible vectors, corrupt index, size and retention boundaries fail.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G70-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -5067,16 +5067,33 @@
         "reasoning_effort": "high",
         "actual": "gpt-6.1-sol/high; configured metadata, hidden serving identity unknown"
       },
-      "activation": "Actual owner approved spec8e09cc7, task-only profile sol61-high-g70-retrieval-2026-10-16 and concrete plan5ac9803 on16October2026; original consumed preparation preserved. Exact scope/budgets in approved plan; acceptance pending actual native proof, current CI and genuine separate review.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Actual owner approved spec8e09cc7, task-only profile sol61-high-g70-retrieval-2026-10-16 and concrete plan5ac9803 on16October2026; original consumed preparation preserved. Exact scope/budgets in approved plan; acceptance pending actual native proof, current CI and genuine separate review. Source PR116 accepted:20retrieval/9host/1actual native-file scenario (native target repeats9shared tests),14checksummed mutation variants,24raw-dot scalar references, full445Rust/48Python, currentCI38877156550, genuine separate exact-final-head review, equal main tree and mainCI38877450998 passed. Actual owner later authorized2additional targeted repairs(total5), last test-only with identical production bytes; no active/review/call increase and all preparation preserved. Original structured budget is historical, not reset. This guide card/pin/action-plan delivery has its own review/CI/merge/main gates; only then G74 may prepare. No model/provider/weights/training/GPU/general quality/performance claim.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/116",
+          "head": "fa238888a771966eff852bc5bfa638d0d98b2718",
+          "main": "3eda9aec2bde346930cb36c74358082b325ba0a3",
+          "tree": "3d8e41e1f20f610af6cee4b0309e478b7942733f",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "fa238888a771966eff852bc5bfa638d0d98b2718",
+            "reviewer": "g70_source_final_review; genuine separate configuredgpt-6.1-sol/high exact-head full-source review and test-only closure; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38877450998,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38877450998",
+            "head": "3eda9aec2bde346930cb36c74358082b325ba0a3",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
         "architect": "configuredgpt-6.1-sol/high",
         "implementer": "configuredgpt-6.1-sol/high inline",
         "verifier": "owned local tools; configuredgpt-6.1-sol/high",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "independent_reviewer": "g70_source_final_review; genuine separate configuredgpt-6.1-sol/high full-source review and test-only closure atfa238888a771966eff852bc5bfa638d0d98b2718; serving identity not exposed"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },

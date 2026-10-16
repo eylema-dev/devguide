@@ -10,6 +10,10 @@
 
 **Spec:** [Owner-approved English specification](https://github.com/eyleme-dev/eyleme/blob/8e09cc7eda296108910cff88bcaaa0b9830a6f80/docs/en/g70-retrieval-design.md) and [Turkish companion](https://github.com/eyleme-dev/eyleme/blob/8e09cc7eda296108910cff88bcaaa0b9830a6f80/docs/tr/g70-retrieval-design.md). The actual owner approved that written spec and the presented G70-only contribution profile on16October2026. This concrete plan is pending review; local spec links become public only through later authorized delivery.
 
+## Execution record
+
+The actual owner approved this original plan5ac9803. Source PR116/headfa238888a771966eff852bc5bfa638d0d98b2718 merged as3eda9aec2bde346930cb36c74358082b325ba0a3 with equal reviewed/main trees and mainCI38877450998 passed. The paired source evidence and current G70 card hold the actual bounded synthetic acceptance. The owner granted2extra targeted repairs(total5), last test-only, without extra active/review/calls; preparation and all consumption were preserved. Original planning-stage pending statements and unchecked steps below remain historical planning text, not a claim that actual approval is absent. Guide delivery still requires its independent exact-head gates.
+
 ## Global Constraints
 
 - Source base `9324207e68782de8b6c892a36a175fb1701c41a9`; source design head `8e09cc7eda296108910cff88bcaaa0b9830a6f80`. Guide base `0efbe545b080b2da2ac3febe021b55fd88d6726f`. Fetch/rebind current main and issue77 before activation. G68/G63/G13 are accepted; G87 is an existing authority pattern. No change to other cards, historical evidence, G40, wire schemas, workflows, checkers or Wasm package inventory.

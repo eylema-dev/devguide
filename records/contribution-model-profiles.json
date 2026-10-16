@@ -301,7 +301,7 @@
         "independent_reviewer"
       ],
       "review_independence": "Genuine separate context and exact final source/guide heads; predecessor review does not accept G70.",
-      "owner_decision": "Actual human approved written design8e09cc7 and presented G70-only qualification, then concrete plan5ac9803 on16October2026. Original120active/3repairs/900review includes all preparation; no model/provider/download/training/spending. Record itself grants no authority.",
+      "owner_decision": "Actual human approved written design8e09cc7 and presented G70-only qualification, then concrete plan5ac9803 on16October2026. Original120active/3repairs/900review includes all preparation; no model/provider/download/training/spending. Record itself grants no authority. Actual human then allowed2extra targeted repair passes(total5), last restricted to the14-case replay test with no production changes; original active/review/call limits remain. No registry record self-authorizes further work.",
       "quality_floor": [
         "frozen_independent_literals_and_failure_tests",
         "actual_native_file_acceptance_currentCI_separate_final_head_review",
@@ -309,10 +309,19 @@
       ],
       "evidence": [
         {
-          "type": "owner_reviewed_predecessor_mapping",
-          "source_main": "9324207e68782de8b6c892a36a175fb1701c41a9",
-          "G70_acceptance": "not_run",
-          "limitation": "G68 numerical and G63/G87 authority evidence informs narrow qualification; no automatic runtime/quality acceptance."
+          "type": "actual_G70_bounded_native_delivery",
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/116",
+          "reviewed_head": "fa238888a771966eff852bc5bfa638d0d98b2718",
+          "accepted_main": "3eda9aec2bde346930cb36c74358082b325ba0a3",
+          "main_ci": "https://github.com/eyleme-dev/eyleme/actions/runs/38877450998",
+          "local_rust_test_executions": 445,
+          "local_python_tests": 48,
+          "synthetic_dimensions": 1024,
+          "checksummed_replay_mutation_cases": 14,
+          "raw_dot_scalar_cases": 24,
+          "production_identical_to": "d6c6fbe22e60a5bdd74f26a5db69a51d840606f1",
+          "limitation": "Synthetic source-scoped retrieval and native file/authority proof only; no embedding/model/provider/training/GPU/performance/general relevance proof."
         }
       ],
       "re_evaluate_on": [
