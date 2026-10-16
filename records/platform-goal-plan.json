@@ -4856,8 +4856,8 @@
         "number": 75,
         "url": "https://github.com/eyleme-dev/eyleme/issues/75"
       },
-      "status": "planned",
-      "base_sha": "0d9a67ec90ead329ecd2ce348be8ea8b4f0b0f52",
+      "status": "accepted",
+      "base_sha": "98e8be6f1f0e623a6b7547c337c53740c64a1354",
       "dependencies": [
         "G67",
         "G23",
@@ -4879,13 +4879,13 @@
           "id": "G68-A1",
           "requirement": "Produce bounded document/query embeddings in owned Rust for the accepted profile and exact model revision; preprocessing and pooling are part of the contract.",
           "check": "Actual pinned-artifact CPU/reference vectors, cosine/ranking tolerances, Unicode/EN/TR/empty/oversized input and bounded batching/memory/cancellation tests.",
-          "result": "not_run"
+          "result": "passed"
         },
         {
           "id": "G68-CP1",
           "requirement": "Change PR uses a dated maintainer-qualified frontier/SOTA LLM profile and genuinely separate owner-approved AI review, with actual task/merge authority. Discussion/bug intake stays open.",
           "check": "Bind observed model/effort/role evidence, valid scoped qualification, actual human decision and independent final-head report; unknown/stale/revoked/mismatched or self-authorized qualification is not passed by CI.",
-          "result": "not_run"
+          "result": "passed"
         }
       ],
       "budget": {
@@ -4900,18 +4900,35 @@
       "model": {
         "planned": "gpt-6.1-sol",
         "reasoning_effort": "high",
-        "actual": null
+        "actual": "gpt-6.1-sol/high configured; hidden serving identity unknown"
       },
-      "activation": "Refresh accepted main/policy, exact affected paths, dependency SHAs, numerical thresholds, scope and finite artifact/process/runtime trial budgets before activation. Apply contribution_policy.v1 and bind current dated owner-qualified author/reviewer evidence before future implementation; requested model alone is insufficient.",
-      "accepted_delivery": null,
-      "blockers": [
-        "Not implemented or accepted; required local/model/runtime proofs remain not_run."
+      "activation": "Actual human approved G68 design, sol61-high-g68-cpu-embedding-2026-10-16 qualification (expires13 November2026), concrete implementation plan and exact finite private artifact/reference/candidate bounds. Explicit later decisions authorized the artifact-specific310-tensor layout correction and one additional targeted pass each for layout, four resource findings, context fixture and Job4 shared-control sequence. Original120active minutes/3repairs/900review seconds remain historical allowances, not reset. The final Job4 decision added30active minutes and300review seconds, giving150active minutes/1200review seconds total; all prior consumption retained. Exact hashes verified one clean acquisition each of model/tokenizer; one F64 reference passed104.321s, then one six-job Rust invocation passed226.674s supervised, with no retries or extra model/provider/training calls. Source numerical revision7ac6d1783b184aa300ee68479cfca44a6f3690a2 has identical implementation bytes to final evidence head cb28e97324c02f534bef7042a191bf0149b418ae. Final source review/current CI/merge and exact-main CI/tree equality passed. This guide card/pin/action-plan delivery requires separate exact-head review/CI/merge/main verification before G70 activates. Small fixed numerical smoke only; no relevance quality, general capacity, performance, GPU, training or full RAG claim.",
+      "accepted_delivery": [
+        {
+          "repository": "eyleme-dev/eyleme",
+          "pr": "https://github.com/eyleme-dev/eyleme/pull/115",
+          "head": "cb28e97324c02f534bef7042a191bf0149b418ae",
+          "main": "9324207e68782de8b6c892a36a175fb1701c41a9",
+          "tree": "5c11463021785eb3cb7f5291325419088051a029",
+          "review": {
+            "status": "passed",
+            "reviewed_head": "cb28e97324c02f534bef7042a191bf0149b418ae",
+            "reviewer": "g68_source_review; genuine separate exact-final-head configured gpt-6.1-sol/high AI review; no findings; serving identity not exposed"
+          },
+          "main_ci": {
+            "id": 38865087229,
+            "url": "https://github.com/eyleme-dev/eyleme/actions/runs/38865087229",
+            "head": "9324207e68782de8b6c892a36a175fb1701c41a9",
+            "status": "passed"
+          }
+        }
       ],
+      "blockers": [],
       "roles": {
-        "architect": "record at activation",
-        "implementer": "record at activation",
-        "verifier": "record at activation",
-        "independent_reviewer": "unassigned; separate context and exact reviewed SHA required"
+        "architect": "configured gpt-6.1-sol/high under owner-approved G68-only contribution profile",
+        "implementer": "configured gpt-6.1-sol/high; first-party Rust inline execution",
+        "verifier": "configured gpt-6.1-sol/high; actual local reference/candidate and source checks",
+        "independent_reviewer": "g68_source_review; genuine separate configured gpt-6.1-sol/high context, exact final source head cb28e97324c02f534bef7042a191bf0149b418ae; serving identity not exposed"
       },
       "contribution_gate": "contribution_policy.v1; actual eligible author/separate-reviewer profile and owner task decision before activation"
     },
